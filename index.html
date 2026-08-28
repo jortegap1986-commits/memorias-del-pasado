@@ -220,7 +220,6 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* ── VIDEOS / HISTORIA EN MOVIMIENTO ── */
-#sec-videos{background:var(--dk);padding:5rem 2rem}
 .videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;max-width:1160px;margin:0 auto}
 .vid-card{background:var(--dm);border:1px solid var(--bdg);overflow:hidden;transition:transform .3s,box-shadow .3s}
 .vid-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(184,134,30,.18)}
@@ -256,12 +255,23 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 @media(max-width:600px){.videos-grid{grid-template-columns:1fr}.redes-grid{flex-direction:column;align-items:stretch}#topbar .social-icons{display:none}}
 
 .sec-thematic{padding:5rem 2rem}
-.sec-thematic.persia-bg{background:linear-gradient(180deg,var(--dm) 0%,var(--d3) 100%)}
-.sec-thematic.roma-bg{background:linear-gradient(180deg,var(--d3) 0%,var(--dm) 100%)}
+.sec-thematic.persia-bg{background:var(--ow)}
+.sec-thematic.roma-bg{background:var(--cr)}
 .thematic-header{text-align:center;margin-bottom:3rem}
 .thematic-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
-.thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--gdl);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
-.thematic-header p{color:var(--stl);font-family:'EB Garamond',serif;font-size:1.1rem;max-width:640px;margin:0 auto}
+.thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
+.thematic-header p{color:var(--txm);font-family:'EB Garamond',serif;font-size:1.1rem;max-width:640px;margin:0 auto}
+.thematic-video-banner{position:relative;height:240px;overflow:hidden;border:1px solid var(--bdg);margin-bottom:3rem}
+.thematic-video-banner video{width:100%;height:100%;object-fit:cover;display:block}
+.thematic-video-banner .tvb-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,10,7,.15) 0%,rgba(12,10,7,.65) 100%)}
+.thematic-video-banner .tvb-label{position:absolute;left:2rem;bottom:1.2rem;color:#fff;font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.explora-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.explora-card{background:var(--w);border:1px solid var(--bd);padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.explora-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.1);border-color:var(--gd)}
+.explora-ico{font-size:2.2rem;margin-bottom:.8rem}
+.explora-card h4{font-family:'Cinzel',serif;font-size:1rem;color:var(--dk);margin-bottom:.5rem}
+.explora-card p{font-family:'EB Garamond',serif;color:var(--txm);font-size:.92rem}
+@media(max-width:900px){.explora-grid{grid-template-columns:1fr}}
 @media(max-width:960px){
   .podcast-grid{grid-template-columns:1fr 1fr}
   .art-grid{grid-template-columns:1fr 1fr}
@@ -321,7 +331,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <div class="hn-menu">
           <a onclick="openArticle('art-falange')">La Falange Macedonia</a>
           <a onclick="openArticle('art-dario')">Darío III y el Imperio Persa</a>
-          <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
+          <a onclick="gotoSection('sec-podcast')">Podcast Gaugamela</a>
+        <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
           <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
           <a onclick="openArticle('art-legiones')">Las Legiones de Roma</a>
           <a onclick="openArticle('art-pompeya1')">Pompeya: El Último Día</a>
@@ -330,8 +341,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <a onclick="openArticle('art-maquinaria')">Maquinaria de Guerra Romana</a>
         </div>
       </div>
-      <button class="hn" onclick="gotoSection('sec-videos')">Videos</button>
+      <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
+      <button class="hn" onclick="gotoSection('sec-podcast')">Podcast</button>
       <button class="hn" onclick="gotoSection('sec-persia-grid')">Persia</button>
+      <button class="hn" onclick="gotoSection('sec-revista')">Revista</button>
       <button class="hn" onclick="gotoSection('sec-roma-grid')">Imperio Romano</button>
       <button class="hn" onclick="gotoSection('sec-comunidad')">Comunidad</button>
       <button class="hn hn-cta" onclick="gotoSection('sec-ebook')">📖 Comprar Libro</button>
@@ -351,7 +364,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <span class="hero-cat">MEMORIAS DEL PASADO · HISTORIA VIVA</span>
         <h1 class="hero-h1">La Historia No Es Pasado. Es Memoria Viva.</h1>
         <p class="hero-excerpt">Artículos, videos y relatos con rigor histórico y narrativa cinematográfica. Descubre las batallas, los imperios y los hombres que construyeron el mundo que habitamos.</p>
-        <button class="hero-btn" onclick="gotoSection('sec-videos')">Explorar Contenido →</button>
+        <button class="hero-btn" onclick="gotoSection('sec-explora')">Explorar Contenido →</button>
       </div>
     </div>
   </div>
@@ -517,52 +530,16 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="now">$4.990</span>
           <span class="cur">CLP</span>
         </div>
-        <a class="ebook-buy-btn" href="https://buy.stripe.com/REEMPLAZAR_CON_TU_LINK" target="_blank" rel="noopener">Comprar Ahora →</a>
+        <a class="ebook-buy-btn" href="https://buy.stripe.com/REEMPLAZAR_CON_TU_LINK" target="_blank" rel="noopener">PDF Directo →</a>
+        <a class="ebook-buy-btn" style="background:var(--dk)" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
       </div>
-      <div class="ebook-trust">Pago seguro con Stripe · Entrega digital automática</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ HISTORIA EN MOVIMIENTO ═══════ -->
-<section id="sec-videos">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-header rv">
-      <span class="sec-label">VIDEOS · HISTORIA EN MOVIMIENTO</span>
-      <h2>La Antigüedad Cobra Vida</h2>
-      <p>Recreaciones cinematográficas de los momentos que definieron el mundo antiguo. Presiona play y viaja dos mil años atrás.</p>
-    </div>
-    <div class="videos-grid">
-      <div class="vid-card rv">
-        <video controls preload="none" poster="assets/img/teutoburgo.jpg"><source src="assets/video/teutoburgo.mp4" type="video/mp4"></video>
-        <div class="vid-card-body"><span class="vid-card-cat">GERMANIA · 9 dC</span><div class="vid-card-title">Teutoburgo: La Emboscada en el Bosque</div></div>
-      </div>
-      <div class="vid-card rv">
-        <video controls preload="none" poster="assets/img/falange.jpg"><source src="assets/video/falange-video.mp4" type="video/mp4"></video>
-        <div class="vid-card-body"><span class="vid-card-cat">MACEDONIA · TÁCTICA</span><div class="vid-card-title">La Falange Macedonia en Combate</div></div>
-      </div>
-      <div class="vid-card rv">
-        <video controls preload="none" poster="assets/img/pompeya1.jpg"><source src="assets/video/pompeya-erupcion.mp4" type="video/mp4"></video>
-        <div class="vid-card-body"><span class="vid-card-cat">POMPEYA · 79 dC</span><div class="vid-card-title">La Erupción del Vesubio</div></div>
-      </div>
-      <div class="vid-card rv">
-        <video controls preload="none" poster="assets/img/legion.jpg"><source src="assets/video/marcha-romana.mp4" type="video/mp4"></video>
-        <div class="vid-card-body"><span class="vid-card-cat">ROMA · LEGIONES</span><div class="vid-card-title">La Marcha de las Legiones</div></div>
-      </div>
-      <div class="vid-card rv">
-        <video controls preload="none" poster="assets/img/asedios.jpg"><source src="assets/video/asedio-video.mp4" type="video/mp4"></video>
-        <div class="vid-card-body"><span class="vid-card-cat">INGENIERÍA DE GUERRA</span><div class="vid-card-title">El Arte Romano del Asedio</div></div>
-      </div>
-      <div class="vid-card rv">
-        <video controls preload="none" poster="assets/img/mapa-alejandro.jpg"><source src="assets/video/recorrido-alejandro.mp4" type="video/mp4"></video>
-        <div class="vid-card-body"><span class="vid-card-cat">ALEJANDRO MAGNO</span><div class="vid-card-title">La Ruta de la Conquista de Persia</div></div>
-      </div>
+      <div class="ebook-trust">PDF: pago seguro con Stripe · Entrega digital automática &nbsp;|&nbsp; También disponible en Amazon (Kindle / tapa blanda)</div>
     </div>
   </div>
 </section>
 
 <!-- ═══════ PODCAST GAUGAMELA ═══════ -->
-<section id="sec-podcast" style="background:var(--dk);padding:5rem 2rem;display:none">
+<section id="sec-podcast" style="background:var(--dk);padding:5rem 2rem">
   <div style="max-width:1160px;margin:0 auto">
     <div class="podcast-header rv">
       <span class="sec-label">PODCAST · HISTORIA MILITAR</span>
@@ -610,6 +587,11 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 <!-- ═══════ SECCIÓN CONQUISTA DE PERSIA — GRID ═══════ -->
 <section id="sec-persia-grid" class="sec-thematic persia-bg">
   <div style="max-width:1160px;margin:0 auto">
+    <div class="thematic-video-banner rv">
+      <video autoplay muted loop playsinline><source src="assets/video/recorrido-alejandro.mp4" type="video/mp4"></video>
+      <div class="tvb-overlay"></div>
+      <div class="tvb-label">La Ruta de la Conquista de Persia</div>
+    </div>
     <div class="thematic-header rv">
       <span class="sec-label">HISTORIA · PERSIA · ALEJANDRO MAGNO</span>
       <h2>La Conquista de Persia</h2>
@@ -713,6 +695,11 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 <!-- ═══════ SECCIÓN IMPERIO ROMANO — GRID ═══════ -->
 <section id="sec-roma-grid" class="sec-thematic roma-bg">
   <div style="max-width:1160px;margin:0 auto">
+    <div class="thematic-video-banner rv">
+      <video autoplay muted loop playsinline><source src="assets/video/marcha-romana.mp4" type="video/mp4"></video>
+      <div class="tvb-overlay"></div>
+      <div class="tvb-label">La Marcha de las Legiones de Roma</div>
+    </div>
     <div class="thematic-header rv">
       <span class="sec-label">HISTORIA · ROMA · REPÚBLICA E IMPERIO</span>
       <h2>El Imperio Romano</h2>
@@ -774,7 +761,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         </div>
       </article>
       <article class="art-card rv" onclick="openArticle('art-coliseo')">
-        <div class="art-card-img" style="background-image:url('assets/img/roma/ingenieros-puente.jpg')"></div>
+        <div class="art-card-img" style="background-image:url('assets/img/torres.jpg')"></div>
         <div class="art-card-body">
           <span class="art-cat">ARQUITECTURA · ESPECTÁCULO</span>
           <h3>El Coliseo y los Gladiadores</h3>
@@ -801,7 +788,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         </div>
       </article>
       <article class="art-card rv" onclick="openArticle('art-crisis-siglo3')">
-        <div class="art-card-img" style="background-image:url('assets/img/roma/roma-tiber.jpg')"></div>
+        <div class="art-card-img" style="background-image:url('assets/img/asedios.jpg')"></div>
         <div class="art-card-body">
           <span class="art-cat">DECADENCIA · SIGLO III d.C.</span>
           <h3>La Crisis del Siglo III</h3>
@@ -809,6 +796,75 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="art-read">Leer artículo →</span>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ REVISTA DIGITAL GRATIS ═══════ -->
+<section id="sec-revista" style="background:var(--w);padding:5rem 2rem">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="thematic-header rv">
+      <span class="sec-label">REVISTA DIGITAL · MUESTRA GRATIS</span>
+      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Historika: Ecos del Mundo Antiguo</h2>
+      <p>Una revista de divulgación histórica estilo National Geographic: reportajes ilustrados, mapas y cronologías sobre las civilizaciones que forjaron el mundo. Hojéala gratis, sin registro.</p>
+    </div>
+    <div class="ebook-wrap rv">
+      <div class="ebook-cover">
+        <img class="ebook-cover-img" src="assets/img/roma-imperial.jpg" alt="Portada de la revista Historika: Ecos del Mundo Antiguo">
+        <span class="ebook-badge-new">Gratis</span>
+      </div>
+      <div class="ebook-info">
+        <span class="sec-label">LECTURA INMEDIATA · SIN REGISTRO</span>
+        <h2>Léela Gratis Ahora Mismo</h2>
+        <p class="ebook-desc">Reportajes fotográficos, cronologías y análisis histórico en un formato de revista interactiva. Ábrela en el lector digital y hojéala como una revista de papel.</p>
+        <div class="ebook-buybox">
+          <a class="ebook-buy-btn" href="https://online.fliphtml5.com/Historika/Historika_Ecos_del_Mundo_Antiguo/" target="_blank" rel="noopener">Leer la Revista Gratis →</a>
+        </div>
+        <div class="ebook-trust">¿Quieres más ediciones y contenido exclusivo? <a onclick="gotoSection('sec-comunidad')" style="color:var(--gd);cursor:pointer;text-decoration:underline">Únete a nuestro grupo privado →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ EXPLORA TODO EL CONTENIDO ═══════ -->
+<section id="sec-explora" style="background:var(--ow);padding:5rem 2rem">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="thematic-header rv">
+      <span class="sec-label">TODO EN UN SOLO LUGAR</span>
+      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Explora Todo Nuestro Contenido</h2>
+      <p>Artículos, podcast, revista, libro y comunidad — el universo completo de Memorias del Pasado en un mismo lugar.</p>
+    </div>
+    <div class="explora-grid">
+      <div class="explora-card rv" onclick="gotoSection('sec-roma-grid')">
+        <div class="explora-ico">🏛️</div>
+        <h4>Artículos de Roma</h4>
+        <p>Legiones, emperadores, Pompeya y el ocaso del Imperio</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-persia-grid')">
+        <div class="explora-ico">⚔️</div>
+        <h4>Persia y Alejandro Magno</h4>
+        <p>La conquista que cambió para siempre el mundo antiguo</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-podcast')">
+        <div class="explora-ico">🎙️</div>
+        <h4>Podcast: Gaugamela</h4>
+        <p>Tres episodios narrados con rigor histórico y cinematográfico</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-revista')">
+        <div class="explora-ico">📰</div>
+        <h4>Revista Digital</h4>
+        <p>Muestra gratis: Historika, Ecos del Mundo Antiguo</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-ebook')">
+        <div class="explora-ico">📖</div>
+        <h4>Libro: Teutoburgo</h4>
+        <p>PDF directo o en Amazon (Kindle / tapa blanda)</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-comunidad')">
+        <div class="explora-ico">👥</div>
+        <h4>Comunidad Privada</h4>
+        <p>Únete al Círculo de Historiadores</p>
+      </div>
     </div>
   </div>
 </section>
@@ -838,8 +894,19 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
     <div class="com-orn">✦ ✦ ✦</div>
     <h2 class="com-title">Únete al Círculo de Historiadores</h2>
     <p class="com-text">Un grupo exclusivo donde compartimos análisis profundos, contenido anticipado, debates sobre el mundo antiguo y material que no publicamos en ningún otro lugar. Miles de apasionados por la historia ya son parte.</p>
-    <a class="com-btn" href="https://web.facebook.com/share/g/1CwEpuhNyq/" target="_blank" rel="noopener">Unirme al Grupo Exclusivo →</a>
+    <a class="com-btn" href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">Unirme al Grupo Exclusivo →</a>
     <div class="com-note">Acceso gratuito · Comunidad en Facebook</div>
+  </div>
+</section>
+
+<!-- ═══════ APOYA NUESTRO TRABAJO ═══════ -->
+<section id="sec-apoyo" style="background:var(--dk);padding:5rem 2rem;text-align:center">
+  <div style="max-width:680px;margin:0 auto" class="rv">
+    <span class="sec-label" style="color:var(--gdl);border-color:var(--bdg)">APOYA NUESTRO TRABAJO</span>
+    <h2 style="font-family:'Cinzel Decorative',serif;color:var(--gdl);font-size:clamp(1.5rem,4vw,2.5rem);margin:1rem 0">Cada Relato Toma Horas de Investigación</h2>
+    <p style="font-family:'EB Garamond',serif;color:rgba(255,255,255,.82);font-size:1.1rem;line-height:1.75;margin-bottom:2rem">Memorias del Pasado es un proyecto independiente hecho con pasión por la historia. Si nuestros artículos, videos y el podcast te han hecho viajar dos mil años atrás, considera invitarnos un café — cada aporte nos ayuda a seguir investigando y produciendo contenido de calidad.</p>
+    <a class="hero-btn" style="display:inline-block" href="https://www.paypal.com/ncp/payment/JN2PTMJBDYHQY" target="_blank" rel="noopener">Donar con PayPal →</a>
+    <div class="com-note" style="margin-top:1rem">Cualquier monto ayuda · Pago seguro con PayPal</div>
   </div>
 </section>
 
@@ -883,15 +950,18 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <div class="ft-col">
         <h5>Explorar</h5>
         <a onclick="showHome()">Inicio</a>
-        <a onclick="gotoSection('sec-ebook')">📖 Comprar el Ebook</a>
-        <a onclick="gotoSection('sec-videos')">Historia en Movimiento</a>
+        <a onclick="gotoSection('sec-ebook')">📖 Comprar el Libro</a>
+        <a onclick="gotoSection('sec-revista')">📰 Revista Gratis</a>
+        <a onclick="gotoSection('sec-podcast')">🎙️ Podcast</a>
+        <a onclick="gotoSection('sec-explora')">Explora Todo el Contenido</a>
         <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
         <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
         <a onclick="gotoSection('sec-citas')">Citas Históricas</a>
+        <a onclick="gotoSection('sec-apoyo')">❤ Apoya Nuestro Trabajo</a>
       </div>
       <div class="ft-col">
         <h5>Comunidad</h5>
-        <a href="https://web.facebook.com/share/g/1CwEpuhNyq/" target="_blank" rel="noopener">✦ Grupo Exclusivo de Facebook</a>
+        <a href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">✦ Grupo Exclusivo de Facebook</a>
         <a href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener">Instagram · @histo_riaantigua</a>
         <a href="https://web.facebook.com/profile.php?id=100094547199409" target="_blank" rel="noopener">Facebook · Memorias del Pasado</a>
         <a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ" target="_blank" rel="noopener">YouTube · Memorias del Pasado</a>
@@ -3248,7 +3318,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 <script>
 // ── State ──
-var SECTIONS=['home-grid','sec-ebook','sec-videos','sec-podcast','sec-persia-grid','sec-roma-grid','sec-citas','sec-comunidad','sec-redes','footer'];
+var SECTIONS=['home-grid','sec-ebook','sec-podcast','sec-persia-grid','sec-roma-grid','sec-revista','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-redes','footer'];
 var ARTICLE_TITLES={
   'art-falange':'La Falange Macedonia',
   'art-dario':'Darío III y el Imperio Persa',
@@ -3295,7 +3365,7 @@ function showHome(){
 
 function openArticle(id){
   // Pause any playing gallery videos
-  document.querySelectorAll('#sec-videos video, .pod-player').forEach(function(v){ if(v.pause) v.pause(); });
+  document.querySelectorAll('.pod-player').forEach(function(v){ if(v.pause) v.pause(); });
   // Hide home sections
   SECTIONS.forEach(function(s){ var el=document.getElementById(s); if(el) el.style.display='none'; });
   document.getElementById('hero').style.display='none';
@@ -3357,7 +3427,7 @@ var revObs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
 },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
 // Observe home grid items on load
-document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-videos .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-redes .rv').forEach(function(el){
+document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-revista .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-redes .rv').forEach(function(el){
   revObs.observe(el);
 });
 </script>
