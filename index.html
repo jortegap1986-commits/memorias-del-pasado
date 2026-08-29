@@ -31,7 +31,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .hdr-title{font-family:'Cinzel Decorative',serif;font-size:.78rem;font-weight:700;color:var(--dk);display:block;letter-spacing:.08em}
 .hdr-sub{font-family:'Cinzel',serif;font-size:.46rem;letter-spacing:.22em;color:var(--st);text-transform:uppercase}
 .hdr-nav{display:flex;align-items:center;gap:.1rem;margin-left:auto}
-.hn{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);padding:.5rem .9rem;cursor:pointer;text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none}
+.hn{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--txm);padding:.6rem 1rem;cursor:pointer;text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;font-weight:600}
 .hn:hover{color:var(--gd);border-bottom-color:var(--gd)}
 .hn-drop{position:relative}
 .hn-menu{display:none;position:absolute;top:100%;left:0;background:var(--w);border:1px solid var(--bd);border-top:3px solid var(--gd);min-width:260px;box-shadow:0 6px 24px rgba(0,0,0,0.12);z-index:600}
@@ -46,7 +46,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .hero-slide.active{opacity:1}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.75) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.08) 100%);display:flex;align-items:center}
 .hero-content{max-width:620px;padding:0 5rem;color:#fff}
-.hero-cat{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.28em;color:var(--gdl);text-transform:uppercase;display:block;margin-bottom:1rem}
+.hero-cat{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.22em;color:var(--gdl);text-transform:uppercase;display:block;margin-bottom:1rem}
 .hero-h1{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.8vw,3rem);font-weight:700;line-height:1.18;margin-bottom:1rem;text-shadow:0 2px 16px rgba(0,0,0,.5)}
 .hero-excerpt{font-family:'EB Garamond',serif;font-size:1.1rem;line-height:1.65;color:rgba(255,255,255,.85);margin-bottom:1.8rem}
 .hero-btn{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 1.8rem;background:var(--gd);color:#fff;border:none;cursor:pointer;transition:background .2s}
@@ -60,7 +60,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 /* ── HOME GRID ── */
 #home-grid{max-width:1280px;margin:0 auto;padding:4rem 2rem}
-.sec-label{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gd);display:flex;align-items:center;gap:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--bdg);margin-bottom:2.5rem}
+.sec-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gd);display:flex;align-items:center;gap:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--bdg);margin-bottom:2.5rem}
 .sec-label::before{content:'✦';font-size:.9rem}
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:4rem}
 .art-card{cursor:pointer;background:var(--w);border:1px solid var(--bd);overflow:hidden;transition:transform .2s,box-shadow .2s}
@@ -215,6 +215,24 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .ebook-trust{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.12em;color:var(--txl);text-transform:uppercase;margin-top:1rem;text-align:center}
 .hn-cta{background:var(--gd)!important;color:#fff!important;padding:.5rem 1.1rem!important;margin-left:.4rem}
 .hn-cta:hover{background:var(--gdl)!important;color:#fff!important;border-bottom-color:transparent!important}
+
+/* ═══ SIDEBAR WIDGETS (donación / comunidad / podcast) — estilo publicidad, siempre visibles ═══ */
+.side-widgets{position:fixed;top:50%;transform:translateY(-50%);z-index:600;display:flex;flex-direction:column;gap:.6rem}
+.side-widgets.left{left:0}
+.side-widgets.right{right:0}
+.side-tab{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1rem .55rem;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:padding .2s,transform .2s;position:relative}
+.side-tab:hover{padding-right:.85rem;padding-left:.85rem;transform:scale(1.03)}
+.side-widgets.left .side-tab{border-radius:0 10px 10px 0}
+.side-widgets.right .side-tab{border-radius:10px 0 0 10px}
+.side-tab-donar{background:linear-gradient(180deg,var(--gd),var(--gdl));color:var(--dk)}
+.side-tab-comunidad{background:var(--dk);color:var(--gdp);border:1px solid var(--bdg)}
+.side-tab-podcast{background:var(--ow);color:var(--dk);border:1px solid var(--bdg)}
+.side-tab-ico{font-size:1.3rem;line-height:1}
+.side-tab-txt{writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+.side-tab-close{position:absolute;top:-8px;right:-8px;width:20px;height:20px;border-radius:50%;background:var(--dk);color:#fff;font-size:.65rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.side-widgets.left .side-tab-close{right:-8px}
+@media(max-width:1300px){.side-widgets{display:none}}
+
 @media(max-width:900px){.ebook-wrap{grid-template-columns:1fr;gap:2.2rem}.ebook-cover{max-width:240px;margin:0 auto}.ebook-features{grid-template-columns:1fr}}
 /* ── HERO VIDEO ── */
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -257,6 +275,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .sec-thematic{padding:5rem 2rem}
 .sec-thematic.persia-bg{background:var(--ow)}
 .sec-thematic.roma-bg{background:var(--cr)}
+.sec-thematic.pompeya-bg{background:var(--ow)}
 .thematic-header{text-align:center;margin-bottom:3rem}
 .thematic-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
 .thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
@@ -334,6 +353,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <a onclick="gotoSection('sec-podcast')">Podcast Gaugamela</a>
         <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
           <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
+        <a onclick="gotoSection('sec-pompeya')">Pompeya</a>
           <a onclick="openArticle('art-legiones')">Las Legiones de Roma</a>
           <a onclick="openArticle('art-pompeya1')">Pompeya: El Último Día</a>
           <a onclick="openArticle('art-pompeya2')">Pompeya: Arte y Vida</a>
@@ -342,10 +362,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         </div>
       </div>
       <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
-      <button class="hn" onclick="gotoSection('sec-podcast')">Podcast</button>
-      <button class="hn" onclick="gotoSection('sec-persia-grid')">Persia</button>
+      <button class="hn" onclick="gotoSection('sec-podcast')">🎙️ Podcast</button>
       <button class="hn" onclick="gotoSection('sec-revista')">Revista</button>
-      <button class="hn" onclick="gotoSection('sec-roma-grid')">Imperio Romano</button>
       <button class="hn" onclick="gotoSection('sec-comunidad')">Comunidad</button>
       <button class="hn hn-cta" onclick="gotoSection('sec-ebook')">📖 Comprar Libro</button>
     </nav>
@@ -800,6 +818,43 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
   </div>
 </section>
 
+<!-- ═══════ SECCIÓN POMPEYA — GRID ═══════ -->
+<section id="sec-pompeya" class="sec-thematic pompeya-bg">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="thematic-video-banner rv">
+      <video autoplay muted loop playsinline><source src="assets/video/pompeya-villa.mp4" type="video/mp4"></video>
+      <div class="tvb-overlay"></div>
+      <div class="tvb-label">Recorrido por Pompeya: la Ciudad que el Tiempo Congeló</div>
+    </div>
+    <div class="thematic-header rv">
+      <span class="sec-label">HISTORIA · POMPEYA · CATÁSTROFE Y VIDA COTIDIANA</span>
+      <h2>Pompeya</h2>
+      <p>El 24 de agosto del 79 dC el Vesubio despertó y congeló una ciudad entera bajo cenizas. Hoy sus calles, frescos y pan carbonizado nos regalan el retrato más vivo del mundo romano.</p>
+    </div>
+    <div class="art-grid">
+      <article class="art-card rv" onclick="openArticle('art-pompeya1')">
+        <div class="art-card-img" style="background-image:url('assets/img/pompeya1.jpg')"></div>
+        <div class="art-card-body">
+          <span class="art-cat">ROMA · CATÁSTROFE · 79 dC</span>
+          <h3>Pompeya: El Último Día de una Ciudad Eterna</h3>
+          <p>En doce horas, una ciudad de 20,000 almas quedó congelada para siempre bajo cuatro metros de ceniza. La crónica hora a hora del día en que el Vesubio borró Pompeya del mapa.</p>
+          <span class="art-read">Leer artículo →</span>
+        </div>
+      </article>
+      <article class="art-card rv" onclick="openArticle('art-pompeya2')">
+        <div class="art-card-img" style="background-image:url('assets/img/pompeya3.jpg')"></div>
+        <div class="art-card-body">
+          <span class="art-cat">ROMA · ARTE · VIDA COTIDIANA</span>
+          <h3>Pompeya: Arte, Vida y Revelaciones Eternas</h3>
+          <p>Los frescos, el grafiti, el pan carbonizado. Pompeya no es solo una tragedia — es el retrato más vivo y completo de cómo vivían los romanos.</p>
+          <span class="art-read">Leer artículo →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══════ REVISTA DIGITAL GRATIS ═══════ -->
 <section id="sec-revista" style="background:var(--w);padding:5rem 2rem">
   <div style="max-width:1160px;margin:0 auto">
@@ -844,6 +899,11 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <div class="explora-ico">⚔️</div>
         <h4>Persia y Alejandro Magno</h4>
         <p>La conquista que cambió para siempre el mundo antiguo</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-pompeya')">
+        <div class="explora-ico">🌋</div>
+        <h4>Pompeya</h4>
+        <p>Recorrido por la ciudad que el Vesubio congeló en el tiempo</p>
       </div>
       <div class="explora-card rv" onclick="gotoSection('sec-podcast')">
         <div class="explora-ico">🎙️</div>
@@ -956,6 +1016,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <a onclick="gotoSection('sec-explora')">Explora Todo el Contenido</a>
         <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
         <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
+        <a onclick="gotoSection('sec-pompeya')">Pompeya</a>
         <a onclick="gotoSection('sec-citas')">Citas Históricas</a>
         <a onclick="gotoSection('sec-apoyo')">❤ Apoya Nuestro Trabajo</a>
       </div>
@@ -3318,7 +3379,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 <script>
 // ── State ──
-var SECTIONS=['home-grid','sec-ebook','sec-podcast','sec-persia-grid','sec-roma-grid','sec-revista','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-redes','footer'];
+var SECTIONS=['home-grid','sec-ebook','sec-podcast','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-revista','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-redes','footer'];
 var ARTICLE_TITLES={
   'art-falange':'La Falange Macedonia',
   'art-dario':'Darío III y el Imperio Persa',
@@ -3427,9 +3488,31 @@ var revObs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
 },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
 // Observe home grid items on load
-document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-revista .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-redes .rv').forEach(function(el){
+document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-revista .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-redes .rv').forEach(function(el){
   revObs.observe(el);
 });
 </script>
+
+<!-- ═══ WIDGETS LATERALES FIJOS (donación · comunidad · podcast) ═══ -->
+<div class="side-widgets left" id="side-left">
+  <div class="side-tab side-tab-comunidad" onclick="gotoSection('sec-comunidad')" title="Únete a la comunidad privada">
+    <span class="side-tab-close" onclick="event.stopPropagation();document.getElementById('side-left').style.display='none'">✕</span>
+    <span class="side-tab-ico">👥</span>
+    <span class="side-tab-txt">Comunidad Privada</span>
+  </div>
+</div>
+<div class="side-widgets right" id="side-right">
+  <div class="side-tab side-tab-donar" onclick="gotoSection('sec-apoyo')" title="Apoya nuestro trabajo">
+    <span class="side-tab-close" onclick="event.stopPropagation();this.parentElement.remove()">✕</span>
+    <span class="side-tab-ico">❤</span>
+    <span class="side-tab-txt">Apoya Nuestro Trabajo</span>
+  </div>
+  <div class="side-tab side-tab-podcast" onclick="gotoSection('sec-podcast')" title="Escuchar el podcast">
+    <span class="side-tab-close" onclick="event.stopPropagation();this.parentElement.remove()">✕</span>
+    <span class="side-tab-ico">🎙️</span>
+    <span class="side-tab-txt">Escucha el Podcast</span>
+  </div>
+</div>
+
 </body>
 </html>
