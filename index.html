@@ -193,6 +193,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .pod-title{font-family:'Cinzel',serif;color:var(--w);font-size:.95rem;margin-bottom:.8rem;line-height:1.3}
 .pod-desc{font-family:'EB Garamond',serif;color:var(--stl);font-size:.9rem;line-height:1.5;margin-bottom:1rem}
 .pod-player{width:100%;accent-color:var(--gd);margin-top:.5rem}
+.pod-soon{font-family:'EB Garamond',serif;font-size:.85rem;color:var(--gdl);margin-top:.7rem;font-style:italic}
 /* ── EBOOK / TIENDA ── */
 #sec-ebook{background:linear-gradient(135deg,var(--ow) 0%,var(--cr) 100%);padding:5.5rem 2rem;position:relative;overflow:hidden;border-top:1px solid var(--bdg);border-bottom:1px solid var(--bdg)}
 .ebook-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:4rem;align-items:center}
@@ -216,22 +217,19 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .hn-cta{background:var(--gd)!important;color:#fff!important;padding:.5rem 1.1rem!important;margin-left:.4rem}
 .hn-cta:hover{background:var(--gdl)!important;color:#fff!important;border-bottom-color:transparent!important}
 
-/* ═══ SIDEBAR WIDGETS (donación / comunidad / podcast) — estilo publicidad, siempre visibles ═══ */
-.side-widgets{position:fixed;top:50%;transform:translateY(-50%);z-index:600;display:flex;flex-direction:column;gap:.6rem}
-.side-widgets.left{left:0}
-.side-widgets.right{right:0}
-.side-tab{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1rem .55rem;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:padding .2s,transform .2s;position:relative}
-.side-tab:hover{padding-right:.85rem;padding-left:.85rem;transform:scale(1.03)}
-.side-widgets.left .side-tab{border-radius:0 10px 10px 0}
-.side-widgets.right .side-tab{border-radius:10px 0 0 10px}
-.side-tab-donar{background:linear-gradient(180deg,var(--gd),var(--gdl));color:var(--dk)}
-.side-tab-comunidad{background:var(--dk);color:var(--gdp);border:1px solid var(--bdg)}
-.side-tab-podcast{background:var(--ow);color:var(--dk);border:1px solid var(--bdg)}
-.side-tab-ico{font-size:1.3rem;line-height:1}
-.side-tab-txt{writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;white-space:nowrap}
-.side-tab-close{position:absolute;top:-8px;right:-8px;width:20px;height:20px;border-radius:50%;background:var(--dk);color:#fff;font-size:.65rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.3)}
-.side-widgets.left .side-tab-close{right:-8px}
-@media(max-width:1300px){.side-widgets{display:none}}
+/* ═══ BOTONES FLOTANTES (donación · comunidad · podcast) ═══ */
+.fab-group{position:fixed;bottom:1.6rem;z-index:600;display:flex;flex-direction:column;gap:.85rem}
+.fab-group.right{right:1.6rem;align-items:flex-end}
+.fab-group.left{left:1.6rem;align-items:flex-start}
+.fab{display:flex;align-items:center;height:52px;border-radius:26px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.22);transition:box-shadow .25s,transform .25s;overflow:hidden;text-decoration:none}
+.fab:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.fab-ico{width:52px;min-width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:1.35rem}
+.fab-label{max-width:0;opacity:0;white-space:nowrap;overflow:hidden;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.06em;font-weight:700;transition:max-width .35s ease,opacity .25s ease,padding .35s ease}
+.fab:hover .fab-label{max-width:220px;opacity:1;padding-right:1.1rem}
+.fab-donar{background:linear-gradient(135deg,var(--gd),var(--gdl));color:var(--dk)}
+.fab-comunidad{background:var(--dk);color:var(--gdp)}
+.fab-podcast{background:var(--w);color:var(--dk);border:1px solid var(--bdg)}
+@media(max-width:640px){.fab-group{display:none}}
 
 @media(max-width:900px){.ebook-wrap{grid-template-columns:1fr;gap:2.2rem}.ebook-cover{max-width:240px;margin:0 auto}.ebook-features{grid-template-columns:1fr}}
 /* ── HERO VIDEO ── */
@@ -276,6 +274,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .sec-thematic.persia-bg{background:var(--ow)}
 .sec-thematic.roma-bg{background:var(--cr)}
 .sec-thematic.pompeya-bg{background:var(--ow)}
+.pompeya-clips{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:640px;margin:2.5rem auto 0}
+.pompeya-clip{border-radius:6px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.18);aspect-ratio:9/16}
+.pompeya-clip video{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:600px){.pompeya-clips{grid-template-columns:1fr;max-width:280px}}
 .thematic-header{text-align:center;margin-bottom:3rem}
 .thematic-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
 .thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
@@ -566,36 +568,30 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
     </div>
     <div class="podcast-grid">
       <div class="pod-card rv" onclick="openArticle('art-podcast-ep1')" style="cursor:pointer">
-        <img class="pod-img" src="assets/img/persia/podcast1.jpg" alt="Episodio 1 Gaugamela" loading="lazy">
+        <video class="pod-img" autoplay muted loop playsinline><source src="assets/video/restauracion1.mp4" type="video/mp4"></video>
         <div class="pod-body">
           <div class="pod-ep">EPISODIO 1</div>
           <div class="pod-title">El Imperio que Gobernó el Mundo</div>
           <p class="pod-desc">La historia del Imperio Aqueménida, su apogeo bajo Darío I y Jerjes, y el ascenso de Alejandro Magno como el mayor desafío que Persia jamás enfrentó.</p>
-          <audio class="pod-player" controls preload="none">
-            <source src="assets/audio/gaugamela-ep1.mp3" type="audio/mpeg">
-          </audio>
+          <div class="pod-soon">🎧 Audio narrado — próximamente &nbsp;·&nbsp; <span style="text-decoration:underline">Leer el episodio →</span></div>
         </div>
       </div>
       <div class="pod-card rv" onclick="openArticle('art-podcast-ep2')" style="cursor:pointer">
-        <img class="pod-img" src="assets/img/persia/gaugamela-podcast.jpg" alt="Episodio 2 Gaugamela" loading="lazy">
+        <video class="pod-img" autoplay muted loop playsinline><source src="assets/video/restauracion2.mp4" type="video/mp4"></video>
         <div class="pod-body">
           <div class="pod-ep">EPISODIO 2</div>
           <div class="pod-title">El Choque de los Titanes</div>
           <p class="pod-desc">Las batallas del Gránico e Issos, la caída de la familia real persa en manos de Alejandro, y los dos años que Darío III usó para preparar su venganza definitiva.</p>
-          <audio class="pod-player" controls preload="none">
-            <source src="assets/audio/gaugamela-ep2.mp3" type="audio/mpeg">
-          </audio>
+          <div class="pod-soon">🎧 Audio narrado — próximamente &nbsp;·&nbsp; <span style="text-decoration:underline">Leer el episodio →</span></div>
         </div>
       </div>
       <div class="pod-card rv" onclick="openArticle('art-podcast-ep3')" style="cursor:pointer">
-        <img class="pod-img" src="assets/img/persia/podcast3.jpg" alt="Episodio 3 Gaugamela" loading="lazy">
+        <video class="pod-img" autoplay muted loop playsinline><source src="assets/video/catedral-gotica.mp4" type="video/mp4"></video>
         <div class="pod-body">
           <div class="pod-ep">EPISODIO 3</div>
           <div class="pod-title">La Llanura de Gaugamela</div>
           <p class="pod-desc">El día que cambió el mundo: 1 de octubre del 331 a.C. El análisis táctico de la batalla, la huida de Darío y el colapso definitivo del Imperio Persa.</p>
-          <audio class="pod-player" controls preload="none">
-            <source src="assets/audio/gaugamela-ep3.mp3" type="audio/mpeg">
-          </audio>
+          <div class="pod-soon">🎧 Audio narrado — próximamente &nbsp;·&nbsp; <span style="text-decoration:underline">Leer el episodio →</span></div>
         </div>
       </div>
     </div>
@@ -851,6 +847,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         </div>
       </article>
     </div>
+    <div class="pompeya-clips rv">
+      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip1.mp4" type="video/mp4"></video></div>
+      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip2.mp4" type="video/mp4"></video></div>
+    </div>
   </div>
 </section>
 
@@ -865,7 +865,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
     </div>
     <div class="ebook-wrap rv">
       <div class="ebook-cover">
-        <img class="ebook-cover-img" src="assets/img/roma-imperial.jpg" alt="Portada de la revista Historika: Ecos del Mundo Antiguo">
+        <video class="ebook-cover-img" autoplay muted loop playsinline><source src="assets/video/promo-revista.mp4" type="video/mp4"></video>
         <span class="ebook-badge-new">Gratis</span>
       </div>
       <div class="ebook-info">
@@ -3493,24 +3493,18 @@ document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #se
 });
 </script>
 
-<!-- ═══ WIDGETS LATERALES FIJOS (donación · comunidad · podcast) ═══ -->
-<div class="side-widgets left" id="side-left">
-  <div class="side-tab side-tab-comunidad" onclick="gotoSection('sec-comunidad')" title="Únete a la comunidad privada">
-    <span class="side-tab-close" onclick="event.stopPropagation();document.getElementById('side-left').style.display='none'">✕</span>
-    <span class="side-tab-ico">👥</span>
-    <span class="side-tab-txt">Comunidad Privada</span>
+<!-- ═══ BOTONES FLOTANTES (donación · comunidad · podcast) ═══ -->
+<div class="fab-group right">
+  <div class="fab fab-donar" onclick="gotoSection('sec-apoyo')" title="Apoya nuestro trabajo">
+    <span class="fab-ico">❤</span><span class="fab-label">Apoya Nuestro Trabajo</span>
+  </div>
+  <div class="fab fab-podcast" onclick="gotoSection('sec-podcast')" title="Escuchar el podcast">
+    <span class="fab-ico">🎙️</span><span class="fab-label">Escucha el Podcast</span>
   </div>
 </div>
-<div class="side-widgets right" id="side-right">
-  <div class="side-tab side-tab-donar" onclick="gotoSection('sec-apoyo')" title="Apoya nuestro trabajo">
-    <span class="side-tab-close" onclick="event.stopPropagation();this.parentElement.remove()">✕</span>
-    <span class="side-tab-ico">❤</span>
-    <span class="side-tab-txt">Apoya Nuestro Trabajo</span>
-  </div>
-  <div class="side-tab side-tab-podcast" onclick="gotoSection('sec-podcast')" title="Escuchar el podcast">
-    <span class="side-tab-close" onclick="event.stopPropagation();this.parentElement.remove()">✕</span>
-    <span class="side-tab-ico">🎙️</span>
-    <span class="side-tab-txt">Escucha el Podcast</span>
+<div class="fab-group left">
+  <div class="fab fab-comunidad" onclick="gotoSection('sec-comunidad')" title="Únete a la comunidad privada">
+    <span class="fab-ico">👥</span><span class="fab-label">Comunidad Privada</span>
   </div>
 </div>
 
