@@ -231,6 +231,30 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .fab-podcast{background:var(--w);color:var(--dk);border:1px solid var(--bdg)}
 @media(max-width:640px){.fab-group{display:none}}
 
+/* ═══ ANIMACIÓN CORONA DE LAUREL + CORAZÓN — SECCIÓN APOYA ═══ */
+.apoyo-anim{position:relative;width:180px;height:180px;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center}
+.apoyo-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,50,.45) 0%,rgba(212,168,50,.12) 45%,transparent 72%);animation:apoyoGlowPulse 3.2s ease-in-out infinite}
+.apoyo-wreath{position:relative;width:170px;height:170px;overflow:visible}
+.apoyo-leaf{fill:var(--gdl);transform-box:fill-box;transform-origin:0% 100%;animation:apoyoLeafSway 4.5s ease-in-out infinite}
+.apoyo-heart{fill:var(--gd);filter:drop-shadow(0 0 6px rgba(212,168,50,.65));transform-box:fill-box;transform-origin:50% 50%;animation:apoyoHeartBeat 1.8s ease-in-out infinite}
+.apoyo-spark{position:absolute;top:50%;left:50%;width:5px;height:5px;border-radius:50%;background:var(--gdp);box-shadow:0 0 6px 1px rgba(240,221,160,.9);opacity:0}
+.apoyo-spark.s1{animation:apoyoOrbit 5.5s linear infinite}
+.apoyo-spark.s2{animation:apoyoOrbit 5.5s linear infinite;animation-delay:-1.8s}
+.apoyo-spark.s3{animation:apoyoOrbit 5.5s linear infinite;animation-delay:-3.6s}
+@keyframes apoyoGlowPulse{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.12);opacity:1}}
+@keyframes apoyoHeartBeat{0%,100%{transform:scale(1)}25%{transform:scale(1.14)}40%{transform:scale(1)}60%{transform:scale(1.08)}}
+@keyframes apoyoLeafSway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(3deg)}}
+@keyframes apoyoOrbit{
+  0%{transform:translate(-50%,-50%) rotate(0deg) translateX(78px) rotate(0deg);opacity:0}
+  8%{opacity:1}
+  50%{transform:translate(-50%,-50%) rotate(180deg) translateX(78px) rotate(-180deg);opacity:.9}
+  92%{opacity:1}
+  100%{transform:translate(-50%,-50%) rotate(360deg) translateX(78px) rotate(-360deg);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){.apoyo-glow,.apoyo-heart,.apoyo-leaf,.apoyo-spark{animation:none!important}}
+
+
+
 @media(max-width:900px){.ebook-wrap{grid-template-columns:1fr;gap:2.2rem}.ebook-cover{max-width:240px;margin:0 auto}.ebook-features{grid-template-columns:1fr}}
 /* ── HERO VIDEO ── */
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -980,6 +1004,27 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 <!-- ═══════ APOYA NUESTRO TRABAJO ═══════ -->
 <section id="sec-apoyo" style="background:var(--dk);padding:5rem 2rem;text-align:center">
   <div style="max-width:680px;margin:0 auto" class="rv">
+    <div class="apoyo-anim" aria-hidden="true">
+      <div class="apoyo-glow"></div>
+      <span class="apoyo-spark s1"></span>
+      <span class="apoyo-spark s2"></span>
+      <span class="apoyo-spark s3"></span>
+      <svg class="apoyo-wreath" viewBox="0 0 200 200">
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-20) translate(0,-20)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-33) translate(0,-31)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-46) translate(0,-42)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-59) translate(0,-53)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-72) translate(0,-64)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-85) translate(0,-75)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(20) translate(0,-20) scale(-1,1)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(33) translate(0,-31) scale(-1,1)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(46) translate(0,-42) scale(-1,1)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(59) translate(0,-53) scale(-1,1)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(72) translate(0,-64) scale(-1,1)"/>
+        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(85) translate(0,-75) scale(-1,1)"/>
+        <path class="apoyo-heart" d="M100 128 C 78 108, 58 92, 58 72 C 58 58, 70 48, 84 48 C 92 48, 98 52, 100 58 C 102 52, 108 48, 116 48 C 130 48, 142 58, 142 72 C 142 92, 122 108, 100 128 Z"/>
+      </svg>
+    </div>
     <span class="sec-label" style="color:var(--gdl);border-color:var(--bdg)">APOYA NUESTRO TRABAJO</span>
     <h2 style="font-family:'Cinzel Decorative',serif;color:var(--gdl);font-size:clamp(1.5rem,4vw,2.5rem);margin:1rem 0">Cada Relato Toma Horas de Investigación</h2>
     <p style="font-family:'EB Garamond',serif;color:rgba(255,255,255,.82);font-size:1.1rem;line-height:1.75;margin-bottom:2rem">Memorias del Pasado es un proyecto independiente hecho con pasión por la historia. Si nuestros artículos, videos y el podcast te han hecho viajar dos mil años atrás, considera invitarnos un café — cada aporte nos ayuda a seguir investigando y produciendo contenido de calidad.</p>
