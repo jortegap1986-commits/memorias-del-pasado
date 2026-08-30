@@ -274,10 +274,11 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .sec-thematic.persia-bg{background:var(--ow)}
 .sec-thematic.roma-bg{background:var(--cr)}
 .sec-thematic.pompeya-bg{background:var(--ow)}
-.pompeya-clips{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:640px;margin:2.5rem auto 0}
+.pompeya-clips{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;max-width:900px;margin:2.5rem auto 0}
 .pompeya-clip{border-radius:6px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.18);aspect-ratio:9/16}
 .pompeya-clip video{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:600px){.pompeya-clips{grid-template-columns:1fr;max-width:280px}}
+@media(max-width:900px){.pompeya-clips{grid-template-columns:repeat(2,1fr);max-width:460px}}
+@media(max-width:480px){.pompeya-clips{grid-template-columns:1fr;max-width:240px}}
 .thematic-header{text-align:center;margin-bottom:3rem}
 .thematic-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
 .thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
@@ -361,6 +362,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <a onclick="openArticle('art-pompeya2')">Pompeya: Arte y Vida</a>
           <a onclick="openArticle('art-teutoburgo')">La Batalla de Teutoburgo</a>
           <a onclick="openArticle('art-maquinaria')">Maquinaria de Guerra Romana</a>
+          <a onclick="openArticle('art-catedral-gotica')">Catedrales Góticas</a>
         </div>
       </div>
       <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
@@ -388,7 +390,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       </div>
     </div>
   </div>
-  <div class="hero-slide" style="background-image:url('assets/img/falange.jpg')">
+  <div class="hero-slide">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/falange.jpg"><source src="assets/video/falange-video.mp4" type="video/mp4"></video>
     <div class="hero-overlay">
       <div class="hero-content">
         <span class="hero-cat">TÁCTICA MILITAR · GRECIA CLÁSICA</span>
@@ -398,7 +401,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       </div>
     </div>
   </div>
-  <div class="hero-slide" style="background-image:url('assets/img/pompeya1.jpg')">
+  <div class="hero-slide">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/pompeya1.jpg"><source src="assets/video/pompeya-erupcion.mp4" type="video/mp4"></video>
     <div class="hero-overlay">
       <div class="hero-content">
         <span class="hero-cat">ROMA · CATÁSTROFE · 79 dC</span>
@@ -408,7 +412,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       </div>
     </div>
   </div>
-  <div class="hero-slide" style="background-image:url('assets/img/teutoburgo.jpg')">
+  <div class="hero-slide">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/teutoburgo.jpg"><source src="assets/video/teutoburgo.mp4" type="video/mp4"></video>
     <div class="hero-overlay">
       <div class="hero-content">
         <span class="hero-cat">ROMA · GERMANIA · EMBOSCADA</span>
@@ -418,7 +423,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       </div>
     </div>
   </div>
-  <div class="hero-slide" style="background-image:url('assets/img/teutoburgo2.jpg')">
+  <div class="hero-slide">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/teutoburgo2.jpg"><source src="assets/video/asedio-video.mp4" type="video/mp4"></video>
     <div class="hero-overlay">
       <div class="hero-content">
         <span class="hero-cat">NUEVO · EBOOK DIGITAL EN PDF</span>
@@ -531,7 +537,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 <section id="sec-ebook">
   <div class="ebook-wrap">
     <div class="ebook-cover rv">
-      <img class="ebook-cover-img" src="assets/img/teutoburgo2.jpg" alt="Portada del libro Teutoburgo: La Emboscada que Detuvo a Roma">
+      <img class="ebook-cover-img" src="assets/img/teutoburgo-portada-real.jpg" alt="Portada del libro Teutoburgo: La Emboscada que Detuvo a Roma">
       <span class="ebook-badge-new">Nuevo · Digital</span>
     </div>
     <div class="ebook-info rv">
@@ -550,10 +556,9 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="now">$4.990</span>
           <span class="cur">CLP</span>
         </div>
-        <a class="ebook-buy-btn" href="https://buy.stripe.com/REEMPLAZAR_CON_TU_LINK" target="_blank" rel="noopener">PDF Directo →</a>
-        <a class="ebook-buy-btn" style="background:var(--dk)" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
+        <a class="ebook-buy-btn" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
       </div>
-      <div class="ebook-trust">PDF: pago seguro con Stripe · Entrega digital automática &nbsp;|&nbsp; También disponible en Amazon (Kindle / tapa blanda)</div>
+      <div class="ebook-trust">Disponible en Amazon · Kindle y tapa blanda · Envío y pago seguro con Amazon</div>
     </div>
   </div>
 </section>
@@ -568,30 +573,36 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
     </div>
     <div class="podcast-grid">
       <div class="pod-card rv" onclick="openArticle('art-podcast-ep1')" style="cursor:pointer">
-        <video class="pod-img" autoplay muted loop playsinline><source src="assets/video/restauracion1.mp4" type="video/mp4"></video>
+        <img class="pod-img" src="assets/img/persia/podcast1.jpg" alt="Episodio 1 Gaugamela" loading="lazy">
         <div class="pod-body">
           <div class="pod-ep">EPISODIO 1</div>
           <div class="pod-title">El Imperio que Gobernó el Mundo</div>
           <p class="pod-desc">La historia del Imperio Aqueménida, su apogeo bajo Darío I y Jerjes, y el ascenso de Alejandro Magno como el mayor desafío que Persia jamás enfrentó.</p>
-          <div class="pod-soon">🎧 Audio narrado — próximamente &nbsp;·&nbsp; <span style="text-decoration:underline">Leer el episodio →</span></div>
+          <audio class="pod-player" controls preload="none" onclick="event.stopPropagation()">
+            <source src="assets/audio/gaugamela-ep1.mp3" type="audio/mpeg">
+          </audio>
         </div>
       </div>
       <div class="pod-card rv" onclick="openArticle('art-podcast-ep2')" style="cursor:pointer">
-        <video class="pod-img" autoplay muted loop playsinline><source src="assets/video/restauracion2.mp4" type="video/mp4"></video>
+        <img class="pod-img" src="assets/img/persia/gaugamela-podcast.jpg" alt="Episodio 2 Gaugamela" loading="lazy">
         <div class="pod-body">
           <div class="pod-ep">EPISODIO 2</div>
           <div class="pod-title">El Choque de los Titanes</div>
           <p class="pod-desc">Las batallas del Gránico e Issos, la caída de la familia real persa en manos de Alejandro, y los dos años que Darío III usó para preparar su venganza definitiva.</p>
-          <div class="pod-soon">🎧 Audio narrado — próximamente &nbsp;·&nbsp; <span style="text-decoration:underline">Leer el episodio →</span></div>
+          <audio class="pod-player" controls preload="none" onclick="event.stopPropagation()">
+            <source src="assets/audio/gaugamela-ep2.mp3" type="audio/mpeg">
+          </audio>
         </div>
       </div>
       <div class="pod-card rv" onclick="openArticle('art-podcast-ep3')" style="cursor:pointer">
-        <video class="pod-img" autoplay muted loop playsinline><source src="assets/video/catedral-gotica.mp4" type="video/mp4"></video>
+        <img class="pod-img" src="assets/img/persia/podcast3.jpg" alt="Episodio 3 Gaugamela" loading="lazy">
         <div class="pod-body">
           <div class="pod-ep">EPISODIO 3</div>
           <div class="pod-title">La Llanura de Gaugamela</div>
           <p class="pod-desc">El día que cambió el mundo: 1 de octubre del 331 a.C. El análisis táctico de la batalla, la huida de Darío y el colapso definitivo del Imperio Persa.</p>
-          <div class="pod-soon">🎧 Audio narrado — próximamente &nbsp;·&nbsp; <span style="text-decoration:underline">Leer el episodio →</span></div>
+          <audio class="pod-player" controls preload="none" onclick="event.stopPropagation()">
+            <source src="assets/audio/gaugamela-ep3.mp3" type="audio/mpeg">
+          </audio>
         </div>
       </div>
     </div>
@@ -850,6 +861,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
     <div class="pompeya-clips rv">
       <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip1.mp4" type="video/mp4"></video></div>
       <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip2.mp4" type="video/mp4"></video></div>
+      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/restauracion1.mp4" type="video/mp4"></video></div>
+      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/restauracion2.mp4" type="video/mp4"></video></div>
     </div>
   </div>
 </section>
@@ -905,6 +918,11 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <h4>Pompeya</h4>
         <p>Recorrido por la ciudad que el Vesubio congeló en el tiempo</p>
       </div>
+      <div class="explora-card rv" onclick="openArticle('art-catedral-gotica')">
+        <div class="explora-ico">⛪</div>
+        <h4>Catedrales Góticas</h4>
+        <p>La arquitectura medieval que aprendió a construir con luz</p>
+      </div>
       <div class="explora-card rv" onclick="gotoSection('sec-podcast')">
         <div class="explora-ico">🎙️</div>
         <h4>Podcast: Gaugamela</h4>
@@ -918,7 +936,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <div class="explora-card rv" onclick="gotoSection('sec-ebook')">
         <div class="explora-ico">📖</div>
         <h4>Libro: Teutoburgo</h4>
-        <p>PDF directo o en Amazon (Kindle / tapa blanda)</p>
+        <p>Disponible en Amazon: Kindle o tapa blanda</p>
       </div>
       <div class="explora-card rv" onclick="gotoSection('sec-comunidad')">
         <div class="explora-ico">👥</div>
@@ -3375,6 +3393,55 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
   <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-gaugamela')">Artículo: Gaugamela en profundidad →</button></div>
 </div>
 
+<!-- ═══════ EDAD MEDIA: CATEDRALES GÓTICAS ═══════ -->
+<div id="art-catedral-gotica" class="art-section">
+  <div class="art-hero" style="position:relative">
+    <video class="hero-video" autoplay muted loop playsinline><source src="assets/video/catedral-gotica.mp4" type="video/mp4"></video>
+    <div class="art-hero-ov"><div class="art-hero-ct">
+      <span class="art-badge">EDAD MEDIA · ARQUITECTURA · FE</span>
+      <h1 class="art-h1">Catedrales Góticas: La Arquitectura que Tocó el Cielo</h1>
+    </div></div>
+  </div>
+  <div class="art-wrap">
+    <div class="art-body">
+      <p>A mediados del siglo XII, en la pequeña abadía de Saint-Denis, cerca de París, el abad Suger emprendió una reforma que cambiaría para siempre la arquitectura occidental. Buscaba que la luz entrara a raudales en la iglesia, que los muros se disolvieran en vidrio de colores y que el edificio entero pareciera elevarse hacia el cielo. Lo que comenzó como una idea teológica se convirtió en una revolución técnica que dio origen al estilo gótico.</p>
+
+      <h2 id="la-innovacion-tecnica">La Innovación Técnica: la Bóveda de Crucería y el Arbotante</h2>
+      <p>El gótico resolvió un problema que había limitado a la arquitectura románica durante siglos: cómo construir muros altos y ligeros sin que el peso de la piedra los hiciera colapsar. La solución fue doble. Primero, la bóveda de crucería, que concentraba el peso del techo en puntos concretos —los nervios— en lugar de distribuirlo uniformemente sobre todo el muro. Segundo, el arbotante: un contrafuerte exterior en forma de arco que transmitía el empuje lateral de la bóveda hacia el suelo, lejos del muro principal.</p>
+      <p>Esta combinación liberó a los muros de su función estructural. Ya no tenían que ser gruesos y macizos: podían adelgazarse, abrirse en enormes ventanales y llenarse de vidrieras. El resultado fue un tipo de edificio que la arquitectura anterior jamás había podido concebir: catedrales de más de cuarenta metros de altura interior, con muros que parecían más luz que piedra.</p>
+
+      <h2 id="la-carrera-hacia-el-cielo">La Carrera Hacia el Cielo</h2>
+      <p>Entre los siglos XII y XIV, las ciudades catedralicias del norte de Francia compitieron abiertamente por construir la nave más alta jamás vista. Notre-Dame de París alcanzó unos treinta y tres metros. Chartres y Reims la superaron. Amiens llegó a cuarenta y dos metros. La competencia culminó —y se estrelló— en la catedral de Beauvais, cuyo coro, terminado en 1272 con casi cuarenta y ocho metros de altura, colapsó parcialmente en 1284: los constructores habían llevado la técnica gótica más allá de lo que la ingeniería de la época podía sostener con seguridad.</p>
+
+      <blockquote>
+        <p>"El gótico no es un estilo decorativo: es un sistema estructural completo, tan racional en su lógica interna como cualquier construcción moderna, que convirtió la piedra en un esqueleto capaz de sostener muros de vidrio."</p>
+        <cite>— Erwin Panofsky, Gothic Architecture and Scholasticism, 1951</cite>
+      </blockquote>
+
+      <h2 id="las-vidrieras-y-la-luz">Las Vidrieras y la Teología de la Luz</h2>
+      <p>Las vidrieras góticas no eran mera decoración: eran, para una población en su mayoría analfabeta, la Biblia contada en imágenes y color. Los ventanales de Chartres —que conservan una de las colecciones de vidrieras medievales más completas del mundo— narran episodios bíblicos, vidas de santos y escenas de los oficios que financiaron su construcción. El célebre "azul de Chartres" bañaba el interior en una luz que los contemporáneos describían como una experiencia casi mística.</p>
+      <p>Construir una catedral gótica era, además, un proyecto de generaciones: la mayoría tardó entre cincuenta y ciento cincuenta años en completarse, lo que significa que casi ningún artesano que colocó la primera piedra vivió para ver el edificio terminado. Era un acto de fe colectiva sostenido por el trabajo continuo de canteros, vidrieros, herreros y arquitectos cuya pericia técnica sigue asombrando ochocientos años después.</p>
+    </div>
+    <aside class="art-aside">
+      <div class="art-toc">
+        <h4>En este artículo</h4>
+        <a href="#la-innovacion-tecnica" onclick="var el=document.getElementById('la-innovacion-tecnica');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Innovación Técnica</a>
+        <a href="#la-carrera-hacia-el-cielo" onclick="var el=document.getElementById('la-carrera-hacia-el-cielo');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Carrera Hacia el Cielo</a>
+        <a href="#las-vidrieras-y-la-luz" onclick="var el=document.getElementById('las-vidrieras-y-la-luz');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Las Vidrieras y la Luz</a>
+      </div>
+    </aside>
+  </div>
+  <div class="art-sources">
+    <h4>Fuentes y Referencias</h4>
+    <ul>
+      <li>Erwin Panofsky — <em>Gothic Architecture and Scholasticism</em>, 1951</li>
+      <li>Otto von Simson — <em>The Gothic Cathedral</em>, Princeton University Press, 1956</li>
+      <li>Alain Erlande-Brandenburg — <em>The Cathedral: The Social and Architectural Dynamics of Construction</em>, 1994</li>
+    </ul>
+  </div>
+  <div class="art-next"><p>Continúa explorando</p><button onclick="gotoSection('sec-explora')">Explora Todo el Contenido →</button></div>
+</div>
+
 </div><!-- /article-view -->
 
 <script>
@@ -3410,7 +3477,8 @@ var ARTICLE_TITLES={
   'art-crisis-siglo3':'La Crisis del Siglo III',
   'art-podcast-ep1':'Podcast EP1: El Imperio que Gobernó el Mundo',
   'art-podcast-ep2':'Podcast EP2: El Choque de los Titanes',
-  'art-podcast-ep3':'Podcast EP3: La Llanura de Gaugamela'
+  'art-podcast-ep3':'Podcast EP3: La Llanura de Gaugamela',
+  'art-catedral-gotica':'Catedrales Góticas'
 };
 
 // ── View management ──
