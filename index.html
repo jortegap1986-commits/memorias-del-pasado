@@ -22,8 +22,15 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 /* ── TOPBAR ── */
 #topbar{background:var(--dk);color:var(--stl);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:700;box-sizing:border-box;min-height:44px;border-bottom:1px solid rgba(212,168,50,.35)}
-.topbar-donate{color:var(--dk);background:linear-gradient(135deg,var(--gd),var(--gdl));text-decoration:none;font-family:'Cinzel',serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;padding:6px 16px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-.topbar-donate:hover{transform:scale(1.05);box-shadow:0 4px 14px rgba(212,168,50,.5)}
+.topbar-cta-group{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center}
+.topbar-donate{color:var(--dk);background:linear-gradient(135deg,var(--gd),var(--gdl));text-decoration:none;font-family:'Cinzel',serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;padding:6px 16px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.25);animation:topbarDonatePulse 2.1s ease-in-out infinite}
+.topbar-donate:hover{transform:scale(1.07);box-shadow:0 4px 18px rgba(212,168,50,.7)}
+.tb-heart{display:inline-block;animation:topbarHeartBeat 1.3s ease-in-out infinite}
+@keyframes topbarDonatePulse{0%,100%{box-shadow:0 2px 8px rgba(0,0,0,.25),0 0 0 0 rgba(212,168,50,.55)}50%{box-shadow:0 2px 8px rgba(0,0,0,.25),0 0 16px 7px rgba(212,168,50,.6)}}
+@keyframes topbarHeartBeat{0%,100%{transform:scale(1)}25%{transform:scale(1.32)}40%{transform:scale(1)}60%{transform:scale(1.18)}}
+.topbar-comunidad{color:var(--gdp);background:rgba(212,168,50,.12);border:1px solid rgba(212,168,50,.55);text-decoration:none;font-family:'Cinzel',serif;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;padding:5px 12px;border-radius:14px;transition:background .2s,transform .2s,border-color .2s}
+.topbar-comunidad:hover{background:rgba(212,168,50,.28);transform:scale(1.05);border-color:var(--gdl)}
+@media(prefers-reduced-motion:reduce){.topbar-donate,.tb-heart{animation:none!important}}
 
 /* ── HEADER ── */
 #header{position:sticky;top:44px;z-index:500;background:var(--w);border-bottom:3px solid var(--gd);box-shadow:0 2px 16px rgba(0,0,0,0.09)}
@@ -65,6 +72,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .sec-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gd);display:flex;align-items:center;gap:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--bdg);margin-bottom:2.5rem}
 .sec-label::before{content:'✦';font-size:.9rem}
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:4rem}
+@media(min-width:961px){.art-grid>.art-card:last-child:nth-child(3n+1){grid-column:2}}
 .art-card{cursor:pointer;background:var(--w);border:1px solid var(--bd);overflow:hidden;transition:transform .2s,box-shadow .2s}
 .art-card:hover{transform:translateY(-5px);box-shadow:0 10px 36px rgba(0,0,0,.12)}
 .art-card-img{position:relative;aspect-ratio:16/9;overflow:hidden;background-size:cover;background-position:center top}
@@ -294,16 +302,13 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .red-card-sub{font-family:'EB Garamond',serif;font-size:.85rem;color:var(--txl);text-align:left}
 @media(max-width:900px){.videos-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.videos-grid{grid-template-columns:1fr}.redes-grid{flex-direction:column;align-items:stretch}#topbar .social-icons{display:none}#topbar>span{display:none}#topbar{justify-content:center}}
+@media(max-width:420px){.topbar-donate{font-size:.66rem;padding:5px 10px}.topbar-comunidad{padding:5px 8px}.topbar-comunidad .tb-label{display:none}}
 
 .sec-thematic{padding:5rem 2rem}
 .sec-thematic.persia-bg{background:var(--ow)}
 .sec-thematic.roma-bg{background:var(--cr)}
 .sec-thematic.pompeya-bg{background:var(--ow)}
-.pompeya-clips{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;max-width:900px;margin:2.5rem auto 0}
-.pompeya-clip{border-radius:6px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.18);aspect-ratio:9/16}
-.pompeya-clip video{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:900px){.pompeya-clips{grid-template-columns:repeat(2,1fr);max-width:460px}}
-@media(max-width:480px){.pompeya-clips{grid-template-columns:1fr;max-width:240px}}
+.art-card-img video{width:100%;height:100%;object-fit:cover;display:block}
 .thematic-header{text-align:center;margin-bottom:3rem}
 .thematic-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
 .thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
@@ -348,7 +353,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 <!-- TOPBAR -->
 <div id="topbar">
   <span>Historia Antigua · Arqueología · Mundo Antiguo</span>
-  <a class="topbar-donate" onclick="gotoSection('sec-apoyo');return false;" href="#sec-apoyo">❤ Apoya Nuestro Trabajo</a>
+  <div class="topbar-cta-group">
+    <a class="topbar-donate" onclick="gotoSection('sec-apoyo');return false;" href="#sec-apoyo"><span class="tb-heart">❤</span> Apoya Nuestro Trabajo</a>
+    <a class="topbar-comunidad" href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener" title="Únete a nuestro grupo privado de Facebook">👥 <span class="tb-label">Únete al Grupo</span></a>
+  </div>
   <div class="social-icons">
     <a href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
       <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.66-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
@@ -579,8 +587,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       </ul>
       <div class="ebook-buybox">
         <div class="ebook-price">
-          <span class="now">$4.990</span>
-          <span class="cur">CLP</span>
+          <span class="now">$7.99</span>
+          <span class="cur">USD</span>
         </div>
         <a class="ebook-buy-btn" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
       </div>
@@ -883,12 +891,42 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="art-read">Leer artículo →</span>
         </div>
       </article>
-    </div>
-    <div class="pompeya-clips rv">
-      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip1.mp4" type="video/mp4"></video></div>
-      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip2.mp4" type="video/mp4"></video></div>
-      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/restauracion1.mp4" type="video/mp4"></video></div>
-      <div class="pompeya-clip"><video autoplay muted loop playsinline><source src="assets/video/restauracion2.mp4" type="video/mp4"></video></div>
+      <article class="art-card rv" onclick="openArticle('art-pompeya-erupcion-ciencia')">
+        <div class="art-card-img"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip1.mp4" type="video/mp4"></video></div>
+        <div class="art-card-body">
+          <span class="art-cat">CIENCIA · VULCANOLOGÍA · DATOS</span>
+          <h3>El Vesubio en Erupción: La Ciencia Detrás de la Catástrofe</h3>
+          <p>No fue magia ni castigo divino: fue física. Cómo funciona una erupción Pliniana, hora a hora, desde la columna de veinte kilómetros hasta los flujos piroclásticos.</p>
+          <span class="art-read">Leer artículo →</span>
+        </div>
+      </article>
+      <article class="art-card rv" onclick="openArticle('art-pompeya-datos')">
+        <div class="art-card-img"><video autoplay muted loop playsinline><source src="assets/video/pompeya-clip2.mp4" type="video/mp4"></video></div>
+        <div class="art-card-body">
+          <span class="art-cat">DATOS · DEMOGRAFÍA · ESTADÍSTICA</span>
+          <h3>Pompeya en Números: La Catástrofe del 79 dC en Cifras</h3>
+          <p>Cuatro ciudades sepultadas, miles de toneladas de roca por segundo, cientos de cuerpos documentados. Los datos duros detrás del desastre más estudiado de la Antigüedad.</p>
+          <span class="art-read">Leer artículo →</span>
+        </div>
+      </article>
+      <article class="art-card rv" onclick="openArticle('art-pompeya2')">
+        <div class="art-card-img"><video autoplay muted loop playsinline><source src="assets/video/restauracion1.mp4" type="video/mp4"></video></div>
+        <div class="art-card-body">
+          <span class="art-cat">RECONSTRUCCIÓN DIGITAL</span>
+          <h3>Dentro de una Domus Romana</h3>
+          <p>Un recorrido digital por el interior de una vivienda romana acomodada — atrios, frescos y mosaicos como los que decoraban las mejores casas de Pompeya.</p>
+          <span class="art-read">Ver artículo relacionado →</span>
+        </div>
+      </article>
+      <article class="art-card rv" onclick="openArticle('art-pompeya1')">
+        <div class="art-card-img"><video autoplay muted loop playsinline><source src="assets/video/restauracion2.mp4" type="video/mp4"></video></div>
+        <div class="art-card-body">
+          <span class="art-cat">RECONSTRUCCIÓN DIGITAL</span>
+          <h3>La Vida Antes del Vesubio</h3>
+          <p>Así lucían los interiores de una casa romana en su época de esplendor — el mundo cotidiano que la erupción del año 79 congeló para siempre.</p>
+          <span class="art-read">Ver artículo relacionado →</span>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1645,8 +1683,129 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <li>Roger Ling — <em>Roman Painting</em>, Cambridge University Press, 1991</li>
     </ul>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-teutoburgo')">La Batalla de Teutoburgo →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-pompeya-erupcion-ciencia')">El Vesubio en Erupción: La Ciencia →</button></div>
 </div>
+
+<!-- ═══════ ARTÍCULO 5B: LA CIENCIA DE LA ERUPCIÓN ═══════ -->
+<div id="art-pompeya-erupcion-ciencia" class="art-section">
+  <div class="art-hero" style="position:relative">
+    <video class="hero-video" autoplay muted loop playsinline><source src="assets/video/pompeya-clip1.mp4" type="video/mp4"></video>
+    <div class="art-hero-ov"><div class="art-hero-ct">
+      <span class="art-badge">VULCANOLOGÍA · CIENCIA · 79 dC</span>
+      <h1 class="art-h1">El Vesubio en Erupción: La Ciencia Detrás de la Catástrofe</h1>
+    </div></div>
+  </div>
+  <div class="art-wrap">
+    <div class="art-body">
+      <p>Durante siglos, la destrucción de Pompeya se contó como una historia de castigo o de mala suerte. Pero desde finales del siglo XX, la vulcanología ha reconstruido el 79 dC con un detalle asombroso: sabemos qué tipo de erupción fue, cuánto duró cada fase, a qué velocidad y temperatura viajó cada nube de ceniza, y por qué mató a unos y perdonó a otros. Esta es la historia del Vesubio contada no desde la tragedia humana, sino desde la física y la geología del volcán mismo.</p>
+
+      <h2 id="una-erupcion-pliniana-anatomia-de-un-fenomeno-extremo">Una Erupción Pliniana: Anatomía de un Fenómeno Extremo</h2>
+      <p>Los vulcanólogos clasifican la erupción del 79 dC como "erupción Pliniana", el tipo más violento y explosivo que existe, llamado así en honor a Plinio el Joven, cuyo relato escrito a Tácito es tan preciso que los científicos modernos lo usan todavía como descripción de referencia del fenómeno. Una erupción Pliniana se produce cuando el magma es extremadamente viscoso y está saturado de gases disueltos —principalmente vapor de agua y dióxido de azufre—. Al ascender por el conducto volcánico, la presión disminuye bruscamente, los gases se expanden de forma casi instantánea y fragmentan el magma en partículas diminutas de ceniza y pómez, que son expulsadas a velocidades supersónicas.</p>
+      <p>El resultado es una columna eruptiva que puede superar los treinta kilómetros de altura, atravesando la troposfera y entrando en la estratosfera. Plinio el Joven la comparó con la silueta de un pino piñonero: un tronco vertical estrecho que se abre en una copa ancha al chocar con capas de aire más densas. Esa metáfora de hace casi dos mil años sigue siendo, según los propios vulcanólogos, la descripción más exacta que existe del perfil de una columna Pliniana.</p>
+
+      <h2 id="dieciocho-horas-que-cambiaron-la-geologia-cronologia-de-la-erupcion">Dieciocho Horas que Cambiaron la Geología: Cronología de la Erupción</h2>
+      <p>El estudio estratigráfico de los depósitos volcánicos —capa por capa, como anillos de un árbol— permite reconstruir la erupción con una precisión de horas. Los vulcanólogos distinguen dos grandes fases. La primera, la fase Pliniana propiamente dicha, duró unas dieciocho o diecinueve horas y consistió principalmente en la caída de pómez: fragmentos de roca volcánica porosa y ligera que cayeron sobre Pompeya a un ritmo de varios centímetros por hora, acumulando finalmente entre dos y tres metros de material antes de que comenzara la fase siguiente. La segunda fase, mucho más breve pero letal, comenzó cuando la columna eruptiva —ya demasiado pesada para sostenerse— empezó a colapsar sobre sí misma en sucesivos pulsos, generando los flujos y oleadas piroclásticas que sepultaron Pompeya, Herculano, Estabias y Oplontis en cuestión de minutos.</p>
+      <p>Un dato que ha generado un intenso debate académico es la fecha exacta. Durante siglos se dio por buena la fecha del 24 de agosto, transmitida por la mayoría de los manuscritos medievales de las cartas de Plinio. Sin embargo, hallazgos arqueológicos recientes apuntan a una fecha posterior: en 2018 se encontró en una casa en excavación una inscripción a carboncillo fechada "dieciséis días antes de las calendas de noviembre" —equivalente al 17 de octubre—, y en las víctimas se han hallado frutos otoñales como granadas y castañas, además de ropa de abrigo más propia de octubre que de pleno verano. Buena parte de la comunidad científica considera hoy más probable una erupción el 24 de octubre del 79 dC, aunque el debate sigue abierto y los textos tradicionales de Plinio continúan citando agosto.</p>
+
+      <figure>
+        <img src="assets/img/pompeya-clip2-frame.jpg" alt="Diagrama de la columna eruptiva Pliniana del Vesubio" loading="lazy">
+        <figcaption>Esquema del desarrollo de una columna eruptiva Pliniana: el material asciende verticalmente por convección hasta que pierde flotabilidad y se expande lateralmente, formando la característica silueta de "pino" que describió Plinio el Joven.</figcaption>
+      </figure>
+
+      <h2 id="flujos-piroclasticos-la-fisica-de-la-destruccion">Flujos Piroclásticos: la Física de la Destrucción</h2>
+      <p>Lo que realmente selló el destino de Pompeya no fue la lluvia de pómez —lenta y, en principio, evitable si se huía a tiempo— sino los flujos y oleadas piroclásticas: corrientes de densidad formadas por gas volcánico sobrecalentado, ceniza fina y fragmentos de roca, que descienden por las laderas del volcán impulsadas por la gravedad y por su propia temperatura, que reduce su densidad y las mantiene en movimiento casi como un fluido. Los vulcanólogos han calculado que estas corrientes viajaron a velocidades de entre cien y setecientos kilómetros por hora y alcanzaron temperaturas de entre doscientos cincuenta y trescientos grados centígrados en Pompeya —lo suficiente para provocar la muerte instantánea por choque térmico, no por asfixia lenta, según los estudios sobre las posturas de los cuerpos publicados por el equipo de Giuseppe Mastrolorenzo en la década de 2000—.</p>
+      <p>Herculano, más cercana al volcán, fue alcanzada por el primer flujo piroclástico horas antes que Pompeya y quedó sepultada bajo hasta veinte metros de material —mucho más que los cuatro a seis metros de Pompeya—, lo que explica su extraordinario estado de conservación, incluyendo estructuras de madera carbonizada que en ningún otro yacimiento romano han sobrevivido.</p>
+
+      <h2 id="el-vesubio-hoy-un-volcan-que-sigue-vivo">El Vesubio Hoy: un Volcán que Sigue Vivo</h2>
+      <p>El Vesubio no es un volcán extinto: es uno de los volcanes más vigilados del planeta. El Osservatorio Vesuviano, fundado en 1841 al pie del volcán, es el observatorio vulcanológico permanente más antiguo del mundo y hoy forma parte del Istituto Nazionale di Geofisica e Vulcanologia (INGV), que monitoriza en tiempo real la sismicidad, la deformación del terreno y las emisiones de gas del volcán. Desde su última erupción, en 1944, el Vesubio permanece en calma, pero los vulcanólogos lo consideran "capaz" de una nueva erupción Pliniana, y hoy más de medio millón de personas viven en la llamada "zona roja" de riesgo inmediato, lo que convierte al Vesubio en uno de los volcanes más peligrosos del mundo no por su actividad actual, sino por la densidad de población a su alrededor.</p>
+      <p>Comparar el 79 dC con erupciones Plinianas modernas ayuda a dimensionar el fenómeno: la erupción del Monte Santa Helena en 1980, en Estados Unidos, liberó una energía comparable en su fase explosiva inicial, mientras que la del Pinatubo en Filipinas en 1991 —considerada la mayor erupción Pliniana del siglo XX— superó ampliamente al Vesubio en volumen de material expulsado. Estudiar el Vesubio, con su registro arqueológico único, sigue siendo hoy una de las mejores herramientas que tiene la ciencia para predecir cómo se comportaría una erupción similar en una zona densamente poblada.</p>
+
+      <blockquote>
+        <p>"El Vesubio del 79 dC no es solo un desastre del pasado: es el mejor laboratorio natural que tiene la vulcanología moderna para entender cómo se comporta una erupción explosiva sobre una población humana, minuto a minuto."</p>
+        <cite>— Haraldur Sigurdsson, vulcanólogo, Encyclopedia of Volcanoes, 2000</cite>
+      </blockquote>
+    </div>
+    <aside class="art-aside">
+      <div class="art-toc">
+        <h4>En este artículo</h4>
+        <a href="#una-erupcion-pliniana-anatomia-de-un-fenomeno-extremo" onclick="var el=document.getElementById('una-erupcion-pliniana-anatomia-de-un-fenomeno-extremo');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Qué es una Erupción Pliniana</a>
+        <a href="#dieciocho-horas-que-cambiaron-la-geologia-cronologia-de-la-erupcion" onclick="var el=document.getElementById('dieciocho-horas-que-cambiaron-la-geologia-cronologia-de-la-erupcion');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Cronología de la Erupción</a>
+        <a href="#flujos-piroclasticos-la-fisica-de-la-destruccion" onclick="var el=document.getElementById('flujos-piroclasticos-la-fisica-de-la-destruccion');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Flujos Piroclásticos</a>
+        <a href="#el-vesubio-hoy-un-volcan-que-sigue-vivo" onclick="var el=document.getElementById('el-vesubio-hoy-un-volcan-que-sigue-vivo');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">El Vesubio Hoy</a>
+      </div>
+    </aside>
+  </div>
+  <div class="art-sources">
+    <h4>Fuentes y Referencias Científicas</h4>
+    <ul>
+      <li>Haraldur Sigurdsson (ed.) — <em>Encyclopedia of Volcanoes</em>, Academic Press, 2000</li>
+      <li>Giuseppe Mastrolorenzo et al. — estudios sobre causas de muerte térmica en Pompeya y Herculano, <em>PLOS ONE</em>, 2001–2010</li>
+      <li>Istituto Nazionale di Geofisica e Vulcanologia (INGV) — Osservatorio Vesuviano, informes de monitoreo</li>
+      <li>Plinio el Joven — <em>Epistulae</em> VI.16 y VI.20, cartas a Tácito, s. II dC</li>
+      <li>Parco Archeologico di Pompei — hallazgo de la inscripción del 17 de octubre, comunicado oficial, 2018</li>
+    </ul>
+  </div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-pompeya-datos')">Pompeya en Números →</button></div>
+</div><!-- /art-pompeya-erupcion-ciencia -->
+
+<!-- ═══════ ARTÍCULO 5C: POMPEYA EN NÚMEROS ═══════ -->
+<div id="art-pompeya-datos" class="art-section">
+  <div class="art-hero" style="position:relative">
+    <video class="hero-video" autoplay muted loop playsinline><source src="assets/video/pompeya-clip2.mp4" type="video/mp4"></video>
+    <div class="art-hero-ov"><div class="art-hero-ct">
+      <span class="art-badge">DATOS · DEMOGRAFÍA · ESTADÍSTICA</span>
+      <h1 class="art-h1">Pompeya en Números: La Catástrofe del 79 dC en Cifras</h1>
+    </div></div>
+  </div>
+  <div class="art-wrap">
+    <div class="art-body">
+      <p>Detrás de cada relato sobre Pompeya hay un conjunto de datos que la arqueología y la vulcanología han ido afinando durante más de dos siglos de excavaciones. Cuántas ciudades desaparecieron, cuánta roca cayó del cielo, cuánta gente vivía allí y cuántos cuerpos se han recuperado: estas cifras, lejos de ser fría estadística, son la base sobre la que se reconstruye con rigor lo que realmente ocurrió aquel día.</p>
+
+      <h2 id="cuatro-ciudades-un-solo-dia">Cuatro Ciudades, un Solo Día</h2>
+      <p>La erupción del 79 dC no destruyó únicamente Pompeya. En el radio de destrucción del Vesubio cayeron al menos cuatro núcleos urbanos: Pompeya, la más extensa, con unas sesenta y seis hectáreas amuralladas; Herculano, más pequeña —unas veinte hectáreas— pero sepultada bajo un depósito mucho más profundo, de hasta veinte metros; Estabias, una zona de villas de recreo de la aristocracia romana en la costa, donde murió Plinio el Viejo; y Oplontis, conocida sobre todo por la lujosa Villa de Popea, la segunda esposa del emperador Nerón. En conjunto, la erupción borró del mapa una franja costera de varios kilómetros que tardaría siglos en volver a ser habitada.</p>
+
+      <h2 id="la-columna-en-cifras-33-kilometros-hacia-el-cielo">La Columna en Cifras: 33 Kilómetros Hacia el Cielo</h2>
+      <p>Los modelos vulcanológicos actuales, basados en el volumen y la dispersión de los depósitos de pómez, estiman que la columna eruptiva alcanzó una altura máxima de entre veinte y treinta y tres kilómetros, penetrando en la estratosfera. Durante el momento de mayor intensidad, el volcán llegó a expulsar, según distintas estimaciones, más de cien mil toneladas de material por segundo. En total, se calcula que la erupción liberó entre uno y medio y cuatro kilómetros cúbicos de magma —roca, ceniza y pómez—, una cifra que sitúa al Vesubio del 79 dC entre las erupciones de magnitud moderada-alta en la escala de explosividad volcánica (VEI), con un índice estimado de 5 sobre un máximo de 8.</p>
+
+      <figure>
+        <img src="assets/img/pompeya-clip1-frame.jpg" alt="Columna eruptiva del Vesubio" loading="lazy">
+        <figcaption>Reconstrucción visual de la columna eruptiva del Vesubio, que según las estimaciones vulcanológicas actuales alcanzó entre 20 y 33 kilómetros de altura durante la fase Pliniana del 79 dC.</figcaption>
+      </figure>
+
+      <h2 id="poblacion-y-victimas-lo-que-revelan-los-restos">Población y Víctimas: lo que Revelan los Restos</h2>
+      <p>Calcular la población de Pompeya en el momento de la erupción es un ejercicio de estimación arqueológica: las cifras aceptadas oscilan entre once mil y veinte mil habitantes dentro de las murallas, según se contabilicen o no los esclavos y la población flotante del puerto. En Herculano, mucho más pequeña, la población se estima entre cuatro mil y cinco mil personas. En el conjunto de la región afectada, algunos demógrafos históricos elevan la cifra total de residentes a más de dieciséis mil personas.</p>
+      <p>De las víctimas, los arqueólogos han documentado hasta la fecha alrededor de mil trescientos cuerpos o restos óseos en Pompeya —incluidos los famosos moldes de yeso de Fiorelli—, lo que sugiere, contra la intuición popular, que una parte considerable de la población logró huir antes de que los flujos piroclásticos llegaran a la ciudad. En Herculano, donde durante décadas se pensó que casi no había víctimas por la escasez de cuerpos hallados en la propia ciudad, el descubrimiento en la década de 1980 de más de trescientos esqueletos refugiados en los cobertizos junto al antiguo puerto —hoy conocidos como "fornici"— cambió radicalmente esa lectura: la gente sí murió en masa, simplemente había buscado refugio junto al mar esperando una evacuación por barco que nunca llegó a tiempo.</p>
+
+      <h2 id="lo-que-la-estadistica-nos-ensena">Lo que la Estadística nos Enseña</h2>
+      <p>Pompeya y Herculano son, en términos demográficos y forenses, el desastre natural de la Antigüedad mejor documentado que existe: pocos eventos catastróficos anteriores al siglo XX permiten cruzar registros arqueológicos, análisis isotópicos de ADN, datación estratigráfica y fuentes escritas contemporáneas con este nivel de detalle. Ese cruce de datos ha permitido a los investigadores estimar, por ejemplo, la proporción de hombres, mujeres, niños y esclavos entre las víctimas, su procedencia geográfica mediante análisis de isótopos dentales, e incluso, en algunos casos, enfermedades y condiciones de salud previas a la erupción. Ningún otro yacimiento del mundo antiguo ofrece una base estadística comparable para estudiar cómo vivía —y cómo murió— una población romana real.</p>
+
+      <blockquote>
+        <p>"Pompeya no es una anécdota trágica: es el mayor conjunto de datos demográficos y forenses que poseemos sobre una población romana real, congelada en un instante y medible con precisión científica dos mil años después."</p>
+        <cite>— Estelle Lazer, antropóloga forense, <em>Resurrecting Pompeii</em>, 2009</cite>
+      </blockquote>
+    </div>
+    <aside class="art-aside">
+      <div class="art-toc">
+        <h4>En este artículo</h4>
+        <a href="#cuatro-ciudades-un-solo-dia" onclick="var el=document.getElementById('cuatro-ciudades-un-solo-dia');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Cuatro Ciudades Sepultadas</a>
+        <a href="#la-columna-en-cifras-33-kilometros-hacia-el-cielo" onclick="var el=document.getElementById('la-columna-en-cifras-33-kilometros-hacia-el-cielo');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Columna en Cifras</a>
+        <a href="#poblacion-y-victimas-lo-que-revelan-los-restos" onclick="var el=document.getElementById('poblacion-y-victimas-lo-que-revelan-los-restos');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Población y Víctimas</a>
+        <a href="#lo-que-la-estadistica-nos-ensena" onclick="var el=document.getElementById('lo-que-la-estadistica-nos-ensena');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Lo que Enseña la Estadística</a>
+      </div>
+    </aside>
+  </div>
+  <div class="art-sources">
+    <h4>Fuentes y Referencias Científicas</h4>
+    <ul>
+      <li>Estelle Lazer — <em>Resurrecting Pompeii</em>, Routledge, 2009</li>
+      <li>Sigurdsson, Cashdollar, Sparks — estudios estratigráficos sobre la secuencia eruptiva, <em>American Journal of Archaeology</em>, 1982</li>
+      <li>Parco Archeologico di Pompei / Ercolano — cifras oficiales de excavación y restos documentados</li>
+      <li>Global Volcanism Program, Smithsonian Institution — ficha del Vesubio, erupción del 79 dC</li>
+      <li>Mary Beard — <em>Pompeii: The Life of a Roman Town</em>, Profile Books, 2008</li>
+    </ul>
+  </div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-teutoburgo')">La Batalla de Teutoburgo →</button></div>
+</div><!-- /art-pompeya-datos -->
 
 <!-- ═══════ ARTÍCULO 6: TEUTOBURGO ═══════ -->
 <div id="art-teutoburgo" class="art-section">
@@ -3500,6 +3659,8 @@ var ARTICLE_TITLES={
   'art-legiones':'Las Legiones de Roma',
   'art-pompeya1':'Pompeya: El Último Día',
   'art-pompeya2':'Pompeya: Arte y Vida',
+  'art-pompeya-erupcion-ciencia':'El Vesubio en Erupción: La Ciencia',
+  'art-pompeya-datos':'Pompeya en Números',
   'art-teutoburgo':'La Batalla de Teutoburgo',
   'art-maquinaria':'Maquinaria de Guerra Romana',
   'art-granico':'La Batalla del Gránico',
