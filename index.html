@@ -21,12 +21,13 @@ html{scroll-behavior:smooth}
 body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.7}
 
 /* ── TOPBAR ── */
-#topbar{background:var(--dk);color:var(--stl);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:700;box-sizing:border-box;min-height:44px;border-bottom:1px solid rgba(212,168,50,.35)}
-.topbar-cta-group{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center}
-.topbar-donate{color:var(--dk);background:linear-gradient(135deg,var(--gd),var(--gdl));text-decoration:none;font-family:'Cinzel',serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;padding:6px 16px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.25);animation:topbarDonatePulse 2.1s ease-in-out infinite}
-.topbar-donate:hover{transform:scale(1.07);box-shadow:0 4px 18px rgba(212,168,50,.7)}
+#topbar{background:var(--dk);color:var(--stl);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 2rem;display:flex;justify-content:space-between;align-items:center;gap:1.4rem;position:sticky;top:0;z-index:700;box-sizing:border-box;min-height:44px;border-bottom:1px solid rgba(212,168,50,.35)}
+.topbar-cta-group{display:flex;align-items:center;gap:.6rem;flex:1 1 auto;min-width:0;justify-content:flex-end}
+.topbar-donate{color:var(--dk);background:linear-gradient(90deg,var(--gd) 0%,var(--gdl) 25%,var(--gd) 50%,var(--gdl) 75%,var(--gd) 100%);background-size:220% 100%;text-decoration:none;font-family:'Cinzel',serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;padding:8px 20px;border-radius:18px;box-shadow:0 2px 8px rgba(0,0,0,.25);flex:1 1 auto;max-width:520px;text-align:center;animation:topbarDonatePulse 2.1s ease-in-out infinite,topbarDonateSheen 3.4s linear infinite}
+.topbar-donate:hover{transform:scale(1.04);box-shadow:0 4px 18px rgba(212,168,50,.7)}
 .tb-heart{display:inline-block;animation:topbarHeartBeat 1.3s ease-in-out infinite}
-@keyframes topbarDonatePulse{0%,100%{box-shadow:0 2px 8px rgba(0,0,0,.25),0 0 0 0 rgba(212,168,50,.55)}50%{box-shadow:0 2px 8px rgba(0,0,0,.25),0 0 16px 7px rgba(212,168,50,.6)}}
+@keyframes topbarDonatePulse{0%,100%{box-shadow:0 2px 8px rgba(0,0,0,.25),0 0 0 0 rgba(212,168,50,.55)}50%{box-shadow:0 2px 8px rgba(0,0,0,.25),0 0 20px 8px rgba(212,168,50,.6)}}
+@keyframes topbarDonateSheen{0%{background-position:0% 50%}100%{background-position:220% 50%}}
 @keyframes topbarHeartBeat{0%,100%{transform:scale(1)}25%{transform:scale(1.32)}40%{transform:scale(1)}60%{transform:scale(1.18)}}
 .topbar-comunidad{color:var(--gdp);background:rgba(212,168,50,.12);border:1px solid rgba(212,168,50,.55);text-decoration:none;font-family:'Cinzel',serif;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;padding:5px 12px;border-radius:14px;transition:background .2s,transform .2s,border-color .2s}
 .topbar-comunidad:hover{background:rgba(212,168,50,.28);transform:scale(1.05);border-color:var(--gdl)}
@@ -301,7 +302,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .red-card-name{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;color:var(--dk);text-transform:uppercase;text-align:left}
 .red-card-sub{font-family:'EB Garamond',serif;font-size:.85rem;color:var(--txl);text-align:left}
 @media(max-width:900px){.videos-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.videos-grid{grid-template-columns:1fr}.redes-grid{flex-direction:column;align-items:stretch}#topbar .social-icons{display:none}#topbar>span{display:none}#topbar{justify-content:center}}
+@media(max-width:600px){.videos-grid{grid-template-columns:1fr}.redes-grid{flex-direction:column;align-items:stretch}#topbar .social-icons{display:none}#topbar>span{display:none}#topbar{justify-content:center}.topbar-cta-group{width:100%;justify-content:center}.topbar-donate{max-width:none}}
 @media(max-width:420px){.topbar-donate{font-size:.66rem;padding:5px 10px}.topbar-comunidad{padding:5px 8px}.topbar-comunidad .tb-label{display:none}}
 
 .sec-thematic{padding:5rem 2rem}
@@ -3051,7 +3052,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 <!-- ═══════ ROMA 5: AUGUSTO ═══════ -->
 <div id="art-augusto" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/roma/roma-tiber.jpg')">
+  <div class="art-hero" style="position:relative">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/roma/augusto-domus-poster.jpg">
+      <source src="assets/video/augusto-domus.mp4" type="video/mp4">
+    </video>
     <div class="art-hero-ov"><div class="art-hero-ct">
       <span class="art-badge">AUGUSTO · PRINCIPADO · PAX ROMANA</span>
       <h1 class="art-h1">Augusto y la Pax Romana: El Arquitecto del Imperio</h1>
@@ -3368,7 +3372,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 <!-- ═══════ ROMA 10: CRISIS SIGLO III ═══════ -->
 <div id="art-crisis-siglo3" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/roma/roma-tiber.jpg')">
+  <div class="art-hero" style="position:relative">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/roma/crisis3-domus-poster.jpg">
+      <source src="assets/video/crisis3-domus.mp4" type="video/mp4">
+    </video>
     <div class="art-hero-ov"><div class="art-hero-ct">
       <span class="art-badge">DECADENCIA · ANARQUÍA MILITAR · 235-284 d.C.</span>
       <h1 class="art-h1">La Crisis del Siglo III: El Imperio al Borde del Colapso</h1>
