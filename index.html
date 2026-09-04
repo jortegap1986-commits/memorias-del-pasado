@@ -262,6 +262,20 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .ebook-buy-btn-alt{background:transparent;color:var(--gd);border:2px solid var(--gd);padding:.83rem 2.2rem}
 .ebook-buy-btn-alt:hover{background:var(--gd);color:#fff}
 .ebook-trust{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.12em;color:var(--txl);text-transform:uppercase;margin-top:1rem;text-align:center}
+
+/* ── Opciones de compra (PDF vs Amazon) ── */
+.buy-options{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.buy-options{grid-template-columns:1fr}}
+.buy-opt{position:relative;background:var(--w);border:1px solid var(--bdg);border-top:4px solid var(--opt-c);padding:1.5rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:.5rem}
+.buy-opt-pdf{--opt-c:var(--gd);--opt-t:rgba(184,134,30,.12)}
+.buy-opt-amazon{--opt-c:var(--tc);--opt-t:rgba(138,63,48,.12)}
+.buy-opt-tag{align-self:flex-start;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--opt-c);background:var(--opt-t);padding:.3rem .7rem;font-weight:700}
+.buy-opt-name{font-family:'Cinzel Decorative',serif;font-size:1.05rem;color:var(--dk);margin-top:.3rem}
+.buy-opt-why{font-family:'EB Garamond',serif;font-size:.92rem;color:var(--txm);line-height:1.5;flex-grow:1}
+.buy-opt-price{font-family:'Cinzel',serif;font-size:1.3rem;font-weight:700;color:var(--dk);margin-top:.2rem}
+.buy-opt-price .cur{font-size:.6rem;color:var(--txl);font-weight:400;letter-spacing:.08em;margin-left:.3rem}
+.buy-opt-btn{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;padding:.95rem 1rem;background:var(--opt-c);color:#fff;border:none;cursor:pointer;transition:filter .2s,transform .2s;text-decoration:none;display:block;margin-top:.4rem}
+.buy-opt-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
 .hn-cta{background:var(--gd)!important;color:#fff!important;padding:.5rem 1.1rem!important;margin-left:.4rem}
 .hn-cta:hover{background:var(--gdl)!important;color:#fff!important;border-bottom-color:transparent!important}
 
@@ -639,15 +653,23 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <li>Descarga inmediata tras la compra</li>
         <li>Léelo en cualquier dispositivo</li>
       </ul>
-      <div class="ebook-buybox">
-        <div class="ebook-price">
-          <span class="now">$7.99</span>
-          <span class="cur">USD</span>
+      <div class="buy-options">
+        <div class="buy-opt buy-opt-pdf">
+          <span class="buy-opt-tag">Descarga inmediata</span>
+          <div class="buy-opt-name">PDF instantáneo</div>
+          <p class="buy-opt-why">Lo recibes al instante y lo lees hoy mismo en el celular, tablet o computador. Sin esperar envíos.</p>
+          <div class="buy-opt-price">$7.99<span class="cur">USD</span></div>
+          <a class="buy-opt-btn" href="https://historiaantigua.gumroad.com/l/rzfqxw" target="_blank" rel="noopener">Comprar ahora →</a>
         </div>
-        <a class="ebook-buy-btn" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
-        <a class="ebook-buy-btn ebook-buy-btn-alt" href="https://historiaantigua.gumroad.com/l/rzfqxw" target="_blank" rel="noopener">Comprar ahora (PDF instantáneo) →</a>
+        <div class="buy-opt buy-opt-amazon">
+          <span class="buy-opt-tag">Kindle o tapa blanda</span>
+          <div class="buy-opt-name">Amazon</div>
+          <p class="buy-opt-why">Prefieres tenerlo en tu biblioteca Kindle o en papel físico en casa, con la confianza y reseñas de Amazon.</p>
+          <div class="buy-opt-price">Ver precio</div>
+          <a class="buy-opt-btn" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
+        </div>
       </div>
-      <div class="ebook-trust">Disponible en Amazon (Kindle y tapa blanda) o en PDF de descarga inmediata vía Gumroad · Pago seguro</div>
+      <div class="ebook-trust">Pago 100% seguro · elige el formato que prefieras</div>
     </div>
   </div>
 </section>
