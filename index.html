@@ -259,6 +259,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .ebook-price .cur{font-family:'Cinzel',serif;font-size:.65rem;color:var(--txl);text-transform:uppercase;letter-spacing:.1em}
 .ebook-buy-btn{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;padding:.95rem 2.2rem;background:var(--gd);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none;display:inline-block}
 .ebook-buy-btn:hover{background:var(--gdl);transform:translateY(-2px)}
+.ebook-buy-btn-alt{background:transparent;color:var(--gd);border:2px solid var(--gd);padding:.83rem 2.2rem}
+.ebook-buy-btn-alt:hover{background:var(--gd);color:#fff}
 .ebook-trust{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.12em;color:var(--txl);text-transform:uppercase;margin-top:1rem;text-align:center}
 .hn-cta{background:var(--gd)!important;color:#fff!important;padding:.5rem 1.1rem!important;margin-left:.4rem}
 .hn-cta:hover{background:var(--gdl)!important;color:#fff!important;border-bottom-color:transparent!important}
@@ -643,8 +645,9 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="cur">USD</span>
         </div>
         <a class="ebook-buy-btn" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
+        <a class="ebook-buy-btn ebook-buy-btn-alt" href="https://historiaantigua.gumroad.com/l/rzfqxw" target="_blank" rel="noopener">Comprar ahora (PDF instantáneo) →</a>
       </div>
-      <div class="ebook-trust">Disponible en Amazon · Kindle y tapa blanda · Envío y pago seguro con Amazon</div>
+      <div class="ebook-trust">Disponible en Amazon (Kindle y tapa blanda) o en PDF de descarga inmediata vía Gumroad · Pago seguro</div>
     </div>
   </div>
 </section>
@@ -1024,6 +1027,42 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
   </div>
 </section>
 
+<!-- ═══════ REVISTA ROMA IMPERIAL — EDICIÓN ESPECIAL (PAGA) ═══════ -->
+<section id="sec-revista-roma" style="background:var(--ow);padding:5rem 2rem">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="thematic-header rv">
+      <span class="sec-label">EDICIÓN ESPECIAL · DESCARGA EN PDF</span>
+      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Roma Imperial: Las Batallas que Forjaron un Imperio</h2>
+      <p>10 batallas que decidieron el destino de Roma, de Trasímeno a Adrianópolo (217 a.C. – 378 d.C.). 600 años de historia militar romana en una edición especial ilustrada.</p>
+    </div>
+    <div class="ebook-wrap rv">
+      <div class="ebook-cover">
+        <img class="ebook-cover-img" src="assets/img/revista-roma-imperial-portada.jpg" alt="Portada de la revista Roma Imperial: Las Batallas que Forjaron un Imperio">
+        <span class="ebook-badge-new">Edición Especial</span>
+      </div>
+      <div class="ebook-info">
+        <span class="sec-label">TIENDA · REVISTA EN PDF</span>
+        <h2>Roma Imperial — Edición Completa</h2>
+        <p class="ebook-desc">Diez batallas que decidieron el destino de un imperio, contadas con rigor histórico y un diseño editorial de calidad revista. Ideal para quienes ya disfrutaron la muestra gratuita y quieren una edición completa para conservar.</p>
+        <ul class="ebook-features">
+          <li>Formato PDF de alta calidad</li>
+          <li>Diseño editorial ilustrado</li>
+          <li>Descarga inmediata tras la compra</li>
+          <li>Léela en cualquier dispositivo</li>
+        </ul>
+        <div class="ebook-buybox">
+          <div class="ebook-price">
+            <span class="now">$4.99</span>
+            <span class="cur">USD</span>
+          </div>
+          <a class="ebook-buy-btn" href="https://historiaantigua.gumroad.com/l/nhluug" target="_blank" rel="noopener">Comprar ahora (PDF instantáneo) →</a>
+        </div>
+        <div class="ebook-trust">Descarga inmediata vía Gumroad · Pago seguro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ EXPLORA TODO EL CONTENIDO ═══════ -->
 <section id="sec-explora" style="background:var(--ow);padding:5rem 2rem">
   <div style="max-width:1160px;margin:0 auto">
@@ -1066,7 +1105,12 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <div class="explora-card rv" onclick="gotoSection('sec-ebook')">
         <div class="explora-ico">📖</div>
         <h4>Libro: Teutoburgo</h4>
-        <p>Disponible en Amazon: Kindle o tapa blanda</p>
+        <p>Disponible en Amazon o en PDF instantáneo</p>
+      </div>
+      <div class="explora-card rv" onclick="gotoSection('sec-revista-roma')">
+        <div class="explora-ico">🏛️</div>
+        <h4>Revista: Roma Imperial</h4>
+        <p>Edición especial completa en PDF — $4.99</p>
       </div>
       <div class="explora-card rv" onclick="gotoSection('sec-comunidad')">
         <div class="explora-ico">👥</div>
