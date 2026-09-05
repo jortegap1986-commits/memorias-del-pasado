@@ -276,6 +276,21 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .buy-opt-price .cur{font-size:.6rem;color:var(--txl);font-weight:400;letter-spacing:.08em;margin-left:.3rem}
 .buy-opt-btn{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;padding:.95rem 1rem;background:var(--opt-c);color:#fff;border:none;cursor:pointer;transition:filter .2s,transform .2s;text-decoration:none;display:block;margin-top:.4rem}
 .buy-opt-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+
+/* ── Newsletter (banner con imagen histórica) ── */
+.nl-sec{position:relative;background:linear-gradient(to right,rgba(10,7,4,.94) 0%,rgba(10,7,4,.86) 40%,rgba(10,7,4,.5) 75%,rgba(10,7,4,.25) 100%),url('assets/img/newsletter-bg-legion.jpg');background-size:cover;background-position:center 30%;padding:4.5rem 2rem}
+.nl-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+.nl-text h2{font-family:'Cinzel Decorative',serif;color:#fff;font-size:clamp(1.6rem,3.6vw,2.5rem);margin:.7rem 0 1rem;line-height:1.2}
+.nl-text p{font-family:'EB Garamond',serif;color:rgba(255,255,255,.85);font-size:1.12rem;line-height:1.7;margin-bottom:1.3rem;max-width:480px}
+.nl-bullets{list-style:none;padding:0;display:flex;flex-direction:column;gap:.55rem}
+.nl-bullets li{font-family:'EB Garamond',serif;font-size:.98rem;color:rgba(255,255,255,.92);display:flex;align-items:center;gap:.6rem}
+.nl-bullets li::before{content:'✦';color:var(--gdl);font-size:.7rem}
+.nl-card{background:#fff;border-radius:14px;padding:.5rem;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+@media(max-width:860px){
+  .nl-inner{grid-template-columns:1fr}
+  .nl-sec{background-position:center 20%}
+  .nl-text p{max-width:none}
+}
 .hn-cta{background:var(--gd)!important;color:#fff!important;padding:.5rem 1.1rem!important;margin-left:.4rem}
 .hn-cta:hover{background:var(--gdl)!important;color:#fff!important;border-bottom-color:transparent!important}
 
@@ -1206,12 +1221,19 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 </section>
 
 <!-- ═══════ NEWSLETTER ═══════ -->
-<section id="sec-newsletter" style="background:var(--tc);padding:5rem 2rem;text-align:center">
-  <div style="max-width:640px;margin:0 auto">
-    <span class="sec-label" style="color:var(--gd)">NO TE PIERDAS NADA</span>
-    <h2 class="rv" style="font-family:'Cinzel Decorative',serif;color:#fff;font-size:clamp(1.4rem,3.6vw,2.2rem);margin:.8rem 0 1rem">Recibe historia antigua en tu correo</h2>
-    <p class="rv" style="font-family:'EB Garamond',serif;color:rgba(255,255,255,.82);font-size:1.1rem;line-height:1.75;margin-bottom:2rem">Batallas, imperios y misterios del mundo clásico, directo a tu bandeja de entrada. Sin spam, cancela cuando quieras.</p>
-    <div class="rv" style="background:#fff;border-radius:14px;padding:.5rem;max-width:560px;margin:0 auto;overflow:hidden">
+<section id="sec-newsletter" class="nl-sec">
+  <div class="nl-inner">
+    <div class="nl-text rv">
+      <span class="sec-label" style="color:var(--gdl)">NO TE PIERDAS NADA</span>
+      <h2>Únete a las filas de Historika</h2>
+      <p>Batallas, imperios y misterios del mundo clásico, directo a tu bandeja de entrada. Sin spam, cancela cuando quieras.</p>
+      <ul class="nl-bullets">
+        <li>Un email, sin saturar tu bandeja</li>
+        <li>Contenido exclusivo antes que en redes</li>
+        <li>Avisos de nuevos libros y revistas</li>
+      </ul>
+    </div>
+    <div class="nl-card rv">
       <iframe width="100%" height="330" src="https://5b195e25.sibforms.com/v2/serve/MUIFAARZxzubNoXgOV42_az0y1bTo2SdiUEEad2yuuskhEYbKF4_y89-xjW1o8mP1gJqtq5kDQ8fmHZbefFP_PUnihIubQINiHxpPxkADaHPP-1ADcTXf79xb9nYJ9AR3k03T2Ui_Qp092ye1x4BTMpxAteJYiLwTyJgUIoOHe1K1Lk9_Z_IQwS3fySNqIaEPy1FurLudfEkVTyYrg==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;width:100%;border:0"></iframe>
     </div>
   </div>
