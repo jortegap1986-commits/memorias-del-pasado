@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jortegap1986-commits.github.io/memorias-del-pasado/sitemap.xml
