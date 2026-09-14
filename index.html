@@ -97,8 +97,8 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 
 /* ── HERO SLIDER ── */
 #hero{position:relative;height:74vh;min-height:520px;overflow:hidden}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease}
-.hero-slide.active{opacity:1}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease;pointer-events:none}
+.hero-slide.active{opacity:1;pointer-events:auto}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.75) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.08) 100%);display:flex;align-items:center}
 .hero-content{max-width:620px;padding:0 5rem;color:#fff}
 .hero-cat{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.22em;color:var(--gdl);text-transform:uppercase;display:block;margin-bottom:1rem}
