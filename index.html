@@ -3933,11 +3933,13 @@ var SECTION_TITLES={
 
 // ── GA4: seguimiento detallado de artículos y secciones ──
 var gaArticleId=null, gaArticleStart=null, gaScrollHit={};
+var GA_HOME_TITLE=document.title;
 function gaSendView(path,title){
+  document.title=title?(title+' · Memorias del Pasado'):GA_HOME_TITLE;
   if(typeof gtag==='function'){
     gtag('event','page_view',{
-      page_title:title,
-      page_location:window.location.origin+window.location.pathname+path,
+      page_title:document.title,
+      page_location:window.location.origin+window.location.pathname.replace(/\/$/,'')+path,
       page_path:path
     });
   }
@@ -3982,7 +3984,7 @@ function showHome(){
   document.getElementById('hero').style.display='';
   window.scrollTo({top:0,behavior:'smooth'});
   document.querySelectorAll('.hn').forEach(function(n){ n.classList.remove('active'); });
-  gaSendView('/','Inicio');
+  gaSendView('/',null);
 }
 
 function openArticle(id){
