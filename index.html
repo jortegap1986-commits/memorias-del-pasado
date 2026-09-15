@@ -84,396 +84,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --w:#FFFFFF;--ow:#F9F5EF;--cr:#F2EAD8;
-  --dk:#0C0A07;--dm:#1A1410;--d3:#242018;
-  --gd:#B8861E;--gdl:#D4A832;--gdp:#F0DDA0;
-  --tc:#8A3F30;--st:#8A7F6E;--stl:#B5A990;
-  --tx:#1A1208;--txm:#4A3E2E;--txl:#7A6E5E;
-  --bd:rgba(0,0,0,0.07);--bdg:rgba(184,134,30,0.2);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.7}
-
-/* ── TOPBAR ── */
-#topbar{position:relative;overflow:hidden;background:linear-gradient(120deg,#1a1410 0%,var(--dk) 45%,#241a10 100%);color:var(--stl);font-family:'Cinzel',serif;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.1rem;padding:14px 2rem;position:sticky;top:0;z-index:700;box-sizing:border-box;min-height:68px;border-bottom:2px solid rgba(212,168,50,.55)}
-#topbar::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 0%,rgba(212,168,50,.16) 45%,rgba(212,168,50,.32) 50%,rgba(212,168,50,.16) 55%,transparent 100%);background-size:250% 100%;animation:topbarSweep 5s linear infinite;pointer-events:none}
-.topbar-msg{display:flex;align-items:center;gap:.6rem;position:relative;z-index:1}
-.topbar-msg .tb-icon{font-size:1.5rem;animation:topbarHeartBeat 1.6s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(212,168,50,.6))}
-.topbar-msg .tb-copy{display:flex;flex-direction:column;line-height:1.25}
-.topbar-msg .tb-copy strong{font-size:.92rem;letter-spacing:.05em;text-transform:uppercase;color:var(--gdl);font-weight:800}
-.topbar-msg .tb-copy span{font-size:.72rem;letter-spacing:.02em;text-transform:none;color:var(--stl);font-family:'EB Garamond',serif;font-style:italic}
-.topbar-cta-group{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
-.topbar-donate{color:var(--dk);background:linear-gradient(90deg,var(--gd) 0%,var(--gdl) 25%,var(--gd) 50%,var(--gdl) 75%,var(--gd) 100%);background-size:220% 100%;text-decoration:none;font-family:'Cinzel',serif;font-size:.85rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;padding:12px 30px;border-radius:24px;box-shadow:0 3px 14px rgba(0,0,0,.3);text-align:center;animation:topbarDonatePulse 2.1s ease-in-out infinite,topbarDonateSheen 3.4s linear infinite}
-.topbar-donate:hover{transform:scale(1.06);box-shadow:0 6px 22px rgba(212,168,50,.8)}
-.tb-heart{display:inline-block;animation:topbarHeartBeat 1.3s ease-in-out infinite}
-@keyframes topbarSweep{0%{background-position:0% 50%}100%{background-position:250% 50%}}
-@keyframes topbarDonatePulse{0%,100%{box-shadow:0 3px 14px rgba(0,0,0,.3),0 0 0 0 rgba(212,168,50,.55)}50%{box-shadow:0 3px 14px rgba(0,0,0,.3),0 0 26px 10px rgba(212,168,50,.65)}}
-@keyframes topbarDonateSheen{0%{background-position:0% 50%}100%{background-position:220% 50%}}
-@keyframes topbarHeartBeat{0%,100%{transform:scale(1)}25%{transform:scale(1.32)}40%{transform:scale(1)}60%{transform:scale(1.18)}}
-.topbar-comunidad{color:var(--gdp);background:rgba(212,168,50,.14);border:1px solid rgba(212,168,50,.6);text-decoration:none;font-family:'Cinzel',serif;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;padding:9px 18px;border-radius:18px;transition:background .2s,transform .2s,border-color .2s}
-.topbar-comunidad:hover{background:rgba(212,168,50,.3);transform:scale(1.05);border-color:var(--gdl)}
-@media(prefers-reduced-motion:reduce){.topbar-donate,.tb-heart,#topbar::before{animation:none!important}}
-@media(max-width:760px){.topbar-msg .tb-copy span{display:none}}
-
-/* ── HEADER ── */
-#header{position:sticky;top:68px;z-index:500;background:var(--w);border-bottom:3px solid var(--gd);box-shadow:0 2px 16px rgba(0,0,0,0.09)}
-.hdr-inner{max-width:1280px;margin:0 auto;padding:.7rem 2rem;display:flex;align-items:center;gap:1.5rem}
-.hdr-logo{display:flex;align-items:center;gap:.75rem;cursor:pointer;flex-shrink:0}
-.hdr-logo img{width:46px;height:46px;object-fit:contain}
-.hdr-title{font-family:'Cinzel Decorative',serif;font-size:.78rem;font-weight:700;color:var(--dk);display:block;letter-spacing:.08em}
-.hdr-sub{font-family:'Cinzel',serif;font-size:.46rem;letter-spacing:.22em;color:var(--st);text-transform:uppercase}
-.hdr-nav{display:flex;align-items:center;gap:.1rem;margin-left:auto}
-.hn{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--txm);padding:.6rem 1rem;cursor:pointer;text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;font-weight:600}
-.hn:hover{color:var(--gd);border-bottom-color:var(--gd)}
-.hn-drop{position:relative}
-.hn-menu{display:none;position:absolute;top:100%;left:0;background:var(--w);border:1px solid var(--bd);border-top:3px solid var(--gd);min-width:260px;box-shadow:0 6px 24px rgba(0,0,0,0.12);z-index:600}
-.hn-drop:hover .hn-menu{display:block}
-.hn-menu a{display:block;padding:.6rem 1.2rem;font-family:'EB Garamond',serif;font-size:.98rem;color:var(--tx);cursor:pointer;border-bottom:1px solid var(--bd);transition:background .15s,color .15s;text-decoration:none}
-.hn-menu a:hover{background:var(--ow);color:var(--gd)}
-#menu-btn{display:none;background:none;border:1px solid var(--bd);padding:.4rem .7rem;cursor:pointer;font-size:1.2rem;color:var(--tx);margin-left:auto}
-
-/* ── HERO SLIDER ── */
-#hero{position:relative;height:74vh;min-height:520px;overflow:hidden}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease;pointer-events:none}
-.hero-slide.active{opacity:1;pointer-events:auto}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.75) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.08) 100%);display:flex;align-items:center}
-.hero-content{max-width:620px;padding:0 5rem;color:#fff}
-.hero-cat{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.22em;color:var(--gdl);text-transform:uppercase;display:block;margin-bottom:1rem}
-.hero-h1{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.8vw,3rem);font-weight:700;line-height:1.18;margin-bottom:1rem;text-shadow:0 2px 16px rgba(0,0,0,.5)}
-.hero-excerpt{font-family:'EB Garamond',serif;font-size:1.1rem;line-height:1.65;color:rgba(255,255,255,.85);margin-bottom:1.8rem}
-.hero-btn{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 1.8rem;background:var(--gd);color:#fff;border:none;cursor:pointer;transition:background .2s}
-.hero-btn:hover{background:var(--gdl)}
-.hero-dots{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem}
-.hero-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:background .2s}
-.hero-dot.active{background:var(--gd)}
-.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);color:#fff;border:none;font-size:2.2rem;padding:.4rem 1rem;cursor:pointer;transition:background .2s;line-height:1}
-.hero-arrow:hover{background:rgba(184,134,30,.65)}
-.hero-prev{left:1rem}.hero-next{right:1rem}
-
-/* ── HOME GRID ── */
-#home-grid{max-width:1280px;margin:0 auto;padding:4rem 2rem}
-.sec-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gd);display:flex;align-items:center;gap:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--bdg);margin-bottom:2.5rem}
-.sec-label::before{content:'✦';font-size:.9rem}
-.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:4rem}
-@media(min-width:961px){.art-grid>.art-card:last-child:nth-child(3n+1){grid-column:2}}
-.art-card{cursor:pointer;background:var(--w);border:1px solid var(--bd);overflow:hidden;transition:transform .2s,box-shadow .2s}
-.art-card:hover{transform:translateY(-5px);box-shadow:0 10px 36px rgba(0,0,0,.12)}
-.art-card-img{position:relative;aspect-ratio:16/9;overflow:hidden;background-size:cover;background-position:center top}
-.art-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
-.art-card:hover .art-card-img img{transform:scale(1.05)}
-.art-card-cat{position:absolute;top:.7rem;left:.7rem;font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;background:var(--gd);color:#fff;padding:.25rem .6rem}
-.art-card-body{padding:1.2rem 1.4rem 1.4rem}
-.art-card-title{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;color:var(--dk);line-height:1.38;margin-bottom:.65rem}
-.art-card-exc{font-family:'EB Garamond',serif;font-size:.95rem;color:var(--txm);line-height:1.55;margin-bottom:1rem}
-.art-card-ft{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--bd);padding-top:.7rem}
-.art-card-meta{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.1em;color:var(--txl);text-transform:uppercase}
-.art-card-cta{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;color:var(--gd);text-transform:uppercase}
-
-/* ── DIVIDER STRIP ── */
-.strip-dark{background:var(--dk);padding:3.5rem 2rem;text-align:center}
-.strip-dark .sd-orn{color:var(--gd);font-size:1.1rem;letter-spacing:.4rem;margin-bottom:1rem}
-.strip-dark .sd-text{font-family:'EB Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--gdp);line-height:1.6;max-width:700px;margin:0 auto .5rem}
-.strip-dark .sd-author{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.2em;color:var(--gd);text-transform:uppercase}
-
-/* ── ARTICLE VIEW ── */
-#article-view{display:none}
-.av-back-bar{background:var(--ow);border-bottom:1px solid var(--bd);padding:.55rem 2rem;display:flex;align-items:center;gap:1.5rem;position:sticky;top:144px;z-index:400}
-.av-back{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);background:none;border:none;cursor:pointer;padding:0}
-.av-back:hover{text-decoration:underline}
-.av-crumb{font-family:'EB Garamond',serif;font-size:.92rem;color:var(--txl)}
-
-/* ── ARTICLE SECTIONS ── */
-.art-section{display:none}
-.art-hero{height:66vh;min-height:430px;background-size:cover;background-position:center;position:relative}
-.art-hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.28) 60%,rgba(0,0,0,.08) 100%);display:flex;align-items:flex-end}
-.art-hero-ct{padding:3rem 4rem;max-width:950px;color:#fff}
-.art-badge{font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;background:var(--gd);color:#fff;padding:.28rem .75rem;display:inline-block;margin-bottom:1rem}
-.art-h1{font-family:'Cinzel',serif;font-size:clamp(1.7rem,4vw,3rem);font-weight:700;line-height:1.15;text-shadow:0 2px 20px rgba(0,0,0,.5);margin-bottom:.7rem}
-.art-byline{font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.72);font-size:1rem}
-
-/* Article body layout */
-.art-wrap{display:grid;grid-template-columns:1fr 270px;gap:4rem;max-width:1160px;margin:0 auto;padding:4rem 2rem}
-.art-body p{font-family:'EB Garamond',serif;font-size:1.14rem;line-height:1.88;color:var(--tx);margin-bottom:1.4rem;text-align:justify}
-.art-body h2{font-family:'Cinzel',serif;font-size:1.32rem;color:var(--dk);padding-bottom:.5rem;border-bottom:2px solid var(--gd);margin:2.5rem 0 1.2rem}
-.art-body h3{font-family:'Cinzel',serif;font-size:1.05rem;color:var(--txm);margin:1.8rem 0 .7rem}
-.art-body figure{margin:2rem 0}
-.art-body figure img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--bd)}
-.art-body figcaption{font-family:'EB Garamond',serif;font-style:italic;font-size:.88rem;color:var(--txl);text-align:center;margin-top:.5rem;padding:0 1rem}
-.art-body blockquote{border-left:4px solid var(--gd);background:var(--ow);padding:1.4rem 1.8rem;margin:2.2rem 0}
-.art-body blockquote p{font-size:1.18rem;font-style:italic;color:var(--dm);margin-bottom:.4rem}
-.art-body blockquote cite{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.14em;color:var(--gd);text-transform:uppercase}
-.art-body video{width:100%;display:block;background:#000;margin:1.5rem 0 0}
-.art-body .vcap{font-family:'EB Garamond',serif;font-style:italic;font-size:.88rem;color:var(--txl);background:var(--ow);padding:.4rem 1rem;margin-bottom:1.5rem}
-
-/* Sidebar TOC */
-.art-aside{padding-top:.5rem}
-.art-toc{position:sticky;top:208px;border:1px solid var(--bd);background:var(--ow);padding:1.2rem 1.4rem}
-.art-toc h4{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--bdg)}
-.art-toc a{display:block;font-family:'EB Garamond',serif;font-size:.9rem;color:var(--txm);padding:.3rem 0;border-bottom:1px solid var(--bd);text-decoration:none;transition:color .15s;cursor:pointer}
-.art-toc a:hover{color:var(--gd)}
-.art-body h2[id]{scroll-margin-top:188px}
-
-/* Timeline */
-.timeline{margin:2.2rem 0;padding-left:.5rem}
-.tl-item{display:flex;gap:1.2rem;margin-bottom:1rem;align-items:flex-start}
-.tl-year{font-family:'Cinzel',serif;font-size:.72rem;font-weight:700;color:var(--gd);min-width:72px;padding-top:.12rem;flex-shrink:0}
-.tl-dot{width:2px;background:var(--bdg);align-self:stretch;flex-shrink:0;position:relative;margin-top:.2rem}
-.tl-dot::before{content:'';position:absolute;top:4px;left:-4px;width:10px;height:10px;background:var(--gd);border-radius:50%}
-.tl-text{font-family:'EB Garamond',serif;font-size:.95rem;color:var(--txm);line-height:1.5}
-
-/* Pagina Insignia */
-.pagina-insignia{background:linear-gradient(135deg,var(--dk) 0%,var(--dm) 100%);padding:5rem 2rem;text-align:center}
-.pi-orn{color:var(--gd);font-size:1.1rem;letter-spacing:.5rem;margin-bottom:1.5rem}
-.pi-title{font-family:'Cinzel Decorative',serif;font-size:1.15rem;color:var(--gdl);margin-bottom:2rem}
-.pi-quote{font-family:'EB Garamond',serif;font-size:1.42rem;font-style:italic;color:var(--gdp);line-height:1.7;max-width:800px;margin:0 auto 1.5rem}
-.pi-body{font-family:'EB Garamond',serif;font-size:1rem;color:var(--stl);max-width:640px;margin:0 auto}
-
-/* Sources */
-.art-sources{background:var(--ow);border-top:3px solid var(--bdg);padding:2.5rem 4rem}
-.art-sources h4{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.25em;color:var(--gd);text-transform:uppercase;margin-bottom:1rem}
-.art-sources ul{list-style:none;padding:0}
-.art-sources li{font-family:'EB Garamond',serif;font-size:.94rem;color:var(--txm);padding:.35rem 0;border-bottom:1px solid var(--bd)}
-.art-sources li::before{content:'— ';color:var(--gd)}
-
-/* Next CTA */
-.art-next{background:var(--cr);padding:3rem;text-align:center;border-top:1px solid var(--bd)}
-.art-next p{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.25em;color:var(--st);text-transform:uppercase;margin-bottom:1rem}
-.art-next button{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 2.2rem;background:var(--dk);color:var(--gdp);border:none;cursor:pointer;transition:background .2s}
-.art-next button:hover{background:var(--gd);color:#fff}
-
-
-
-/* ── QUOTES ── */
-#sec-citas{background:var(--dk);padding:5rem 2rem}
-.citas-inner{max-width:1280px;margin:0 auto}
-.qgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
-.qcard{background:var(--dm);border:1px solid var(--bdg);padding:1.75rem;border-top:3px solid var(--gd)}
-.qcard-text{font-family:'EB Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--gdp);line-height:1.65;margin-bottom:1rem}
-.qcard-auth{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.15em;color:var(--gd);text-transform:uppercase}
-
-/* ── FOOTER ── */
-#footer{background:var(--dk);color:var(--stl);padding:4rem 2rem 2rem}
-.ft-inner{max-width:1200px;margin:0 auto}
-.ft-logo{display:flex;align-items:center;gap:.9rem;margin-bottom:2.5rem}
-.ft-logo img{width:40px;height:40px;object-fit:contain}
-.ft-title{font-family:'Cinzel Decorative',serif;font-size:.72rem;color:var(--gdl);letter-spacing:.08em}
-.ft-sub{font-family:'Cinzel',serif;font-size:.44rem;letter-spacing:.2em;color:var(--st);text-transform:uppercase;margin-top:.2rem}
-.ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;padding:2.5rem 0;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:2rem}
-.ft-col h5{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:.9rem}
-.ft-col a{display:block;font-family:'EB Garamond',serif;font-size:.92rem;color:var(--stl);cursor:pointer;padding:.22rem 0;transition:color .15s;text-decoration:none}
-.ft-col a:hover{color:var(--gdl)}
-.ft-copy{text-align:center;font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase}
-.ft-orn{color:var(--gd);font-size:1rem;letter-spacing:.4rem;margin-bottom:.6rem}
-
-/* ── REVEAL ── */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-
-/* ── MOBILE ── */
-
-/* ── PODCAST SECTION ── */
-#sec-podcast{background:var(--dk);padding:5rem 2rem}
-.podcast-header{text-align:center;margin-bottom:3rem}
-.podcast-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
-.podcast-header h2{font-family:'Cinzel Decorative',serif;color:var(--gdl);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
-.podcast-header p{color:var(--stl);font-family:'EB Garamond',serif;font-size:1.1rem;max-width:600px;margin:0 auto}
-.podcast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1100px;margin:0 auto}
-.pod-card{background:var(--dm);border:1px solid var(--bdg);border-radius:4px;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.pod-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(184,134,30,.15)}
-.pod-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.pod-body{padding:1.4rem}
-.pod-ep{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:var(--gd);margin-bottom:.5rem;font-weight:700}
-.pod-title{font-family:'Cinzel',serif;color:var(--w);font-size:.95rem;margin-bottom:.8rem;line-height:1.3}
-.pod-desc{font-family:'EB Garamond',serif;color:var(--stl);font-size:.9rem;line-height:1.5;margin-bottom:1rem}
-.pod-player{width:100%;accent-color:var(--gd);margin-top:.5rem}
-.pod-soon{font-family:'EB Garamond',serif;font-size:.85rem;color:var(--gdl);margin-top:.7rem;font-style:italic}
-/* ── EBOOK / TIENDA ── */
-#sec-ebook{background:linear-gradient(135deg,var(--ow) 0%,var(--cr) 100%);padding:5.5rem 2rem;position:relative;overflow:hidden;border-top:1px solid var(--bdg);border-bottom:1px solid var(--bdg)}
-.ebook-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:4rem;align-items:center}
-.ebook-cover{position:relative}
-.ebook-cover-img{width:100%;aspect-ratio:2/3;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.35),0 8px 20px rgba(0,0,0,.2);border:1px solid rgba(0,0,0,.15);transform:rotate(-2deg);transition:transform .3s ease;display:block}
-.ebook-cover:hover .ebook-cover-img{transform:rotate(0deg) scale(1.02)}
-.ebook-badge-new{position:absolute;top:-14px;right:6px;background:var(--tc);color:#fff;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;padding:.5rem .9rem;transform:rotate(6deg);box-shadow:0 4px 12px rgba(0,0,0,.25)}
-.ebook-info h2{font-family:'Cinzel Decorative',serif;color:var(--dk);font-size:clamp(1.4rem,3.2vw,2.3rem);margin:.7rem 0 .8rem;line-height:1.25}
-.ebook-author{font-family:'EB Garamond',serif;font-style:italic;color:var(--txl);margin-bottom:1.3rem;font-size:1.05rem}
-.ebook-desc{font-family:'EB Garamond',serif;color:var(--txm);font-size:1.08rem;line-height:1.75;margin-bottom:1.5rem}
-.ebook-features{list-style:none;padding:0;margin-bottom:1.8rem;display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
-.ebook-features li{font-family:'EB Garamond',serif;font-size:.94rem;color:var(--txm);display:flex;align-items:center;gap:.5rem}
-.ebook-features li::before{content:'✦';color:var(--gd);font-size:.7rem}
-.ebook-buybox{background:var(--w);border:1px solid var(--bdg);border-left:4px solid var(--gd);padding:1.5rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.ebook-price{display:flex;align-items:baseline;gap:.5rem}
-.ebook-price .now{font-family:'Cinzel',serif;font-size:1.9rem;font-weight:700;color:var(--dk)}
-.ebook-price .cur{font-family:'Cinzel',serif;font-size:.65rem;color:var(--txl);text-transform:uppercase;letter-spacing:.1em}
-.ebook-buy-btn{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;padding:.95rem 2.2rem;background:var(--gd);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none;display:inline-block}
-.ebook-buy-btn:hover{background:var(--gdl);transform:translateY(-2px)}
-.ebook-buy-btn-alt{background:transparent;color:var(--gd);border:2px solid var(--gd);padding:.83rem 2.2rem}
-.ebook-buy-btn-alt:hover{background:var(--gd);color:#fff}
-.ebook-trust{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.12em;color:var(--txl);text-transform:uppercase;margin-top:1rem;text-align:center}
-
-/* ── Opciones de compra (PDF vs Amazon) ── */
-.buy-options{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.buy-options{grid-template-columns:1fr}}
-.buy-opt{position:relative;background:var(--w);border:1px solid var(--bdg);border-top:4px solid var(--opt-c);padding:1.5rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:.5rem}
-.buy-opt-pdf{--opt-c:var(--gd);--opt-t:rgba(184,134,30,.12)}
-.buy-opt-amazon{--opt-c:var(--tc);--opt-t:rgba(138,63,48,.12)}
-.buy-opt-tag{align-self:flex-start;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--opt-c);background:var(--opt-t);padding:.3rem .7rem;font-weight:700}
-.buy-opt-name{font-family:'Cinzel Decorative',serif;font-size:1.05rem;color:var(--dk);margin-top:.3rem}
-.buy-opt-why{font-family:'EB Garamond',serif;font-size:.92rem;color:var(--txm);line-height:1.5;flex-grow:1}
-.buy-opt-price{font-family:'Cinzel',serif;font-size:1.3rem;font-weight:700;color:var(--dk);margin-top:.2rem}
-.buy-opt-price .cur{font-size:.6rem;color:var(--txl);font-weight:400;letter-spacing:.08em;margin-left:.3rem}
-.buy-opt-btn{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;padding:.95rem 1rem;background:var(--opt-c);color:#fff;border:none;cursor:pointer;transition:filter .2s,transform .2s;text-decoration:none;display:block;margin-top:.4rem}
-.buy-opt-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
-
-/* ── Newsletter (banner con imagen histórica) ── */
-.nl-sec{position:relative;background:linear-gradient(to right,rgba(10,7,4,.94) 0%,rgba(10,7,4,.86) 40%,rgba(10,7,4,.5) 75%,rgba(10,7,4,.25) 100%),url('assets/img/newsletter-bg-legion.jpg');background-size:cover;background-position:center 30%;padding:4.5rem 2rem}
-.nl-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
-.nl-text h2{font-family:'Cinzel Decorative',serif;color:#fff;font-size:clamp(1.6rem,3.6vw,2.5rem);margin:.7rem 0 1rem;line-height:1.2}
-.nl-text p{font-family:'EB Garamond',serif;color:rgba(255,255,255,.85);font-size:1.12rem;line-height:1.7;margin-bottom:1.3rem;max-width:480px}
-.nl-bullets{list-style:none;padding:0;display:flex;flex-direction:column;gap:.55rem}
-.nl-bullets li{font-family:'EB Garamond',serif;font-size:.98rem;color:rgba(255,255,255,.92);display:flex;align-items:center;gap:.6rem}
-.nl-bullets li::before{content:'✦';color:var(--gdl);font-size:.7rem}
-.nl-card{background:#fff;border-radius:14px;padding:.5rem;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
-@media(max-width:860px){
-  .nl-inner{grid-template-columns:1fr}
-  .nl-sec{background-position:center 20%}
-  .nl-text p{max-width:none}
-}
-.hn-cta{background:var(--gd)!important;color:#fff!important;padding:.5rem 1.1rem!important;margin-left:.4rem}
-.hn-cta:hover{background:var(--gdl)!important;color:#fff!important;border-bottom-color:transparent!important}
-
-/* ═══ BOTONES FLOTANTES (donación · comunidad · podcast) ═══ */
-.fab-group{position:fixed;bottom:1.6rem;z-index:600;display:flex;flex-direction:column;gap:.85rem}
-.fab-group.right{right:1.6rem;align-items:flex-end}
-.fab-group.left{left:1.6rem;align-items:flex-start}
-.fab{display:flex;align-items:center;height:52px;border-radius:26px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.22);transition:box-shadow .25s,transform .25s;overflow:hidden;text-decoration:none}
-.fab:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 28px rgba(0,0,0,.3)}
-.fab-ico{width:52px;min-width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:1.35rem}
-.fab-label{max-width:0;opacity:0;white-space:nowrap;overflow:hidden;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.06em;font-weight:700;transition:max-width .35s ease,opacity .25s ease,padding .35s ease}
-.fab:hover .fab-label{max-width:220px;opacity:1;padding-right:1.1rem}
-.fab-comunidad{background:var(--dk);color:var(--gdp)}
-.fab-podcast{background:var(--w);color:var(--dk);border:1px solid var(--bdg)}
-@media(max-width:640px){.fab-group{display:none}}
-
-/* ═══ ANIMACIÓN CORONA DE LAUREL + CORAZÓN — SECCIÓN APOYA ═══ */
-.apoyo-anim{position:relative;width:180px;height:180px;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center}
-.apoyo-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,50,.45) 0%,rgba(212,168,50,.12) 45%,transparent 72%);animation:apoyoGlowPulse 3.2s ease-in-out infinite}
-.apoyo-wreath{position:relative;width:170px;height:170px;overflow:visible}
-.apoyo-leaf{fill:var(--gdl);transform-box:fill-box;transform-origin:0% 100%;animation:apoyoLeafSway 4.5s ease-in-out infinite}
-.apoyo-heart{fill:var(--gd);filter:drop-shadow(0 0 6px rgba(212,168,50,.65));transform-box:fill-box;transform-origin:50% 50%;animation:apoyoHeartBeat 1.8s ease-in-out infinite}
-.apoyo-spark{position:absolute;top:50%;left:50%;width:5px;height:5px;border-radius:50%;background:var(--gdp);box-shadow:0 0 6px 1px rgba(240,221,160,.9);opacity:0}
-.apoyo-spark.s1{animation:apoyoOrbit 5.5s linear infinite}
-.apoyo-spark.s2{animation:apoyoOrbit 5.5s linear infinite;animation-delay:-1.8s}
-.apoyo-spark.s3{animation:apoyoOrbit 5.5s linear infinite;animation-delay:-3.6s}
-@keyframes apoyoGlowPulse{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.12);opacity:1}}
-@keyframes apoyoHeartBeat{0%,100%{transform:scale(1)}25%{transform:scale(1.14)}40%{transform:scale(1)}60%{transform:scale(1.08)}}
-@keyframes apoyoLeafSway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(3deg)}}
-@keyframes apoyoOrbit{
-  0%{transform:translate(-50%,-50%) rotate(0deg) translateX(78px) rotate(0deg);opacity:0}
-  8%{opacity:1}
-  50%{transform:translate(-50%,-50%) rotate(180deg) translateX(78px) rotate(-180deg);opacity:.9}
-  92%{opacity:1}
-  100%{transform:translate(-50%,-50%) rotate(360deg) translateX(78px) rotate(-360deg);opacity:0}
-}
-@media(prefers-reduced-motion:reduce){.apoyo-glow,.apoyo-heart,.apoyo-leaf,.apoyo-spark{animation:none!important}}
-
-
-
-@media(max-width:900px){.ebook-wrap{grid-template-columns:1fr;gap:2.2rem}.ebook-cover{max-width:240px;margin:0 auto}.ebook-features{grid-template-columns:1fr}}
-/* ── HERO VIDEO ── */
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-
-/* ── VIDEOS / HISTORIA EN MOVIMIENTO ── */
-.videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;max-width:1160px;margin:0 auto}
-.vid-card{background:var(--dm);border:1px solid var(--bdg);overflow:hidden;transition:transform .3s,box-shadow .3s}
-.vid-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(184,134,30,.18)}
-.vid-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;cursor:pointer}
-.vid-card-body{padding:1.1rem 1.3rem 1.3rem}
-.vid-card-cat{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;display:block;margin-bottom:.4rem}
-.vid-card-title{font-family:'Cinzel',serif;font-size:.9rem;color:var(--w);line-height:1.35}
-
-/* ── COMUNIDAD ── */
-#sec-comunidad{background:linear-gradient(135deg,var(--dm) 0%,var(--dk) 100%);padding:5.5rem 2rem;text-align:center;border-top:1px solid var(--bdg)}
-.com-inner{max-width:760px;margin:0 auto}
-.com-orn{color:var(--gd);font-size:1.2rem;letter-spacing:.5rem;margin-bottom:1.2rem}
-.com-title{font-family:'Cinzel Decorative',serif;color:var(--gdl);font-size:clamp(1.4rem,3.5vw,2.4rem);margin-bottom:1rem;line-height:1.3}
-.com-text{font-family:'EB Garamond',serif;color:var(--stl);font-size:1.12rem;line-height:1.75;margin-bottom:2.2rem}
-.com-btn{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.6rem;background:var(--gd);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none;display:inline-block}
-.com-btn:hover{background:var(--gdl);transform:translateY(-2px)}
-.com-note{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.15em;color:var(--st);text-transform:uppercase;margin-top:1.2rem}
-
-/* ── REDES SOCIALES ── */
-.social-icons{display:flex;gap:.7rem;align-items:center}
-.social-icons a{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid var(--bdg);color:var(--gdl);transition:background .2s,color .2s,border-color .2s;text-decoration:none}
-.social-icons a:hover{background:var(--gd);color:#fff;border-color:var(--gd)}
-.social-icons svg{width:15px;height:15px;fill:currentColor}
-#sec-redes{background:var(--ow);padding:4.5rem 2rem;text-align:center;border-top:1px solid var(--bdg)}
-.redes-title{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.3em;color:var(--gd);text-transform:uppercase;margin-bottom:2rem}
-.redes-grid{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto}
-.red-card{display:flex;align-items:center;gap:1rem;background:var(--w);border:1px solid var(--bd);border-top:3px solid var(--gd);padding:1.2rem 1.8rem;text-decoration:none;transition:transform .25s,box-shadow .25s;min-width:230px}
-.red-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.12)}
-.red-card svg{width:28px;height:28px;fill:var(--gd);flex-shrink:0}
-.red-card-name{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;color:var(--dk);text-transform:uppercase;text-align:left}
-.red-card-sub{font-family:'EB Garamond',serif;font-size:.85rem;color:var(--txl);text-align:left}
-@media(max-width:900px){.videos-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.videos-grid{grid-template-columns:1fr}.redes-grid{flex-direction:column;align-items:stretch}#topbar .social-icons{display:none}#topbar{justify-content:center;flex-direction:column;padding:10px 1.2rem;min-height:100px}.topbar-msg{text-align:center}.topbar-cta-group{width:100%;justify-content:center}.topbar-donate{max-width:none;flex:1 1 auto}#header{top:100px}.av-back-bar{top:176px}.art-toc{top:240px}.art-body h2[id]{scroll-margin-top:220px}}
-@media(max-width:420px){.topbar-donate{font-size:.66rem;padding:5px 10px}.topbar-comunidad{padding:5px 8px}.topbar-comunidad .tb-label{display:none}}
-
-.sec-thematic{padding:5rem 2rem}
-.sec-thematic.persia-bg{background:var(--ow)}
-.sec-thematic.roma-bg{background:var(--cr)}
-.sec-thematic.pompeya-bg{background:var(--ow)}
-.art-card-img video{width:100%;height:100%;object-fit:cover;display:block}
-.thematic-header{text-align:center;margin-bottom:3rem}
-.thematic-header .sec-label{display:inline-block;background:var(--gd);color:var(--dk);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;padding:.3rem .9rem;margin-bottom:1rem;font-weight:700}
-.thematic-header h2{font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem);margin-bottom:.5rem}
-.thematic-header p{color:var(--txm);font-family:'EB Garamond',serif;font-size:1.1rem;max-width:640px;margin:0 auto}
-.thematic-video-banner{position:relative;height:240px;overflow:hidden;border:1px solid var(--bdg);margin-bottom:3rem}
-.thematic-video-banner video{width:100%;height:100%;object-fit:cover;display:block}
-.thematic-video-banner .tvb-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,10,7,.15) 0%,rgba(12,10,7,.65) 100%)}
-.thematic-video-banner .tvb-label{position:absolute;left:2rem;bottom:1.2rem;color:#fff;font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6)}
-.split-feature{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;background:var(--ow);border:1px solid var(--bdg);margin-bottom:3rem;min-height:420px}
-.split-feature-text{padding:3rem 3.2rem;display:flex;flex-direction:column;justify-content:center}
-.split-feature-text .sec-label{margin-bottom:.9rem}
-.split-feature-text h3{font-family:'Cinzel',serif;font-size:1.7rem;color:var(--dk);line-height:1.28;margin-bottom:1.1rem}
-.split-feature-text p{font-family:'EB Garamond',serif;font-size:1.08rem;color:var(--txm);line-height:1.7;margin-bottom:.9rem}
-.split-feature-text .split-feature-btn{align-self:flex-start;margin-top:.6rem;font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--gd);padding:.85rem 1.6rem;border:none;cursor:pointer;transition:background .2s}
-.split-feature-text .split-feature-btn:hover{background:var(--dk)}
-.split-feature-media{position:relative;overflow:hidden;min-height:280px}
-.split-feature-media video{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
-@media(max-width:860px){.split-feature{grid-template-columns:1fr}.split-feature-media{min-height:260px;order:-1}.split-feature-text{padding:2.2rem 1.6rem}}
-
-.explora-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.explora-card{background:var(--w);border:1px solid var(--bd);padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.explora-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.1);border-color:var(--gd)}
-.explora-ico{font-size:2.2rem;margin-bottom:.8rem}
-.explora-card h4{font-family:'Cinzel',serif;font-size:1rem;color:var(--dk);margin-bottom:.5rem}
-.explora-card p{font-family:'EB Garamond',serif;color:var(--txm);font-size:.92rem}
-@media(max-width:900px){.explora-grid{grid-template-columns:1fr}}
-@media(max-width:960px){
-  .podcast-grid{grid-template-columns:1fr 1fr}
-  .art-grid{grid-template-columns:1fr 1fr}
-  .art-wrap{grid-template-columns:1fr}
-  .art-aside{display:none}
-  .qgrid{grid-template-columns:1fr 1fr!important}
-  .maps-grid{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr}
-  #menu-btn{display:block}
-  .hdr-nav{display:none}
-  .hdr-nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--w);border-top:3px solid var(--gd);padding:1rem;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:600}
-}
-@media(max-width:600px){
-  .podcast-grid{grid-template-columns:1fr}
-  .art-grid{grid-template-columns:1fr}
-  .qgrid{grid-template-columns:1fr!important}
-  .hero-content{padding:0 1.5rem}
-  .art-hero-ct{padding:2rem}
-  .art-wrap{padding:2rem 1rem}
-  .art-sources{padding:2rem 1.5rem}
-}
-</style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
@@ -525,9 +136,9 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
         <a onclick="gotoSection('sec-pompeya')">Pompeya</a>
           <a onclick="openArticle('art-legiones')">Las Legiones de Roma</a>
-          <a onclick="openArticle('art-pompeya1')">Pompeya: El Último Día</a>
+          <a href="articulos/pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
           <a onclick="openArticle('art-pompeya2')">Pompeya: Arte y Vida</a>
-          <a onclick="openArticle('art-teutoburgo')">La Batalla de Teutoburgo</a>
+          <a href="articulos/batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
           <a onclick="openArticle('art-maquinaria')">Maquinaria de Guerra Romana</a>
           <a onclick="openArticle('art-catedral-gotica')">Catedrales Góticas</a>
         </div>
@@ -575,7 +186,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <span class="hero-cat">ROMA · CATÁSTROFE · 79 dC</span>
         <h1 class="hero-h1">Pompeya: El Último Día de una Ciudad Eterna</h1>
         <p class="hero-excerpt">El 24 de agosto del año 79 dC, el Vesubio borró del mapa una ciudad de 20,000 almas. Sus voces aún resuenan.</p>
-        <button class="hero-btn" onclick="openArticle('art-pompeya1')">Leer Artículo →</button>
+        <button class="hero-btn" onclick="location.href='articulos/pompeya-ultimo-dia.html'">Leer Artículo →</button>
       </div>
     </div>
   </div>
@@ -586,7 +197,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <span class="hero-cat">ROMA · GERMANIA · EMBOSCADA</span>
         <h1 class="hero-h1">El Bosque que Detuvo a Roma: Teutoburgo</h1>
         <p class="hero-excerpt">Tres legiones entraron al bosque. Ningún soldado salió. El desastre que cambió el mapa de Europa para siempre.</p>
-        <button class="hero-btn" onclick="openArticle('art-teutoburgo')">Leer Artículo →</button>
+        <button class="hero-btn" onclick="location.href='articulos/batalla-teutoburgo.html'">Leer Artículo →</button>
       </div>
     </div>
   </div>
@@ -648,7 +259,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           </div>
         </article>
         <!-- Card 4 -->
-        <article class="art-card rv" onclick="openArticle('art-pompeya1')">
+        <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
           <div class="art-card-img"><img src="assets/img/pompeya1.jpg" alt="Pompeya erupción" loading="lazy"><span class="art-card-cat">ROMA · CATÁSTROFE · 79 dC</span></div>
           <div class="art-card-body">
             <h3 class="art-card-title">Pompeya: El Último Día de una Ciudad Eterna</h3>
@@ -666,7 +277,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           </div>
         </article>
         <!-- Card 6 -->
-        <article class="art-card rv" onclick="openArticle('art-teutoburgo')">
+        <article class="art-card rv" onclick="location.href='articulos/batalla-teutoburgo.html'">
           <div class="art-card-img"><img src="assets/img/teutoburgo.jpg" alt="Teutoburgo" loading="lazy"><span class="art-card-cat">ROMA · GERMANIA · 9 dC</span></div>
           <div class="art-card-body">
             <h3 class="art-card-title">La Batalla del Bosque de Teutoburgo</h3>
@@ -835,7 +446,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="art-read">Leer artículo →</span>
         </div>
       </article>
-      <article class="art-card rv" onclick="openArticle('art-gaugamela')">
+      <article class="art-card rv" onclick="location.href='articulos/batalla-gaugamela.html'">
         <div class="art-card-img" style="background-image:url('assets/img/persia/gaugamela-articulo.jpg')"></div>
         <div class="art-card-body">
           <span class="art-cat">BATALLA DECISIVA · 331 a.C.</span>
@@ -925,7 +536,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="art-read">Leer artículo →</span>
         </div>
       </article>
-      <article class="art-card rv" onclick="openArticle('art-cesar')">
+      <article class="art-card rv" onclick="location.href='articulos/julio-cesar-rubicon.html'">
         <div class="art-card-img" style="background-image:url('assets/img/roma/foro-senado.jpg')"></div>
         <div class="art-card-body">
           <span class="art-cat">POLÍTICA · REPÚBLICA · 49 a.C.</span>
@@ -961,7 +572,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="art-read">Leer artículo →</span>
         </div>
       </article>
-      <article class="art-card rv" onclick="openArticle('art-coliseo')">
+      <article class="art-card rv" onclick="location.href='articulos/coliseo-romano-gladiadores.html'">
         <div class="art-card-img" style="background-image:url('assets/img/torres.jpg')"></div>
         <div class="art-card-body">
           <span class="art-cat">ARQUITECTURA · ESPECTÁCULO</span>
@@ -1029,7 +640,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
     </div>
 
     <div class="art-grid">
-      <article class="art-card rv" onclick="openArticle('art-pompeya1')">
+      <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
         <div class="art-card-img" style="background-image:url('assets/img/pompeya1.jpg')"></div>
         <div class="art-card-body">
           <span class="art-cat">ROMA · CATÁSTROFE · 79 dC</span>
@@ -1074,7 +685,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
           <span class="art-read">Ver artículo relacionado →</span>
         </div>
       </article>
-      <article class="art-card rv" onclick="openArticle('art-pompeya1')">
+      <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
         <div class="art-card-img"><video autoplay muted loop playsinline><source src="assets/video/restauracion2.mp4" type="video/mp4"></video></div>
         <div class="art-card-body">
           <span class="art-cat">RECONSTRUCCIÓN DIGITAL</span>
@@ -1321,9 +932,9 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
         <a onclick="openArticle('art-falange')">La Falange Macedonia</a>
         <a onclick="openArticle('art-dario')">Darío III y el Imperio Persa</a>
         <a onclick="openArticle('art-legiones')">Las Legiones de Roma</a>
-        <a onclick="openArticle('art-pompeya1')">Pompeya: El Último Día</a>
+        <a href="articulos/pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
         <a onclick="openArticle('art-pompeya2')">Pompeya: Arte y Vida</a>
-        <a onclick="openArticle('art-teutoburgo')">La Batalla de Teutoburgo</a>
+        <a href="articulos/batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
         <a onclick="openArticle('art-maquinaria')">Maquinaria de Guerra Romana</a>
       </div>
       <div class="ft-col">
@@ -1696,109 +1307,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <li>Michael Speidel — <em>Ancient Germanic Warriors</em>, Routledge, 2004</li>
     </ul>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-pompeya1')">Pompeya: El Último Día →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="location.href='articulos/pompeya-ultimo-dia.html'">Pompeya: El Último Día →</button></div>
 </div><!-- /art-legiones -->
 
-<!-- ═══════ ARTÍCULO 4: POMPEYA EL ÚLTIMO DÍA ═══════ -->
-<div id="art-pompeya1" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/pompeya1.jpg')">
-    <div class="art-hero-ov"><div class="art-hero-ct">
-      <span class="art-badge">ROMA · CATÁSTROFE · 79 dC</span>
-      <h1 class="art-h1">Pompeya: El Último Día de una Ciudad Eterna</h1>
-    </div></div>
-  </div>
-  <div class="art-wrap">
-    <div class="art-body">
-      <p>El 24 de agosto del año 79 después de Cristo amaneció como cualquier otro día de verano tardío en la próspera ciudad de Pompeya, en la costa de la Bahía de Nápoles. Los panaderos encendieron sus hornos antes del amanecer. Los vendedores de la vía dell'Abbondanza comenzaron a abrir sus puestos de comida caliente en los mostradores de piedra volcánica. Los gladiadores del anfiteatro hicieron sus ejercicios matutinos. Los magistrados se preparaban para sus obligaciones en el foro. Ninguno de los aproximadamente veinte mil habitantes de la ciudad sabía que antes de que ese día terminara, Pompeya dejaría de existir para siempre, y que su destrucción se convertiría, dos mil años después, en la fuente de información más extraordinaria sobre la vida cotidiana en el mundo romano.</p>
-
-      <h2 id="pompeya-antes-de-la-catastrofe-una-ciudad-en-plenitud">Pompeya Antes de la Catástrofe: Una Ciudad en Plenitud</h2>
-      <p>Pompeya en el año 79 dC era una ciudad de tamaño mediano pero notable prosperidad. Fundada en el siglo VII aC por los oscos, había pasado por manos samnitas y romanas antes de convertirse en colonia romana en el 80 aC, tras la guerra social. En el año de su destrucción, llevaba casi ciento sesenta años como ciudad romana y había asimilado plenamente la cultura, el idioma y las instituciones de Roma, aunque conservaba también elementos de sus herencias cultural más antiguas.</p>
-      <p>La economía de Pompeya giraba en torno a tres pilares: el comercio marítimo a través de su puerto en el río Sarno —acceso al Mediterráneo—, la producción agrícola de las fértiles tierras del Vesubio —vino, aceite de oliva, cereales— y una activa industria de procesamiento de pescado, especialmente la producción de garum, la salsa de pescado fermentado que era el condimento omnipresente de la cocina romana. Pompeya exportaba garum a todo el Imperio.</p>
-      <p>La ciudad estaba dotada de infraestructuras que la mayoría de las ciudades europeas no volverían a tener hasta el siglo XIX: agua corriente canalizada mediante un sistema de tuberías de plomo desde las fuentes de los montes Apeninos, red de alcantarillado, pavimentación de calles con grandes losas de piedra volcánica que aún se ven hoy, baños públicos accesibles a toda la población, teatro, odeón y el anfiteatro más antiguo construido en piedra que existe —data aproximadamente del 80 aC—.</p>
-
-      <figure>
-        <img src="assets/img/pompeya2.jpg" alt="Pompeya reconstruida" loading="lazy">
-        <figcaption>Reconstrucción digital de las calles de Pompeya en su época de esplendor, mostrando los pórticos, las tiendas y el tráfico de una ciudad romana próspera del siglo I dC.</figcaption>
-      </figure>
-
-      <h2 id="el-vesubio-un-vecino-traicionero">El Vesubio: Un Vecino Traicionero</h2>
-      <p>El monte Vesubio, que domina la bahía de Nápoles con su perfil inconfundible, no era reconocido como volcán por los romanos. El concepto moderno de vulcanología no existía, y aunque el poeta Diodoro Sículo había sugerido que podría ser de origen ígneo por la apariencia de sus rocas, los romanos de la época consideraban el Vesubio simplemente como una montaña excepcionalmente fértil —las laderas volcánicas producen suelos extraordinariamente ricos— ideal para el cultivo de la vid.</p>
-      <p>El Vesubio había permanecido en silencio durante siglos antes del 79 dC. Su última erupción documentada databa de aproximadamente el 1800 aC —más de mil ochocientos años antes—. Para los pompeyanos, la montaña era simplemente paisaje y fuente de prosperidad agrícola, no una amenaza.</p>
-      <p>Sin embargo, había habido señales de advertencia que los pompeyanos no supieron o no quisieron interpretar. En el año 62 dC, diecisiete años antes de la erupción, un violento terremoto sacudió la región y causó daños graves en Pompeya, Herculano y las ciudades vecinas. Las obras de reconstrucción todavía continuaban en el año 79. En los meses previos a agosto, una serie de pequeños terremotos —microseísmos, los llamamos hoy— habían inquietado a los habitantes. Varios manantiales habían secado inesperadamente. Los pozos daban agua con olor a azufre. Pero nadie conectó estos fenómenos con la montaña.</p>
-
-      <h2 id="el-24-de-agosto-hora-a-hora">El 24 de Agosto, Hora a Hora</h2>
-      <p>Hacia la una del mediodía —hora prima según el calendario romano— el Vesubio comenzó a rugir. Una columna de gas, ceniza y material piroclástico se disparó hacia el cielo con una violencia que los testigos describirían después como semejante a un pino gigantesco: el tronco ascendente y las ramas horizontales en la cima, expandiéndose a medida que el material eyectado perdía velocidad vertical. Esta columna eruptiva, que los vulcanólogos modernos llaman "columna Pliniana" en honor precisamente a la descripción de Plinio el Joven, alcanzó entre veinte y treinta kilómetros de altura.</p>
-      <p>Durante las primeras horas, la amenaza principal no fue el fuego sino la lluvia de pómez —la piedra volcánica porosa y ligera que cayó sobre Pompeya a razón de varios centímetros por hora. Los pompeyanos que no huyeron inmediatamente pronto vieron cómo los tejados de sus casas comenzaban a ceder bajo el peso acumulado. Las calles se llenaron de una nieve gris que hacía difícil caminar. Plinio el Joven, que observaba desde Miseno, al otro lado de la bahía, describió cómo la noche llegó prematuramente a las dos de la tarde, cuando la nube volcánica bloqueó el sol.</p>
-      <p>Plinio el Viejo, el famoso naturalista que comandaba la flota romana en Miseno, tomó la decisión que le costaría la vida: zarpar hacia Pompeya no para huir sino para investigar y rescatar supervivientes. Llegó a la ciudad vecina de Estabias, donde murió la mañana del 25 de agosto, probablemente por inhalación de gases volcánicos mientras dormía en la playa esperando que el viento cambiara para poder partir.</p>
-      <p>A lo largo de la noche del 24 y la madrugada del 25, la situación en Pompeya empeoró catastrophicamente. Las paredes de la columna eruptiva comenzaron a colapsar, generando los flujos piroclásticos: nubes de gas superсaliente, ceniza y rocas que descienden por las laderas del volcán a velocidades de cien a trescientos kilómetros por hora, a temperaturas de entre doscientos y seiscientos grados centígrados. El primer flujo piroclástico llegó a Herculano, la ciudad más cercana al Vesubio, en la madrugada del 25. En Pompeya, los flujos llegaron entre las seis y las ocho de la mañana del 25 de agosto.</p>
-
-      <blockquote>
-        <p>"Las tinieblas que nos envolvían no eran como las de una noche sin luna, sino como las de un cuarto cerrado cuando se apaga la luz. Oíamos lamentos de mujeres, lloros de niños, gritos de hombres... Muchos pedían a los dioses socorro; otros decían que ya no había dioses y que esta era la última noche del mundo."</p>
-        <cite>— Plinio el Joven, Epistulae VI.20, carta a Tácito</cite>
-      </blockquote>
-
-      <h2 id="las-victimas-petrificadas-voces-desde-el-silencio">Las Víctimas Petrificadas: Voces desde el Silencio</h2>
-      <p>Cuando Giuseppe Fiorelli asumió la dirección de las excavaciones de Pompeya en 1863, notó que en las capas de ceniza consolidada aparecían con frecuencia cavidades con forma humana —el espacio negativo que había dejado un cuerpo que se había descompuesto en los casi dieciocho siglos transcurridos. Fiorelli tuvo la idea de rellenar estas cavidades con yeso líquido antes de continuar excavando. El resultado fue devastadoramente poderoso: los moldes de yeso revelaban no solo la postura sino los gestos, las expresiones, los detalles de la ropa y hasta las expresiones faciales de las personas que habían muerto allí.</p>
-      <p>Entre las víctimas más famosas están el "Perro de Pompeya", atado a su cadena y retorcido en su agonía; la "Dama del Anillo", una mujer con joyas de oro en sus dedos, probablemente perteneciente a las clases acomodadas; y los "Fugitivos de la Garden House", un grupo de cuarenta y una personas que habían buscado refugio en un jardín y fueron alcanzadas por el flujo piroclástico antes de poder escapar. Sus posturas —algunos protegiendo sus cabezas, otros abrazados, madres con niños en brazos— son el testimonio más estremecedor de sus últimos momentos.</p>
-
-      <video autoplay muted loop playsinline><source src="assets/video/pompeya-foro-aereo.mp4" type="video/mp4">Tu navegador no admite video HTML5.</video>
-      <p class="vcap">Reconstrucción científica de la secuencia de la erupción del Vesubio del 79 dC, desde la columna Pliniana hasta los flujos piroclásticos que destruyeron Pompeya y Herculano.</p>
-
-      <h2 id="plinio-el-joven-el-testigo-de-la-historia">Plinio el Joven: El Testigo de la Historia</h2>
-      <p>Cayo Cecilio Plinio, conocido como Plinio el Joven para distinguirlo de su tío, tenía diecisiete años cuando el Vesubio entró en erupción. Estaba en Miseno, a veinte kilómetros de Pompeya, y fue testigo del comienzo de la catástrofe. Sus dos cartas al historiador Tácito —las Epistulae VI.16 y VI.20— escritas más de veinte años después pero basadas en notas tomadas en el momento, son el único relato ocular de la erupción que poseemos, y son consideradas documentos históricos de primer orden por su precisión y detalle.</p>
-      <p>La descripción de Plinio de la columna eruptiva —"similar a un pino, ya que se elevaba a gran altura sobre un tronco largo y luego se extendía en ramas"— es tan precisa desde el punto de vista vulcanológico que los científicos modernos la utilizan como descripción tipo para las erupciones de este estilo, llamadas "erupciones Plinianas" en su honor. Su relato de la muerte de su tío, que fue a investigar el fenómeno y murió por los gases, es también un documento excepcional sobre la actitud intelectual y física del sabio romano ante el peligro natural.</p>
-
-      <h2 id="los-arqueologos-descubren-pompeya-dos-siglos-de-revelaciones">Los Arqueólogos Descubren Pompeya: Dos Siglos de Revelaciones</h2>
-      <p>La redescubierta oficial de Pompeya ocurrió en 1748, cuando el rey Carlos VII de Nápoles ordenó excavar el sitio que los campesinos locales llamaban "la Civita" —la ciudad—. Los primeros trabajos fueron más saqueo que arqueología: los excavadores buscaban estatuas, frescos arrancables y objetos de valor para las colecciones reales. No había registro sistemático de dónde se encontraba cada objeto ni en qué contexto. Piezas irremplazables fueron separadas de su entorno arqueológico para siempre.</p>
-      <p>La situación cambió radicalmente con Giuseppe Fiorelli, nombrado director de las excavaciones en 1863. Fiorelli introdujo el sistema de cuadrículas numeradas —las insulae y regiones que todavía se usan hoy para identificar las zonas del yacimiento— y estableció el principio de excavar y documentar antes de mover. Su innovación más célebre, la técnica de moldes de yeso, transformó un yacimiento arqueológico en un panteón de humanidad congelada. En el siglo XX, las excavaciones se aceleraron y sistematizaron bajo la dirección de Amedeo Maiuri, que lideró las campañas más extensas de la historia del yacimiento entre 1924 y 1961.</p>
-      <p>El siglo XXI ha traído una nueva revolución metodológica a Pompeya. El Grande Progetto Pompei, financiado en parte por la Unión Europea, combinó restauración urgente de las estructuras dañadas con nuevas excavaciones utilizando tecnologías impensables para los pioneros del siglo XVIII: escáneres LIDAR que mapean el subsuelo sin excavar, análisis de ADN de los restos humanos, espectroscopía de rayos X para identificar pigmentos en los frescos, y modelización 3D de edificios enteros. Los resultados de Regio V y Regio IX, publicados entre 2018 y 2023, han sido portada de las principales revistas científicas del mundo.</p>
-
-      <div class="timeline">
-        <div class="tl-item"><span class="tl-year">62 dC</span><div class="tl-dot"></div><span class="tl-text">Terremoto severo daña Pompeya. Las obras de reconstrucción continuarán hasta el día de la erupción.</span></div>
-        <div class="tl-item"><span class="tl-year">24 ago 79</span><div class="tl-dot"></div><span class="tl-text">~13:00. El Vesubio entra en erupción. Columna de 25 km de altura. Lluvia de pómez sobre Pompeya.</span></div>
-        <div class="tl-item"><span class="tl-year">25 ago 79</span><div class="tl-dot"></div><span class="tl-text">Madrugada. Flujos piroclásticos. Pompeya y Herculano sepultadas bajo 4-6 metros de ceniza.</span></div>
-        <div class="tl-item"><span class="tl-year">1748</span><div class="tl-dot"></div><span class="tl-text">Redescubrimiento oficial de Pompeya bajo el rey Carlos VII de Nápoles. Inicio de las excavaciones.</span></div>
-        <div class="tl-item"><span class="tl-year">1863</span><div class="tl-dot"></div><span class="tl-text">Fiorelli introduce la técnica de moldes de yeso. Los pompeanos "resucitan" en su agonía.</span></div>
-        <div class="tl-item"><span class="tl-year">2012–23</span><div class="tl-dot"></div><span class="tl-text">Grande Progetto Pompei. Nuevas excavaciones en Regio V y IX revelan hallazgos extraordinarios.</span></div>
-      </div>
-
-      <figure>
-        <img src="assets/img/senado.jpg" alt="El Senado romano" loading="lazy">
-        <figcaption>El Foro de Pompeya, el corazón político y comercial de la ciudad, donde los pompeyanos realizaban sus transacciones, ejercían sus derechos y honraban a sus dioses. Fue uno de los últimos lugares donde muchos buscaron refugio.</figcaption>
-      </figure>
-
-    </div>
-    <aside class="art-aside">
-      <div class="art-toc">
-        <h4>En este artículo</h4>
-        <a href="#pompeya-antes-de-la-catastrofe-una-ciudad-en-plenitud" onclick="var el=document.getElementById('pompeya-antes-de-la-catastrofe-una-ciudad-en-plenitud');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Pompeya Antes del Volcán</a>
-        <a href="#el-vesubio-un-vecino-traicionero" onclick="var el=document.getElementById('el-vesubio-un-vecino-traicionero');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">El Vesubio Traicionero</a>
-        <a href="#el-24-de-agosto-hora-a-hora" onclick="var el=document.getElementById('el-24-de-agosto-hora-a-hora');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">24 de Agosto: Hora a Hora</a>
-        <a href="#las-victimas-petrificadas-voces-desde-el-silencio" onclick="var el=document.getElementById('las-victimas-petrificadas-voces-desde-el-silencio');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Las Víctimas Petrificadas</a>
-        <a href="#plinio-el-joven-el-testigo-de-la-historia" onclick="var el=document.getElementById('plinio-el-joven-el-testigo-de-la-historia');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Plinio el Joven</a>
-        <a href="#los-arqueologos-descubren-pompeya-dos-siglos-de-revelaciones" onclick="var el=document.getElementById('los-arqueologos-descubren-pompeya-dos-siglos-de-revelaciones');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Los Arqueólogos</a>
-      </div>
-    </aside>
-  </div>
-  <div class="pagina-insignia">
-    <div class="pi-orn">✦ ✦ ✦</div>
-    <div class="pi-title">Página Insignia: El Tiempo Detenido</div>
-    <p class="pi-quote">"En doce horas, una ciudad de veinte mil almas quedó sepultada bajo cuatro metros de ceniza. Dos mil años después, sus voces nos siguen hablando desde las paredes de sus casas, desde sus posturas de agonía, desde el pan carbonizado en el horno que nunca se abrió."</p>
-    <p class="pi-body">Pompeya es el regalo más extraño y terrible de la historia: una ciudad congelada en el momento de su muerte, que por esa misma razón nos habla de la vida con una vividez que ningún texto, ningún monumento, ningún museo puede igualar.</p>
-    <div class="pi-orn">✦ ✦ ✦</div>
-  </div>
-  <div class="art-sources">
-    <h4>Fuentes y Referencias Científicas</h4>
-    <ul>
-      <li>Plinio el Joven — <em>Epistulae</em> VI.16 y VI.20, cartas a Tácito, s. II dC</li>
-      <li>Mary Beard — <em>Pompeii: The Life of a Roman Town</em>, Profile Books, 2008</li>
-      <li>Haraldur Sigurdsson (ed.) — <em>Encyclopedia of Volcanoes</em>, Academic Press, 2000</li>
-      <li>Soprintendenza Pompei — Informes arqueológicos, Grande Progetto Pompei 2018–2023</li>
-      <li>Andrew Wallace-Hadrill — <em>Herculaneum: Past and Future</em>, Frances Lincoln, 2011</li>
-    </ul>
-  </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-pompeya2')">Pompeya: Arte, Vida y Revelaciones →</button></div>
-</div><!-- /art-pompeya1 -->
+<!-- /art-pompeya1 -->
 
 <!-- ═══════ ARTÍCULO 5: POMPEYA ARTE Y VIDA ═══════ -->
 <div id="art-pompeya2" class="art-section">
@@ -2024,115 +1536,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <li>Mary Beard — <em>Pompeii: The Life of a Roman Town</em>, Profile Books, 2008</li>
     </ul>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-teutoburgo')">La Batalla de Teutoburgo →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="location.href='articulos/batalla-teutoburgo.html'">La Batalla de Teutoburgo →</button></div>
 </div><!-- /art-pompeya-datos -->
 
-<!-- ═══════ ARTÍCULO 6: TEUTOBURGO ═══════ -->
-<div id="art-teutoburgo" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/teutoburgo.jpg')">
-    <div class="art-hero-ov"><div class="art-hero-ct">
-      <span class="art-badge">ROMA · GERMANIA · 9 dC · EMBOSCADA</span>
-      <h1 class="art-h1">La Batalla del Bosque de Teutoburgo: El Desastre que Detuvo a Roma</h1>
-    </div></div>
-  </div>
-  <div class="art-wrap">
-    <div class="art-body">
-      <p>En septiembre del año 9 de nuestra era, en las profundidades de un bosque de Germania que los romanos nunca habían conseguido cartografiar del todo, veinte mil soldados romanos de las legiones XVII, XVIII y XIX marchaban en columna de marcha bajo una lluvia persistente. Al frente, el gobernador Publio Quintilio Varo confiaba en su guía germánico, un brillante joven oficial auxiliar que había servido en el ejército romano durante años y hablaba latín con fluidez. Ese joven, cuyo nombre romano era Arminius y cuyo nombre germánico era Hermann, hijo de Segimero, jefe del pueblo querusco, estaba llevando a las tres legiones al mayor desastre militar de la historia de Roma.</p>
 
-      <h2 id="roma-en-germania-la-ambicion-imperial">Roma en Germania: La Ambición Imperial</h2>
-      <p>A principios del siglo I de nuestra era, el Rin era la frontera nororiental del Imperio Romano. Sin embargo, el emperador Augusto tenía planes más ambiciosos: empujar la frontera hasta el río Elba, una línea más corta y más defendible que el Rin, que reduciría el perímetro fronterizo del Imperio y añadiría a Roma el control de los ricos recursos y la densa población de la Germania interior.</p>
-      <figure class="art-video">
-        <video controls preload="none" style="width:100%;border-radius:4px;margin:1.5rem 0">
-          <source src="assets/video/teutoburgo.mp4" type="video/mp4">
-        </video>
-        <figcaption>El Bosque de Teutoburgo: el terreno accidentado que convirtió en trampa mortal las columnas de marcha romanas en el año 9 dC.</figcaption>
-      </figure>
-      <p>Las campañas del general Druso entre el 12 y el 9 aC habían establecido una presencia romana al este del Rin, con varios campamentos permanentes y una red de alianzas con tribus germánicas locales. Druso había llegado hasta el Elba antes de morir de una caída de caballo en el año 9 aC —en la frontera que su hijo Germánico reivindicaría dos décadas más tarde—. Su hermano Tiberio continuó las campañas, y para el año 7 dC la situación parecía tan estable que Augusto decidió que Germania ya podía ser administrada como provincia, en lugar de ser simplemente un territorio de operaciones militares.</p>
-      <p>Para ese papel administrativo, Augusto nombró a Publio Quintilio Varo, un general competente y administrador experimentado que había gobernado con éxito Siria. El problema era que Siria era una provincia totalmente romanizada con ciudades, infraestructuras y una clase dirigente que llevaba generaciones colaborando con Roma. Germania era otra cosa: un territorio de bosques casi impenetrables, pantanos y aldeas dispersas, sin ciudades, sin calzadas, sin la estructura administrativa que hacía gobernable una provincia romana. Varo no vio la diferencia, o no quiso verla.</p>
-
-      <h2 id="arminius-el-guerrero-que-aprendio-de-roma-para-destruirla">Arminius: El Guerrero que Aprendió de Roma para Destruirla</h2>
-      <p>Arminius era, en todos los sentidos externos, un producto del sistema romano que intentaría destruir. Enviado a Roma como rehén de la tribu querusca cuando era niño —práctica habitual para asegurar la lealtad de los jefes aliados—, creció en la capital del Imperio, recibió educación romana, aprendió latín, estudió tácticas militares y sirvió como oficial auxiliar en el ejército romano, alcanzando el rango de caballero romano y el mando de tropas auxiliares germánicas.</p>
-      <p>Lo que pensaba realmente Arminius durante esos años de servicio romano es imposible de saber. Tácito y Velleius Paterculus —nuestras dos fuentes principales— lo presentan como alguien que siempre tuvo la intención de liberar a su pueblo, pero esta imagen puede ser una elaboración retrospectiva. Lo que sí sabemos es que en el año 7 dC, cuando Varo fue nombrado gobernador, Arminius comenzó a moverse. Estableció contacto con los jefes de varias tribus germánicas, incluida la de su propio suegro Segestas —que, significativamente, advertiría a Varo de la conspiración y no sería escuchado—, y comenzó a planificar la emboscada más perfecta de la historia militar antigua.</p>
-
-      <figure>
-        <img src="assets/img/germanos.jpg" alt="Guerreros germánicos" loading="lazy">
-        <figcaption>Representación de guerreros germánicos lanzando jabalinas desde la orilla de un río. La táctica germánica favorecía el combate en terreno boscoso donde la organización legionaria perdía su ventaja.</figcaption>
-      </figure>
-
-      <h2 id="la-trampa-tres-dias-de-masacre-en-el-bosque">La Trampa: Tres Días de Masacre en el Bosque</h2>
-      <p>El engaño de Arminius fue brillante en su sencillez. Inventó una revuelta indígena en una región alejada del campamento romano de verano, suficientemente convincente como para que Varo decidiera desplazarse a sofocarla antes de regresar a los cuarteles de invierno en el Rin. La ruta que sugirió —a través del Bosque de Teutoburgo, en lo que hoy es el noroeste de Alemania— era terriblemente inadecuada para el movimiento de un ejército grande: senderos estrechos entre árboles enormes, terreno empapado por las lluvias otoñales, colinas que impedían ver más allá de cien metros en cualquier dirección.</p>
-      <p>El primer día de la emboscada, el ejército romano —veinte mil legionarios más quizás diez mil auxiliares, mujeres, esclavos y seguidores del campamento— marchaba en una columna de más de veinte kilómetros de longitud cuando los guerreros germánicos emergieron de entre los árboles simultáneamente a lo largo de toda la columna. Los romanos no podían formar la falange de cohortes que era su arma definitiva: el terreno no lo permitía. No había campo abierto donde desplegar la triple acies, no había espacio para coordinar la artillería, no había flancos que defender porque el bosque era el flanco por todos lados.</p>
-      <p>El primer día fue confusión y pérdidas masivas. Varo intentó reorganizar la columna en una formación más compacta, pero la tarea era gigantesca: veinte kilómetros de hombres aterrorizados bajo un fuego constante de jabalinas y flechas, en un lodazal que hacía que cada paso costara tres veces el esfuerzo normal. La lluvia apagaba las antorchas que los soldados necesitaban para ver dónde ponían los pies.</p>
-      <p>El segundo día fue peor. Los germánicos habían construido durante la noche una empalizada de madera a través del sendero que los romanos debían seguir, canalizando el avance hacia los ataques de flancos. Cada vez que los legionarios intentaban girar para enfrentar a sus atacantes, encontraban árboles y más árboles. Los centuriones intentaban mantener la disciplina, pero los hombres caían a cientos y las formaciones se deshacían.</p>
-      <p>El tercer día fue la aniquilación. Varo, herido y sin ver salida, se suicidó clavándose su espada —el gesto de honor final de un general romano derrotado. Cuando su comandante cayó, el ejército romano se desintegró. Algunos centuriones más veteranos intentaron abrirse paso con sus hombres; la mayoría fue masacrada. Una pequeña fracción de caballería logró huir, incluyendo el comandante de la caballería, Numerio Vala, que fue después denunciado como cobarde por haber escapado cuando sus legiones morían. Los prisioneros supervivientes fueron sacrificados a los dioses germánicos o vendidos como esclavos.</p>
-
-      <video controls preload="metadata"><source src="assets/video/teutoburgo.mp4" type="video/mp4">Tu navegador no admite video HTML5.</video>
-      <p class="vcap">Reconstrucción histórica de las tácticas de emboscada germánica en el Bosque de Teutoburgo, mostrando las condiciones de terreno que anularon las ventajas tácticas de las legiones romanas.</p>
-
-      <h2 id="la-reaccion-de-augusto-el-trauma-de-roma">La Reacción de Augusto: El Trauma de Roma</h2>
-      <p>Cuando la noticia llegó a Roma, Augusto —que tenía setenta y un años y había llevado décadas construyendo el sistema del Imperio— sufrió lo que los fuentes describen como una crisis nerviosa. Dejó crecer su barba y su cabello sin recortar durante meses, en señal de duelo. Se golpeaba la cabeza contra las paredes del palacio gritando "¡Quintilio Varo, devuélveme mis legiones!" —la frase que se convertiría en uno de los más famosos lamentos de la historia—. Reforzó las milicias de la ciudad por temor a un ataque germánico sobre Italia, aunque Arminius, sin recursos para asediar ciudades romanas, nunca tuvo esa capacidad.</p>
-      <p>La consecuencia más duradera de Teutoburgo fue simbólica pero profundamente significativa: los números de las tres legiones destruidas —XVII, XVIII, XIX— nunca fueron reutilizados en la historia romana. Era costumbre que cuando una legión era disuelta o destruida, sus números se reasignaran a nuevas unidades. Pero las legiones de Varo recibieron un tratamiento diferente: sus números fueron borrados de la lista legionaria para siempre, como si nunca hubieran existido, o quizás como recordatorio permanente del desastre.</p>
-
-      <figure>
-        <img src="assets/img/teutoburgo2.jpg" alt="La emboscada de Teutoburgo" loading="lazy">
-        <figcaption>Reconstrucción de la emboscada en el Bosque de Teutoburgo. Los guerreros germánicos atacaron desde la espesura del bosque, impidiendo que los legionarios romanos formaran sus habituales posiciones de combate.</figcaption>
-      </figure>
-
-      <div class="timeline">
-        <div class="tl-item"><span class="tl-year">12 aC</span><div class="tl-dot"></div><span class="tl-text">Campañas de Druso al este del Rin. Roma establece presencia en Germania interior.</span></div>
-        <div class="tl-item"><span class="tl-year">7 dC</span><div class="tl-dot"></div><span class="tl-text">Varo nombrado gobernador de Germania. Arminius comienza a planificar la conspiración.</span></div>
-        <div class="tl-item"><span class="tl-year">Sep 9 dC</span><div class="tl-dot"></div><span class="tl-text">Batallas del Bosque de Teutoburgo. Tres días de combate. XVII, XVIII y XIX legiones destruidas.</span></div>
-        <div class="tl-item"><span class="tl-year">14–16 dC</span><div class="tl-dot"></div><span class="tl-text">Campañas de Germánico. Recupera dos de los tres águilas legionarias perdidas. Encuentra el campo de batalla.</span></div>
-        <div class="tl-item"><span class="tl-year">17 dC</span><div class="tl-dot"></div><span class="tl-text">Germánico es retirado por Tiberio. Roma abandona definitivamente el intento de conquistar Germania.</span></div>
-        <div class="tl-item"><span class="tl-year">21 dC</span><div class="tl-dot"></div><span class="tl-text">Arminius asesinado por sus propios parientes. El héroe de la liberación germánica muere a manos de los suyos.</span></div>
-      </div>
-
-      <h2 id="germanico-y-el-campo-de-los-muertos">Germánico y el Campo de los Muertos</h2>
-      <p>En el año 15 dC, seis años después de la masacre, el general Germánico —sobrino del emperador Tiberio y uno de los comandantes más brillantes de su generación— condujo a sus legiones al Bosque de Teutoburgo con el doble objetivo de recuperar los cuerpos de los caídos y vengar la derrota. Tácito, que escribió su relato décadas después pero basándose en fuentes directas, describe la escena con un horror contenido que atraviesa los siglos: los legionarios de Germánico encontraron los huesos blanqueados de sus compatriotas esparcidos por el bosque en el mismo orden en que habían caído —primeros los de la vanguardia, luego los del centro, finalmente los de la retaguardia—. Los cráneos estaban clavados en los troncos de los árboles. Los altares donde los druidas germánicos habían sacrificado a los prisioneros de más alto rango todavía mostraban las marcas de las hogueras.</p>
-      <p>Germánico ordenó enterrar todos los restos en un túmulo colectivo. Sus soldados, muchos de los cuales habían conocido personalmente a algunos de los muertos, realizaron la tarea en silencio. Tácito señala que el propio Germánico puso con sus manos el primer trozo de césped sobre el túmulo —un gesto de piedad personal que fue criticado por Tiberio como innecesariamente emocional para un general imperial. Las campañas de Germánico de 14 a 16 dC recuperaron dos de los tres águilas legionarias perdidas. La tercera no sería recuperada hasta el año 41 dC, bajo el emperador Claudio.</p>
-
-      <h2 id="kalkriese-la-arqueologia-confirma-la-historia">Kalkriese: La Arqueología Confirma la Historia</h2>
-      <p>Durante siglos, la localización exacta de la batalla de Teutoburgo fue un misterio histórico. Tácito y los otros autores latinos proporcionaban descripciones del terreno —bosques, pantanos, una colina estrecha— pero sin coordenadas precisas, y la Germania romana era tan poco conocida geográficamente que los historiadores modernos han debatido la localización durante generaciones.</p>
-      <p>La respuesta llegó en 1987, de la manera más inesperada. Tony Clunn, un oficial del ejército británico aficionado a la arqueología y destinado en la base de la OTAN en Osnabrück, estaba realizando prospecciones con detector de metales en la zona de Kalkriese, al norte de Osnabrück, cuando comenzó a encontrar monedas romanas de la época de Augusto en cantidades inusuales. Informó a las autoridades arqueológicas alemanas, que iniciaron excavaciones sistemáticas en 1989. Lo que encontraron transformó nuestra comprensión de la batalla.</p>
-      <p>Kalkriese resultó ser el lugar donde se libró al menos la fase decisiva de la masacre. Las excavaciones han sacado a la luz más de seis mil monedas romanas del período augusteo, fragmentos de equipamiento legionario —fíbulas de uniforme, herrajes de cinturón, piezas de lorica segmentata—, huesos humanos y de animales mezclados en capas que reflejan el caos del combate, y la más extraordinaria de todas las piezas: una máscara de desfile de bronce de un oficial de caballería romana, casi perfectamente preservada, que se ha convertido en el símbolo del yacimiento y del museo que se levantó en el lugar. La tierra de Kalkriese todavía guarda los secretos de aquellos tres días de septiembre del año 9 dC.</p>
-
-      <blockquote>
-        <p>"Seis años después, Germánico atravesó el bosque. Encontró los huesos blanqueados de los hombres de Varo esparcidos entre los árboles, los cráneos clavados en los troncos, los altares donde los sacerdotes germánicos habían sacrificado a los tribunos y a los centuriones principales."</p>
-        <cite>— Tácito, Anales I.61</cite>
-      </blockquote>
-
-    </div>
-    <aside class="art-aside">
-      <div class="art-toc">
-        <h4>En este artículo</h4>
-        <a href="#roma-en-germania-la-ambicion-imperial" onclick="var el=document.getElementById('roma-en-germania-la-ambicion-imperial');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Roma en Germania</a>
-        <a href="#arminius-el-guerrero-que-aprendio-de-roma-para-destruirla" onclick="var el=document.getElementById('arminius-el-guerrero-que-aprendio-de-roma-para-destruirla');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Arminius: El Traidor Leal</a>
-        <a href="#la-trampa-tres-dias-de-masacre-en-el-bosque" onclick="var el=document.getElementById('la-trampa-tres-dias-de-masacre-en-el-bosque');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Trampa Perfecta</a>
-        <a href="#la-reaccion-de-augusto-el-trauma-de-roma" onclick="var el=document.getElementById('la-reaccion-de-augusto-el-trauma-de-roma');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Tres Días de Masacre</a>
-        <a href="#germanico-y-el-campo-de-los-muertos" onclick="var el=document.getElementById('germanico-y-el-campo-de-los-muertos');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Reacción de Augusto</a>
-        <a href="#kalkriese-la-arqueologia-confirma-la-historia" onclick="var el=document.getElementById('kalkriese-la-arqueologia-confirma-la-historia');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Kalkriese: La Arqueología</a>
-      </div>
-    </aside>
-  </div>
-  <div class="pagina-insignia">
-    <div class="pi-orn">✦ ✦ ✦</div>
-    <div class="pi-title">Página Insignia: El Bosque que Detuvo a Roma</div>
-    <p class="pi-quote">"¡Quintilio Varo, devuélveme mis legiones!" Roma nunca olvidó el bosque de Teutoburgo. Nunca reutilizó los números XVII, XVIII y XIX. Y nunca —ni bajo Augusto, ni bajo Tiberio, ni bajo los emperadores más ambiciosos— volvió a cruzar el Rin para quedarse.</p>
-    <p class="pi-body">Teutoburgo fue el límite del mundo romano. El punto donde el Imperio encontró una frontera que no pudo cruzar. Y en ese límite, Europa tuvo la oportunidad de ser diferente.</p>
-    <div class="pi-orn">✦ ✦ ✦</div>
-  </div>
-  <div class="art-sources">
-    <h4>Fuentes y Referencias Científicas</h4>
-    <ul>
-      <li>Tácito — <em>Anales</em> I.55-71, s. II dC</li>
-      <li>Velleius Paterculus — <em>Historia Romana</em> II.117-120, s. I dC</li>
-      <li>Casio Dion — <em>Historia Romana</em> LVI.18-24, s. III dC</li>
-      <li>Peter Wells — <em>The Battle That Stopped Rome</em>, Norton, 2003</li>
-      <li>Tony Clunn — <em>The Quest for the Lost Roman Legions</em>, Savas Beatie, 2005</li>
-    </ul>
-  </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-maquinaria')">Maquinaria de Guerra Romana →</button></div>
-</div>
 
 <!-- ═══════ ARTÍCULO 7: MAQUINARIA DE GUERRA ═══════ -->
 <div id="art-maquinaria" class="art-section">
@@ -2567,80 +1974,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <li>N.G.L. Hammond — <em>Alexander the Great: King, Commander and Statesman</em>, Noyes Press, 1980</li>
     </ul>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-gaugamela')">Gaugamela: El Fin de un Imperio →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="location.href='articulos/batalla-gaugamela.html'">Gaugamela: El Fin de un Imperio →</button></div>
 </div>
 
-<!-- ═══════ PERSIA 5: GAUGAMELA ═══════ -->
-<div id="art-gaugamela" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/persia/gaugamela-articulo.jpg')">
-    <div class="art-hero-ov"><div class="art-hero-ct">
-      <span class="art-badge">BATALLA DECISIVA · MESOPOTAMIA · 331 a.C.</span>
-      <h1 class="art-h1">Gaugamela: La Batalla que Destruyó el Imperio Persa</h1>
-    </div></div>
-  </div>
-  <div class="art-wrap">
-    <div class="art-body">
-      <p>El 1 de octubre del año 331 antes de Cristo, en una llanura polvororienta de Mesopotamia cerca del pueblo de Gaugamela —en la actual región de Mosul, Irak— se libró la batalla más analizada de la Antigüedad clásica. En un extremo de la llanura, Alejandro III de Macedonia comandaba un ejército de aproximadamente cuarenta y siete mil hombres: la fuerza de combate más disciplinada y tácticamente sofisticada del mundo conocido. En el otro extremo, Darío III Codomano, el Gran Rey del Imperio Persa, había reunido la mayor concentración de fuerzas militares que el Imperio Aqueménida había movilizado en generaciones: estimaciones antiguas que van de doscientos cincuenta mil a un millón de hombres, con las estimaciones modernas más conservadoras en torno a los cien mil.</p>
-      <p>El resultado de esas pocas horas de combate no fue solo la derrota del ejército persa: fue el fin del Imperio Aqueménida, dos siglos de historia, cuarenta millones de súbditos, y la mayor concentración de riqueza que el mundo había visto hasta entonces. Todo se decidió en una tarde de octubre, en una llanura que Darío mismo había mandado alisar para que no hubiera un solo obstáculo que pudiera desvigar los carros con cuchillas o romper la línea de su caballería.</p>
 
-      <h2 id="la-preparacion-dos-anos-despues-de-issos">La Preparación: Dos Años Después de Issos</h2>
-      <p>Darío III tenía casi dos años para preparar la revancha después de la derrota en Issos. Usó ese tiempo con una meticulosidad que los historiadores modernos reconocen como extraordinaria. Reunió contingentes de todas las satrapías del Imperio —medas, bactrianos, sogdianos, indios, escitas, árabes, egipcios, griegos mercenarios— y los entrenó y equipó con la mejor tecnología disponible. Mandó construir nuevos carros con cuchillas, más ligeros y letales que los modelos anteriores, con las cuchillas montadas no solo en los ejes sino también en los laterales y en el travesaño delantero.</p>
-      <p>La elección del campo de batalla fue quizás la decisión más inteligente de Darío en toda la guerra. La llanura de Gaugamela era exactamente lo opuesto del desfiladero costero de Issos: plana, amplia, sin obstáculos naturales que pudieran limitar el desplegue de una fuerza inmensamente superior en número. En Issos, el terreno había trabajado contra Darío al neutralizar su ventaja numérica. En Gaugamela, el terreno trabajaría para él. El Gran Rey incluso mandó a sus ingenieros nivelar las porciones de la llanura que mostraban irregularidades, para garantizar que los carros pudieran moverse sin obstáculos.</p>
-      <p>Darío también mandó grupos de caballería a hostigar el avance macedónico, con la esperanza de cansar al ejército enemigo antes de la batalla decisiva. Alejandro, lejos de apresurar el avance, marchó con deliberada lentitud, asegurando el suministro de sus tropas y llegando al campo de batalla en perfectas condiciones de combate. La noche antes de la batalla, Parmenión recomendó un ataque nocturno para aprovechar la confusión; Alejandro rechazó la idea con la célebre respuesta de que no robaba victorias.</p>
-
-      <figure>
-        <img src="assets/img/persia/gaugamela1.jpg" alt="La llanura de Gaugamela" loading="lazy">
-        <figcaption>La llanura de Gaugamela, en la actual Irak. Darío mandó nivelar el terreno para maximizar la efectividad de sus carros con cuchillas y su superioridad numérica. Alejandro transformó esa misma llanura en la tumba del Imperio Persa.</figcaption>
-      </figure>
-
-      <h2 id="el-despliegue-la-disposicion-de-las-fuerzas">El Despliegue: La Disposición de las Fuerzas</h2>
-      <p>El despliegue de Darío en Gaugamela fue cuidadosamente planificado. En el centro situó a los mejores infantes del Imperio: los griegos mercenarios y los persas de la guardia real. Los flancos estaban cubiertos por la mejor caballería del Imperio —bactriana, escita, y parta a la izquierda; persa, aria y siria a la derecha—. Delante de la línea, en posiciones cuidadosamente marcadas en el terreno nivelado, esperaban los carros con cuchillas. Los elefantes indios —quince según Arriano— estaban situados frente al centro macedónico para aterrorizar a los caballos.</p>
-      <p>Alejandro estudió el despliegue persa durante horas antes de la batalla. Su propia disposición fue una obra de arte táctico. La falange macedónica ocupaba el centro, como siempre. A su derecha, Alejandro con los Hetairoi. A su izquierda, la caballería tesalia al mando de Parmenión. Pero la verdadera innovación de Gaugamela fue la creación de un segundo frente: unidades de infantería ligera y caballería dispuestas en ángulo hacia atrás desde ambos flancos de la línea principal, para enfrentarse a cualquier intento de envolvimiento por parte de la superior caballería persa. El ejército macedónico estaba diseñado para combatir rodeado.</p>
-
-      <h2 id="la-batalla-el-movimiento-oblicuo">La Batalla: El Movimiento Oblicuo</h2>
-      <p>La batalla comenzó con la falange macedónica avanzando en formación, pero con Alejandro y los Hetairoi moviéndose deliberadamente hacia la derecha —alejándose del terreno nivelado por los persas y aproximándose a la zona no preparada. Este movimiento oblicuo desconcertó a Darío: si Alejandro continuaba moviéndose hacia la derecha, los carros quedarían fuera de posición y no podrían cargar contra la falange en el terreno adecuado. Darío ordenó a su caballería izquierda que avanzara para impedir que Alejandro siguiera desplazándose.</p>
-      <p>Ese movimiento de la caballería persa izquierda —la primera en moverse, rompiendo la línea— creó lo que Alejandro buscaba: un hueco entre la caballería izquierda que había adelantado y los mercenarios griegos en el centro. En el momento exacto en que ese hueco era suficientemente grande, Alejandro giró con los Hetairoi y las unidades de infantería de élite —los hipaspistas— y cargó directamente a través de él, en cuña, apuntando al centro de la línea persa donde estaba Darío.</p>
-      <p>Los carros con cuchillas cargaron como estaba planeado, pero encontraron a las tropas ligeras macedónicas que simplemente se apartaban para dejarlos pasar —abriendo calles en la formación por las que los carros atravesaban sin hacer daño— antes de cerrarse de nuevo y continuar avanzando. Algunos carros llegaron hasta las filas de retaguardia, donde fueron detenidos por los palafreneros macedónicos. El arma que Darío había considerado decisiva quedó neutralizada casi sin bajas.</p>
-
-      <blockquote>
-        <p>"Alejandro no buscaba al ejército persa para destruirlo. Buscaba a Darío. Sabía que si el Rey huía, el ejército se derrumbaría solo."</p>
-        <cite>— John Keegan, The Mask of Command, 1987</cite>
-      </blockquote>
-
-      <h2 id="la-carga-final-y-la-huida-de-dario">La Carga Final y la Huida de Darío</h2>
-      <p>La cuña de Alejandro penetró la línea persa y avanzó hacia el centro con una velocidad que los persas no pudieron contener. A medida que los Hetairoi se aproximaban al centro, donde Darío estaba de pie en su carro rodeado de su guardia personal, el Gran Rey vio que la situación era incontrolable. La cuña macedónica se acercaba, su guardia empezaba a doblegarse bajo la presión, y desde su posición elevada podía ver el panorama completo: su flanco izquierdo enredado en perseguir a la caballería aliada y al ala izquierda macedónica; su flanco derecho comenzando a presionar con éxito sobre Parmenión; y en el centro, la cuña de hierro de Alejandro avanzando imparable.</p>
-      <p>Darío huyó. Arriano describe el momento con la máxima sobriedad: "El primero en huir fue Darío mismo." Su carro de guerra fue abandonado, así como su arco, su escudo y su manto real. A caballo, escapó hacia el este, hacia Arbela y más tarde hacia Ecbatana. Su huida desencadenó el colapso del ejército persa en el centro: cuando los hombres vieron al Gran Rey huyendo, el pánico se extendió por la línea y la batalla se convirtió en una persecución.</p>
-      <p>En el flanco izquierdo macedónico, Parmenión pasó momentos difíciles: la caballería persa y parta había roto la línea y llegado hasta el campamento macedónico. En circunstancias normales, Alejandro habría girado para ayudarle. Pero sabía que si perseguía a Darío ahora, la guerra terminaría. Optó por continuar la persecución del Gran Rey, y la situación en el flanco izquierdo se resolvió cuando el colapso del centro persa llegó también a sus flancos.</p>
-
-      <h2 id="las-consecuencias-el-fin-de-un-imperio">Las Consecuencias: El Fin de un Imperio</h2>
-      <p>Las bajas macedónicas en Gaugamela fueron sorprendentemente bajas —las fuentes antiguas hablan de quinientos muertos, aunque las estimaciones modernas son algo más altas. Las bajas persas fueron masivas, con la estimación antigua de cuarenta mil muertos que los historiadores modernos consideran exagerada pero indicativa de una derrota catastrófica.</p>
-      <p>Tras Gaugamela, el Imperio Persa se derrumbó como una estructura que había perdido sus pilares maestros. Babilonia, la mayor ciudad del mundo antiguo, se rindió sin combate cuando Alejandro se aproximó. Susa, con su fabuloso tesoro real, siguió el mismo ejemplo. Persépolis, la capital ceremonial del Imperio, fue tomada meses después. El tesoro aqueménida —estimado en ciento veinte mil talentos de plata, una riqueza que desequilibró las economías del mundo mediterráneo durante una generación— cayó en manos macedónicas.</p>
-      <p>Gaugamela es hoy estudiada en academias militares de todo el mundo como ejemplo de maneuver warfare —guerra de maniobra— en su forma más pura. La combinación de movimiento oblicuo para crear una brecha, penetración en cuña a través de esa brecha, y orientación hacia el punto de comando enemigo en lugar del ejército en su conjunto, sigue siendo un modelo de eficiencia táctica dos mil trescientos años después de que Alejandro la ejecutara en aquella llanura mesopotámica.</p>
-
-    </div>
-    <aside class="art-aside">
-      <div class="art-toc">
-        <h4>En este artículo</h4>
-        <a href="#la-preparacion-dos-anos-despues-de-issos" onclick="var el=document.getElementById('la-preparacion-dos-anos-despues-de-issos');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Preparación Persa</a>
-        <a href="#el-despliegue-la-disposicion-de-las-fuerzas" onclick="var el=document.getElementById('el-despliegue-la-disposicion-de-las-fuerzas');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">El Despliegue</a>
-        <a href="#la-batalla-el-movimiento-oblicuo" onclick="var el=document.getElementById('la-batalla-el-movimiento-oblicuo');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">El Movimiento Oblicuo</a>
-        <a href="#la-carga-final-y-la-huida-de-dario" onclick="var el=document.getElementById('la-carga-final-y-la-huida-de-dario');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Huida de Darío</a>
-        <a href="#las-consecuencias-el-fin-de-un-imperio" onclick="var el=document.getElementById('las-consecuencias-el-fin-de-un-imperio');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Consecuencias</a>
-      </div>
-    </aside>
-  </div>
-  <div class="art-sources">
-    <h4>Fuentes y Referencias Científicas</h4>
-    <ul>
-      <li>Arriano — <em>Anábasis</em>, Libro III.7-15, s. II d.C.</li>
-      <li>John Keegan — <em>The Mask of Command</em>, Viking, 1987</li>
-      <li>Donald W. Engels — <em>Alexander the Great and the Logistics of the Macedonian Army</em>, UCB, 1978</li>
-      <li>Diodoro Sículo — <em>Biblioteca Histórica</em>, XVII.56-61</li>
-      <li>A.B. Bosworth — <em>Conquest and Empire</em>, Cambridge, 1988</li>
-    </ul>
-  </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-persepolis')">El Incendio de Persépolis →</button></div>
-</div>
 
 <!-- ═══════ PERSIA 6: PERSÉPOLIS ═══════ -->
 <div id="art-persepolis" class="art-section">
@@ -3115,72 +2452,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <li>Serge Lancel — <em>Carthage: A History</em>, Blackwell, 1995</li>
     </ul>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-cesar')">Julio César y el Rubicón →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="location.href='articulos/julio-cesar-rubicon.html'">Julio César y el Rubicón →</button></div>
 </div>
 
-<!-- ═══════ ROMA 3: CÉSAR ═══════ -->
-<div id="art-cesar" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/roma/foro-senado.jpg')">
-    <div class="art-hero-ov"><div class="art-hero-ct">
-      <span class="art-badge">REPÚBLICA · GUERRA CIVIL · 49 a.C.</span>
-      <h1 class="art-h1">Julio César y el Cruce del Rubicón</h1>
-    </div></div>
-  </div>
-  <div class="art-wrap">
-    <div class="art-body">
-      <p>En enero del año 49 antes de Cristo, en la orilla sur del río Rubicón —el pequeño río del norte de Italia que marcaba el límite constitucional entre la Galia Cisalpina y la Italia propiamente dicha— Cayo Julio César se detuvo. Al cruzar ese río al frente de sus legiones, violaría la ley más fundamental de la República romana: la prohibición de que un general con mando militar cruzara los límites de su provincia con tropas armadas. Era traición. Era guerra civil. Era el fin de la República tal como la conocían.</p>
-      <p>"Alea iacta est" —la suerte está echada—, dijo César según las fuentes, y cruzó. La frase ha perdurado dos mil años como símbolo de la decisión irreversible, del momento en que el punto de no retorno queda atrás. Lo que siguió al cruce del Rubicón no fue solo una guerra civil: fue la transformación de Roma de República a Principado, el fin de cinco siglos de gobierno oligárquico y el comienzo de la era imperial que duraría otros cinco siglos en Occidente.</p>
 
-      <h2 id="el-hombre-cesar-antes-del-rubicon">El Hombre: César Antes del Rubicón</h2>
-      <p>Cayo Julio César nació en el 100 a.C. en el seno de la gens Iulia, una familia patricia que reclamaba descender de Eneas y por tanto de la propia Venus. Pero aunque era patricio, César perteneció desde joven al bando de los populares —la facción política que defendía los intereses de los ciudadanos ordinarios frente a la oligarquía senatorial— y sufrió persecución del dictador Sila en su juventud. Su carrera política fue la de un hombre que combinaba un talento político extraordinario con una ambición desmedida, y que usó ambas herramientas con igual eficacia.</p>
-      <p>La alianza que César formó en el 60 a.C. con Pompeyo el Grande —el general más prestigioso de Roma— y Craso —el hombre más rico— es conocida como el Primer Triunvirato. No fue una alianza oficial sino un acuerdo privado que permitió a César obtener el consulado en el 59 a.C. y luego el mando militar de la Galia. En los diez años siguientes, la Campaña de las Galias (58-49 a.C.) transformó a César de político en el general más exitoso de su generación, añadió a Roma territorios que hoy son Francia, Bélgica, parte de Suiza y Alemania occidental, y le proporcionó tanto riqueza como la lealtad de veteranas legiones que le adoraban.</p>
-
-      <figure>
-        <img src="assets/img/roma/foro-senado.jpg" alt="El Senado Romano" loading="lazy">
-        <figcaption>El Senado Romano donde se libró la batalla política que precedió al cruce del Rubicón. Los senadores que temían el poder de César —liderados por Pompeyo y Catón el Joven— optaron por la confrontación directa en lugar de buscar un compromiso.</figcaption>
-      </figure>
-
-      <h2 id="la-crisis-constitucional">La Crisis Constitucional</h2>
-      <p>La muerte de Craso en la batalla de Carras (53 a.C.) eliminó el elemento que mantenía el equilibrio entre César y Pompeyo. Los dos hombres más poderosos de Roma quedaron frente a frente, y la creciente rivalidad política se agudizó por la presión de los senadores más conservadores —el bando de los Optimates, liderado moralmente por Catón el Joven y políticamente por Pompeyo— que temían que César utilizara su popularidad y sus legiones para hacerse con el control permanente de Roma.</p>
-      <p>La clave constitucional del conflicto era la pregunta de qué pasaría cuando expirara el mando de César en la Galia. Si regresaba a Roma como ciudadano privado para presentarse al consulado, quedaría expuesto a las acusaciones judiciales que sus enemigos tenían preparadas —y la justicia romana, controlada por los Optimates, lo habría destruido políticamente y posiblemente exiliado. Si mantenía el mando hasta ser elegido cónsul in absentia —como la ley romana permitía en circunstancias especiales— podría presentarse al consulado sin perder la inmunidad que le daba el imperium proconsular. El Senado, controlado por sus enemigos, se negó a concederle esa prerrogativa.</p>
-      <p>El ultimátum llegó en enero del 49 a.C.: el Senado ordenó a César disolver su ejército y regresar a Roma como ciudadano privado. El cónsul Marco Antonio —aliado de César— vetó el decreto, pero el Senado declaró el estado de emergencia. César, ante la alternativa de someterse a la destrucción política o rebelarse abiertamente, eligió la rebelión. El Rubicón fue el momento en que eligió.</p>
-
-      <h2 id="la-guerra-civil">La Guerra Civil</h2>
-      <p>Lo que siguió al cruce del Rubicón fue una guerra civil que duró cuatro años (49-45 a.C.) y se extendió desde Italia a España, Grecia, Egipto y el norte de África. La velocidad con que César actuó en los primeros días fue característica: sin esperar a reunir el grueso de sus fuerzas, avanzó hacia el sur de Italia con una legión, y la mayoría de las guarniciones y ciudades se rindieron sin combate. Pompeyo, que no había completado sus preparativos militares, huyó a Grecia con el Senado y los aristócratas que apoyaban la causa republicana.</p>
-      <p>La batalla decisiva se libró en Farsalia, en Grecia, en agosto del 48 a.C. César, con un ejército más pequeño pero veterano y con una iniciativa táctica superior, derrotó el ejército superior en número de Pompeyo. Pompeyo huyó a Egipto, donde fue asesinado por agentes del faraón Ptolomeo XIII —que esperaba ganarse el favor de César. Cuando César llegó a Alejandría y le presentaron la cabeza de Pompeyo, se dice que lloró. Era un rival, no un enemigo.</p>
-
-      <blockquote>
-        <p>"César fue el más completo de los romanos: general, orador, historiador, político y amante. No pudo ser, sin embargo, lo que la República necesitaba: un ciudadano."</p>
-        <cite>— Theodor Mommsen, Historia de Roma, 1854</cite>
-      </blockquote>
-
-      <h2 id="el-asesinato-y-su-legado">El Asesinato y su Legado</h2>
-      <p>César regresó a Roma como amo indiscutible del mundo romano, pero la cuestión de qué tipo de gobierno crear resultó más difícil que cualquier campaña militar. Fue nombrado dictador perpetuo —una innovación que rompía con la tradición romana de la dictadura como cargo temporal de emergencia— y acumuló honores sin precedentes: su imagen en las monedas, el mes de Julio en su honor, poderes que los romanos consideraban propios de los reyes.</p>
-      <p>El 15 de marzo del 44 a.C. —los Idus de Marzo— un grupo de senadores que se autodenominaban "los Libertadores" lo asesinaron en las escaleras del teatro de Pompeyo, en el momento en que el Senado iba a reunirse. Veintitrés puñaladas. Los conspiradores esperaban que el asesinato restaurara la República. No lo hizo: desencadenó otra ronda de guerras civiles que terminarían con el triunfo de Octaviano —el sobrino nieto y heredero adoptivo de César— y el establecimiento del Principado. La República que querían salvar murió con César o, más exactamente, había muerto en el Rubicón. El asesinato solo lo hizo evidente.</p>
-
-    </div>
-    <aside class="art-aside">
-      <div class="art-toc">
-        <h4>En este artículo</h4>
-        <a href="#el-hombre-cesar-antes-del-rubicon" onclick="var el=document.getElementById('el-hombre-cesar-antes-del-rubicon');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">César Antes del Rubicón</a>
-        <a href="#la-crisis-constitucional" onclick="var el=document.getElementById('la-crisis-constitucional');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Crisis Constitucional</a>
-        <a href="#la-guerra-civil" onclick="var el=document.getElementById('la-guerra-civil');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Guerra Civil</a>
-        <a href="#el-asesinato-y-su-legado" onclick="var el=document.getElementById('el-asesinato-y-su-legado');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">El Asesinato y su Legado</a>
-      </div>
-    </aside>
-  </div>
-  <div class="art-sources">
-    <h4>Fuentes y Referencias Científicas</h4>
-    <ul>
-      <li>Julio César — <em>De Bello Civili</em>, s. I a.C.</li>
-      <li>Plutarco — <em>Vida de César</em>, s. I-II d.C.</li>
-      <li>Suetonio — <em>Vida de los Doce Césares: César</em>, s. II d.C.</li>
-      <li>Adrian Goldsworthy — <em>Caesar: Life of a Colossus</em>, Yale University Press, 2006</li>
-      <li>Tom Holland — <em>Rubicon: The Last Years of the Roman Republic</em>, Little Brown, 2003</li>
-    </ul>
-  </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-teutoburgo2')">La Batalla de Teutoburgo →</button></div>
-</div>
 
 <!-- ═══════ ROMA 4: TEUTOBURGO ═══════ -->
 <div id="art-teutoburgo2" class="art-section">
@@ -3363,65 +2638,10 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       <li>Anthony Barrett — <em>Caligula: The Corruption of Power</em>, Yale, 1990</li>
     </ul>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-coliseo')">El Coliseo y los Gladiadores →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="location.href='articulos/coliseo-romano-gladiadores.html'">El Coliseo y los Gladiadores →</button></div>
 </div>
 
-<!-- ═══════ ROMA 7: COLISEO ═══════ -->
-<div id="art-coliseo" class="art-section">
-  <div class="art-hero" style="background-image:url('assets/img/roma/ingenieros-puente.jpg')">
-    <div class="art-hero-ov"><div class="art-hero-ct">
-      <span class="art-badge">ARQUITECTURA · ESPECTÁCULO · 72-80 d.C.</span>
-      <h1 class="art-h1">El Coliseo Romano y los Juegos Gladiatorios</h1>
-    </div></div>
-  </div>
-  <div class="art-wrap">
-    <div class="art-body">
-      <p>El Coliseo —su nombre oficial es Anfiteatro Flavio— es el edificio más reconocible de Roma y uno de los monumentos más famosos del mundo. Construido entre el 72 y el 80 d.C. durante el reinado de los emperadores Vespasiano y Tito, con una capacidad de entre cincuenta mil y ochenta mil espectadores, representó el pico de la ingeniería arquitectónica romana y el escenario principal de los spectacula —los juegos públicos— que eran el instrumento más poderoso del que disponía el poder imperial para mantener la lealtad y el entretenimiento de la población de Roma.</p>
 
-      <h2 id="la-ingenieria-del-coliseo">La Ingeniería del Coliseo</h2>
-      <p>El Coliseo es un elipsoide de 188 metros de largo por 156 de ancho y 48 de altura, construido sobre una estructura de hormigón romano —el opus caementicium— que ha demostrado ser más durable que muchas estructuras modernas. Sus cuatro pisos combinan los tres órdenes arquitectónicos griegos —dórico, jónico y corintio— con el arco romano en una fachada que fue el modelo para innumerables estadios modernos.</p>
-      <p>El interior del Coliseo era una maravilla de organización: un sistema de ochenta entradas —cada una numerada, como los estadios modernos— permitía a cincuenta mil espectadores tomar sus asientos en quince minutos y evacuarlos en el mismo tiempo. Las gradas se organizaban por rango social: los mejores asientos, más cercanos a la arena, estaban reservados para los senadores y el propio emperador; los peores, más alejados, para las mujeres y los esclavos. El suelo de la arena era de madera cubierta de arena —la palabra "arena" viene del latín para arena, que se usaba para absorber la sangre— sobre un sistema de túneles subterráneos, el hipogeo, donde se almacenaban los animales, el equipo y los gladiadores.</p>
-
-      <figure>
-        <img src="assets/img/roma/ingenieros-puente.jpg" alt="Ingeniería romana" loading="lazy">
-        <figcaption>Los ingenieros romanos aplicaron al Coliseo las mismas técnicas que a sus puentes y acueductos: el arco de descarga que distribuye el peso, el hormigón romano que con el tiempo se vuelve más resistente, y la organización funcional que pone la eficiencia por encima de la ornamentación.</figcaption>
-      </figure>
-
-      <h2 id="los-gladiadores-mas-alla-del-mito">Los Gladiadores: Más Allá del Mito</h2>
-      <p>La imagen popular del gladiador —un esclavo desgraciado obligado a combatir hasta la muerte ante multitudes sedientas de sangre— es en parte correcta y en parte una simplificación que ignora las complejidades de la realidad histórica. Los gladiadores eran en su mayoría esclavos, prisioneros de guerra o criminales condenados, sí. Pero había también hombres libres —e incluso algunos de rango senatorial, en las épocas más desordenadas— que elegían voluntariamente el oficio por razones que iban desde la desesperación económica hasta la búsqueda de fama y emoción.</p>
-      <p>Los gladiadores entrenaban en los ludi —escuelas de gladiadores— bajo la supervisión de lanistas, entrenadores especializados. El entrenamiento duraba meses antes de que un gladiador pudiera presentarse en la arena, y los lanistas tenían un incentivo económico para no dejar que sus inversiones murieran innecesariamente: un gladiador bien entrenado era una inversión costosa. Los datos arqueológicos y epigráficos —las lápidas de gladiadores que han sobrevivido— sugieren que la tasa de mortalidad en los combates era significativamente menor de lo que la leyenda popular sugiere: quizás uno de cada diez combates terminaba con la muerte de uno de los participantes.</p>
-      <p>Los combates seguían reglas complejas, con varios tipos de gladiadores especializados —el retiarius con red y tridente, el secutor con casco cerrado, el murmillo con escudo galés, el thrax con escudo pequeño y cuchillo curvo— que combatían con sus propios estilos y contra oponentes designados según una tradición establecida. El público entendía estas reglas y las apreciaba: los aficionados romanos distinguían entre un combate bien realizado y uno torpe con la misma precisión con que un aficionado moderno aprecia la técnica boxística.</p>
-
-      <h2 id="los-juegos-como-instrumento-politico">Los Juegos como Instrumento Político</h2>
-      <p>Los juegos gladiatorios —como todos los espectáculos públicos romanos— eran fundamentalmente un instrumento político. La fórmula que el poeta Juvenal acuñó —panem et circenses, pan y circo— captura la relación entre el poder imperial y la población de Roma: el emperador mantenía la lealtad de las clases urbanas proporcionándoles grano gratuito (o a precio controlado) y entretenimiento espectacular. Los juegos no eran solo diversión: eran la manifestación visible del poder y la generosidad imperial, y la ocasión en que el pueblo romano podía interactuar directamente con su gobernante.</p>
-      <p>El pulgar arriba o abajo de la leyenda popular es en realidad una simplificación del gesto real: la decisión de matar o perdonar a un gladiador vencido era tomada por el organizador de los juegos —normalmente el emperador o el magistrado que los patrocinaba— teniendo en cuenta la opinión del público, que la expresaba mediante gestos y aclamaciones. Un gladiador que hubiera combatido valientemente podía ser perdonado aunque hubiera perdido; uno que hubiera luchado cobardemente podía ser ejecutado aunque hubiera ganado. Los valores marciales que Roma promovía en los juegos eran los mismos que promovía en sus legiones: valor, disciplina y la aceptación estoica de la muerte.</p>
-
-      <blockquote>
-        <p>"Los romanos no iban al Coliseo a ver morir gente. Iban a ver a personas enfrentarse al miedo con coraje. Esa es la diferencia entre la brutalidad y la espectacularización de la virtud."</p>
-        <cite>— Keith Hopkins, Death and Renewal, 1983</cite>
-      </blockquote>
-
-    </div>
-    <aside class="art-aside">
-      <div class="art-toc">
-        <h4>En este artículo</h4>
-        <a href="#la-ingenieria-del-coliseo" onclick="var el=document.getElementById('la-ingenieria-del-coliseo');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">La Ingeniería del Coliseo</a>
-        <a href="#los-gladiadores-mas-alla-del-mito" onclick="var el=document.getElementById('los-gladiadores-mas-alla-del-mito');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Los Gladiadores</a>
-        <a href="#los-juegos-como-instrumento-politico" onclick="var el=document.getElementById('los-juegos-como-instrumento-politico');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});};return false;">Los Juegos como Instrumento Político</a>
-      </div>
-    </aside>
-  </div>
-  <div class="art-sources">
-    <h4>Fuentes y Referencias Científicas</h4>
-    <ul>
-      <li>Keith Hopkins y Mary Beard — <em>The Colosseum</em>, Profile Books, 2005</li>
-      <li>Juvenal — <em>Sátiras</em>, X, s. I-II d.C.</li>
-      <li>Plinio el Joven — <em>Cartas</em>, s. I-II d.C.</li>
-      <li>Donald Kyle — <em>Spectacles of Death in Ancient Rome</em>, Routledge, 1998</li>
-    </ul>
-  </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-cuatro-emperadores')">El Año de los Cuatro Emperadores →</button></div>
-</div>
 
 <!-- ═══════ ROMA 8: CUATRO EMPERADORES ═══════ -->
 <div id="art-cuatro-emperadores" class="art-section">
@@ -3831,7 +3051,7 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
       </div>
     </aside>
   </div>
-  <div class="art-next"><p>Continúa leyendo</p><button onclick="openArticle('art-gaugamela')">Artículo: Gaugamela en profundidad →</button></div>
+  <div class="art-next"><p>Continúa leyendo</p><button onclick="location.href='articulos/batalla-gaugamela.html'">Artículo: Gaugamela en profundidad →</button></div>
 </div>
 
 <!-- ═══════ EDAD MEDIA: CATEDRALES GÓTICAS ═══════ -->
