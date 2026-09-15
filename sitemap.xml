@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jortegap1986-commits.github.io/memorias-del-pasado/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://memoriasdelpasado.org/</loc>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jortegap1986-commits.github.io/memorias-del-pasado/privacidad.html</loc>
+    <loc>https://memoriasdelpasado.org/mapa-alejandro.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://memoriasdelpasado.org/privacidad.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://jortegap1986-commits.github.io/memorias-del-pasado/terminos.html</loc>
+    <loc>https://memoriasdelpasado.org/terminos.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
