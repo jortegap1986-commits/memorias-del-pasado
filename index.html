@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">XYZTEST
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9NWKLGF0S"></script>
@@ -3883,6 +3883,54 @@ var ARTICLE_TITLES={
   'art-podcast-ep3':'Podcast EP3: La Llanura de Gaugamela',
   'art-catedral-gotica':'Catedrales Góticas'
 };
+  var SECTION_TITLES={
+    'sec-ebook':'Comprar Libro','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
+    'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya','sec-revista':'Revista',
+    'sec-revista-roma':'Revista Roma','sec-explora':'Explora','sec-citas':'Citas',
+    'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
+    'sec-redes':'Redes Sociales'
+  };
+
+  // GA4: seguimiento detallado de articulos y secciones
+  var gaArticleId=null, gaArticleStart=null, gaScrollHit={};
+  function gaSendView(path,title){
+    if(typeof gtag==='function'){
+      gtag('event','page_view',{
+        page_title:title,
+        page_location:window.location.origin+window.location.pathname+path,
+        page_path:path
+      });
+    }
+  }
+  function gaScrollCheck(){
+    if(!gaArticleId) return;
+    var el=document.getElementById(gaArticleId);
+    if(!el) return;
+    var total=el.offsetHeight||1;
+    var seen=Math.min(total,(window.scrollY+window.innerHeight)-el.offsetTop);
+    var pct=Math.max(0,Math.min(100,Math.round((seen/total)*100)));
+    [25,50,75,90].forEach(function(m){
+      var k=gaArticleId+'_'+m;
+      if(pct>=m && !gaScrollHit[k]){
+        gaScrollHit[k]=true;
+        if(typeof gtag==='function'){
+          gtag('event','article_scroll',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,percent:m});
+        }
+      }
+    });
+  }
+  function gaCloseArticle(){
+    if(gaArticleId && gaArticleStart){
+      var secs=Math.round((Date.now()-gaArticleStart)/1000);
+      if(typeof gtag==='function' && secs>1){
+        gtag('event','article_read_time',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,seconds:secs});
+      }
+    }
+    window.removeEventListener('scroll',gaScrollCheck);
+    gaArticleId=null; gaArticleStart=null;
+  }
+  window.addEventListener('beforeunload',gaCloseArticle);
+  window.addEventListener('pagehide',gaCloseArticle);
 
 // ── View management ──
 function showHome(){
