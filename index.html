@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">XYZTEST
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9NWKLGF0S"></script>
@@ -3883,57 +3883,58 @@ var ARTICLE_TITLES={
   'art-podcast-ep3':'Podcast EP3: La Llanura de Gaugamela',
   'art-catedral-gotica':'Catedrales Góticas'
 };
-  var SECTION_TITLES={
-    'sec-ebook':'Comprar Libro','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
-    'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya','sec-revista':'Revista',
-    'sec-revista-roma':'Revista Roma','sec-explora':'Explora','sec-citas':'Citas',
-    'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
-    'sec-redes':'Redes Sociales'
-  };
+var SECTION_TITLES={
+  'sec-ebook':'Comprar Libro','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
+  'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya','sec-revista':'Revista',
+  'sec-revista-roma':'Revista Roma','sec-explora':'Explora','sec-citas':'Citas',
+  'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
+  'sec-redes':'Redes Sociales'
+};
 
-  // GA4: seguimiento detallado de articulos y secciones
-  var gaArticleId=null, gaArticleStart=null, gaScrollHit={};
-  function gaSendView(path,title){
-    if(typeof gtag==='function'){
-      gtag('event','page_view',{
-        page_title:title,
-        page_location:window.location.origin+window.location.pathname+path,
-        page_path:path
-      });
-    }
-  }
-  function gaScrollCheck(){
-    if(!gaArticleId) return;
-    var el=document.getElementById(gaArticleId);
-    if(!el) return;
-    var total=el.offsetHeight||1;
-    var seen=Math.min(total,(window.scrollY+window.innerHeight)-el.offsetTop);
-    var pct=Math.max(0,Math.min(100,Math.round((seen/total)*100)));
-    [25,50,75,90].forEach(function(m){
-      var k=gaArticleId+'_'+m;
-      if(pct>=m && !gaScrollHit[k]){
-        gaScrollHit[k]=true;
-        if(typeof gtag==='function'){
-          gtag('event','article_scroll',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,percent:m});
-        }
-      }
+// ── GA4: seguimiento detallado de artículos y secciones ──
+var gaArticleId=null, gaArticleStart=null, gaScrollHit={};
+function gaSendView(path,title){
+  if(typeof gtag==='function'){
+    gtag('event','page_view',{
+      page_title:title,
+      page_location:window.location.origin+window.location.pathname+path,
+      page_path:path
     });
   }
-  function gaCloseArticle(){
-    if(gaArticleId && gaArticleStart){
-      var secs=Math.round((Date.now()-gaArticleStart)/1000);
-      if(typeof gtag==='function' && secs>1){
-        gtag('event','article_read_time',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,seconds:secs});
+}
+function gaScrollCheck(){
+  if(!gaArticleId) return;
+  var el=document.getElementById(gaArticleId);
+  if(!el) return;
+  var total=el.offsetHeight||1;
+  var seen=Math.min(total,(window.scrollY+window.innerHeight)-el.offsetTop);
+  var pct=Math.max(0,Math.min(100,Math.round((seen/total)*100)));
+  [25,50,75,90].forEach(function(m){
+    var k=gaArticleId+'_'+m;
+    if(pct>=m && !gaScrollHit[k]){
+      gaScrollHit[k]=true;
+      if(typeof gtag==='function'){
+        gtag('event','article_scroll',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,percent:m});
       }
     }
-    window.removeEventListener('scroll',gaScrollCheck);
-    gaArticleId=null; gaArticleStart=null;
+  });
+}
+function gaCloseArticle(){
+  if(gaArticleId && gaArticleStart){
+    var secs=Math.round((Date.now()-gaArticleStart)/1000);
+    if(typeof gtag==='function' && secs>1){
+      gtag('event','article_read_time',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,seconds:secs});
+    }
   }
-  window.addEventListener('beforeunload',gaCloseArticle);
-  window.addEventListener('pagehide',gaCloseArticle);
+  window.removeEventListener('scroll',gaScrollCheck);
+  gaArticleId=null; gaArticleStart=null;
+}
+window.addEventListener('beforeunload',gaCloseArticle);
+window.addEventListener('pagehide',gaCloseArticle);
 
 // ── View management ──
 function showHome(){
+  gaCloseArticle();
   SECTIONS.forEach(function(s){ var el=document.getElementById(s); if(el) el.style.display=''; });
   var av=document.getElementById('article-view');
   if(av) av.style.display='none';
@@ -3941,9 +3942,11 @@ function showHome(){
   document.getElementById('hero').style.display='';
   window.scrollTo({top:0,behavior:'smooth'});
   document.querySelectorAll('.hn').forEach(function(n){ n.classList.remove('active'); });
+  gaSendView('/','Inicio');
 }
 
 function openArticle(id){
+  gaCloseArticle();
   // Pause any playing gallery videos
   document.querySelectorAll('.pod-player').forEach(function(v){ if(v.pause) v.pause(); });
   // Hide home sections
@@ -3965,6 +3968,10 @@ function openArticle(id){
   document.querySelectorAll('#'+id+' .rv').forEach(function(el){
     if(!el.classList.contains('in')){ revObs.observe(el); }
   });
+  // GA4: registrar apertura del artículo y empezar a medir lectura/scroll
+  gaArticleId=id; gaArticleStart=Date.now(); gaScrollHit={};
+  gaSendView('/#'+id, ARTICLE_TITLES[id]||id);
+  window.addEventListener('scroll',gaScrollCheck);
 }
 
 function gotoSection(id){
@@ -3972,6 +3979,7 @@ function gotoSection(id){
   setTimeout(function(){
     var el=document.getElementById(id);
     if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+    gaSendView('/#'+id, SECTION_TITLES[id]||id);
   },150);
 }
 
