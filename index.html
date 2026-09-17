@@ -1031,7 +1031,7 @@
 
 <script>
 // ── State ──
-var SECTIONS=['home-grid','sec-ebook','sec-podcast','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-revista','sec-revista-roma','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
+var SECTIONS=['home-grid','sec-ebook','sec-podcast','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-revista','sec-revista-roma','sec-revista-hallazgos','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
 var ARTICLE_TITLES={
   'art-falange':'La Falange Macedonia',
   'art-dario':'Darío III y el Imperio Persa',
@@ -1070,7 +1070,7 @@ var ARTICLE_TITLES={
 var SECTION_TITLES={
   'sec-ebook':'Comprar Libro','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
   'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya','sec-revista':'Revista',
-  'sec-revista-roma':'Revista Roma','sec-explora':'Explora','sec-citas':'Citas',
+  'sec-revista-roma':'Revista Roma','sec-revista-hallazgos':'Revista Hallazgos 2026','sec-explora':'Explora','sec-citas':'Citas',
   'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
   'sec-redes':'Redes Sociales'
 };
@@ -1188,7 +1188,7 @@ var revObs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
 },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
 // Observe home grid items on load
-document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-revista .rv, #sec-revista-roma .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
+document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-revista .rv, #sec-revista-roma .rv, #sec-revista-hallazgos .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
   revObs.observe(el);
 });
 </script>
