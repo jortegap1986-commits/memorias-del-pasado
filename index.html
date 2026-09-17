@@ -160,8 +160,9 @@
     </video>
     <div class="hero-overlay">
       <div class="hero-content">
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Memorias del Pasado — Historia antigua, arqueología y mundo antiguo</h1>
         <span class="hero-cat">TÁCTICA MILITAR · GRECIA CLÁSICA</span>
-        <h1 class="hero-h1">La Falange Macedonia: El Arma que Conquistó el Mundo</h1>
+        <p class="hero-h1">La Falange Macedonia: El Arma que Conquistó el Mundo</p>
         <p class="hero-excerpt">Dieciséis mil sarissas avanzaban como un solo organismo. Ningún ejército de la Antigüedad pudo detenerlas. Así conquistó Alejandro el mundo conocido en doce años.</p>
         <button class="hero-btn" onclick="location.href='articulos/falange-macedonia.html'">Leer Artículo →</button>
       </div>
@@ -1117,7 +1118,7 @@ window.addEventListener('beforeunload',gaCloseArticle);
 window.addEventListener('pagehide',gaCloseArticle);
 
 // ── View management ──
-function showHome(){
+function showHome(silencioso){
   gaCloseArticle();
   SECTIONS.forEach(function(s){ var el=document.getElementById(s); if(el) el.style.display=''; });
   var av=document.getElementById('article-view');
@@ -1126,7 +1127,7 @@ function showHome(){
   document.getElementById('hero').style.display='';
   window.scrollTo({top:0,behavior:'smooth'});
   document.querySelectorAll('.hn').forEach(function(n){ n.classList.remove('active'); });
-  gaSendView('/',null);
+  if(!silencioso) gaSendView('/',null);
 }
 
 function openArticle(id){
@@ -1159,7 +1160,7 @@ function openArticle(id){
 }
 
 function gotoSection(id){
-  showHome();
+  showHome(true);
   setTimeout(function(){
     var el=document.getElementById(id);
     if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
