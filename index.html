@@ -1204,5 +1204,33 @@ document.querySelectorAll('#home-grid .rv, #sec-biblioteca .rv, #sec-podcast .rv
   </div>
 </div>
 
+
+<!-- GA4: eventos de negocio (clics a productos, revista, grupo, apoyo y redes) -->
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if(!a) return;
+  var h = a.href || '';
+  if(!/^https?:/.test(h)) return;
+  if(h.indexOf(location.hostname) !== -1) return;
+  var p = { link_url: h, link_text: (a.textContent||'').trim().slice(0,80) };
+  var card = a.closest('.bib-card');
+  if(card){
+    var t = card.querySelector('h3'); if(t) p.producto = t.textContent.trim();
+    var pr = card.querySelector('.bib-precio'); if(pr) p.precio = pr.textContent.trim();
+  }
+  var ev = null;
+  if(h.indexOf('gumroad.com') > -1){ ev='clic_comprar'; p.tienda='Gumroad'; }
+  else if(h.indexOf('amzn.to') > -1 || h.indexOf('amazon.') > -1){ ev='clic_comprar'; p.tienda='Amazon'; p.producto = p.producto || 'Teutoburgo'; }
+  else if(h.indexOf('fliphtml5.com') > -1){ ev='clic_revista_gratis'; }
+  else if(/facebook\.com\/groups/.test(h)){ ev='clic_grupo_privado'; }
+  else if(h.indexOf('paypal.com') > -1){ ev='clic_apoyo'; }
+  else if(/instagram\.com/.test(h)){ ev='clic_red_social'; p.red='Instagram'; }
+  else if(/youtube\.com/.test(h)){ ev='clic_red_social'; p.red='YouTube'; }
+  else if(/facebook\.com/.test(h)){ ev='clic_red_social'; p.red='Facebook'; }
+  if(ev && typeof gtag === 'function') gtag('event', ev, p);
+}, true);
+</script>
+
 </body>
 </html>
