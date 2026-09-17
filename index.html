@@ -145,9 +145,9 @@
       </div>
       <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
       <button class="hn" onclick="gotoSection('sec-podcast')">🎙️ Podcast</button>
-      <button class="hn" onclick="gotoSection('sec-revista')">Revista</button>
+      <button class="hn" onclick="gotoSection('sec-biblioteca')">Biblioteca</button>
       <button class="hn" onclick="gotoSection('sec-comunidad')">Comunidad</button>
-      <button class="hn hn-cta" onclick="gotoSection('sec-ebook')">📖 Comprar Libro</button>
+      <button class="hn hn-cta" onclick="gotoSection('sec-biblioteca')">📚 Biblioteca</button>
     </nav>
     <button id="menu-btn" onclick="toggleMenu()">☰</button>
   </div>
@@ -258,44 +258,151 @@
 
 <!-- MAPS SECTION -->
 
-<!-- ═══════ EBOOK / TIENDA ═══════ -->
-<section id="sec-ebook">
-  <div class="ebook-wrap">
-    <div class="ebook-cover rv">
-      <img class="ebook-cover-img" src="assets/img/teutoburgo-portada-real.jpg" alt="Portada del libro Teutoburgo: La Emboscada que Detuvo a Roma">
-      <span class="ebook-badge-new">Nuevo · Digital</span>
+<!-- ═══════ LA BIBLIOTECA · TIENDA UNIFICADA ═══════ -->
+<style>
+#sec-biblioteca{background:var(--ow);padding:5rem 2rem}
+#sec-biblioteca .bib-wrap{max-width:1160px;margin:0 auto}
+#sec-biblioteca .bib-filtros{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:1.8rem 0 2.2rem}
+#sec-biblioteca .bib-f{font-family:'Cinzel',serif;font-size:.74rem;letter-spacing:.12em;padding:.5rem 1.1rem;
+  border:1px solid var(--bd);background:var(--w);color:var(--txm);border-radius:999px;cursor:pointer;transition:.2s}
+#sec-biblioteca .bib-f:hover{border-color:var(--bdg);color:var(--tc)}
+#sec-biblioteca .bib-f.on{background:var(--tc);border-color:var(--tc);color:#fff}
+#sec-biblioteca .bib-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+#sec-biblioteca .bib-card{background:var(--w);border:1px solid var(--bd);border-radius:6px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+#sec-biblioteca .bib-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,10,7,.16)}
+#sec-biblioteca .bib-card.bib-off{display:none}
+#sec-biblioteca .bib-port{position:relative;aspect-ratio:2/3;overflow:hidden;background:var(--dk)}
+#sec-biblioteca .bib-port img,#sec-biblioteca .bib-port video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+#sec-biblioteca .bib-card:hover .bib-port img{transform:scale(1.04)}
+#sec-biblioteca .bib-badge{position:absolute;top:.7rem;left:.7rem;font-family:'Cinzel',serif;font-size:.62rem;
+  letter-spacing:.12em;text-transform:uppercase;padding:.32rem .6rem;border-radius:2px;color:#fff;background:var(--tc)}
+#sec-biblioteca .bib-badge.oro{background:var(--gd)}
+#sec-biblioteca .bib-badge.verde{background:#4B6B3A}
+#sec-biblioteca .bib-body{padding:1.1rem 1.1rem 1.25rem;display:flex;flex-direction:column;flex:1}
+#sec-biblioteca .bib-tipo{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.16em;color:var(--txl);
+  text-transform:uppercase;margin-bottom:.45rem}
+#sec-biblioteca .bib-body h3{font-family:'Cinzel',serif;font-size:1rem;line-height:1.3;margin:0 0 .5rem;color:var(--tx)}
+#sec-biblioteca .bib-desc{font-size:.93rem;line-height:1.5;color:var(--txm);margin:0 0 .9rem;flex:1}
+#sec-biblioteca .bib-pie{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:auto;
+  border-top:1px solid var(--bd);padding-top:.85rem}
+#sec-biblioteca .bib-precio{font-family:'Cinzel',serif;font-size:1.22rem;color:var(--tc);font-weight:600}
+#sec-biblioteca .bib-precio .cur{font-size:.62rem;color:var(--txl);letter-spacing:.1em;margin-left:.2rem}
+#sec-biblioteca .bib-precio.gratis{color:#4B6B3A}
+#sec-biblioteca .bib-btn{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;text-decoration:none;
+  background:var(--gd);color:#fff;padding:.55rem .9rem;border-radius:3px;white-space:nowrap;transition:.2s}
+#sec-biblioteca .bib-btn:hover{background:var(--gdl)}
+#sec-biblioteca .bib-btn.sec{background:transparent;color:var(--tc);border:1px solid var(--bdg)}
+#sec-biblioteca .bib-alt{display:block;text-align:center;font-size:.8rem;color:var(--txl);margin-top:.6rem}
+#sec-biblioteca .bib-alt a{color:var(--gd);text-decoration:underline}
+#sec-biblioteca .bib-trust{text-align:center;color:var(--txl);font-size:.9rem;margin-top:2rem;font-style:italic}
+@media(max-width:900px){#sec-biblioteca .bib-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){
+  #sec-biblioteca{padding:3rem 1rem}
+  #sec-biblioteca .bib-pie{flex-direction:column;align-items:stretch}
+  #sec-biblioteca .bib-btn{text-align:center}
+}
+</style>
+<section id="sec-biblioteca">
+  <div class="bib-wrap">
+    <div class="thematic-header rv">
+      <span class="sec-label">TIENDA · REVISTAS Y LIBROS EN PDF</span>
+      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">La Biblioteca de Memorias del Pasado</h2>
+      <p>Revistas ilustradas y libros de historia antigua, con rigor histórico y diseño editorial. Descarga inmediata y lectura en cualquier dispositivo.</p>
     </div>
-    <div class="ebook-info rv">
-      <span class="sec-label">TIENDA · EBOOK EN PDF</span>
-      <h2>TEUTOBURGO: La Emboscada que Detuvo a Roma</h2>
-      <p class="ebook-author">Por Fernando Ortega · Autor de Memorias del Pasado</p>
-      <p class="ebook-desc">El relato completo, con rigor histórico y narrativa cinematográfica, de los tres días que destrozaron tres legiones romanas y cambiaron para siempre el mapa de Europa. La historia de Arminius, Varo y la trampa perfecta que Roma jamás vio venir.</p>
-      <ul class="ebook-features">
-        <li>Formato PDF de alta calidad</li>
-        <li>Mapas y cronología incluidos</li>
-        <li>Descarga inmediata tras la compra</li>
-        <li>Léelo en cualquier dispositivo</li>
-      </ul>
-      <div class="buy-options">
-        <div class="buy-opt buy-opt-pdf">
-          <span class="buy-opt-tag">Descarga inmediata</span>
-          <div class="buy-opt-name">PDF instantáneo</div>
-          <p class="buy-opt-why">Lo recibes al instante y lo lees hoy mismo en el celular, tablet o computador. Sin esperar envíos.</p>
-          <div class="buy-opt-price">$7.99<span class="cur">USD</span></div>
-          <a class="buy-opt-btn" href="https://historiaantigua.gumroad.com/l/rzfqxw" target="_blank" rel="noopener">Comprar ahora →</a>
-        </div>
-        <div class="buy-opt buy-opt-amazon">
-          <span class="buy-opt-tag">Kindle o tapa blanda</span>
-          <div class="buy-opt-name">Amazon</div>
-          <p class="buy-opt-why">Prefieres tenerlo en tu biblioteca Kindle o en papel físico en casa, con la confianza y reseñas de Amazon.</p>
-          <div class="buy-opt-price">Ver precio</div>
-          <a class="buy-opt-btn" href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Comprar en Amazon →</a>
-        </div>
-      </div>
-      <div class="ebook-trust">Pago 100% seguro · elige el formato que prefieras</div>
+
+    <div class="bib-filtros rv">
+      <span class="bib-f on" data-f="todo">Todo</span>
+      <span class="bib-f" data-f="revista">Revistas</span>
+      <span class="bib-f" data-f="libro">Libros</span>
+      <span class="bib-f" data-f="gratis">Gratis</span>
     </div>
+
+    <div class="bib-grid" id="bib-grid">
+
+      <article class="bib-card rv" data-cat="revista gratis">
+        <div class="bib-port">
+          <video class="bib-video" autoplay muted loop playsinline><source src="assets/video/promo-revista.mp4" type="video/mp4"></video>
+          <span class="bib-badge verde">Gratis</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · Muestra</div>
+          <h3>Historika: Ecos del Mundo Antiguo</h3>
+          <p class="bib-desc">Reportajes ilustrados, mapas y cronologías sobre las civilizaciones que forjaron el mundo. Hójeala como una revista de papel, sin registro.</p>
+          <div class="bib-pie">
+            <span class="bib-precio gratis">Gratis</span>
+            <a class="bib-btn sec" href="https://online.fliphtml5.com/Historika/Historika_Ecos_del_Mundo_Antiguo/" target="_blank" rel="noopener">Leer ahora →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-hallazgos-2026-portada.jpg" alt="Portada de la revista Hallazgos 2026: arqueología clásica" loading="lazy">
+          <span class="bib-badge">Nueva edición</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 14 páginas</div>
+          <h3>Hallazgos 2026</h3>
+          <p class="bib-desc">Roma, Troya, Iberia y Egipto: los cuatro descubrimientos que este año están reescribiendo la historia del Mediterráneo antiguo.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/hallazgos2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-roma-imperial-portada.jpg" alt="Portada de la revista Roma Imperial: las batallas que forjaron un imperio" loading="lazy">
+          <span class="bib-badge oro">Edición especial</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 10 batallas</div>
+          <h3>Roma Imperial</h3>
+          <p class="bib-desc">De Trasímeno a Adrianópolis: 600 años de historia militar romana en una edición especial ilustrada.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/nhluug" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro">
+        <div class="bib-port">
+          <img src="assets/img/teutoburgo-portada-real.jpg" alt="Portada del libro Teutoburgo: la emboscada que detuvo a Roma" loading="lazy">
+          <span class="bib-badge">Libro</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Libro · PDF o Amazon</div>
+          <h3>Teutoburgo: La Emboscada que Detuvo a Roma</h3>
+          <p class="bib-desc">Arminius, Varo y los tres días que destrozaron tres legiones romanas y cambiaron para siempre el mapa de Europa.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$7.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/rzfqxw" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+          <span class="bib-alt">También en <a href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
+        </div>
+      </article>
+
+    </div>
+    <p class="bib-trust">Descarga inmediata vía Gumroad · Pago seguro · Léelo en cualquier dispositivo</p>
   </div>
 </section>
+<script>
+document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
+  f.addEventListener('click',function(){
+    document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(x){x.classList.remove('on')});
+    f.classList.add('on');
+    var v=f.dataset.f;
+    document.querySelectorAll('#bib-grid .bib-card').forEach(function(c){
+      c.classList.toggle('bib-off', v!=='todo' && c.dataset.cat.split(' ').indexOf(v)===-1);
+    });
+  });
+});
+</script>
+
+
 
 <!-- ═══════ PODCAST GAUGAMELA ═══════ -->
 <section id="sec-podcast" style="background:var(--dk);padding:5rem 2rem">
@@ -646,103 +753,11 @@
 </section>
 
 
-<!-- ═══════ REVISTA DIGITAL GRATIS ═══════ -->
-<section id="sec-revista" style="background:var(--w);padding:5rem 2rem">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-header rv">
-      <span class="sec-label">REVISTA DIGITAL · MUESTRA GRATIS</span>
-      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Historika: Ecos del Mundo Antiguo</h2>
-      <p>Una revista de divulgación histórica estilo National Geographic: reportajes ilustrados, mapas y cronologías sobre las civilizaciones que forjaron el mundo. Hojéala gratis, sin registro.</p>
-    </div>
-    <div class="ebook-wrap rv">
-      <div class="ebook-cover">
-        <video class="ebook-cover-img" autoplay muted loop playsinline><source src="assets/video/promo-revista.mp4" type="video/mp4"></video>
-        <span class="ebook-badge-new">Gratis</span>
-      </div>
-      <div class="ebook-info">
-        <span class="sec-label">LECTURA INMEDIATA · SIN REGISTRO</span>
-        <h2>Léela Gratis Ahora Mismo</h2>
-        <p class="ebook-desc">Reportajes fotográficos, cronologías y análisis histórico en un formato de revista interactiva. Ábrela en el lector digital y hojéala como una revista de papel.</p>
-        <div class="ebook-buybox">
-          <a class="ebook-buy-btn" href="https://online.fliphtml5.com/Historika/Historika_Ecos_del_Mundo_Antiguo/" target="_blank" rel="noopener">Leer la Revista Gratis →</a>
-        </div>
-        <div class="ebook-trust">¿Quieres más ediciones y contenido exclusivo? <a onclick="gotoSection('sec-comunidad')" style="color:var(--gd);cursor:pointer;text-decoration:underline">Únete a nuestro grupo privado →</a></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════ REVISTA ROMA IMPERIAL — EDICIÓN ESPECIAL (PAGA) ═══════ -->
-<section id="sec-revista-roma" style="background:var(--ow);padding:5rem 2rem">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-header rv">
-      <span class="sec-label">EDICIÓN ESPECIAL · DESCARGA EN PDF</span>
-      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Roma Imperial: Las Batallas que Forjaron un Imperio</h2>
-      <p>10 batallas que decidieron el destino de Roma, de Trasímeno a Adrianópolo (217 a.C. – 378 d.C.). 600 años de historia militar romana en una edición especial ilustrada.</p>
-    </div>
-    <div class="ebook-wrap rv">
-      <div class="ebook-cover">
-        <img class="ebook-cover-img" src="assets/img/revista-roma-imperial-portada.jpg" alt="Portada de la revista Roma Imperial: Las Batallas que Forjaron un Imperio">
-        <span class="ebook-badge-new">Edición Especial</span>
-      </div>
-      <div class="ebook-info">
-        <span class="sec-label">TIENDA · REVISTA EN PDF</span>
-        <h2>Roma Imperial — Edición Completa</h2>
-        <p class="ebook-desc">Diez batallas que decidieron el destino de un imperio, contadas con rigor histórico y un diseño editorial de calidad revista. Ideal para quienes ya disfrutaron la muestra gratuita y quieren una edición completa para conservar.</p>
-        <ul class="ebook-features">
-          <li>Formato PDF de alta calidad</li>
-          <li>Diseño editorial ilustrado</li>
-          <li>Descarga inmediata tras la compra</li>
-          <li>Léela en cualquier dispositivo</li>
-        </ul>
-        <div class="ebook-buybox">
-          <div class="ebook-price">
-            <span class="now">$4.99</span>
-            <span class="cur">USD</span>
-          </div>
-          <a class="ebook-buy-btn" href="https://historiaantigua.gumroad.com/l/nhluug" target="_blank" rel="noopener">Comprar ahora (PDF instantáneo) →</a>
-        </div>
-        <div class="ebook-trust">Descarga inmediata vía Gumroad · Pago seguro</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════ REVISTA HALLAZGOS 2026 — EDICIÓN ESPECIAL (PAGA) ═══════ -->
-<section id="sec-revista-hallazgos" style="background:var(--w);padding:5rem 2rem">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-header rv">
-      <span class="sec-label">NUEVA EDICIÓN · DESCARGA EN PDF</span>
-      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Hallazgos 2026: Cuatro Descubrimientos que Reescriben el Mediterráneo</h2>
-      <p>Roma, Troya, Iberia y Egipto: los cuatro grandes hallazgos arqueológicos de 2026 reunidos en una edición especial de 14 páginas, con el rigor y el diseño editorial de nuestras revistas anteriores.</p>
-    </div>
-    <div class="ebook-wrap rv">
-      <div class="ebook-cover">
-        <img class="ebook-cover-img" src="assets/img/revista-hallazgos-2026-portada.jpg" alt="Portada de la revista Hallazgos 2026: Cuatro Descubrimientos que Reescriben el Mediterráneo">
-        <span class="ebook-badge-new">Nueva Edición</span>
-      </div>
-      <div class="ebook-info">
-        <span class="sec-label">TIENDA · REVISTA EN PDF</span>
-        <h2>Hallazgos 2026 — Edición Completa</h2>
-        <p class="ebook-desc">El mosaico mural más grande del mundo romano, la plaza que renació sobre las cenizas de Troya, el ADN que devuelve el vino a los fenicios y las lenguas de oro de un puerto olvidado de Egipto. Cuatro descubrimientos que este año están reescribiendo la historia del Mediterráneo antiguo, contados con el mismo rigor editorial que nuestras otras ediciones.</p>
-        <ul class="ebook-features">
-          <li>Formato PDF de alta calidad</li>
-          <li>Diseño editorial ilustrado</li>
-          <li>Descarga inmediata tras la compra</li>
-          <li>Léela en cualquier dispositivo</li>
-        </ul>
-        <div class="ebook-buybox">
-          <div class="ebook-price">
-            <span class="now">$4.99</span>
-            <span class="cur">USD</span>
-          </div>
-          <a class="ebook-buy-btn" href="https://historiaantigua.gumroad.com/l/hallazgos2026" target="_blank" rel="noopener">Comprar ahora (PDF instantáneo) →</a>
-        </div>
-        <div class="ebook-trust">Descarga inmediata vía Gumroad · Pago seguro</div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
 
 <!-- ═══════ EXPLORA TODO EL CONTENIDO ═══════ -->
 <section id="sec-explora" style="background:var(--ow);padding:5rem 2rem">
@@ -778,25 +793,10 @@
         <h4>Podcast: Gaugamela</h4>
         <p>Tres episodios narrados con rigor histórico y cinematográfico</p>
       </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-revista')">
-        <div class="explora-ico">📰</div>
-        <h4>Revista Digital</h4>
-        <p>Muestra gratis: Historika, Ecos del Mundo Antiguo</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-ebook')">
-        <div class="explora-ico">📖</div>
-        <h4>Libro: Teutoburgo</h4>
-        <p>Disponible en Amazon o en PDF instantáneo</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-revista-roma')">
-        <div class="explora-ico">🏛️</div>
-        <h4>Revista: Roma Imperial</h4>
-        <p>Edición especial completa en PDF — $4.99</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-revista-hallazgos')">
-        <div class="explora-ico">🏺</div>
-        <h4>Revista: Hallazgos 2026</h4>
-        <p>Roma, Troya, Iberia y Egipto en PDF — $4.99</p>
+      <div class="explora-card rv" onclick="gotoSection('sec-biblioteca')">
+        <div class="explora-ico">📚</div>
+        <h4>La Biblioteca</h4>
+        <p>Revistas y libros en PDF — desde gratis hasta $7.99</p>
       </div>
       <div class="explora-card rv" onclick="gotoSection('sec-comunidad')">
         <div class="explora-ico">👥</div>
@@ -928,8 +928,7 @@
       <div class="ft-col">
         <h5>Explorar</h5>
         <a onclick="showHome()">Inicio</a>
-        <a onclick="gotoSection('sec-ebook')">📖 Comprar el Libro</a>
-        <a onclick="gotoSection('sec-revista')">📰 Revista Gratis</a>
+        <a onclick="gotoSection('sec-biblioteca')">📚 La Biblioteca</a>
         <a onclick="gotoSection('sec-podcast')">🎙️ Podcast</a>
         <a onclick="gotoSection('sec-explora')">Explora Todo el Contenido</a>
         <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
@@ -1031,7 +1030,7 @@
 
 <script>
 // ── State ──
-var SECTIONS=['home-grid','sec-ebook','sec-podcast','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-revista','sec-revista-roma','sec-revista-hallazgos','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
+var SECTIONS=['home-grid','sec-biblioteca','sec-podcast','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
 var ARTICLE_TITLES={
   'art-falange':'La Falange Macedonia',
   'art-dario':'Darío III y el Imperio Persa',
@@ -1068,9 +1067,9 @@ var ARTICLE_TITLES={
   'art-catedral-gotica':'Catedrales Góticas'
 };
 var SECTION_TITLES={
-  'sec-ebook':'Comprar Libro','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
-  'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya','sec-revista':'Revista',
-  'sec-revista-roma':'Revista Roma','sec-revista-hallazgos':'Revista Hallazgos 2026','sec-explora':'Explora','sec-citas':'Citas',
+  'sec-biblioteca':'Biblioteca','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
+  'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya',
+  'sec-explora':'Explora','sec-citas':'Citas',
   'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
   'sec-redes':'Redes Sociales'
 };
@@ -1188,7 +1187,7 @@ var revObs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
 },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
 // Observe home grid items on load
-document.querySelectorAll('#home-grid .rv, #sec-ebook .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-revista .rv, #sec-revista-roma .rv, #sec-revista-hallazgos .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
+document.querySelectorAll('#home-grid .rv, #sec-biblioteca .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
   revObs.observe(el);
 });
 </script>
