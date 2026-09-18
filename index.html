@@ -267,7 +267,7 @@
   border:1px solid var(--bd);background:var(--w);color:var(--txm);border-radius:999px;cursor:pointer;transition:.2s}
 #sec-biblioteca .bib-f:hover{border-color:var(--bdg);color:var(--tc)}
 #sec-biblioteca .bib-f.on{background:var(--tc);border-color:var(--tc);color:#fff}
-#sec-biblioteca .bib-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+#sec-biblioteca .bib-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.4rem}
 #sec-biblioteca .bib-card{background:var(--w);border:1px solid var(--bd);border-radius:6px;overflow:hidden;
   display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 #sec-biblioteca .bib-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,10,7,.16)}
@@ -308,13 +308,14 @@
     <div class="thematic-header rv">
       <span class="sec-label">TIENDA · REVISTAS Y LIBROS EN PDF</span>
       <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">La Tienda de Memorias del Pasado</h2>
-      <p>Revistas ilustradas y libros de historia antigua, con rigor histórico y diseño editorial. Descarga inmediata y lectura en cualquier dispositivo.</p>
+      <p>Revistas ilustradas, libros y cuentos de historia antigua, con rigor histórico y diseño editorial. Descarga inmediata y lectura en cualquier dispositivo.</p>
     </div>
 
     <div class="bib-filtros rv">
       <span class="bib-f on" data-f="todo">Todo</span>
       <span class="bib-f" data-f="revista">Revistas</span>
       <span class="bib-f" data-f="libro">Libros</span>
+      <span class="bib-f" data-f="infantil">Infantil</span>
       <span class="bib-f" data-f="gratis">Gratis</span>
     </div>
 
@@ -364,6 +365,22 @@
           <div class="bib-pie">
             <span class="bib-precio">$4.99<span class="cur">USD</span></span>
             <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/nhluug" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro infantil">
+        <div class="bib-port">
+          <img src="assets/img/cuento-gotita-portada.jpg" alt="Portada del cuento ilustrado Gotita y el acueducto" loading="lazy">
+          <span class="bib-badge verde">Infantil</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Cuento · 2 a 4 años</div>
+          <h3>Gotita y el Acueducto</h3>
+          <p class="bib-desc">El viaje de una gota de agua desde la montaña hasta Roma, por canales, túneles y los arcos más altos del mundo antiguo. Incluye página para colorear.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$2.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/gotita" target="_blank" rel="noopener">Comprar →</a>
           </div>
         </div>
       </article>
