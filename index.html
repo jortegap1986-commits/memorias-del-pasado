@@ -57,6 +57,87 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Documentales — Memorias del Pasado",
+  "itemListElement": [
+    {
+      "@type": "VideoObject",
+      "name": "El Desastre del Bosque de Teutoburgo",
+      "description": "Tres legiones romanas desaparecieron en un bosque germano en el año 9 d.C. El documental completo sobre el desastre que detuvo la expansión de Roma.",
+      "thumbnailUrl": "https://img.youtube.com/vi/IwGDyrT9f4w/hqdefault.jpg",
+      "uploadDate": "2025-10-01T14:00:21-07:00",
+      "duration": "PT15M38S",
+      "embedUrl": "https://www.youtube.com/embed/IwGDyrT9f4w",
+      "contentUrl": "https://www.youtube.com/watch?v=IwGDyrT9f4w",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Memorias del Pasado",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memoriasdelpasado.org/apple-touch-icon.png"
+        }
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Gaugamela: la Batalla que Cambió la Historia",
+      "description": "El 1 de octubre del 331 a.C., Alejandro Magno se enfrentó al ejército más grande jamás reunido por Persia. El día que terminó un imperio.",
+      "thumbnailUrl": "https://img.youtube.com/vi/CKTpaqkskxc/hqdefault.jpg",
+      "uploadDate": "2026-04-18T08:00:31-07:00",
+      "duration": "PT12M08S",
+      "embedUrl": "https://www.youtube.com/embed/CKTpaqkskxc",
+      "contentUrl": "https://www.youtube.com/watch?v=CKTpaqkskxc",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Memorias del Pasado",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memoriasdelpasado.org/apple-touch-icon.png"
+        }
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "La Caída de Constantinopla: El Fin del Imperio Romano de Oriente",
+      "description": "Documental completo sobre el asedio de 1453: el último acto de mil años de historia romana en Oriente.",
+      "thumbnailUrl": "https://img.youtube.com/vi/IVSkj0nSUx8/hqdefault.jpg",
+      "uploadDate": "2026-02-26T15:07:37-08:00",
+      "duration": "PT11M18S",
+      "embedUrl": "https://www.youtube.com/embed/IVSkj0nSUx8",
+      "contentUrl": "https://www.youtube.com/watch?v=IVSkj0nSUx8",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Memorias del Pasado",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memoriasdelpasado.org/apple-touch-icon.png"
+        }
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "¿Cómo un Hombre en Quiebra Conquistó el Mundo?",
+      "description": "Antes de cruzar el Rubicón, César estaba al borde de la ruina financiera. La historia de la apuesta que cambió Roma para siempre.",
+      "thumbnailUrl": "https://img.youtube.com/vi/SPfUemxZRCY/hqdefault.jpg",
+      "uploadDate": "2025-09-21T23:00:18-07:00",
+      "duration": "PT11M57S",
+      "embedUrl": "https://www.youtube.com/embed/SPfUemxZRCY",
+      "contentUrl": "https://www.youtube.com/watch?v=SPfUemxZRCY",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Memorias del Pasado",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memoriasdelpasado.org/apple-touch-icon.png"
+        }
+      }
+    }
+  ]
+}
+</script>
 
 <!-- Open Graph / Facebook / WhatsApp -->
 <meta property="og:type" content="website">
@@ -147,6 +228,7 @@
       </div>
       <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
       <button class="hn" onclick="gotoSection('sec-podcast')">🎙️ Podcast</button>
+      <button class="hn" onclick="gotoSection('sec-documentales')">🎬 Documentales</button>
       <button class="hn" onclick="gotoSection('sec-comunidad')">Comunidad</button>
       <button class="hn hn-cta" onclick="gotoSection('sec-biblioteca')">🛍️ Tienda</button>
     </nav>
@@ -172,6 +254,7 @@
           <a onclick="gotoSection('sec-persia-grid')">⚔ Persia</a>
           <a onclick="gotoSection('sec-pompeya')">🌋 Pompeya</a>
           <a onclick="gotoSection('sec-podcast')">🎙 Podcast</a>
+          <a onclick="gotoSection('sec-documentales')">🎬 Documentales</a>
         </div>
       </div>
     </div>
@@ -504,6 +587,74 @@ document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
           </audio>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SECCIÓN DOCUMENTALES ═══════ -->
+<section id="sec-documentales" style="background:var(--dk);padding:5rem 2rem">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="podcast-header rv">
+      <span class="sec-label">DOCUMENTALES · CANAL MEMORIAS DEL PASADO</span>
+      <h2>Documentales Completos</h2>
+      <p>Los relatos más largos del canal, en video: batallas, imperios y las decisiones que cambiaron la historia antigua, contados con detalle.</p>
+    </div>
+    <div class="docu-grid">
+      <a class="docu-card rv" href="https://www.youtube.com/watch?v=IwGDyrT9f4w" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_documental',{video_id:'IwGDyrT9f4w',video_title:'El Desastre del Bosque de Teutoburgo'});}">
+        <div class="docu-thumb">
+          <img src="https://img.youtube.com/vi/IwGDyrT9f4w/hqdefault.jpg" alt="El Desastre del Bosque de Teutoburgo" loading="lazy">
+          <span class="docu-play">▶</span>
+          <span class="docu-dur">15:38</span>
+        </div>
+        <div class="docu-body">
+          <div class="docu-eyebrow">La Frontera Sangrienta</div>
+          <div class="docu-title">El Desastre del Bosque de Teutoburgo</div>
+          <p class="docu-desc">Tres legiones romanas desaparecieron en un bosque germano en el año 9 d.C. El documental completo sobre el desastre que detuvo la expansión de Roma.</p>
+          <span class="docu-cta">Ver en YouTube →</span>
+        </div>
+      </a>
+      <a class="docu-card rv" href="https://www.youtube.com/watch?v=CKTpaqkskxc" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_documental',{video_id:'CKTpaqkskxc',video_title:'La Batalla que Cambió la Historia'});}">
+        <div class="docu-thumb">
+          <img src="https://img.youtube.com/vi/CKTpaqkskxc/hqdefault.jpg" alt="La Batalla que Cambió la Historia" loading="lazy">
+          <span class="docu-play">▶</span>
+          <span class="docu-dur">12:08</span>
+        </div>
+        <div class="docu-body">
+          <div class="docu-eyebrow">Gaugamela</div>
+          <div class="docu-title">La Batalla que Cambió la Historia</div>
+          <p class="docu-desc">El 1 de octubre del 331 a.C., Alejandro Magno se enfrentó al ejército más grande jamás reunido por Persia. El día que terminó un imperio.</p>
+          <span class="docu-cta">Ver en YouTube →</span>
+        </div>
+      </a>
+      <a class="docu-card rv" href="https://www.youtube.com/watch?v=IVSkj0nSUx8" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_documental',{video_id:'IVSkj0nSUx8',video_title:'El Fin del Imperio Romano de Oriente'});}">
+        <div class="docu-thumb">
+          <img src="https://img.youtube.com/vi/IVSkj0nSUx8/hqdefault.jpg" alt="El Fin del Imperio Romano de Oriente" loading="lazy">
+          <span class="docu-play">▶</span>
+          <span class="docu-dur">11:18</span>
+        </div>
+        <div class="docu-body">
+          <div class="docu-eyebrow">La Caída de Constantinopla</div>
+          <div class="docu-title">El Fin del Imperio Romano de Oriente</div>
+          <p class="docu-desc">Documental completo sobre el asedio de 1453: el último acto de mil años de historia romana en Oriente.</p>
+          <span class="docu-cta">Ver en YouTube →</span>
+        </div>
+      </a>
+      <a class="docu-card rv" href="https://www.youtube.com/watch?v=SPfUemxZRCY" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_documental',{video_id:'SPfUemxZRCY',video_title:'¿Cómo un Hombre en Quiebra Conquistó el Mundo?'});}">
+        <div class="docu-thumb">
+          <img src="https://img.youtube.com/vi/SPfUemxZRCY/hqdefault.jpg" alt="¿Cómo un Hombre en Quiebra Conquistó el Mundo?" loading="lazy">
+          <span class="docu-play">▶</span>
+          <span class="docu-dur">11:57</span>
+        </div>
+        <div class="docu-body">
+          <div class="docu-eyebrow">Julio César</div>
+          <div class="docu-title">¿Cómo un Hombre en Quiebra Conquistó el Mundo?</div>
+          <p class="docu-desc">Antes de cruzar el Rubicón, César estaba al borde de la ruina financiera. La historia de la apuesta que cambió Roma para siempre.</p>
+          <span class="docu-cta">Ver en YouTube →</span>
+        </div>
+      </a>
+    </div>
+    <div class="docu-more">
+      <a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ/videos" target="_blank" rel="noopener">Ver todos los videos en YouTube →</a>
     </div>
   </div>
 </section>
@@ -963,6 +1114,7 @@ document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
         <a onclick="showHome()">Inicio</a>
         <a onclick="gotoSection('sec-biblioteca')">🛍️ La Tienda</a>
         <a onclick="gotoSection('sec-podcast')">🎙️ Podcast</a>
+        <a onclick="gotoSection('sec-documentales')">🎬 Documentales</a>
         <a onclick="gotoSection('sec-explora')">Explora Todo el Contenido</a>
         <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
         <a href="articulos/conquista-de-persia.html">→ Guía Completa: Persia</a>
@@ -1065,7 +1217,7 @@ document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
 
 <script>
 // ── State ──
-var SECTIONS=['home-grid','sec-biblioteca','sec-podcast','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
+var SECTIONS=['home-grid','sec-biblioteca','sec-podcast','sec-documentales','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
 var ARTICLE_TITLES={
   'art-falange':'La Falange Macedonia',
   'art-dario':'Darío III y el Imperio Persa',
@@ -1102,7 +1254,7 @@ var ARTICLE_TITLES={
   'art-catedral-gotica':'Catedrales Góticas'
 };
 var SECTION_TITLES={
-  'sec-biblioteca':'Tienda','sec-podcast':'Podcast','sec-persia-grid':'Conquista de Persia',
+  'sec-biblioteca':'Tienda','sec-podcast':'Podcast','sec-documentales':'Documentales','sec-persia-grid':'Conquista de Persia',
   'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya',
   'sec-explora':'Explora','sec-citas':'Citas',
   'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
@@ -1222,7 +1374,7 @@ var revObs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
 },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
 // Observe home grid items on load
-document.querySelectorAll('#home-grid .rv, #sec-biblioteca .rv, #sec-podcast .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
+document.querySelectorAll('#home-grid .rv, #sec-biblioteca .rv, #sec-podcast .rv, #sec-documentales .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
   revObs.observe(el);
 });
 </script>
