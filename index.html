@@ -239,17 +239,14 @@
 
 <!-- HERO FIJO (un solo mensaje, un solo CTA) -->
 <section id="hero">
-  <div class="hero-slide active">
-    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/falange2.jpg">
-      <source src="assets/video/falange-video.mp4" type="video/mp4">
-    </video>
+  <div class="hero-slide active" style="background-image:url('assets/img/acueducto-segovia1.jpg')">
     <div class="hero-overlay">
       <div class="hero-content">
         <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Memorias del Pasado — Historia antigua, arqueología y mundo antiguo</h1>
-        <span class="hero-cat">TÁCTICA MILITAR · GRECIA CLÁSICA</span>
-        <p class="hero-h1">Falange Macedonia: Armas y Táctica que Conquistaron el Mundo</p>
-        <p class="hero-excerpt">Dieciséis mil sarissas avanzaban como un solo organismo. Ningún ejército de la Antigüedad pudo detenerlas. Así conquistó Alejandro el mundo conocido en doce años.</p>
-        <button class="hero-btn" onclick="if(typeof gtag==='function'){gtag('event','clic_banner_hero',{article_id:'falange-macedonia',article_title:'Falange Macedonia: Armas y Táctica que Conquistaron el Mundo'});}location.href='articulos/falange-macedonia.html'">Leer Artículo →</button>
+        <span class="hero-cat">HISPANIA ROMANA · INGENIERÍA</span>
+        <p class="hero-h1">El Acueducto de Segovia: 2.000 Años sin una Gota de Argamasa</p>
+        <p class="hero-excerpt">728 metros de arcos de granito, 28 metros de altura, ni un gramo de mortero en las juntas. Diecinueve siglos después, la ingeniería romana sigue de pie.</p>
+        <button class="hero-btn" onclick="if(typeof gtag==='function'){gtag('event','clic_banner_hero',{article_id:'acueducto-de-segovia',article_title:'El Acueducto de Segovia: 2.000 Años sin una Gota de Argamasa'});}location.href='articulos/acueducto-de-segovia.html'">Leer Artículo →</button>
         <div class="hero-chips">
           <a onclick="gotoSection('sec-roma-grid')">🏛 Roma</a>
           <a onclick="gotoSection('sec-persia-grid')">⚔ Persia</a>
@@ -271,6 +268,15 @@
       <div class="art-grid">
 
         <!-- Card 1 -->
+        <article class="art-card rv" onclick="location.href='articulos/acueducto-de-segovia.html'">
+          <div class="art-card-img"><img src="assets/img/acueducto-segovia1.jpg" alt="Acueducto de Segovia" loading="lazy"><span class="art-card-cat">HISPANIA ROMANA · INGENIERÍA</span></div>
+          <div class="art-card-body">
+            <h3 class="art-card-title">El Acueducto de Segovia: 2.000 Años sin una Gota de Argamasa</h3>
+            <p class="art-card-exc">728 metros de arcos de granito, 28 metros de altura, ni un gramo de mortero en las juntas. Diecinueve siglos después, la ingeniería romana sigue de pie.</p>
+            <div class="art-card-ft"><span class="art-card-meta">12 min · 1400 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
+          </div>
+        </article>
+        <!-- Card 2 -->
         <article class="art-card rv" onclick="location.href='articulos/falange-macedonia.html'">
           <div class="art-card-img"><img src="assets/img/falange2.jpg" alt="Falange Macedonia" loading="lazy"><span class="art-card-cat">TÁCTICA MILITAR · GRECIA</span></div>
           <div class="art-card-body">
@@ -279,7 +285,7 @@
             <div class="art-card-ft"><span class="art-card-meta">12 min · 2000 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
-        <!-- Card 2 -->
+        <!-- Card 3 -->
         <article class="art-card rv" onclick="location.href='articulos/dario-y-el-imperio-persa.html'">
           <div class="art-card-img"><img src="assets/img/dario2.jpg" alt="Darío III Gaugamela" loading="lazy"><span class="art-card-cat">PERSIA · ALEJANDRO MAGNO</span></div>
           <div class="art-card-body">
@@ -288,7 +294,7 @@
             <div class="art-card-ft"><span class="art-card-meta">13 min · 2200 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
-        <!-- Card 3 -->
+        <!-- Card 4 -->
         <article class="art-card rv" onclick="location.href='articulos/legiones-de-roma.html'">
           <div class="art-card-img"><img src="assets/img/legion2.jpg" alt="Legiones Roma" loading="lazy"><span class="art-card-cat">ROMA · EJÉRCITO PROFESIONAL</span></div>
           <div class="art-card-body">
@@ -297,7 +303,7 @@
             <div class="art-card-ft"><span class="art-card-meta">14 min · 2300 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
-        <!-- Card 4 -->
+        <!-- Card 5 -->
         <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
           <div class="art-card-img"><img src="assets/img/pompeya1.jpg" alt="Pompeya erupción" loading="lazy"><span class="art-card-cat">ROMA · CATÁSTROFE · 79 dC</span></div>
           <div class="art-card-body">
@@ -306,7 +312,7 @@
             <div class="art-card-ft"><span class="art-card-meta">13 min · 2100 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
-        <!-- Card 5 -->
+        <!-- Card 6 -->
         <article class="art-card rv" onclick="location.href='articulos/pompeya-arte-y-vida.html'">
           <div class="art-card-img"><img src="assets/img/pompeya3.jpg" alt="Pompeya arte" loading="lazy"><span class="art-card-cat">ROMA · ARTE · VIDA COTIDIANA</span></div>
           <div class="art-card-body">
@@ -315,7 +321,7 @@
             <div class="art-card-ft"><span class="art-card-meta">14 min · 2300 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
-        <!-- Card 6 -->
+        <!-- Card 7 -->
         <article class="art-card rv" onclick="location.href='articulos/batalla-teutoburgo.html'">
           <div class="art-card-img"><img src="assets/img/teutoburgo.jpg" alt="Teutoburgo" loading="lazy"><span class="art-card-cat">ROMA · GERMANIA · 9 dC</span></div>
           <div class="art-card-body">
@@ -324,22 +330,13 @@
             <div class="art-card-ft"><span class="art-card-meta">13 min · 2100 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
-        <!-- Card 7 -->
+        <!-- Card 8 -->
         <article class="art-card rv" onclick="location.href='articulos/maquinaria-de-guerra-romana.html'">
           <div class="art-card-img"><img src="assets/img/maquinaria2.jpg" alt="Maquinaria romana" loading="lazy"><span class="art-card-cat">ROMA · INGENIERÍA DE GUERRA</span></div>
           <div class="art-card-body">
             <h3 class="art-card-title">Maquinaria de Guerra Romana: La Ingeniería del Poder</h3>
             <p class="art-card-exc">El ariete, el onagro, la ballista, la torre de asedio. Cuando Roma decidía que un muro debía caer, caía. Era solo una cuestión de ingeniería.</p>
             <div class="art-card-ft"><span class="art-card-meta">14 min · 2300 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 8 -->
-        <article class="art-card rv" onclick="location.href='articulos/acueducto-de-segovia.html'">
-          <div class="art-card-img"><img src="assets/img/acueducto-segovia1.jpg" alt="Acueducto de Segovia" loading="lazy"><span class="art-card-cat">HISPANIA ROMANA · INGENIERÍA</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">El Acueducto de Segovia: 2.000 Años sin una Gota de Argamasa</h3>
-            <p class="art-card-exc">728 metros de arcos de granito, 28 metros de altura, ni un gramo de mortero en las juntas. Diecinueve siglos después, la ingeniería romana sigue de pie.</p>
-            <div class="art-card-ft"><span class="art-card-meta">12 min · 1400 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
           </div>
         </article>
       </div><!-- /art-grid -->
