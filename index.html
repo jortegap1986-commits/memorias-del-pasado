@@ -229,6 +229,7 @@
         </div>
       </div>
       <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
+      <button class="hn" onclick="location.href='boletin.html'">📰 Boletín</button>
       <button class="hn" onclick="gotoSection('sec-podcast')">🎙️ Podcast</button>
       <button class="hn" onclick="gotoSection('sec-documentales')">🎬 Documentales</button>
       <button class="hn" onclick="gotoSection('sec-comunidad')">Comunidad</button>
@@ -258,6 +259,38 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ═══════ BOLETÍN HISTORIKA — POST CENTRAL ═══════ -->
+<style>
+#sec-boletin{max-width:1280px;margin:0 auto;padding:4.5rem 2rem 0}
+#sec-boletin .bt-post{position:relative;display:block;text-decoration:none;cursor:pointer;overflow:hidden;
+  background:linear-gradient(135deg,var(--dm) 0%,var(--dk) 55%,#241a0e 100%);
+  border:1px solid rgba(212,168,50,.25);max-width:920px;margin:0 auto;
+  padding:3.4rem 3.6rem;text-align:center;transition:transform .25s ease,box-shadow .25s ease}
+#sec-boletin .bt-post::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(circle at 15% 15%,rgba(212,168,50,.14) 0%,transparent 50%),
+  radial-gradient(circle at 88% 85%,rgba(212,168,50,.1) 0%,transparent 50%)}
+#sec-boletin .bt-post:hover{transform:translateY(-6px);box-shadow:0 20px 55px rgba(0,0,0,.28)}
+#sec-boletin .bt-post:hover .bt-post-cta{background:var(--gdl)}
+#sec-boletin .bt-post-orn{position:relative;color:var(--gd);font-size:.95rem;letter-spacing:.5rem;margin-bottom:1.4rem}
+#sec-boletin .bt-post-eyebrow{position:relative;font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gdl);margin-bottom:1rem}
+#sec-boletin .bt-post-title{position:relative;font-family:'Cinzel',serif;font-weight:700;color:#fff;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.28;margin-bottom:1rem;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+#sec-boletin .bt-post-teaser{position:relative;font-family:'EB Garamond',serif;font-style:italic;font-size:1.12rem;color:rgba(255,255,255,.78);max-width:640px;margin:0 auto 1.6rem;line-height:1.65}
+#sec-boletin .bt-post-meta{position:relative;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stl);margin-bottom:1.8rem}
+#sec-boletin .bt-post-meta span{color:var(--gdl)}
+#sec-boletin .bt-post-cta{position:relative;display:inline-block;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;background:var(--gd);color:#fff;padding:.95rem 2.4rem;transition:background .2s}
+@media(max-width:760px){#sec-boletin{padding:3rem 1.1rem 0}#sec-boletin .bt-post{padding:2.6rem 1.8rem}}
+</style>
+<section id="sec-boletin">
+  <a class="bt-post" href="boletin.html" onclick="if(typeof gtag==='function'){gtag('event','clic_boletin_home');}">
+    <div class="bt-post-orn">✦ ✦ ✦</div>
+    <div class="bt-post-eyebrow">Boletín Historika</div>
+    <h2 class="bt-post-title">Crónicas del Mundo Antiguo — Edición de Septiembre</h2>
+    <p class="bt-post-teaser">El muro perdido de Lutecia bajo París, una ciudadela romana en el Danubio y el rescate de una tumba tebana de 3.000 años: tres hallazgos, un solo boletín.</p>
+    <div class="bt-post-meta">N.º 24 · <span>3 artículos nuevos</span> · Septiembre 2026</div>
+    <span class="bt-post-cta">Ver boletín completo →</span>
+  </a>
 </section>
 
 <!-- HOME GRID -->
