@@ -4,20 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="max-image-preview:large">
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHYMWPJQCF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-WHYMWPJQCF');
-</script>
-
-<title>Memorias del Pasado – Historia · Arqueología · Mundo Antiguo</title>
-<meta name="description" content="Historia antigua contada con rigor y narrativa cinematográfica: Roma, Persia, Grecia, Pompeya y más. Artículos, videos y podcast sobre el mundo antiguo.">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WHYMWPJQCF');</script>
+<title>Memorias del Pasado – Historia antigua explicada: Roma, Persia, Egipto y Pompeya</title>
+<meta name="description" content="Cómo se construyó el mundo antiguo, explicado en artículos de 10 minutos: ingeniería romana, batallas, Persia, Pompeya e Hispania. Documentales, podcast y revistas en PDF.">
 <link rel="canonical" href="https://memoriasdelpasado.org/">
-
 <!-- JSON-LD: datos estructurados para Google -->
 <script type="application/ld+json">
 {
@@ -139,772 +131,380 @@
 }
 </script>
 
-<!-- Open Graph / Facebook / WhatsApp -->
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://memoriasdelpasado.org/">
-<meta property="og:title" content="Memorias del Pasado – Historia · Arqueología · Mundo Antiguo">
-<meta property="og:description" content="Historia antigua contada con rigor y narrativa cinematográfica: Roma, Persia, Grecia, Pompeya y más. Artículos, videos y podcast sobre el mundo antiguo.">
+<meta property="og:title" content="Memorias del Pasado – Historia antigua explicada">
+<meta property="og:description" content="Cómo se construyó el mundo antiguo, explicado en artículos de 10 minutos: ingeniería romana, batallas, Persia, Pompeya e Hispania.">
 <meta property="og:image" content="https://memoriasdelpasado.org/assets/img/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="es_ES">
-<meta property="og:site_name" content="Memorias del Pasado">
-
-<!-- Twitter/X Card -->
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES"><meta property="og:site_name" content="Memorias del Pasado">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Memorias del Pasado – Historia · Arqueología · Mundo Antiguo">
-<meta name="twitter:description" content="Historia antigua contada con rigor y narrativa cinematográfica: Roma, Persia, Grecia, Pompeya y más. Artículos, videos y podcast sobre el mundo antiguo.">
+<meta name="twitter:title" content="Memorias del Pasado – Historia antigua explicada">
 <meta name="twitter:image" content="https://memoriasdelpasado.org/assets/img/og-image.jpg">
-
-<!-- Favicons -->
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-portada-poster.jpg">
 <link rel="stylesheet" href="css/site.css">
+<style>
+
+/* ── capa 2026: header sin topbar, reveal desde visible, utilidades ── */
+#header.hdr2{top:0}
+.hdr-logo{text-decoration:none}
+.hn.active{color:var(--gd);border-bottom-color:var(--gd)}
+.hn-cta{background:var(--gd);color:#fff!important;border-radius:3px;margin-left:.4rem;padding:.55rem 1rem}
+.hn-cta:hover{background:var(--gdl);border-bottom-color:transparent}
+.ft-social{display:flex;justify-content:center;gap:.9rem;margin:1.5rem 0 .5rem}
+.ft-social a{width:40px;height:40px;border:1px solid var(--bdg);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.ft-social a:hover{background:rgba(212,168,50,.2);transform:translateY(-2px)}
+.ft-social svg{width:18px;height:18px;fill:var(--gdl)}
+/* reveal: visible por defecto; solo anima cuando hay JS y el usuario acepta movimiento */
+.rv{opacity:1;transform:none}
+html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+html.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}}
+.sec{padding:4.5rem 2rem}
+.sec-in{max-width:1180px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.sec-head .sec-label{margin-bottom:.5rem;border:none;padding:0}
+.sec-head h2{font-family:'Cinzel',serif;font-size:clamp(1.35rem,2.8vw,2rem);color:var(--tx);line-height:1.2;text-wrap:balance}
+.sec-head .more{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gd);text-decoration:none;border-bottom:1px solid var(--bdg);padding-bottom:.2rem;white-space:nowrap}
+.sec-head .more:hover{border-bottom-color:var(--gd)}
+.art-card{display:block;color:inherit;text-decoration:none;border-radius:4px}
+.art-card:focus-visible{outline:2px solid var(--gd);outline-offset:3px}
+@media(max-width:760px){.sec{padding:3rem 1.1rem}}
+
+/* ── HERO 2026: video en bucle + promesa + 2 acciones ── */
+#hero2{position:relative;min-height:min(82vh,680px);background:#0c0a07;color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+#hero2 .h-media{position:absolute;inset:0}
+#hero2 video,#hero2 .h-poster{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
+#hero2 .h-poster{position:absolute;inset:0;background:url('assets/img/hero-portada-poster.jpg') center 40%/cover no-repeat;transform:scale(1.04);animation:kenburns 14s ease-in-out infinite alternate}
+#hero2 video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s}
+#hero2 video.on{opacity:1}
+#hero2 .h-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,10,7,.25) 0%,rgba(12,10,7,.15) 35%,rgba(12,10,7,.82) 78%,#0c0a07 100%)}
+#hero2 .h-in{position:relative;max-width:1180px;width:100%;margin:0 auto;padding:7rem 2rem 2.6rem}
+#hero2 .h-ey{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gdl);display:block;margin-bottom:1rem}
+#hero2 h1{font-family:'Cinzel',serif;font-weight:700;font-size:clamp(1.75rem,4.6vw,3.3rem);line-height:1.12;margin:0 0 1rem;max-width:16ch;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+#hero2 h1 .w{display:inline-block;opacity:0;transform:translateY(.5em);animation:wordIn .7s cubic-bezier(.2,.7,.2,1) forwards}
+#hero2 .h-sub{font-family:'EB Garamond',serif;font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.5;color:rgba(255,255,255,.86);max-width:40ch;margin:0 0 1.5rem;opacity:0;animation:fadeUp .8s .55s forwards}
+#hero2 .h-ctas{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;opacity:0;animation:fadeUp .8s .75s forwards}
+#hero2 .h-btn{font-family:'Cinzel',serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:1rem 1.8rem;border-radius:3px;background:var(--gd);color:#fff;transition:background .2s,transform .2s;box-shadow:0 8px 30px rgba(184,134,30,.35)}
+#hero2 .h-btn:hover{background:var(--gdl);transform:translateY(-2px)}
+#hero2 .h-btn.sec{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.35);box-shadow:none;backdrop-filter:blur(4px)}
+#hero2 .h-btn.sec:hover{background:rgba(255,255,255,.18)}
+#hero2 .h-proof{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:1.8rem;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);opacity:0;animation:fadeUp .8s 1s forwards}
+#hero2 .h-proof b{color:var(--gdp);font-size:.8rem;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+#hero2 .h-scroll{position:absolute;right:2rem;bottom:1.4rem;width:26px;height:40px;border:2px solid rgba(255,255,255,.4);border-radius:14px;opacity:0;animation:fadeUp 1s 1.6s forwards}
+#hero2 .h-scroll::after{content:'';position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--gdl);animation:scrollDot 1.8s ease-in-out infinite}
+@keyframes wordIn{to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+@keyframes scrollDot{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){#hero2 h1 .w,#hero2 .h-sub,#hero2 .h-ctas,#hero2 .h-proof,#hero2 .h-scroll{animation:none;opacity:1;transform:none}#hero2 .h-poster{animation:none}}
+@media(max-width:760px){
+  #hero2{min-height:min(88vh,640px)}
+  #hero2 .h-in{padding:5rem 1.1rem 2rem}
+  #hero2 h1{font-size:1.9rem}
+  #hero2 .h-btn{flex:1 1 100%;text-align:center}
+  #hero2 .h-scroll{display:none}
+  #hero2 .h-proof{gap:.4rem 1rem}
+}
+/* ── EMPIEZA POR AQUÍ ── */
+#sec-empieza{background:var(--w)}
+.start-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:1.4rem}
+.start-card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--bd);background:var(--w);overflow:hidden;border-radius:4px;transition:transform .25s,box-shadow .25s}
+.start-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(12,10,7,.16)}
+.start-img{aspect-ratio:16/10;overflow:hidden;background:var(--dk)}
+.start-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.start-card:hover .start-img img{transform:scale(1.07)}
+.start-grid .start-card:first-child .start-img{aspect-ratio:16/11}
+.start-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;flex:1}
+.start-ey{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tc);margin-bottom:.5rem}
+.start-body h3{font-family:'Cinzel',serif;font-size:1.1rem;line-height:1.3;color:var(--tx);margin:0 0 .5rem;text-wrap:balance}
+.start-grid .start-card:first-child h3{font-size:1.35rem}
+.start-body p{font-family:'EB Garamond',serif;font-size:1rem;color:var(--txm);line-height:1.5;margin:0 0 1rem;flex:1}
+.start-cta{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gd);display:inline-flex;align-items:center;gap:.3rem;transition:gap .2s}
+.start-card:hover .start-cta{gap:.7rem}
+@media(max-width:900px){.start-grid{grid-template-columns:1fr 1fr}.start-grid .start-card:first-child{grid-column:1/-1}}
+@media(max-width:560px){.start-grid{grid-template-columns:1fr}}
+/* ── CIVILIZACIONES ── */
+#sec-civ{background:var(--dk);padding:2.2rem 2rem}
+.civ-row{max-width:1180px;margin:0 auto;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;justify-content:center}
+.civ-row span{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stl);margin-right:.6rem}
+.civ{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gdp);text-decoration:none;border:1px solid rgba(212,168,50,.4);padding:.55rem 1rem;border-radius:999px;transition:background .2s,transform .2s}
+.civ:hover{background:rgba(212,168,50,.25);transform:translateY(-2px)}
+/* ── MÁS LEÍDOS ── */
+#sec-mas{background:var(--ow)}
+#sec-mas .art-grid{margin-bottom:0}
+@media(max-width:960px){#sec-mas .art-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){#sec-mas .art-grid{grid-template-columns:1fr}}
+/* ── IMÁN: PDF GRATIS ── */
+#sec-newsletter.iman{background:var(--cr);padding:4rem 2rem}
+.iman-in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+.iman-txt .sec-label{border:none;padding:0;margin-bottom:.8rem}
+.iman-txt h2{font-family:'Cinzel',serif;font-size:clamp(1.4rem,2.8vw,2rem);color:var(--tx);line-height:1.2;margin-bottom:.8rem;text-wrap:balance}
+.iman-txt p{font-family:'EB Garamond',serif;font-size:1.1rem;color:var(--txm);line-height:1.6;max-width:46ch}
+.iman-txt ul{list-style:none;padding:0;margin:1rem 0 0;font-family:'EB Garamond',serif;font-size:1rem;color:var(--txm)}
+.iman-txt li{margin:.3rem 0} .iman-txt li::before{content:'✦';color:var(--gd);margin-right:.5rem;font-size:.75rem}
+.iman-card{background:var(--w);border:1px solid var(--bd);border-top:4px solid var(--gd);border-radius:4px;padding:.4rem .4rem 0;box-shadow:0 14px 40px rgba(12,10,7,.08)}
+.iman-card iframe{display:block;border:0;width:100%;height:330px}
+.iman-note{font-family:'Cinzel',serif;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--txl);text-align:center;padding:.6rem}
+@media(max-width:820px){.iman-in{grid-template-columns:1fr;gap:1.6rem}}
+/* ── PACK ── */
+#sec-pack{background:#0c0a07;color:#fff;padding:5rem 2rem;position:relative;overflow:hidden}
+#sec-pack::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,168,50,.16),transparent 55%)}
+.pack-in{position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.pack-covers{position:relative;height:380px;display:flex;justify-content:center;align-items:center}
+.pack-covers img{position:absolute;width:200px;aspect-ratio:2/3;object-fit:cover;border:1px solid rgba(255,255,255,.25);box-shadow:0 24px 50px rgba(0,0,0,.55);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pack-covers img:nth-child(1){transform:translateX(-120px) rotate(-9deg)}
+.pack-covers img:nth-child(2){transform:translateY(-10px) scale(1.06);z-index:2}
+.pack-covers img:nth-child(3){transform:translateX(120px) rotate(9deg)}
+.pack-covers:hover img:nth-child(1){transform:translateX(-160px) rotate(-13deg)}
+.pack-covers:hover img:nth-child(3){transform:translateX(160px) rotate(13deg)}
+.pack-covers:hover img:nth-child(2){transform:translateY(-24px) scale(1.1)}
+.pack-txt .sec-label{color:var(--gdl);border:none;padding:0;margin-bottom:.8rem}
+.pack-txt h2{font-family:'Cinzel',serif;font-size:clamp(1.4rem,2.8vw,2.1rem);line-height:1.2;margin-bottom:.8rem;text-wrap:balance}
+.pack-txt p{font-family:'EB Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,.82);line-height:1.55;max-width:44ch}
+.pack-price{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin:1.2rem 0}
+.pack-now{font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;color:var(--gdl);line-height:1}
+.pack-now small{font-size:.75rem;letter-spacing:.1em;margin-left:.2rem;color:var(--gdp)}
+.pack-was{font-family:'EB Garamond',serif;color:rgba(255,255,255,.5);text-decoration:line-through}
+.pack-off{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;background:var(--tc);padding:.35rem .7rem;border-radius:2px}
+.pack-ctas{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.pack-buy{font-family:'Cinzel',serif;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gd);color:#fff;text-decoration:none;padding:1rem 2rem;border-radius:3px;transition:background .2s,transform .2s}
+.pack-buy:hover{background:var(--gdl);transform:translateY(-2px)}
+.pack-see{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gdp);text-decoration:none;border-bottom:1px solid rgba(240,221,160,.5);padding-bottom:.2rem}
+.pack-trust{margin-top:1.2rem;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stl);display:flex;gap:.4rem 1.4rem;flex-wrap:wrap}
+@media(max-width:860px){.pack-in{grid-template-columns:1fr;gap:1.5rem}.pack-covers{height:300px;order:-1}.pack-covers img{width:150px}.pack-covers img:nth-child(1){transform:translateX(-95px) rotate(-9deg)}.pack-covers img:nth-child(3){transform:translateX(95px) rotate(9deg)}.pack-buy{flex:1 1 100%;text-align:center}}
+/* ── DOCUMENTALES ── */
+#sec-documentales{background:var(--dm)}
+#sec-documentales .sec-head h2{color:#fff}
+.pod-row{margin-top:2.2rem;border-top:1px solid rgba(212,168,50,.2);padding-top:1.4rem;display:flex;gap:.6rem 1.2rem;flex-wrap:wrap;align-items:center;font-family:'EB Garamond',serif;color:rgba(255,255,255,.75)}
+.pod-row b{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gdl)}
+.pod-row a{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.25);padding:.4rem .8rem;border-radius:999px;transition:background .2s}
+.pod-row a:hover{background:rgba(212,168,50,.35)}
+@media(max-width:1000px){.docu-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.docu-grid{grid-template-columns:1fr}}
+/* ── COMUNIDAD ── */
+#sec-comunidad{background:var(--ow);padding:4.5rem 2rem}
+.com-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.com-card{background:var(--w);border:1px solid var(--bd);border-radius:4px;padding:1.8rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .25s,box-shadow .25s}
+.com-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(12,10,7,.12)}
+.com-card .sec-label{border:none;padding:0;margin:0}
+.com-card h3{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--tx);line-height:1.25}
+.com-card p{font-family:'EB Garamond',serif;color:var(--txm);font-size:1.02rem;line-height:1.55;flex:1}
+.com-card a{align-self:flex-start;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;background:var(--tc);color:#fff;padding:.8rem 1.4rem;border-radius:3px;transition:background .2s}
+.com-card a:hover{background:#a24a38}
+.com-card a.wa{background:#1f8a4c} .com-card a.wa:hover{background:#25a35a}
+.com-card small{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--txl)}
+@media(max-width:700px){.com-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div id="topbar">
-  <div class="topbar-msg">
-    <span class="tb-icon">🏛️</span>
-    <div class="tb-copy">
-      <strong>Ayúdanos a Mantener Viva la Historia</strong>
-      <span>Este proyecto existe gracias a lectores como tú</span>
-    </div>
-  </div>
-  <div class="topbar-cta-group">
-    <a class="topbar-donate" onclick="gotoSection('sec-apoyo');return false;" href="#sec-apoyo"><span class="tb-heart">❤</span> Apoya Nuestro Trabajo</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-      <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.66-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
-    </a>
-    <a href="https://web.facebook.com/profile.php?id=100094547199409" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-      <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
-    </a>
-    <a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener" aria-label="Canal de WhatsApp" title="Canal de WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37A9.8 9.8 0 0 1 2.24 12C2.24 6.6 6.64 2.2 12.05 2.2c2.62 0 5.08 1.02 6.93 2.88A9.74 9.74 0 0 1 21.85 12c0 5.4-4.4 9.8-9.8 9.8zm8.35-18.15A11.73 11.73 0 0 0 12.05.2C5.54.2.24 5.5.24 12c0 2.08.54 4.11 1.58 5.9L.14 24l6.26-1.64A11.8 11.8 0 0 0 12.04 23.8h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.12-3.45-8.35z"/></svg>
-    </a>
-    <a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
-      <svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-    </a>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header id="header">
+<header id="header" class="hdr2">
   <div class="hdr-inner">
-    <div class="hdr-logo" onclick="showHome()">
-      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado">
-      <div>
-        <span class="hdr-title">MEMORIAS DEL PASADO</span>
-        <span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span>
-      </div>
-    </div>
+    <a class="hdr-logo" href="index.html" aria-label="Inicio">
+      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
+    </a>
     <nav class="hdr-nav" id="hdr-nav">
-      <button class="hn" onclick="showHome()">Inicio</button>
-      <div class="hn-drop">
-        <button class="hn">Biblioteca ▾</button>
-        <div class="hn-menu">
-          <a href="articulos/falange-macedonia.html">La Falange Macedonia</a>
-          <a href="articulos/dario-y-el-imperio-persa.html">Darío III y el Imperio Persa</a>
-          <a onclick="gotoSection('sec-podcast')">Podcast Gaugamela</a>
-        <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
-          <a href="articulos/conquista-de-persia.html">→ Guía Completa: Persia</a>
-          <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
-          <a href="articulos/imperio-romano.html">→ Guía Completa: Roma</a>
-        <a onclick="gotoSection('sec-pompeya')">Pompeya</a>
-          <a href="articulos/legiones-de-roma.html">Las Legiones de Roma</a>
-          <a href="articulos/pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
-          <a href="articulos/pompeya-arte-y-vida.html">Pompeya: Arte y Vida</a>
-          <a href="articulos/batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
-          <a href="articulos/maquinaria-de-guerra-romana.html">Maquinaria de Guerra Romana</a>
-          <a href="articulos/catedrales-goticas.html">Catedrales Góticas</a>
-          <a href="articulos/acueducto-de-segovia.html">El Acueducto de Segovia</a>
-          <a href="articulos/italica.html">Itálica</a>
-        </div>
-      </div>
-      <button class="hn" onclick="gotoSection('sec-explora')">Explora</button>
-      <button class="hn" onclick="location.href='boletin.html'">📰 Boletín</button>
-      <button class="hn" onclick="gotoSection('sec-podcast')">🎙️ Podcast</button>
-      <button class="hn" onclick="gotoSection('sec-documentales')">🎬 Documentales</button>
-      <button class="hn" onclick="gotoSection('sec-comunidad')">Comunidad</button>
-      <button class="hn hn-cta" onclick="gotoSection('sec-biblioteca')">🛍️ Tienda</button>
+      <a class="hn active" href="index.html">Inicio</a>
+      <a class="hn" href="articulos/index.html">Artículos</a>
+      <a class="hn" href="index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="boletin.html">Boletín</a>
+      <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
+      <a class="hn hn-cta" href="tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()">☰</button>
+    <button id="menu-btn" onclick="toggleMenu()" aria-label="Menú">☰</button>
   </div>
 </header>
 
-<!-- HERO · OFERTA PRINCIPAL: PACK COLECCIÓN 2026 -->
-<style>
-#hero.hp{height:auto;min-height:0;background:#0c0a07;color:#fff;overflow:hidden}
-#hero.hp .hp-in{max-width:1180px;margin:0 auto;padding:3.2rem 2rem 2.6rem;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2.5rem;align-items:center}
-#hero.hp .hp-eye{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gdl);margin-bottom:1rem;display:block}
-#hero.hp .hp-h{font-family:'Cinzel',serif;font-weight:700;font-size:clamp(1.6rem,3.6vw,2.6rem);line-height:1.18;margin:0 0 1rem;text-wrap:balance}
-#hero.hp .hp-sub{font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.55;color:rgba(255,255,255,.82);margin:0 0 1.4rem;max-width:34em}
-#hero.hp .hp-list{list-style:none;padding:0;margin:0 0 1.6rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.35rem 1.2rem;font-family:'EB Garamond',serif;font-size:1.02rem;color:rgba(255,255,255,.9)}
-#hero.hp .hp-list li::before{content:'✦';color:var(--gd);margin-right:.5rem;font-size:.8rem}
-#hero.hp .hp-price{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
-#hero.hp .hp-now{font-family:'Cinzel',serif;font-size:2.4rem;font-weight:700;color:var(--gdl);line-height:1}
-#hero.hp .hp-now small{font-size:.8rem;letter-spacing:.12em;margin-left:.3rem;color:var(--gdp)}
-#hero.hp .hp-was{font-family:'EB Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,.55);text-decoration:line-through}
-#hero.hp .hp-off{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;background:var(--tc);color:#fff;padding:.35rem .7rem;border-radius:2px}
-#hero.hp .hp-ctas{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-#hero.hp .hp-buy{font-family:'Cinzel',serif;font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gd);color:#fff;text-decoration:none;padding:1.05rem 2.2rem;border-radius:3px;transition:background .2s,transform .2s}
-#hero.hp .hp-buy:hover,#hero.hp .hp-buy:focus-visible{background:var(--gdl);transform:translateY(-2px)}
-#hero.hp .hp-buy:focus-visible,#hero.hp .hp-see:focus-visible{outline:2px solid var(--gdp);outline-offset:3px}
-#hero.hp .hp-see{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gdp);background:none;border:none;border-bottom:1px solid rgba(240,221,160,.5);padding:.3rem 0;cursor:pointer}
-#hero.hp .hp-trust{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.4rem;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stl)}
-#hero.hp .hp-img{position:relative;margin:0;aspect-ratio:4/5;max-height:520px;width:100%;overflow:hidden}
-#hero.hp .hp-img img{width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block}
-#hero.hp .hp-free{border-top:1px solid rgba(212,168,50,.22);background:#14110c}
-#hero.hp .hp-free-in{max-width:1180px;margin:0 auto;padding:.9rem 2rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.1rem;font-family:'EB Garamond',serif;font-size:1rem;color:rgba(255,255,255,.7)}
-#hero.hp .hp-free-in a{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:.4rem .8rem;border-radius:999px;transition:background .2s}
-#hero.hp .hp-free-in a:hover{background:rgba(212,168,50,.4)}
-@media(max-width:860px){
-  #hero.hp .hp-in{grid-template-columns:minmax(0,1fr);padding:2rem 1.1rem 2rem;gap:1.4rem}
-  #hero.hp .hp-img{order:-1;aspect-ratio:16/9;max-height:190px}
-  #hero.hp .hp-img img{object-position:center 50%}
-  #hero.hp .hp-list{display:none}
-  #hero.hp .hp-h{font-size:1.45rem}
-  #hero.hp .hp-sub{font-size:1.05rem;margin-bottom:1rem}
-  #hero.hp .hp-in{padding-top:1.2rem}
-  #hero.hp .hp-buy{flex:1 1 100%;text-align:center}
-  #hero.hp .hp-free-in{padding:.9rem 1.1rem}
-}
-@media(prefers-reduced-motion:reduce){#hero.hp .hp-buy{transition:none}}
-</style>
-<section id="hero" class="hp">
-  <div class="hp-in">
-    <div>
-      <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Memorias del Pasado — Historia antigua, arqueología y mundo antiguo</h1>
-      <span class="hp-eye">Pack Historika · Colección 2026</span>
-      <p class="hp-h">Las 9 revistas de historia antigua de 2026, en un solo pack</p>
-      <p class="hp-sub">146 páginas ilustradas sobre Roma, Persia, los hititas y los grandes hallazgos arqueológicos del año. En PDF, listas para leer hoy en el móvil, la tablet o el ordenador.</p>
-      <ul class="hp-list">
-        <li>Los diez emperadores · 24 págs.</li>
-        <li>Persia · Fronteras · Conexiones · 16 págs. c/u</li>
-        <li>Hititas · Guardianes · 16 págs. c/u</li>
-        <li>Dossier · Hallazgos · Estratos · 13 a 15 págs.</li>
+<!-- ═══════ HERO ═══════ -->
+<section id="hero2" aria-label="Portada">
+  <div class="h-media">
+    <div class="h-poster"></div>
+    <video id="hero-video" muted loop playsinline preload="none" poster="assets/img/hero-portada-poster.jpg" aria-hidden="true">
+      <source src="assets/video/hero-portada.mp4" type="video/mp4">
+    </video>
+    <div class="h-shade"></div>
+  </div>
+  <div class="h-in">
+    <span class="h-ey">Historia antigua · Roma · Persia · Pompeya · Hispania</span>
+    <h1 id="h-title">Cómo se construyó el mundo antiguo, explicado en diez minutos</h1>
+    <p class="h-sub">Ingeniería, batallas y ciudades que siguen en pie dos mil años después. Artículos largos, documentales y revistas, escritos para que entiendas cómo funcionaba todo.</p>
+    <div class="h-ctas">
+      <a class="h-btn" href="articulos/batalla-teutoburgo.html" onclick="if(typeof gtag==='function'){gtag('event','clic_hero_cta',{tipo:'articulo_semana'});}">Leer el artículo de la semana</a>
+      <a class="h-btn sec" href="articulos/index.html" onclick="if(typeof gtag==='function'){gtag('event','clic_hero_cta',{tipo:'ver_articulos'});}">Ver los 34 artículos</a>
+    </div>
+    <div class="h-proof"><span><b data-count="700000" data-suffix="+">0</b> lectores en redes</span><span><b>34</b> artículos</span><span><b>4</b> documentales</span><span><b>9</b> revistas</span></div>
+  </div>
+  <div class="h-scroll" aria-hidden="true"></div>
+</section>
+
+<!-- ═══════ EMPIEZA POR AQUÍ ═══════ -->
+<section id="sec-empieza" class="sec">
+  <div class="sec-in">
+    <div class="sec-head">
+      <div><div class="sec-label">Empieza por aquí</div><h2>Los tres artículos que más gente lee hasta el final</h2></div>
+      <a class="more" href="articulos/index.html">Todos los artículos →</a>
+    </div>
+    <div class="start-grid">
+      <a class="start-card rv" href="articulos/batalla-teutoburgo.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'batalla-teutoburgo',posicion:1});}">
+        <div class="start-img"><img src="assets/img/teutoburgo.jpg" alt="" loading="eager" decoding="async"></div>
+        <div class="start-body">
+          <span class="start-ey">BATALLA · 14 min</span>
+          <h3>Tres legiones entraron al bosque. Ninguna volvió.</h3>
+          <p>La emboscada de Arminio en el año 9 dC y por qué Roma nunca volvió a cruzar el Rin.</p>
+          <span class="start-cta">Leer ahora →</span>
+        </div>
+      </a>
+      <a class="start-card rv" href="articulos/acueducto-de-segovia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'acueducto-de-segovia',posicion:2});}">
+        <div class="start-img"><img src="assets/img/acueducto-segovia1.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="start-body">
+          <span class="start-ey">INGENIERÍA · 12 min</span>
+          <h3>2.000 años en pie sin una gota de argamasa.</h3>
+          <p>728 metros de granito encajado a presión. Cómo lo levantaron y por qué sigue ahí.</p>
+          <span class="start-cta">Leer ahora →</span>
+        </div>
+      </a>
+      <a class="start-card rv" href="articulos/legiones-de-roma.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'legiones-de-roma',posicion:3});}">
+        <div class="start-img"><img src="assets/img/legion2.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="start-body">
+          <span class="start-ey">EJÉRCITO · 14 min</span>
+          <h3>5.500 hombres, diez cohortes, una sola voluntad.</h3>
+          <p>Armamento, paga, castigos y la organización de la máquina militar más eficaz de la Antigüedad.</p>
+          <span class="start-cta">Leer ahora →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CIVILIZACIONES ═══════ -->
+<section id="sec-civ" aria-label="Explorar por civilización">
+  <span id="sec-persia-grid"></span><span id="sec-roma-grid"></span><span id="sec-pompeya"></span><span id="sec-explora"></span>
+  <div class="civ-row">
+    <span>Elige tu civilización</span>
+    <a class="civ" href="articulos/index.html#roma">Roma</a>
+    <a class="civ" href="articulos/index.html#persia">Persia y Alejandro</a>
+    <a class="civ" href="articulos/index.html#pompeya">Pompeya</a>
+    <a class="civ" href="articulos/index.html#hispania">Hispania</a>
+    <a class="civ" href="articulos/index.html#ingenieria">Ingeniería</a>
+    <a class="civ" href="articulos/index.html#batallas">Batallas</a>
+  </div>
+</section>
+
+<!-- ═══════ MÁS LEÍDOS ═══════ -->
+<section id="sec-mas" class="sec">
+  <div class="sec-in">
+    <div class="sec-head">
+      <div><div class="sec-label">Más leídos</div><h2>Falanges, emperadores y una ciudad bajo la ceniza</h2></div>
+      <a class="more" href="articulos/index.html">Ver los 34 →</a>
+    </div>
+    <div class="art-grid">
+<a class="art-card rv" href="articulos/falange-macedonia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'falange-macedonia'});}">
+  <div class="art-card-img"><img src="assets/img/falange2.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">GRECIA · TÁCTICA</span></div>
+  <div class="art-card-body">
+    <h3 class="art-card-title">Falange Macedonia: Armas y Táctica que Conquistaron el Mundo</h3>
+    <p class="art-card-exc">Qué era la falange macedonia, cómo se organizaba y qué armas usaba: la formación militar con la que Filipo II y Alejandro Magno dominaron el Mediterráneo.</p>
+    <div class="art-card-ft"><span class="art-card-meta">14 min de lectura</span><span class="art-card-cta">Leer →</span></div>
+  </div>
+</a><a class="art-card rv" href="articulos/dario-y-el-imperio-persa.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'dario-y-el-imperio-persa'});}">
+  <div class="art-card-img"><img src="assets/img/dario2.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">PERSIA · DARÍO III</span></div>
+  <div class="art-card-body">
+    <h3 class="art-card-title">Darío III y la Caída del Imperio Persa</h3>
+    <p class="art-card-exc">En el otoño del año 331 antes de Cristo, en una llanura polvororienta cerca del pueblo mesopotámico de Gaugamela, el destino del mundo conocido quedó…</p>
+    <div class="art-card-ft"><span class="art-card-meta">13 min de lectura</span><span class="art-card-cta">Leer →</span></div>
+  </div>
+</a><a class="art-card rv" href="articulos/maquinaria-de-guerra-romana.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'maquinaria-de-guerra-romana'});}">
+  <div class="art-card-img"><img src="assets/img/maquinaria2.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">ROMA · INGENIERÍA DE GUERRA</span></div>
+  <div class="art-card-body">
+    <h3 class="art-card-title">Maquinaria de Guerra Romana: La Ingeniería del Poder</h3>
+    <p class="art-card-exc">Si las legiones romanas eran la fuerza que conquistaba los campos de batalla abiertos, la maquinaria de guerra romana era la que doblegaba las ciudades…</p>
+    <div class="art-card-ft"><span class="art-card-meta">13 min de lectura</span><span class="art-card-cta">Leer →</span></div>
+  </div>
+</a><a class="art-card rv" href="articulos/pompeya-ultimo-dia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'pompeya-ultimo-dia'});}">
+  <div class="art-card-img"><img src="assets/img/pompeya1.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">POMPEYA · 79 DC</span></div>
+  <div class="art-card-body">
+    <h3 class="art-card-title">Pompeya: El Último Día de una Ciudad Eterna</h3>
+    <p class="art-card-exc">Hora a hora, la erupción del Vesubio del 79 d.C.: cómo murió Pompeya, el testimonio de Plinio el Joven y lo que la arqueología moderna sigue revelando.</p>
+    <div class="art-card-ft"><span class="art-card-meta">14 min de lectura</span><span class="art-card-cta">Leer →</span></div>
+  </div>
+</a><a class="art-card rv" href="articulos/italica.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'italica'});}">
+  <div class="art-card-img"><img src="assets/img/italica1.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">HISPANIA · CIUDAD IMPERIAL</span></div>
+  <div class="art-card-body">
+    <h3 class="art-card-title">Itálica: La Primera Ciudad que Roma Fundó Fuera de Italia</h3>
+    <p class="art-card-exc">En 206 aC, Escipión instaló a sus veteranos heridos en una colina de Hispania. Dos siglos después, esa colonia había parido a dos emperadores de Roma: Trajano y Adriano.</p>
+    <div class="art-card-ft"><span class="art-card-meta">13 min de lectura</span><span class="art-card-cta">Leer →</span></div>
+  </div>
+</a><a class="art-card rv" href="articulos/pompeya-arte-y-vida.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'pompeya-arte-y-vida'});}">
+  <div class="art-card-img"><img src="assets/img/pompeya3.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">POMPEYA · VIDA COTIDIANA</span></div>
+  <div class="art-card-body">
+    <h3 class="art-card-title">Pompeya: Arte, Vida y Revelaciones Eternas</h3>
+    <p class="art-card-exc">Si la primera historia de Pompeya es una historia de muerte y destrucción, la segunda —y quizás la más importante— es una historia de vida…</p>
+    <div class="art-card-ft"><span class="art-card-meta">14 min de lectura</span><span class="art-card-cta">Leer →</span></div>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ IMÁN · PDF GRATIS ═══════ -->
+<section id="sec-newsletter" class="iman">
+  <div class="iman-in">
+    <div class="iman-txt rv">
+      <div class="sec-label">Gratis · PDF</div>
+      <h2>Tres recetas romanas auténticas, a cambio de tu correo</h2>
+      <p>Panis, moretum y libum: tres platos de hace dos mil años, con la receta adaptada a una cocina de hoy y la historia de quién los comía.</p>
+      <ul>
+        <li>Lo recibes al instante en tu correo</li>
+        <li>Después, un boletín al mes con los artículos nuevos</li>
+        <li>Sin spam; te das de baja con un clic</li>
       </ul>
-      <div class="hp-price">
-        <span class="hp-now">$12.99<small>USD</small></span>
-        <span class="hp-was">$44.91 por separado</span>
-        <span class="hp-off">Ahorras 71 %</span>
-      </div>
-      <div class="hp-ctas">
-        <a class="hp-buy" href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&amp;utm_medium=hero_home&amp;utm_campaign=coleccion2026" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_gumroad_pack',{ubicacion:'hero'});}">Comprar el pack · $12.99</a>
-        <button class="hp-see" type="button" onclick="if(typeof gtag==='function'){gtag('event','clic_ver_tienda',{ubicacion:'hero'});}gotoSection('sec-biblioteca')">Ver las revistas una a una</button>
-      </div>
-      <div class="hp-trust"><span>Descarga inmediata</span><span>Pago seguro con Gumroad</span><span>Tuyo para siempre</span></div>
     </div>
-    <figure class="hp-img"><img src="assets/img/coleccion-2026-portada.jpg" alt="Las nueve revistas del pack Historika Colección 2026" fetchpriority="high"></figure>
-  </div>
-  <div class="hp-free">
-    <div class="hp-free-in">
-      <span>¿Prefieres leer gratis primero? Empieza por:</span>
-      <a href="articulos/acueducto-de-segovia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_banner_hero',{article_id:'acueducto-de-segovia'});}">Acueducto de Segovia</a>
-      <a href="articulos/falange-macedonia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_banner_hero',{article_id:'falange-macedonia'});}">La falange macedonia</a>
-      <a href="articulos/legiones-de-roma.html" onclick="if(typeof gtag==='function'){gtag('event','clic_banner_hero',{article_id:'legiones-de-roma'});}">Las legiones de Roma</a>
+    <div class="iman-card rv">
+      <iframe title="Formulario para recibir el PDF gratis" loading="lazy" src="https://5b195e25.sibforms.com/v2/serve/MUIFAARZxzubNoXgOV42_az0y1bTo2SdiUEEad2yuuskhEYbKF4_y89-xjW1o8mP1gJqtq5kDQ8fmHZbefFP_PUnihIubQINiHxpPxkADaHPP-1ADcTXf79xb9nYJ9AR3k03T2Ui_Qp092ye1x4BTMpxAteJYiLwTyJgUIoOHe1K1Lk9_Z_IQwS3fySNqIaEPy1FurLudfEkVTyYrg=="></iframe>
+      <div class="iman-note">Más de 700.000 lectores nos siguen en redes · Boletín Historika</div>
     </div>
   </div>
 </section>
 
-
-
-
-
-<!-- HOME GRID -->
-<div id="home-grid">
-<div id="sec-home">
-  <div id="home-content">
-    <div style="max-width:1280px;margin:0 auto;padding:4rem 2rem">
-      <div class="sec-label">ARTÍCULOS DESTACADOS</div>
-      <div class="art-grid">
-
-        <!-- Card 1 -->
-        <article class="art-card rv" onclick="location.href='articulos/acueducto-de-segovia.html'">
-          <div class="art-card-img"><img src="assets/img/acueducto-segovia1.jpg" alt="Acueducto de Segovia" loading="lazy"><span class="art-card-cat">HISPANIA ROMANA · INGENIERÍA</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">El Acueducto de Segovia: 2.000 Años sin una Gota de Argamasa</h3>
-            <p class="art-card-exc">728 metros de arcos de granito, 28 metros de altura, ni un gramo de mortero en las juntas. Diecinueve siglos después, la ingeniería romana sigue de pie.</p>
-            <div class="art-card-ft"><span class="art-card-meta">12 min · 1400 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 2 -->
-        <article class="art-card rv" onclick="location.href='articulos/falange-macedonia.html'">
-          <div class="art-card-img"><img src="assets/img/falange2.jpg" alt="Falange Macedonia" loading="lazy"><span class="art-card-cat">TÁCTICA MILITAR · GRECIA</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Falange Macedonia: Armas y Táctica que Conquistaron el Mundo</h3>
-            <p class="art-card-exc">La sarissa de seis metros redefinió la guerra antigua. El arma que permitió a Alejandro conquistar el mundo conocido en doce años.</p>
-            <div class="art-card-ft"><span class="art-card-meta">12 min · 2000 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 3 -->
-        <article class="art-card rv" onclick="location.href='articulos/dario-y-el-imperio-persa.html'">
-          <div class="art-card-img"><img src="assets/img/dario2.jpg" alt="Darío III Gaugamela" loading="lazy"><span class="art-card-cat">PERSIA · ALEJANDRO MAGNO</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Darío III y la Caída del Imperio Persa</h3>
-            <p class="art-card-exc">Gaugamela, 331 aC. Dos mundos chocan. El Imperio que tardó dos siglos en construirse desapareció en una tarde de octubre.</p>
-            <div class="art-card-ft"><span class="art-card-meta">13 min · 2200 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 4 -->
-        <article class="art-card rv" onclick="location.href='articulos/legiones-de-roma.html'">
-          <div class="art-card-img"><img src="assets/img/legion2.jpg" alt="Legiones Roma" loading="lazy"><span class="art-card-cat">ROMA · EJÉRCITO PROFESIONAL</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Legiones Romanas: Armamento y Organización de Roma</h3>
-            <p class="art-card-exc">Cinco mil quinientos hombres, diez cohortes, una voluntad. La máquina militar más perfecta que el mundo antiguo conoció jamás.</p>
-            <div class="art-card-ft"><span class="art-card-meta">14 min · 2300 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 5 -->
-        <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
-          <div class="art-card-img"><img src="assets/img/pompeya1.jpg" alt="Pompeya erupción" loading="lazy"><span class="art-card-cat">ROMA · CATÁSTROFE · 79 dC</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Pompeya: El Último Día de una Ciudad Eterna</h3>
-            <p class="art-card-exc">El 24 de agosto del 79 dC el Vesubio despertó. En doce horas, una ciudad de 20,000 almas quedó congelada para siempre bajo cuatro metros de ceniza.</p>
-            <div class="art-card-ft"><span class="art-card-meta">13 min · 2100 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 6 -->
-        <article class="art-card rv" onclick="location.href='articulos/pompeya-arte-y-vida.html'">
-          <div class="art-card-img"><img src="assets/img/pompeya3.jpg" alt="Pompeya arte" loading="lazy"><span class="art-card-cat">ROMA · ARTE · VIDA COTIDIANA</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Pompeya: Arte, Vida y Revelaciones Eternas</h3>
-            <p class="art-card-exc">Los frescos, el grafiti, el pan carbonizado. Pompeya no es solo una tragedia — es el retrato más vivo y completo de cómo vivían los romanos.</p>
-            <div class="art-card-ft"><span class="art-card-meta">14 min · 2300 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 7 -->
-        <article class="art-card rv" onclick="location.href='articulos/batalla-teutoburgo.html'">
-          <div class="art-card-img"><img src="assets/img/teutoburgo.jpg" alt="Teutoburgo" loading="lazy"><span class="art-card-cat">ROMA · GERMANIA · 9 dC</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">La Batalla del Bosque de Teutoburgo</h3>
-            <p class="art-card-exc">Arminius engañó a Roma. Tres legiones entraron al bosque en septiembre del año 9 dC. Ningún soldado volvió. Roma nunca cruzó el Rin.</p>
-            <div class="art-card-ft"><span class="art-card-meta">13 min · 2100 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 8 -->
-        <article class="art-card rv" onclick="location.href='articulos/maquinaria-de-guerra-romana.html'">
-          <div class="art-card-img"><img src="assets/img/maquinaria2.jpg" alt="Maquinaria romana" loading="lazy"><span class="art-card-cat">ROMA · INGENIERÍA DE GUERRA</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Maquinaria de Guerra Romana: La Ingeniería del Poder</h3>
-            <p class="art-card-exc">El ariete, el onagro, la ballista, la torre de asedio. Cuando Roma decidía que un muro debía caer, caía. Era solo una cuestión de ingeniería.</p>
-            <div class="art-card-ft"><span class="art-card-meta">14 min · 2300 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-        <!-- Card 9 -->
-        <article class="art-card rv" onclick="location.href='articulos/italica.html'">
-          <div class="art-card-img"><img src="assets/img/italica1.jpg" alt="Itálica" loading="lazy"><span class="art-card-cat">HISPANIA ROMANA · CIUDAD IMPERIAL</span></div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Itálica: La Primera Ciudad que Roma Fundó Fuera de Italia</h3>
-            <p class="art-card-exc">En 206 aC, Escipión instaló a sus veteranos heridos en una colina de Hispania. Dos siglos después, esa colonia había parido a dos emperadores de Roma: Trajano y Adriano.</p>
-            <div class="art-card-ft"><span class="art-card-meta">13 min · 2200 palabras</span><span class="art-card-cta">Leer artículo →</span></div>
-          </div>
-        </article>
-      </div><!-- /art-grid -->
-    </div><!-- /max-width -->
-
-    <!-- Dark Quote Strip -->
-    <div class="strip-dark">
-      <div class="sd-orn">✦ ✦ ✦</div>
-      <p class="sd-text">"Roma no fue construida en un día. Fue construida con la sangre, la disciplina y el genio de generaciones de hombres que creyeron en algo más grande que ellos mismos."</p>
-      <span class="sd-author">Memorias del Pasado</span>
-    </div>
-
-  </div><!-- /home-content -->
-</div><!-- /sec-home -->
-</div><!-- /home-grid -->
-
-<!-- ═══════ BOLETÍN HISTORIKA — POST CENTRAL ═══════ -->
-<style>
-#sec-boletin{max-width:1280px;margin:0 auto;padding:4.5rem 2rem 0}
-#sec-boletin .bt-post{position:relative;display:block;text-decoration:none;cursor:pointer;overflow:hidden;
-  background:#0c0a07 url('assets/img/boletin-lutecia.jpg') center 38%/cover no-repeat;
-  border:1px solid rgba(212,168,50,.25);max-width:920px;margin:0 auto;
-  padding:3.4rem 3.6rem;text-align:center;transition:transform .25s ease,box-shadow .25s ease}
-#sec-boletin .bt-post::before{content:'';position:absolute;inset:0;background:
-  linear-gradient(135deg,rgba(12,10,7,.90) 0%,rgba(12,10,7,.84) 55%,rgba(36,26,14,.88) 100%),
-  radial-gradient(circle at 15% 15%,rgba(212,168,50,.16) 0%,transparent 50%),
-  radial-gradient(circle at 88% 85%,rgba(212,168,50,.1) 0%,transparent 50%)}
-#sec-boletin .bt-post:hover{transform:translateY(-6px);box-shadow:0 20px 55px rgba(0,0,0,.28)}
-#sec-boletin .bt-post:hover .bt-post-cta{background:var(--gdl)}
-#sec-boletin .bt-post-orn{position:relative;color:var(--gd);font-size:.95rem;letter-spacing:.5rem;margin-bottom:1.4rem}
-#sec-boletin .bt-post-eyebrow{position:relative;font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gdl);margin-bottom:1rem}
-#sec-boletin .bt-post-title{position:relative;font-family:'Cinzel',serif;font-weight:700;color:#fff;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.28;margin-bottom:1rem;text-shadow:0 2px 18px rgba(0,0,0,.4)}
-#sec-boletin .bt-post-teaser{position:relative;font-family:'EB Garamond',serif;font-style:italic;font-size:1.12rem;color:rgba(255,255,255,.78);max-width:640px;margin:0 auto 1.6rem;line-height:1.65}
-#sec-boletin .bt-post-meta{position:relative;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stl);margin-bottom:1.8rem}
-#sec-boletin .bt-post-meta span{color:var(--gdl)}
-#sec-boletin .bt-post-cta{position:relative;display:inline-block;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;background:var(--gd);color:#fff;padding:.95rem 2.4rem;transition:background .2s}
-@media(max-width:760px){#sec-boletin{padding:3rem 1.1rem 0}#sec-boletin .bt-post{padding:2.6rem 1.8rem}}
-</style>
-<section id="sec-boletin">
-  <a class="bt-post" href="boletin.html" onclick="if(typeof gtag==='function'){gtag('event','clic_boletin_home');}">
-    <div class="bt-post-orn">✦ ✦ ✦</div>
-    <div class="bt-post-eyebrow">Boletín Historika</div>
-    <h2 class="bt-post-title">Crónicas del Mundo Antiguo — Edición de Septiembre</h2>
-    <p class="bt-post-teaser">El muro perdido de Lutecia bajo París, una ciudadela romana en el Danubio y el rescate de una tumba tebana de 3.000 años: tres hallazgos, un solo boletín.</p>
-    <div class="bt-post-meta">N.º 24 · <span>3 artículos nuevos</span> · Septiembre 2026</div>
-    <span class="bt-post-cta">Ver boletín completo →</span>
-  </a>
-</section>
-
-
-<!-- MAPS SECTION -->
-
-<!-- ═══════ LA BIBLIOTECA · TIENDA UNIFICADA ═══════ -->
-<style>
-#sec-biblioteca{background:var(--ow);padding:5rem 2rem}
-#sec-biblioteca .bib-wrap{max-width:1160px;margin:0 auto}
-#sec-biblioteca .bib-filtros{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:1.8rem 0 2.2rem}
-#sec-biblioteca .bib-f{font-family:'Cinzel',serif;font-size:.74rem;letter-spacing:.12em;padding:.5rem 1.1rem;
-  border:1px solid var(--bd);background:var(--w);color:var(--txm);border-radius:999px;cursor:pointer;transition:.2s}
-#sec-biblioteca .bib-f:hover{border-color:var(--bdg);color:var(--tc)}
-#sec-biblioteca .bib-f.on{background:var(--tc);border-color:var(--tc);color:#fff}
-#sec-biblioteca .bib-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.4rem}
-#sec-biblioteca .bib-card{background:var(--w);border:1px solid var(--bd);border-radius:6px;overflow:hidden;
-  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-#sec-biblioteca .bib-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,10,7,.16)}
-#sec-biblioteca .bib-card.bib-off{display:none}
-#sec-biblioteca .bib-port{position:relative;aspect-ratio:2/3;overflow:hidden;background:var(--dk)}
-#sec-biblioteca .bib-port img,#sec-biblioteca .bib-port video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-#sec-biblioteca .bib-card:hover .bib-port img{transform:scale(1.04)}
-#sec-biblioteca .bib-badge{position:absolute;top:.7rem;left:.7rem;font-family:'Cinzel',serif;font-size:.62rem;
-  letter-spacing:.12em;text-transform:uppercase;padding:.32rem .6rem;border-radius:2px;color:#fff;background:var(--tc)}
-#sec-biblioteca .bib-badge.oro{background:var(--gd)}
-#sec-biblioteca .bib-badge.verde{background:#4B6B3A}
-#sec-biblioteca .bib-body{padding:1.1rem 1.1rem 1.25rem;display:flex;flex-direction:column;flex:1}
-#sec-biblioteca .bib-tipo{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.16em;color:var(--txl);
-  text-transform:uppercase;margin-bottom:.45rem}
-#sec-biblioteca .bib-body h3{font-family:'Cinzel',serif;font-size:1rem;line-height:1.3;margin:0 0 .5rem;color:var(--tx)}
-#sec-biblioteca .bib-desc{font-size:.93rem;line-height:1.5;color:var(--txm);margin:0 0 .9rem;flex:1}
-#sec-biblioteca .bib-pie{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:auto;
-  border-top:1px solid var(--bd);padding-top:.85rem}
-#sec-biblioteca .bib-precio{font-family:'Cinzel',serif;font-size:1.22rem;color:var(--tc);font-weight:600}
-#sec-biblioteca .bib-precio .cur{font-size:.62rem;color:var(--txl);letter-spacing:.1em;margin-left:.2rem}
-#sec-biblioteca .bib-precio.gratis{color:#4B6B3A}
-#sec-biblioteca .bib-btn{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;text-decoration:none;
-  background:var(--gd);color:#fff;padding:.55rem .9rem;border-radius:3px;white-space:nowrap;transition:.2s}
-#sec-biblioteca .bib-btn:hover{background:var(--gdl)}
-#sec-biblioteca .bib-btn.sec{background:transparent;color:var(--tc);border:1px solid var(--bdg)}
-#sec-biblioteca .bib-alt{display:block;text-align:center;font-size:.8rem;color:var(--txl);margin-top:.6rem}
-#sec-biblioteca .bib-alt a{color:var(--gd);text-decoration:underline}
-#sec-biblioteca .bib-trust{text-align:center;color:var(--txl);font-size:.9rem;margin-top:2rem;font-style:italic}
-@media(max-width:900px){#sec-biblioteca .bib-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:540px){
-  #sec-biblioteca{padding:3rem 1rem}
-  #sec-biblioteca .bib-pie{flex-direction:column;align-items:stretch}
-  #sec-biblioteca .bib-btn{text-align:center}
-}
-</style>
-<section id="sec-biblioteca">
-  <div class="bib-wrap">
-    <div class="thematic-header rv">
-      <span class="sec-label">TIENDA · REVISTAS Y LIBROS EN PDF</span>
-      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">La Tienda de Memorias del Pasado</h2>
-      <p>Revistas ilustradas, libros y cuentos de historia antigua, con rigor histórico y diseño editorial. Descarga inmediata y lectura en cualquier dispositivo.</p>
-    </div>
-
-    <div class="bib-filtros rv">
-      <span class="bib-f on" data-f="todo">Todo</span>
-      <span class="bib-f" data-f="revista">Revistas</span>
-      <span class="bib-f" data-f="libro">Libros</span>
-      <span class="bib-f" data-f="infantil">Infantil</span>
-      <span class="bib-f" data-f="gratis">Gratis</span>
-    </div>
-
-    <div class="bib-grid" id="bib-grid">
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/coleccion-2026-portada.jpg" alt="Portada del pack HISTORIKA Colección 2026 con las nueve revistas" loading="lazy">
-          <span class="bib-badge oro">Pack · Ahorra 71%</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 9 ediciones · 146 páginas</div>
-          <h3>HISTORIKA · Colección 2026</h3>
-          <p class="bib-desc">Las nueve ediciones de 2026 en un solo pack: Los Diez Emperadores, Persia, Dossier, Estratos, Hallazgos, Fronteras, Conexiones, Hititas y Guardianes. Compradas por separado valen $44.91.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$12.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&utm_medium=tienda&utm_campaign=coleccion2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-roma-por-dentro-portada.jpg" alt="Portada de la edición especial HISTORIKA Roma por dentro" loading="lazy">
-          <span class="bib-badge oro">Edición especial</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Edición especial · 24 páginas</div>
-          <h3>Roma por dentro</h3>
-          <p class="bib-desc">La ingeniería que hizo funcionar un imperio: acueductos, la Cloaca Máxima, el hipocausto, los ascensores del Coliseo, el Panteón y 80.000 km de calzadas.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$6.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/roma-por-dentro?utm_source=web&utm_medium=tienda&utm_campaign=roma-por-dentro" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0HMMGCRWZ" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-guardianes-2026-portada.jpg" alt="Portada de la revista HISTORIKA Guardianes, rostros contra el mal" loading="lazy">
-          <span class="bib-badge">Nueva edición</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 16 páginas</div>
-          <h3>Guardianes, rostros contra el mal</h3>
-          <p class="bib-desc">Un Sileno de barro que vigilaba a un muerto, las Medusas y la columna que llora de la Cisterna Basílica de Constantinopla, un Zeus rescatado de los traficantes, un mosaico en Kültepe y un patio de columnas en Arsinoe.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/guardianes2026?utm_source=web&utm_medium=tienda&utm_campaign=guardianes2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-hititas-2026-portada.jpg" alt="Portada de la revista HISTORIKA Hititas, la voz de la arcilla" loading="lazy">
-          <span class="bib-badge">Edición especial</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 16 páginas</div>
-          <h3>Hititas, la voz de la arcilla</h3>
-          <p class="bib-desc">El archivo secreto de un rey hitita: 184 tablillas con cartas desde el frente, una epidemia en la corte y oráculos. Además, los colosos de Ramsés II, una espada en un lago volcánico y Dioniso en el Ponto.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/hititas2026?utm_source=web&utm_medium=tienda&utm_campaign=hititas2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-conexiones-2026-portada.jpg" alt="Portada de la revista HISTORIKA Conexiones 2026" loading="lazy">
-          <span class="bib-badge">Nueva edición</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 16 páginas</div>
-          <h3>Conexiones 2026</h3>
-          <p class="bib-desc">Cómo se unía el mundo antiguo: una tumba etrusca llena de tesoros griegos, la Troya de Esmirna, legiones sobre tumbas faraónicas y el telégrafo de agua de los griegos.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/conexiones2026?utm_source=web&utm_medium=tienda&utm_campaign=conexiones2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-fronteras-2026-portada.jpg" alt="Portada de la revista HISTORIKA Fronteras 2026" loading="lazy">
-          <span class="bib-badge">Nueva edición</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 16 páginas</div>
-          <h3>Fronteras 2026</h3>
-          <p class="bib-desc">Los bordes del mundo antiguo: la muralla gala bajo el Hôtel-Dieu de París, una ciudad fantasma del Limes del Danubio, la capilla de Paser en Tebas y el carnyx celta frente a Grecia y Roma.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/fronteras2026?utm_source=web&utm_medium=tienda&utm_campaign=fronteras2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista gratis">
-        <div class="bib-port">
-          <img src="assets/img/revista-ecos-portada.jpg" alt="Portada de la revista Historika: Ecos del Mundo Antiguo" loading="lazy">
-          <span class="bib-badge verde">Gratis</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · Muestra</div>
-          <h3>Historika: Ecos del Mundo Antiguo</h3>
-          <p class="bib-desc">Reportajes ilustrados, mapas y cronologías sobre las civilizaciones que forjaron el mundo. Hójeala como una revista de papel, sin registro.</p>
-          <div class="bib-pie">
-            <span class="bib-precio gratis">Gratis</span>
-            <a class="bib-btn sec" href="https://online.fliphtml5.com/Historika/Historika_Ecos_del_Mundo_Antiguo/?utm_source=web&utm_medium=tienda&utm_campaign=ecos-mundo-antiguo" target="_blank" rel="noopener">Leer ahora →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-persia-2026-portada.jpg" alt="Portada de la revista Persia: el Imperio aqueménida" loading="lazy">
-          <span class="bib-badge">Nueva edición</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 16 páginas</div>
-          <h3>Persia 2026</h3>
-          <p class="bib-desc">De Ciro el Grande a la caída ante Alejandro: el imperio más poderoso antes de la era helenística, en 12 artículos visuales con fuentes antiguas.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/persia2026?utm_source=web&utm_medium=tienda&utm_campaign=persia2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-hallazgos-2026-portada.jpg" alt="Portada de la revista Hallazgos 2026: arqueología clásica" loading="lazy">
-          <span class="bib-badge">Nueva edición</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 14 páginas</div>
-          <h3>Hallazgos 2026</h3>
-          <p class="bib-desc">Roma, Troya, Iberia y Egipto: los cuatro descubrimientos que este año están reescribiendo la historia del Mediterráneo antiguo.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/hallazgos2026?utm_source=web&utm_medium=tienda&utm_campaign=hallazgos2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-emperadores-2026-portada.jpg" alt="Portada de la revista HISTORIKA Los diez emperadores" loading="lazy">
-          <span class="bib-badge">Edición especial</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 24 páginas</div>
-          <h3>Los diez emperadores</h3>
-          <p class="bib-desc">De Augusto a Constantino: diez reinados que fundaron, salvaron y reinventaron el Imperio, cada uno con su obra, su cita y sus fuentes.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/emperadores2026?utm_source=web&utm_medium=tienda&utm_campaign=emperadores2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0HMPTTG9F" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-dossier-2026-portada.jpg" alt="Portada de la revista HISTORIKA Dossier 2026" loading="lazy">
-          <span class="bib-badge">Revista</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 15 páginas</div>
-          <h3>Dossier 2026</h3>
-          <p class="bib-desc">Seis hallazgos que reescriben el mundo antiguo: los Vigiles de Trajano, Heracleópolis Magna, la ciudadela de Dájla, Pompeya, el baluarte de Tutmosis I y Vespasiano.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/dossier2026?utm_source=web&utm_medium=tienda&utm_campaign=dossier2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-estratos-2026-portada.jpg" alt="Portada de la revista HISTORIKA Estratos 2026" loading="lazy">
-          <span class="bib-badge">Revista</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 13 páginas</div>
-          <h3>Estratos 2026</h3>
-          <p class="bib-desc">Cinco capas del mundo antiguo: los frescos ocultos de Esmirna, el lagar de Menfis, el laberinto de Saqqara, la ilusión del Limes y el taller donde nació la metalurgia.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/estratos2026?utm_source=web&utm_medium=tienda&utm_campaign=estratos2026" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="revista">
-        <div class="bib-port">
-          <img src="assets/img/revista-roma-imperial-portada.jpg" alt="Portada de la revista Roma Imperial: las batallas que forjaron un imperio" loading="lazy">
-          <span class="bib-badge oro">Edición especial</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Revista · 10 batallas</div>
-          <h3>Roma Imperial</h3>
-          <p class="bib-desc">De Trasímeno a Adrianópolis: 600 años de historia militar romana en una edición especial ilustrada.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/roma-imperial?utm_source=web&utm_medium=tienda&utm_campaign=roma-imperial" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="libro infantil">
-        <div class="bib-port">
-          <img src="assets/img/cuento-gotita-portada.jpg" alt="Portada del cuento ilustrado Gotita y el acueducto" loading="lazy">
-          <span class="bib-badge verde">Infantil</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Cuento · 2 a 4 años</div>
-          <h3>Gotita y el Acueducto</h3>
-          <p class="bib-desc">El viaje de una gota de agua desde la montaña hasta Roma, por canales, túneles y los arcos más altos del mundo antiguo. Incluye página para colorear.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$2.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/gotita?utm_source=web&utm_medium=tienda&utm_campaign=gotita-acueducto" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0HKD1D4DM" target="_blank" rel="noopener">tapa blanda o Kindle</a></span>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="libro">
-        <div class="bib-port">
-          <img src="assets/img/teutoburgo-portada-real.jpg" alt="Portada del libro Teutoburgo: la emboscada que detuvo a Roma" loading="lazy">
-          <span class="bib-badge">Libro</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Libro · PDF o Amazon</div>
-          <h3>Teutoburgo: La Emboscada que Detuvo a Roma</h3>
-          <p class="bib-desc">Arminius, Varo y los tres días que destrozaron tres legiones romanas y cambiaron para siempre el mapa de Europa.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$7.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/rzfqxw?utm_source=web&utm_medium=tienda&utm_campaign=teutoburgo" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-          <span class="bib-alt">También en <a href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="libro">
-        <div class="bib-port">
-          <img src="assets/img/imperios-simbolo-portada.jpg" alt="Portada del libro Imperios del Símbolo" loading="lazy">
-          <span class="bib-badge">Libro</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Libro · PDF o Amazon</div>
-          <h3>Imperios del Símbolo</h3>
-          <p class="bib-desc">Egipto, Mesopotamia, Grecia, Roma y Bizancio: cómo cinco civilizaciones convirtieron el poder en piedra, rito e imagen.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$5.00<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/imperios-del-simbolo?utm_source=web&utm_medium=tienda&utm_campaign=imperios-del-simbolo" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0F63ZZLBN" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="libro">
-        <div class="bib-port">
-          <img src="assets/img/libro-que-comian-portada.jpg" alt="Portada del libro ¿Qué comían realmente los romanos?" loading="lazy">
-          <span class="bib-badge">Libro</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Libro · Cocina romana</div>
-          <h3>¿Qué comían realmente los romanos?</h3>
-          <p class="bib-desc">Diez platos auténticos de la Antigua Roma reconstruidos para la cocina moderna: panis, moretum, patina, libum, garum y más, con su historia y su receta.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$9.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/xklcum?utm_source=web&utm_medium=tienda&utm_campaign=que-comian" target="_blank" rel="noopener">Comprar →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="libro">
-        <div class="bib-port">
-          <img src="assets/img/libro-meditaciones-portada.jpg" alt="Portada de la novela Meditaciones de Sangre y Mármol" loading="lazy">
-          <span class="bib-badge oro">Novela</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Novela histórica · Amazon</div>
-          <h3>Meditaciones de Sangre y Mármol</h3>
-          <p class="bib-desc">La última vigilia de Marco Aurelio: guerras en el Danubio, la peste y la traición, contadas desde el emperador que escribió las Meditaciones.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://www.amazon.com/dp/B0F76C41YZ" target="_blank" rel="noopener">Ver en Amazon →</a>
-          </div>
-          <span class="bib-alt">Kindle $4.99 · tapa blanda $7.99</span>
-        </div>
-      </article>
-
-      <article class="bib-card rv" data-cat="libro infantil">
-        <div class="bib-port">
-          <img src="assets/img/libro-filosofo-manto-portada.jpg" alt="Portada del cuento El Filósofo con el Manto Equivocado" loading="lazy">
-          <span class="bib-badge verde">Infantil</span>
-        </div>
-        <div class="bib-body">
-          <div class="bib-tipo">Cuento · Kindle</div>
-          <h3>El Filósofo con el Manto Equivocado</h3>
-          <p class="bib-desc">Diógilo vive en un barril y lleva un manto de mil remiendos. Un cuento inspirado en Diógenes de Sinope sobre ser auténtico.</p>
-          <div class="bib-pie">
-            <span class="bib-precio">$6.99<span class="cur">USD</span></span>
-            <a class="bib-btn" href="https://www.amazon.com/dp/B0FVJ28RK7" target="_blank" rel="noopener">Ver en Amazon →</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-    <p class="bib-trust">Descarga inmediata vía Gumroad · Pago seguro · Léelo en cualquier dispositivo</p>
-  </div>
-</section>
-<script>
-document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
-  f.addEventListener('click',function(){
-    document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(x){x.classList.remove('on')});
-    f.classList.add('on');
-    var v=f.dataset.f;
-    document.querySelectorAll('#bib-grid .bib-card').forEach(function(c){
-      c.classList.toggle('bib-off', v!=='todo' && c.dataset.cat.split(' ').indexOf(v)===-1);
-    });
-  });
-});
-</script>
-
-
-
-<!-- ═══════ PODCAST GAUGAMELA ═══════ -->
-<section id="sec-podcast" style="background:var(--dk);padding:5rem 2rem">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="podcast-header rv">
-      <span class="sec-label">PODCAST · HISTORIA MILITAR</span>
-      <h2>Batalla de Gaugamela: La Llanura Donde Cayó el Imperio Persa</h2>
-      <p>Tres episodios que narran la batalla que destruyó el Imperio Persa en octubre del 331 a.C. Escucha la historia con detalle académico y narración cinematográfica.</p>
-    </div>
-    <div class="podcast-grid">
-      <div class="pod-card rv" onclick="location.href='articulos/podcast-ep1-imperio-que-goberno-el-mundo.html'" style="cursor:pointer">
-        <img class="pod-img" src="assets/img/persia/podcast1.jpg" alt="Episodio 1 Gaugamela" loading="lazy">
-        <div class="pod-body">
-          <div class="pod-ep">EPISODIO 1</div>
-          <div class="pod-title">El Imperio que Gobernó el Mundo</div>
-          <p class="pod-desc">La historia del Imperio Aqueménida, su apogeo bajo Darío I y Jerjes, y el ascenso de Alejandro Magno como el mayor desafío que Persia jamás enfrentó.</p>
-          <audio class="pod-player" controls preload="none" onclick="event.stopPropagation()">
-            <source src="assets/audio/gaugamela-ep1.mp3" type="audio/mpeg">
-          </audio>
-        </div>
+<!-- ═══════ PACK COLECCIÓN 2026 ═══════ -->
+<section id="sec-pack">
+  <span id="sec-biblioteca"></span><span id="sec-revista"></span><span id="sec-ebook"></span>
+  <div class="pack-in">
+    <div class="pack-txt rv">
+      <div class="sec-label">Pack Historika · Colección 2026</div>
+      <h2>Las 9 revistas de 2026 en un solo pack</h2>
+      <p>146 páginas ilustradas: los diez emperadores, Persia, Hititas, Fronteras, Conexiones, Guardianes y los grandes hallazgos del año. En PDF, para leer en el móvil o la tablet.</p>
+      <div class="pack-price"><span class="pack-now">$12.99<small>USD</small></span><span class="pack-was">$44.91 por separado</span><span class="pack-off">Ahorras 71 %</span></div>
+      <div class="pack-ctas">
+        <a class="pack-buy" href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&amp;utm_medium=banda_home&amp;utm_campaign=coleccion2026" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_gumroad_pack',{ubicacion:'banda_home'});}">Comprar el pack · $12.99</a>
+        <a class="pack-see" href="tienda.html" onclick="if(typeof gtag==='function'){gtag('event','clic_ver_tienda',{ubicacion:'banda_home'});}">Ver las revistas una a una</a>
       </div>
-      <div class="pod-card rv" onclick="location.href='articulos/podcast-ep2-choque-de-los-titanes.html'" style="cursor:pointer">
-        <img class="pod-img" src="assets/img/persia/gaugamela-podcast.jpg" alt="Episodio 2 Gaugamela" loading="lazy">
-        <div class="pod-body">
-          <div class="pod-ep">EPISODIO 2</div>
-          <div class="pod-title">El Choque de los Titanes</div>
-          <p class="pod-desc">Las batallas del Gránico e Issos, la caída de la familia real persa en manos de Alejandro, y los dos años que Darío III usó para preparar su venganza definitiva.</p>
-          <audio class="pod-player" controls preload="none" onclick="event.stopPropagation()">
-            <source src="assets/audio/gaugamela-ep2.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-      </div>
-      <div class="pod-card rv" onclick="location.href='articulos/podcast-ep3-llanura-de-gaugamela.html'" style="cursor:pointer">
-        <img class="pod-img" src="assets/img/persia/podcast3.jpg" alt="Episodio 3 Gaugamela" loading="lazy">
-        <div class="pod-body">
-          <div class="pod-ep">EPISODIO 3</div>
-          <div class="pod-title">La Llanura de Gaugamela</div>
-          <p class="pod-desc">El día que cambió el mundo: 1 de octubre del 331 a.C. El análisis táctico de la batalla, la huida de Darío y el colapso definitivo del Imperio Persa.</p>
-          <audio class="pod-player" controls preload="none" onclick="event.stopPropagation()">
-            <source src="assets/audio/gaugamela-ep3.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-      </div>
+      <div class="pack-trust"><span>Descarga inmediata</span><span>Pago seguro con Gumroad</span><span>Tuyo para siempre</span></div>
+    </div>
+    <div class="pack-covers rv" aria-hidden="true">
+      <img src="assets/img/revista-persia-2026-portada.jpg" alt="" loading="lazy">
+      <img src="assets/img/revista-emperadores-2026-portada.jpg" alt="" loading="lazy">
+      <img src="assets/img/revista-fronteras-2026-portada.jpg" alt="" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- ═══════ SECCIÓN DOCUMENTALES ═══════ -->
-<section id="sec-documentales" style="background:var(--dk);padding:5rem 2rem">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="podcast-header rv">
-      <span class="sec-label">DOCUMENTALES · CANAL MEMORIAS DEL PASADO</span>
-      <h2>Documentales Completos</h2>
-      <p>Los relatos más largos del canal, en video: batallas, imperios y las decisiones que cambiaron la historia antigua, contados con detalle.</p>
+<!-- ═══════ DOCUMENTALES ═══════ -->
+<section id="sec-documentales" class="sec">
+  <span id="sec-podcast"></span>
+  <div class="sec-in">
+    <div class="sec-head">
+      <div><div class="sec-label">Documentales</div><h2>Los relatos largos del canal, en video</h2></div>
+      <a class="more" href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ/videos" target="_blank" rel="noopener">Ver el canal →</a>
     </div>
     <div class="docu-grid">
       <a class="docu-card rv" href="https://www.youtube.com/watch?v=IwGDyrT9f4w" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_documental',{video_id:'IwGDyrT9f4w',video_title:'El Desastre del Bosque de Teutoburgo'});}">
@@ -963,786 +563,112 @@ document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
     <div class="docu-more">
       <a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ/videos" target="_blank" rel="noopener">Ver todos los videos en YouTube →</a>
     </div>
-  </div>
-</section>
-
-<!-- ═══════ SECCIÓN CONQUISTA DE PERSIA — GRID ═══════ -->
-<section id="sec-persia-grid" class="sec-thematic persia-bg">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-video-banner rv">
-      <video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/recorrido-alejandro.mp4" type="video/mp4"></video>
-      <div class="tvb-overlay"></div>
-      <div class="tvb-label">La Ruta de la Conquista de Persia</div>
-    </div>
-    <div class="thematic-header rv">
-      <span class="sec-label">HISTORIA · PERSIA · ALEJANDRO MAGNO</span>
-      <h2>La Conquista de Persia</h2>
-      <p>Del Gránico a Persépolis: la campaña que en once años destruyó el mayor imperio del mundo antiguo.</p>
-      <p style="margin-top:.6rem"><a href="articulos/conquista-de-persia.html" style="color:var(--gd);font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none">→ Ver la Guía Completa: Conquista de Persia</a></p>
-    </div>
-    <div class="art-grid">
-      <article class="art-card rv" onclick="location.href='articulos/batalla-del-granico.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/caballeria-griega.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">TÁCTICA · 334 a.C.</span>
-          <h3>La Batalla del Gránico</h3>
-          <p>El primer choque de Alejandro contra Persia en las orillas del río Gránico. Una victoria relámpago que abrió las puertas de Asia.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/batalla-de-issos.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/formacion-griega.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">BATALLA · 333 a.C.</span>
-          <h3>La Batalla de Issos</h3>
-          <p>Darío eligió un desfiladero para neutralizar la ventaja macedónica. Alejandro lo convirtió en su trampa. La familia real persa cayó cautiva.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/asedio-de-tiro.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/alexander-cavalry.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ASEDIO · 332 a.C.</span>
-          <h3>El Asedio de Tiro</h3>
-          <p>Siete meses de obstinación contra la ciudad más fortificada del Mediterráneo. Alejandro construyó una calzada desde tierra firme hasta una isla para tomarla.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/batalla-gaugamela.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/gaugamela-articulo.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">BATALLA DECISIVA · 331 a.C.</span>
-          <h3>Batalla de Gaugamela: La Llanura Donde Cayó el Imperio Persa</h3>
-          <p>La batalla más analizada de la Antigüedad. Darío reunió el mayor ejército persa de la historia. Alejandro encontró el hueco en la línea y cargó directamente hacia el Rey.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/incendio-de-persepolis.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/alejandro-grande.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">HISTORIA · CONTROVERSIA</span>
-          <h3>El Incendio de Persépolis</h3>
-          <p>La capital ceremonial del Imperio Persa ardió en el 330 a.C. ¿Fue venganza calculada por la destrucción de Atenas o una noche de excesos? El debate sigue abierto.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/puertas-persas.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/falange-persia.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">RESISTENCIA · 330 a.C.</span>
-          <h3>Las Puertas Persas</h3>
-          <p>El sátrapa Ariobarzanes detuvo al ejército macedónico en un desfiladero de montaña durante semanas. La única victoria persa significativa tras Gaugamela.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/muerte-de-dario-iii.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/dario-derrotado.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">TRAICIÓN · 330 a.C.</span>
-          <h3>La Muerte de Darío III</h3>
-          <p>El Gran Rey fue asesinado por su propio sátrapa Beso cuando huía hacia el este. Alejandro cubrió el cadáver con su manto y lo enterró con honores reales.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/los-inmortales-persas.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/falange-abierto.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ÉLITE MILITAR · PERSIA</span>
-          <h3>Los Inmortales Persas</h3>
-          <p>Diez mil guerreros de élite cuya cifra nunca cambiaba: si uno moría, otro ocupaba su lugar al instante. La guardia que protegió el trono persa durante dos siglos.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/legado-aquemenida.html'">
-        <div class="art-card-img" data-bg="assets/img/persia/gaugamela1.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ADMINISTRACIÓN · LEGADO</span>
-          <h3>El Legado Aqueménida</h3>
-          <p>El sistema de satrapías, las calzadas reales, el correo imperial y la tolerancia religiosa que Alejandro heredó e incorporó. Cómo Persia sobrevivió a su propia conquista.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
+  
+    <div class="pod-row rv"><b>Podcast · Gaugamela</b> Tres episodios sobre la batalla que destruyó el Imperio Persa:
+      <a href="articulos/podcast-ep1-imperio-que-goberno-el-mundo.html">Ep. 1</a><a href="articulos/podcast-ep2-choque-de-los-titanes.html">Ep. 2</a><a href="articulos/podcast-ep3-llanura-de-gaugamela.html">Ep. 3</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════ SECCIÓN IMPERIO ROMANO — GRID ═══════ -->
-<section id="sec-roma-grid" class="sec-thematic roma-bg">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-video-banner rv">
-      <video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/marcha-romana.mp4" type="video/mp4"></video>
-      <div class="tvb-overlay"></div>
-      <div class="tvb-label">La Marcha de las Legiones de Roma</div>
-    </div>
-    <div class="thematic-header rv">
-      <span class="sec-label">HISTORIA · ROMA · REPÚBLICA E IMPERIO</span>
-      <h2>El Imperio Romano</h2>
-      <p>De la fundación mítica a la crisis del siglo III: la historia de la civilización que definió Occidente durante mil años.</p>
-      <p style="margin-top:.6rem"><a href="articulos/imperio-romano.html" style="color:var(--gd);font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none">→ Ver la Guía Completa: Imperio Romano</a></p>
-    </div>
-    <div class="art-grid">
-      <article class="art-card rv" onclick="location.href='articulos/fundacion-de-roma.html'">
-        <div class="art-card-img" data-bg="assets/img/roma/roma-republicana.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ORÍGENES · MITO Y ARQUEOLOGÍA</span>
-          <h3>La Fundación de Roma</h3>
-          <p>Entre el mito de Rómulo y Remo y lo que la arqueología revela: cómo una aldea de pastores en el Lacio se convirtió en la ciudad que conquistó el mundo conocido.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/guerras-punicas.html'">
-        <div class="art-card-img" data-bg="assets/img/roma/foro-republicano.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">GUERRAS · CARTAGO · MEDITERRÁNEO</span>
-          <h3>Las Guerras Púnicas</h3>
-          <p>Tres guerras en un siglo que decidieron el destino del Mediterráneo. Aníbal cruzó los Alpes con elefantes. Roma sobrevivió Cannas y aprendió a ganar la guerra perdiendo las batallas.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/julio-cesar-rubicon.html'">
-        <div class="art-card-img" data-bg="assets/img/roma/foro-senado.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">POLÍTICA · REPÚBLICA · 49 a.C.</span>
-          <h3>Julio César y el Rubicón</h3>
-          <p>La decisión que convirtió a la República en Imperio. "Alea iacta est." Un cruce de río que cambió la historia occidental para siempre.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/augusto-y-la-pax-romana.html'">
-        <div class="art-card-img" data-bg="assets/img/roma/roma-tiber.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">AUGUSTO · PAX ROMANA</span>
-          <h3>Augusto y la Pax Romana</h3>
-          <p>El sobrino nieto de César que transformó la República en Imperio sin llamarse nunca emperador. Dos siglos de paz relativa, prosperidad y construcción que definieron Roma.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/los-pretorianos.html'">
-        <div class="art-card-img" data-bg="assets/img/roma/legion-marcha.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">GUARDIA IMPERIAL · POLÍTICA</span>
-          <h3>Los Pretorianos</h3>
-          <p>La guardia que protegía al emperador y a veces lo mataba para poner otro en su lugar. El precio político del poder concentrado en manos de unos pocos miles de soldados.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/coliseo-romano-gladiadores.html'">
-        <div class="art-card-img" data-bg="assets/img/torres.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ARQUITECTURA · ESPECTÁCULO</span>
-          <h3>El Coliseo y los Gladiadores</h3>
-          <p>La ingeniería que permitió albergar ochenta mil espectadores y el sistema económico, político y cultural detrás de los juegos que Roma usó para controlar a su población.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/ano-de-los-cuatro-emperadores.html'">
-        <div class="art-card-img" data-bg="assets/img/roma/foro-senado.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">CRISIS · 69 d.C.</span>
-          <h3>El Año de los Cuatro Emperadores</h3>
-          <p>En doce meses, cuatro hombres ocuparon el trono de Roma. La guerra civil que siguió a la muerte de Nerón demostró que el poder imperial era un negocio violento y provisional.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/crisis-del-siglo-iii.html'">
-        <div class="art-card-img" data-bg="assets/img/asedios.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">DECADENCIA · SIGLO III d.C.</span>
-          <h3>La Crisis del Siglo III</h3>
-          <p>Cincuenta años de anarquía, veintiséis emperadores, invasiones externas y colapso económico. Cómo el Imperio más sólido de la historia estuvo a punto de desintegrarse.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ SECCIÓN POMPEYA — GRID ═══════ -->
-<section id="sec-pompeya" class="sec-thematic pompeya-bg">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-video-banner rv">
-      <video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/pompeya-villa.mp4" type="video/mp4"></video>
-      <div class="tvb-overlay"></div>
-      <div class="tvb-label">Recorrido por Pompeya: la Ciudad que el Tiempo Congeló</div>
-    </div>
-    <div class="thematic-header rv">
-      <span class="sec-label">HISTORIA · POMPEYA · CATÁSTROFE Y VIDA COTIDIANA</span>
-      <h2>Pompeya</h2>
-      <p>El 24 de agosto del 79 dC el Vesubio despertó y congeló una ciudad entera bajo cenizas. Hoy sus calles, frescos y pan carbonizado nos regalan el retrato más vivo del mundo romano.</p>
-    </div>
-
-    <div class="split-feature rv">
-      <div class="split-feature-text">
-        <span class="sec-label">EN VIDEO · RECORRIDO REAL</span>
-        <h3>Pompeya en Movimiento: Camina por sus Calles</h3>
-        <p>Antes de leer los datos, míralo con tus propios ojos. Este metraje real recorre las calles, atrios y frescos de Pompeya tal como se conservan hoy — la misma ciudad que el Vesubio congeló en el año 79 dC.</p>
-        <p>Cada piedra, cada columna, cada fresco que ves en este video es auténtico. Es el punto de partida perfecto para entender, a continuación, la ciencia exacta de lo que ocurrió aquel día.</p>
-        <button class="split-feature-btn" onclick="location.href='articulos/vesubio-ciencia-erupcion.html'">Descubre la ciencia de la erupción →</button>
-      </div>
-      <div class="split-feature-media">
-        <video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/pompeya-foro-aereo.mp4" type="video/mp4"></video>
-      </div>
-    </div>
-
-    <div class="art-grid">
-      <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
-        <div class="art-card-img" data-bg="assets/img/pompeya1.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ROMA · CATÁSTROFE · 79 dC</span>
-          <h3>Pompeya: El Último Día de una Ciudad Eterna</h3>
-          <p>En doce horas, una ciudad de 20,000 almas quedó congelada para siempre bajo cuatro metros de ceniza. La crónica hora a hora del día en que el Vesubio borró Pompeya del mapa.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/pompeya-arte-y-vida.html'">
-        <div class="art-card-img" data-bg="assets/img/pompeya3.jpg"></div>
-        <div class="art-card-body">
-          <span class="art-cat">ROMA · ARTE · VIDA COTIDIANA</span>
-          <h3>Pompeya: Arte, Vida y Revelaciones Eternas</h3>
-          <p>Los frescos, el grafiti, el pan carbonizado. Pompeya no es solo una tragedia — es el retrato más vivo y completo de cómo vivían los romanos.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/vesubio-ciencia-erupcion.html'">
-        <div class="art-card-img"><video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/pompeya-clip1.mp4" type="video/mp4"></video></div>
-        <div class="art-card-body">
-          <span class="art-cat">CIENCIA · VULCANOLOGÍA · DATOS</span>
-          <h3>El Vesubio en Erupción: La Ciencia Detrás de la Catástrofe</h3>
-          <p>No fue magia ni castigo divino: fue física. Cómo funciona una erupción Pliniana, hora a hora, desde la columna de veinte kilómetros hasta los flujos piroclásticos.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/pompeya-en-numeros.html'">
-        <div class="art-card-img"><video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/pompeya-clip2.mp4" type="video/mp4"></video></div>
-        <div class="art-card-body">
-          <span class="art-cat">DATOS · DEMOGRAFÍA · ESTADÍSTICA</span>
-          <h3>Pompeya en Números: La Catástrofe del 79 dC en Cifras</h3>
-          <p>Cuatro ciudades sepultadas, miles de toneladas de roca por segundo, cientos de cuerpos documentados. Los datos duros detrás del desastre más estudiado de la Antigüedad.</p>
-          <span class="art-read">Leer artículo →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/pompeya-arte-y-vida.html'">
-        <div class="art-card-img"><video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/restauracion1.mp4" type="video/mp4"></video></div>
-        <div class="art-card-body">
-          <span class="art-cat">RECONSTRUCCIÓN DIGITAL</span>
-          <h3>Dentro de una Domus Romana</h3>
-          <p>Un recorrido digital por el interior de una vivienda romana acomodada — atrios, frescos y mosaicos como los que decoraban las mejores casas de Pompeya.</p>
-          <span class="art-read">Ver artículo relacionado →</span>
-        </div>
-      </article>
-      <article class="art-card rv" onclick="location.href='articulos/pompeya-ultimo-dia.html'">
-        <div class="art-card-img"><video class="lzv" muted loop playsinline preload="none"><source data-src="assets/video/restauracion2.mp4" type="video/mp4"></video></div>
-        <div class="art-card-body">
-          <span class="art-cat">RECONSTRUCCIÓN DIGITAL</span>
-          <h3>La Vida Antes del Vesubio</h3>
-          <p>Así lucían los interiores de una casa romana en su época de esplendor — el mundo cotidiano que la erupción del año 79 congeló para siempre.</p>
-          <span class="art-read">Ver artículo relacionado →</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-<!-- ═══════ EXPLORA TODO EL CONTENIDO ═══════ -->
-<section id="sec-explora" style="background:var(--ow);padding:5rem 2rem">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="thematic-header rv">
-      <span class="sec-label">TODO EN UN SOLO LUGAR</span>
-      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">Explora Todo Nuestro Contenido</h2>
-      <p>Artículos, podcast, revista, libro y comunidad — el universo completo de Memorias del Pasado en un mismo lugar.</p>
-    </div>
-    <div class="explora-grid">
-      <div class="explora-card rv" onclick="gotoSection('sec-roma-grid')">
-        <div class="explora-ico">🏛️</div>
-        <h4>Artículos de Roma</h4>
-        <p>Legiones, emperadores, Pompeya y el ocaso del Imperio</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-persia-grid')">
-        <div class="explora-ico">⚔️</div>
-        <h4>Persia y Alejandro Magno</h4>
-        <p>La conquista que cambió para siempre el mundo antiguo</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-pompeya')">
-        <div class="explora-ico">🌋</div>
-        <h4>Pompeya</h4>
-        <p>Recorrido por la ciudad que el Vesubio congeló en el tiempo</p>
-      </div>
-      <div class="explora-card rv" onclick="location.href='articulos/catedrales-goticas.html'">
-        <div class="explora-ico">⛪</div>
-        <h4>Catedrales Góticas</h4>
-        <p>La arquitectura medieval que aprendió a construir con luz</p>
-      </div>
-      <div class="explora-card rv" onclick="location.href='articulos/acueducto-de-segovia.html'">
-        <div class="explora-ico">💧</div>
-        <h4>Acueducto de Segovia</h4>
-        <p>728 metros de arcos romanos en pie sin una gota de argamasa</p>
-      </div>
-      <div class="explora-card rv" onclick="location.href='articulos/italica.html'">
-        <div class="explora-ico">🏛️</div>
-        <h4>Itálica</h4>
-        <p>La ciudad que dio a Roma dos emperadores: Trajano y Adriano</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-podcast')">
-        <div class="explora-ico">🎙️</div>
-        <h4>Podcast: Gaugamela</h4>
-        <p>Tres episodios narrados con rigor histórico y cinematográfico</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-biblioteca')">
-        <div class="explora-ico">📚</div>
-        <h4>La Tienda</h4>
-        <p>Revistas y libros en PDF — desde gratis hasta $7.99</p>
-      </div>
-      <div class="explora-card rv" onclick="gotoSection('sec-comunidad')">
-        <div class="explora-ico">👥</div>
-        <h4>Comunidad Privada</h4>
-        <p>Únete al Círculo de Historiadores</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- QUOTES SECTION -->
-<section id="sec-citas" style="background:var(--dk);padding:5rem 2rem">
-  <div class="citas-inner">
-    <div class="sec-label" style="color:var(--gd);border-color:var(--bdg)">VOCES DEL MUNDO ANTIGUO</div>
-    <div class="qgrid">
-      <div class="qcard rv"><p class="qcard-text">"Veni, vidi, vici." — Llegué, vi, vencí.</p><span class="qcard-auth">Julio César, tras la batalla de Zela, 47 aC</span></div>
-      <div class="qcard rv"><p class="qcard-text">"No robaré la victoria."</p><span class="qcard-auth">Alejandro Magno, la noche antes de Gaugamela, según Plutarco (Alejandro, 31)</span></div>
-      <div class="qcard rv"><p class="qcard-text">"¡Quintilio Varo, devuélveme mis legiones!" Golpeándose la cabeza contra las paredes de su palacio.</p><span class="qcard-auth">Augusto tras Teutoburgo, 9 dC, según Suetonio (Augusto, 23)</span></div>
-      <div class="qcard rv"><p class="qcard-text">"Una nube de aspecto y tamaño inusuales surgió sobre el Vesubio. Su forma se asemejaba a la de un pino."</p><span class="qcard-auth">Plinio el Joven, Epistulae VI.16, 79 dC</span></div>
-      <div class="qcard rv"><p class="qcard-text">"Quien desee la paz, que prepare la guerra."</p><span class="qcard-auth">Vegecio, Epitoma rei militaris, libro III, s. IV dC</span></div>
-      <div class="qcard rv"><p class="qcard-text">"Donde crean un desierto, lo llaman paz."</p><span class="qcard-auth">Tácito, Agrícola 30, discurso de Calgaco, 98 dC</span></div>
-      <div class="qcard rv"><p class="qcard-text">"Ningún muro era suficiente. Donde Roma decidía que algo debía caer, caía. Era solo cuestión de tiempo e ingeniería."</p><span class="qcard-auth">Memorias del Pasado</span></div>
-      <div class="qcard rv"><p class="qcard-text">"Los pompeyanos no sabían que serían inmortales. Solo vivían, amaban, escribían en las paredes y cocinaban el pan del día."</p><span class="qcard-auth">Memorias del Pasado</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ COMUNIDAD EXCLUSIVA ═══════ -->
+<!-- ═══════ COMUNIDAD ═══════ -->
 <section id="sec-comunidad">
-  <div class="com-inner rv">
-    <div class="com-orn">✦ ✦ ✦</div>
-    <h2 class="com-title">Únete al Círculo de Historiadores</h2>
-    <p class="com-text">Un grupo exclusivo donde compartimos análisis profundos, contenido anticipado, debates sobre el mundo antiguo y material que no publicamos en ningún otro lugar. Más de cien aficionados a la historia antigua ya son parte.</p>
-    <a class="com-btn" href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">Unirme al Grupo Exclusivo →</a>
-    <div class="com-note">Suscripción de $0.50 USD al mes · Comunidad en Facebook</div>
-  </div>
-</section>
-
-<!-- ═══════ APOYA NUESTRO TRABAJO ═══════ -->
-<section id="sec-apoyo" style="background:var(--dk);padding:5rem 2rem;text-align:center">
-  <div style="max-width:680px;margin:0 auto" class="rv">
-    <div class="apoyo-anim" aria-hidden="true">
-      <div class="apoyo-glow"></div>
-      <span class="apoyo-spark s1"></span>
-      <span class="apoyo-spark s2"></span>
-      <span class="apoyo-spark s3"></span>
-      <svg class="apoyo-wreath" viewBox="0 0 200 200">
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-20) translate(0,-20)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-33) translate(0,-31)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-46) translate(0,-42)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-59) translate(0,-53)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-72) translate(0,-64)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(-85) translate(0,-75)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(20) translate(0,-20) scale(-1,1)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(33) translate(0,-31) scale(-1,1)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(46) translate(0,-42) scale(-1,1)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(59) translate(0,-53) scale(-1,1)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(72) translate(0,-64) scale(-1,1)"/>
-        <ellipse class="apoyo-leaf" cx="0" cy="0" rx="15" ry="6" transform="translate(100,150) rotate(85) translate(0,-75) scale(-1,1)"/>
-        <path class="apoyo-heart" d="M100 128 C 78 108, 58 92, 58 72 C 58 58, 70 48, 84 48 C 92 48, 98 52, 100 58 C 102 52, 108 48, 116 48 C 130 48, 142 58, 142 72 C 142 92, 122 108, 100 128 Z"/>
-      </svg>
+  <div class="com-grid">
+    <div class="com-card rv">
+      <div class="sec-label">Grupo exclusivo</div>
+      <h3>Círculo de Historiadores</h3>
+      <p>Las revistas completas en flipbook, análisis que no publicamos en ningún otro lugar y debate con más de cien aficionados a la historia antigua.</p>
+      <a href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_grupo_privado',{ubicacion:'home'});}">Unirme al grupo →</a>
+      <small>$0.50 USD al mes · En Facebook</small>
     </div>
-    <span class="sec-label" style="color:var(--gdl);border-color:var(--bdg)">APOYA NUESTRO TRABAJO</span>
-    <h2 style="font-family:'Cinzel Decorative',serif;color:var(--gdl);font-size:clamp(1.5rem,4vw,2.5rem);margin:1rem 0">Cada Relato Toma Horas de Investigación</h2>
-    <p style="font-family:'EB Garamond',serif;color:rgba(255,255,255,.82);font-size:1.1rem;line-height:1.75;margin-bottom:2rem">Memorias del Pasado es un proyecto independiente hecho con pasión por la historia. Si nuestros artículos, videos y el podcast te han hecho viajar dos mil años atrás, considera invitarnos un café — cada aporte nos ayuda a seguir investigando y produciendo contenido de calidad.</p>
-    <a class="hero-btn" style="display:inline-block" href="https://www.paypal.com/ncp/payment/JN2PTMJBDYHQY" target="_blank" rel="noopener">Donar con PayPal →</a>
-    <div class="com-note" style="margin-top:1rem">Cualquier monto ayuda · Pago seguro con PayPal</div>
-  </div>
-</section>
-
-<!-- ═══════ NEWSLETTER ═══════ -->
-<section id="sec-newsletter" class="nl-sec">
-  <div class="nl-inner">
-    <div class="nl-text rv">
-      <span class="sec-label" style="color:var(--gdl)">NO TE PIERDAS NADA</span>
-      <h2>Únete a las filas de Historika</h2>
-      <p>Batallas, imperios y misterios del mundo clásico, directo a tu bandeja de entrada. Sin spam, cancela cuando quieras.</p>
-      <ul class="nl-bullets">
-        <li>Un email, sin saturar tu bandeja</li>
-        <li>Contenido exclusivo antes que en redes</li>
-        <li>Avisos de nuevos libros y revistas</li>
-      </ul>
-    </div>
-    <div class="nl-card rv">
-      <iframe width="100%" height="330" src="https://5b195e25.sibforms.com/v2/serve/MUIFAARZxzubNoXgOV42_az0y1bTo2SdiUEEad2yuuskhEYbKF4_y89-xjW1o8mP1gJqtq5kDQ8fmHZbefFP_PUnihIubQINiHxpPxkADaHPP-1ADcTXf79xb9nYJ9AR3k03T2Ui_Qp092ye1x4BTMpxAteJYiLwTyJgUIoOHe1K1Lk9_Z_IQwS3fySNqIaEPy1FurLudfEkVTyYrg==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;width:100%;border:0"></iframe>
+    <div class="com-card rv">
+      <div class="sec-label">Canal de WhatsApp</div>
+      <h3>Un dato del mundo antiguo cada día</h3>
+      <p>Los reels y artículos nuevos directo en tu teléfono, sin algoritmo de por medio. Gratis.</p>
+      <a class="wa" href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'wa',ubicacion:'home'});}">Seguir el canal →</a>
+      <small>Gratis · Sin registro</small>
     </div>
   </div>
 </section>
 
-<!-- ═══════ REDES SOCIALES ═══════ -->
-<section id="sec-redes">
-  <div class="redes-title">✦ &nbsp;Sigue la Historia en Todas Partes&nbsp; ✦</div>
-  <div class="redes-grid">
-    <a class="red-card rv" href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.66-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
-      <div><div class="red-card-name">Instagram</div><div class="red-card-sub">@histo_riaantigua</div></div>
-    </a>
-    <a class="red-card rv" href="https://web.facebook.com/profile.php?id=100094547199409" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
-      <div><div class="red-card-name">Facebook</div><div class="red-card-sub">Memorias del Pasado</div></div>
-    </a>
-    <a class="red-card rv" href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-      <div><div class="red-card-name">YouTube</div><div class="red-card-sub">Canal Memorias del Pasado</div></div>
-    </a>
-    <a class="red-card rv" href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37A9.8 9.8 0 0 1 2.24 12C2.24 6.6 6.64 2.2 12.05 2.2c2.62 0 5.08 1.02 6.93 2.88A9.74 9.74 0 0 1 21.85 12c0 5.4-4.4 9.8-9.8 9.8zm8.35-18.15A11.73 11.73 0 0 0 12.05.2C5.54.2.24 5.5.24 12c0 2.08.54 4.11 1.58 5.9L.14 24l6.26-1.64A11.8 11.8 0 0 0 12.04 23.8h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.12-3.45-8.35z"/></svg>
-      <div><div class="red-card-name">WhatsApp</div><div class="red-card-sub">Canal de Memorias del Pasado</div></div>
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer id="footer">
   <div class="ft-inner">
     <div class="ft-logo">
-      <img src="assets/img/logo.png" alt="Logo">
+      <img src="assets/img/logo.png" alt="Logo" width="40" height="40">
       <div><div class="ft-title">MEMORIAS DEL PASADO</div><div class="ft-sub">Historia · Arqueología · Mundo Antiguo</div></div>
     </div>
     <div class="ft-grid">
       <div class="ft-col">
-        <h5>Biblioteca</h5>
-        <a href="articulos/falange-macedonia.html">La Falange Macedonia</a>
-        <a href="articulos/dario-y-el-imperio-persa.html">Darío III y el Imperio Persa</a>
-        <a href="articulos/legiones-de-roma.html">Las Legiones de Roma</a>
-        <a href="articulos/pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
-        <a href="articulos/pompeya-arte-y-vida.html">Pompeya: Arte y Vida</a>
-        <a href="articulos/batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
-        <a href="articulos/maquinaria-de-guerra-romana.html">Maquinaria de Guerra Romana</a>
-        <a href="articulos/acueducto-de-segovia.html">El Acueducto de Segovia</a>
-        <a href="articulos/italica.html">Itálica</a>
+        <h5>Leer</h5>
+        <a href="articulos/index.html">Todos los artículos</a>
+        <a href="articulos/index.html#roma">Roma</a>
+        <a href="articulos/index.html#persia">Persia y Alejandro</a>
+        <a href="articulos/index.html#pompeya">Pompeya</a>
+        <a href="articulos/index.html#hispania">Hispania romana</a>
+        <a href="articulos/index.html#ingenieria">Ingeniería antigua</a>
+        <a href="boletin.html">Boletín Historika</a>
       </div>
       <div class="ft-col">
-        <h5>Explorar</h5>
-        <a onclick="showHome()">Inicio</a>
-        <a onclick="gotoSection('sec-biblioteca')">🛍️ La Tienda</a>
-        <a onclick="gotoSection('sec-podcast')">🎙️ Podcast</a>
-        <a onclick="gotoSection('sec-documentales')">🎬 Documentales</a>
-        <a onclick="gotoSection('sec-explora')">Explora Todo el Contenido</a>
-        <a onclick="gotoSection('sec-persia-grid')">Conquista de Persia</a>
-        <a href="articulos/conquista-de-persia.html">→ Guía Completa: Persia</a>
-        <a onclick="gotoSection('sec-roma-grid')">Imperio Romano</a>
-        <a href="articulos/imperio-romano.html">→ Guía Completa: Roma</a>
-        <a onclick="gotoSection('sec-pompeya')">Pompeya</a>
-        <a onclick="gotoSection('sec-citas')">Citas Históricas</a>
-        <a onclick="gotoSection('sec-apoyo')">❤ Apoya Nuestro Trabajo</a>
+        <h5>Ver y escuchar</h5>
+        <a href="index.html#sec-documentales">Documentales</a>
+        <a href="articulos/podcast-ep1-imperio-que-goberno-el-mundo.html">Podcast Gaugamela · Ep. 1</a>
+        <a href="articulos/podcast-ep2-choque-de-los-titanes.html">Podcast Gaugamela · Ep. 2</a>
+        <a href="articulos/podcast-ep3-llanura-de-gaugamela.html">Podcast Gaugamela · Ep. 3</a>
+        <a href="mapa-alejandro.html">Mapa interactivo de Alejandro</a>
+        <a href="recetas/index.html">Recetas romanas</a>
       </div>
       <div class="ft-col">
-        <h5>Comunidad</h5>
-        <a href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">✦ Grupo Exclusivo de Facebook</a>
-        <a href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener">Instagram · @histo_riaantigua</a>
-        <a href="https://web.facebook.com/profile.php?id=100094547199409" target="_blank" rel="noopener">Facebook · Memorias del Pasado</a>
-        <a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ" target="_blank" rel="noopener">YouTube · Memorias del Pasado</a>
-        <a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener">WhatsApp · Canal de Memorias del Pasado</a>
+        <h5>Tienda y comunidad</h5>
+        <a href="tienda.html">Revistas y libros en PDF</a>
+        <a href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&utm_medium=footer" target="_blank" rel="noopener">Pack Colección 2026</a>
+        <a href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">Grupo exclusivo de Facebook</a>
+        <a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener">Canal de WhatsApp</a>
+        <a id="sec-apoyo" href="https://www.paypal.com/ncp/payment/JN2PTMJBDYHQY" target="_blank" rel="noopener">❤ Apoya nuestro trabajo</a>
       </div>
     </div>
+    <div class="ft-social"><a href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'ig'});}"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.66-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a><a href="https://web.facebook.com/profile.php?id=100094547199409" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'fb'});}"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a><a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener" aria-label="Canal de WhatsApp" title="Canal de WhatsApp" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'wa'});}"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37A9.8 9.8 0 0 1 2.24 12C2.24 6.6 6.64 2.2 12.05 2.2c2.62 0 5.08 1.02 6.93 2.88A9.74 9.74 0 0 1 21.85 12c0 5.4-4.4 9.8-9.8 9.8zm8.35-18.15A11.73 11.73 0 0 0 12.05.2C5.54.2.24 5.5.24 12c0 2.08.54 4.11 1.58 5.9L.14 24l6.26-1.64A11.8 11.8 0 0 0 12.04 23.8h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.12-3.45-8.35z"/></svg></a><a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'yt'});}"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a></div>
     <div class="ft-copy">
       <div class="ft-orn">✦ ✦ ✦</div>
       <p>© 2026 Memorias del Pasado · Historia que trasciende el tiempo</p>
       <p style="margin-top:.6rem"><a href="privacidad.html" style="color:var(--gdl);text-decoration:none">Política de Privacidad</a> &nbsp;·&nbsp; <a href="terminos.html" style="color:var(--gdl);text-decoration:none">Términos de Uso</a></p>
-      <p style="margin-top:.5rem;font-family:'EB Garamond',serif;font-style:italic;font-size:.85rem;color:var(--txl);letter-spacing:.05em;text-transform:none">Quien no conoce su historia está condenado a repetirla. Contenido basado en fuentes históricas y arqueológicas verificadas, para una audiencia que exige rigor y pasión por el mundo antiguo.</p>
     </div>
   </div>
 </footer>
 
-<!-- ARTICLE VIEW -->
-<div id="article-view" style="display:none">
-  <div class="av-back-bar">
-    <button class="av-back" onclick="showHome()">&#8592; Volver a Inicio</button>
-    <span class="av-crumb">Inicio / Biblioteca / <span id="av-crumb-title"></span></span>
-  </div>
-
-
-
-
-<!-- /art-pompeya1 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div><!-- /article-view -->
-
 <script>
-// ── State ──
-var SECTIONS=['home-grid','sec-biblioteca','sec-podcast','sec-documentales','sec-persia-grid','sec-roma-grid','sec-pompeya','sec-explora','sec-citas','sec-comunidad','sec-apoyo','sec-newsletter','sec-redes','footer'];
-var ARTICLE_TITLES={
-  'art-falange':'La Falange Macedonia',
-  'art-dario':'Darío III y el Imperio Persa',
-  'art-legiones':'Las Legiones de Roma',
-  'art-pompeya1':'Pompeya: El Último Día',
-  'art-pompeya2':'Pompeya: Arte y Vida',
-  'art-pompeya-erupcion-ciencia':'El Vesubio en Erupción: La Ciencia',
-  'art-pompeya-datos':'Pompeya en Números',
-  'art-teutoburgo':'La Batalla de Teutoburgo',
-  'art-maquinaria':'Maquinaria de Guerra Romana',
-  'art-granico':'La Batalla del Gránico',
-  'art-dario3':'Darío III: El Último Gran Rey',
-  'art-issos':'La Batalla de Issos',
-  'art-tiro':'El Asedio de Tiro',
-  'art-gaugamela':'Batalla de Gaugamela: La Llanura Donde Cayó el Imperio Persa',
-  'art-persepolis':'El Incendio de Persépolis',
-  'art-puertas-persas':'Las Puertas Persas',
-  'art-muerte-dario':'La Muerte de Darío III',
-  'art-inmortales':'Los Inmortales Persas',
-  'art-legado-aqueménida':'El Legado Aqueménida',
-  'art-fundacion-roma':'La Fundación de Roma',
-  'art-guerras-punicas':'Las Guerras Púnicas',
-  'art-cesar':'Julio César y el Rubicón',
-  'art-teutoburgo2':'Teutoburgo: La Derrota de Roma',
-  'art-augusto':'Augusto y la Pax Romana',
-  'art-pretorianos':'Los Pretorianos',
-  'art-coliseo':'El Coliseo y los Gladiadores',
-  'art-cuatro-emperadores':'El Año de los Cuatro Emperadores',
-  'art-legiones-roma':'Las Legiones Romanas',
-  'art-crisis-siglo3':'La Crisis del Siglo III',
-  'art-podcast-ep1':'Podcast EP1: El Imperio que Gobernó el Mundo',
-  'art-podcast-ep2':'Podcast EP2: El Choque de los Titanes',
-  'art-podcast-ep3':'Podcast EP3: La Llanura de Gaugamela',
-  'art-catedral-gotica':'Catedrales Góticas'
-};
-var SECTION_TITLES={
-  'sec-biblioteca':'Tienda','sec-podcast':'Podcast','sec-documentales':'Documentales','sec-persia-grid':'Conquista de Persia',
-  'sec-roma-grid':'Imperio Romano','sec-pompeya':'Pompeya',
-  'sec-explora':'Explora','sec-citas':'Citas',
-  'sec-comunidad':'Comunidad','sec-apoyo':'Apoya Nuestro Trabajo','sec-newsletter':'Newsletter',
-  'sec-redes':'Redes Sociales'
-};
-
-// ── GA4: seguimiento detallado de artículos y secciones ──
-var gaArticleId=null, gaArticleStart=null, gaScrollHit={};
-var GA_HOME_TITLE=document.title;
-function gaSendView(path,title){
-  document.title=title?(title+' · Memorias del Pasado'):GA_HOME_TITLE;
-  if(typeof gtag==='function'){
-    gtag('event','page_view',{
-      page_title:document.title,
-      page_location:window.location.origin+window.location.pathname.replace(/\/$/,'')+path,
-      page_path:path
-    });
-  }
-}
-function gaScrollCheck(){
-  if(!gaArticleId) return;
-  var el=document.getElementById(gaArticleId);
-  if(!el) return;
-  var total=el.offsetHeight||1;
-  var seen=Math.min(total,(window.scrollY+window.innerHeight)-el.offsetTop);
-  var pct=Math.max(0,Math.min(100,Math.round((seen/total)*100)));
-  [25,50,75,90].forEach(function(m){
-    var k=gaArticleId+'_'+m;
-    if(pct>=m && !gaScrollHit[k]){
-      gaScrollHit[k]=true;
-      if(typeof gtag==='function'){
-        gtag('event','article_scroll',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,percent:m});
-      }
-    }
-  });
-}
-function gaCloseArticle(){
-  if(gaArticleId && gaArticleStart){
-    var secs=Math.round((Date.now()-gaArticleStart)/1000);
-    if(typeof gtag==='function' && secs>1){
-      gtag('event','article_read_time',{article_id:gaArticleId,article_title:ARTICLE_TITLES[gaArticleId]||gaArticleId,seconds:secs});
-    }
-  }
-  window.removeEventListener('scroll',gaScrollCheck);
-  gaArticleId=null; gaArticleStart=null;
-}
-window.addEventListener('beforeunload',gaCloseArticle);
-window.addEventListener('pagehide',gaCloseArticle);
-
-// ── View management ──
-function showHome(silencioso){
-  gaCloseArticle();
-  SECTIONS.forEach(function(s){ var el=document.getElementById(s); if(el) el.style.display=''; });
-  var av=document.getElementById('article-view');
-  if(av) av.style.display='none';
-  document.querySelectorAll('.art-section').forEach(function(a){ a.style.display='none'; });
-  document.getElementById('hero').style.display='';
-  window.scrollTo({top:0,behavior:'smooth'});
-  document.querySelectorAll('.hn').forEach(function(n){ n.classList.remove('active'); });
-  if(!silencioso) gaSendView('/',null);
-}
-
-function openArticle(id){
-  gaCloseArticle();
-  // Pause any playing gallery videos
-  document.querySelectorAll('.pod-player').forEach(function(v){ if(v.pause) v.pause(); });
-  // Hide home sections
-  SECTIONS.forEach(function(s){ var el=document.getElementById(s); if(el) el.style.display='none'; });
-  document.getElementById('hero').style.display='none';
-  // Show article view
-  var av=document.getElementById('article-view');
-  if(av) av.style.display='block';
-  // Hide all articles, show the one requested
-  document.querySelectorAll('.art-section').forEach(function(a){ a.style.display='none'; });
-  var target=document.getElementById(id);
-  if(target){ target.style.display='block'; }
-  // Update breadcrumb
-  var crumb=document.getElementById('av-crumb-title');
-  if(crumb) crumb.textContent=ARTICLE_TITLES[id]||'';
-  // Scroll to top
-  window.scrollTo({top:0,behavior:'instant'});
-  // Re-observe reveals inside the shown article
-  document.querySelectorAll('#'+id+' .rv').forEach(function(el){
-    if(!el.classList.contains('in')){ revObs.observe(el); }
-  });
-  // GA4: registrar apertura del artículo y empezar a medir lectura/scroll
-  gaArticleId=id; gaArticleStart=Date.now(); gaScrollHit={};
-  gaSendView('/#'+id, ARTICLE_TITLES[id]||id);
-  window.addEventListener('scroll',gaScrollCheck);
-}
-
-function gotoSection(id){
-  showHome(true);
-  setTimeout(function(){
-    var el=document.getElementById(id);
-    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-    gaSendView('/#'+id, SECTION_TITLES[id]||id);
-  },150);
-}
-
-// ── Mobile menu ──
-function toggleMenu(){
-  var nav=document.getElementById('hdr-nav');
-  if(nav) nav.classList.toggle('open');
-}
-// Close mobile menu on outside click
-document.addEventListener('click',function(e){
-  var nav=document.getElementById('hdr-nav');
-  var btn=document.getElementById('menu-btn');
-  if(nav && btn && !nav.contains(e.target) && !btn.contains(e.target)){
-    nav.classList.remove('open');
-  }
-});
-
-// ── Scroll Reveal ──
-var revObs=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
-},{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
-// Observe home grid items on load
-document.querySelectorAll('#home-grid .rv, #sec-biblioteca .rv, #sec-podcast .rv, #sec-documentales .rv, #sec-persia-grid .rv, #sec-roma-grid .rv, #sec-pompeya .rv, #sec-explora .rv, #sec-citas .rv, #sec-comunidad .rv, #sec-apoyo .rv, #sec-newsletter .rv, #sec-redes .rv').forEach(function(el){
-  revObs.observe(el);
-});
+document.documentElement.classList.add('js');
+function toggleMenu(){var n=document.getElementById('hdr-nav');if(n)n.classList.toggle('open');}
+document.addEventListener('click',function(e){var n=document.getElementById('hdr-nav'),b=document.getElementById('menu-btn');if(n&&b&&!n.contains(e.target)&&!b.contains(e.target))n.classList.remove('open');});
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(function(e,i){e.style.transitionDelay=((i%3)*70)+'ms';io.observe(e);});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')});},2500);
+})();
 </script>
-
-<!-- ═══ BOTONES FLOTANTES (donación · comunidad · podcast) ═══ -->
-<div class="fab-group right">
-  <div class="fab fab-podcast" onclick="gotoSection('sec-podcast')" title="Escuchar el podcast">
-    <span class="fab-ico">🎙️</span><span class="fab-label">Escucha el Podcast</span>
-  </div>
-</div>
-<div class="fab-group left">
-  <div class="fab fab-comunidad" onclick="gotoSection('sec-comunidad')" title="Únete a la comunidad privada">
-    <span class="fab-ico">👥</span><span class="fab-label">Comunidad Privada</span>
-  </div>
-</div>
-
-
-<!-- GA4: eventos de negocio (clics a productos, revista, grupo, apoyo y redes) -->
 <script>
-document.addEventListener('click', function(e){
-  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
-  if(!a) return;
-  var h = a.href || '';
-  if(!/^https?:/.test(h)) return;
-  if(h.indexOf(location.hostname) !== -1) return;
-  var p = { link_url: h, link_text: (a.textContent||'').trim().slice(0,80) };
-  var card = a.closest('.bib-card');
-  if(card){
-    var t = card.querySelector('h3'); if(t) p.producto = t.textContent.trim();
-    var pr = card.querySelector('.bib-precio'); if(pr) p.precio = pr.textContent.trim();
-  }
-  var ev = null;
-  if(h.indexOf('gumroad.com') > -1){ ev='clic_comprar'; p.tienda='Gumroad'; }
-  else if(h.indexOf('amzn.to') > -1 || h.indexOf('amazon.') > -1){ ev='clic_comprar'; p.tienda='Amazon'; p.producto = p.producto || 'Teutoburgo'; }
-  else if(h.indexOf('fliphtml5.com') > -1){ ev='clic_revista_gratis'; }
-  else if(/facebook\.com\/groups/.test(h)){ ev='clic_grupo_privado'; }
-  else if(h.indexOf('paypal.com') > -1){ ev='clic_apoyo'; }
-  else if(/instagram\.com/.test(h)){ ev='clic_red_social'; p.red='Instagram'; }
-  else if(/youtube\.com/.test(h)){ ev='clic_red_social'; p.red='YouTube'; }
-  else if(/facebook\.com/.test(h)){ ev='clic_red_social'; p.red='Facebook'; }
-  if(ev && typeof gtag === 'function') gtag('event', ev, p);
-}, true);
+// Titular palabra a palabra
+(function(){var h=document.getElementById('h-title');if(!h)return;var ws=h.textContent.trim().split(/\s+/);h.innerHTML=ws.map(function(w,i){return '<span class="w" style="animation-delay:'+(120+i*55)+'ms">'+w+'</span>'}).join(' ');})();
+// Video del hero: se carga después del primer pintado y solo si la conexión lo permite
+(function(){var v=document.getElementById('hero-video');if(!v)return;
+  var c=navigator.connection||{};if(c.saveData||/2g/.test(c.effectiveType||''))return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  function go(){v.preload='auto';v.load();var p=v.play();if(p&&p.then)p.then(function(){v.classList.add('on')}).catch(function(){});v.addEventListener('playing',function(){v.classList.add('on')},{once:true});}
+  if('requestIdleCallback' in window)requestIdleCallback(go,{timeout:1500});else setTimeout(go,600);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)v.pause();else if(v.classList.contains('on'))v.play().catch(function(){});});
+})();
+// Contador de lectores
+(function(){var el=document.querySelector('[data-count]');if(!el)return;var end=+el.dataset.count,suf=el.dataset.suffix||'',t0=null;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=end.toLocaleString('es')+suf;return;}
+  function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1600);k=1-Math.pow(1-k,3);el.textContent=Math.round(end*k).toLocaleString('es')+suf;if(k<1)requestAnimationFrame(step);}
+  setTimeout(function(){requestAnimationFrame(step)},900);
+})();
+// Tiempo en portada y profundidad de scroll (para medir la retención en GA4)
+(function(){var hit={},t0=Date.now();
+  function chk(){var d=document.documentElement;var pct=Math.round((scrollY+innerHeight)/d.scrollHeight*100);[25,50,75,90].forEach(function(m){if(pct>=m&&!hit[m]){hit[m]=1;if(typeof gtag==='function')gtag('event','home_scroll',{percent:m});}});}
+  addEventListener('scroll',chk,{passive:true});
+  addEventListener('pagehide',function(){if(typeof gtag==='function')gtag('event','home_time',{seconds:Math.round((Date.now()-t0)/1000)});});
+})();
 </script>
-
-<script>(function(){var vs=document.querySelectorAll("video.lzv");function load(v){var s=v.querySelector("source[data-src]");if(s&&!s.getAttribute("src")){s.setAttribute("src",s.getAttribute("data-src"));v.load();}var p=v.play();if(p&&p.catch)p.catch(function(){});}if(!("IntersectionObserver" in window)){vs.forEach(load);return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load(e.target);}else if(!e.target.paused){e.target.pause();}});},{rootMargin:"200px"});vs.forEach(function(v){io.observe(v);});})();(function(){var bs=document.querySelectorAll("[data-bg]");function sh(el){el.style.backgroundImage="url('"+el.getAttribute("data-bg")+"')";el.removeAttribute("data-bg");}if(!("IntersectionObserver" in window)){bs.forEach(sh);return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){sh(e.target);io.unobserve(e.target);}});},{rootMargin:"300px"});bs.forEach(function(el){io.observe(el);});})();</script>
 </body>
 </html>

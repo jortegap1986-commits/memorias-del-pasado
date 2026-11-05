@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHYMWPJQCF"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WHYMWPJQCF');</script>
+<title>Tienda · Revistas y libros de historia antigua en PDF – Memorias del Pasado</title>
+<meta name="description" content="Revistas ilustradas, libros y cuentos de historia antigua en PDF: Roma, Persia, hititas, emperadores y los hallazgos arqueológicos de 2026. Descarga inmediata.">
+<link rel="canonical" href="https://memoriasdelpasado.org/tienda.html">
+<meta property="og:type" content="website"><meta property="og:url" content="https://memoriasdelpasado.org/tienda.html">
+<meta property="og:title" content="Tienda de Memorias del Pasado · Revistas de historia antigua en PDF">
+<meta property="og:image" content="https://memoriasdelpasado.org/assets/img/coleccion-2026-portada.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+/* ── capa 2026: header sin topbar, reveal desde visible, utilidades ── */
+#header.hdr2{top:0}
+.hdr-logo{text-decoration:none}
+.hn.active{color:var(--gd);border-bottom-color:var(--gd)}
+.hn-cta{background:var(--gd);color:#fff!important;border-radius:3px;margin-left:.4rem;padding:.55rem 1rem}
+.hn-cta:hover{background:var(--gdl);border-bottom-color:transparent}
+.ft-social{display:flex;justify-content:center;gap:.9rem;margin:1.5rem 0 .5rem}
+.ft-social a{width:40px;height:40px;border:1px solid var(--bdg);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.ft-social a:hover{background:rgba(212,168,50,.2);transform:translateY(-2px)}
+.ft-social svg{width:18px;height:18px;fill:var(--gdl)}
+/* reveal: visible por defecto; solo anima cuando hay JS y el usuario acepta movimiento */
+.rv{opacity:1;transform:none}
+html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+html.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}}
+.sec{padding:4.5rem 2rem}
+.sec-in{max-width:1180px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.sec-head .sec-label{margin-bottom:.5rem;border:none;padding:0}
+.sec-head h2{font-family:'Cinzel',serif;font-size:clamp(1.35rem,2.8vw,2rem);color:var(--tx);line-height:1.2;text-wrap:balance}
+.sec-head .more{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gd);text-decoration:none;border-bottom:1px solid var(--bdg);padding-bottom:.2rem;white-space:nowrap}
+.sec-head .more:hover{border-bottom-color:var(--gd)}
+.art-card{display:block;color:inherit;text-decoration:none;border-radius:4px}
+.art-card:focus-visible{outline:2px solid var(--gd);outline-offset:3px}
+@media(max-width:760px){.sec{padding:3rem 1.1rem}}
+
+#sec-biblioteca .thematic-header{text-align:center;max-width:720px;margin:0 auto}
+#sec-biblioteca .thematic-header p{font-family:'EB Garamond',serif;color:var(--txm);font-size:1.1rem}
+</style>
+</head>
+<body>
+<header id="header" class="hdr2">
+  <div class="hdr-inner">
+    <a class="hdr-logo" href="index.html" aria-label="Inicio">
+      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
+    </a>
+    <nav class="hdr-nav" id="hdr-nav">
+      <a class="hn" href="index.html">Inicio</a>
+      <a class="hn" href="articulos/index.html">Artículos</a>
+      <a class="hn" href="index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="boletin.html">Boletín</a>
+      <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
+      <a class="hn hn-cta active" href="tienda.html">Revistas</a>
+    </nav>
+    <button id="menu-btn" onclick="toggleMenu()" aria-label="Menú">☰</button>
+  </div>
+</header>
+<!-- ═══════ LA BIBLIOTECA · TIENDA UNIFICADA ═══════ -->
+<style>
+#sec-biblioteca{background:var(--ow);padding:5rem 2rem}
+#sec-biblioteca .bib-wrap{max-width:1160px;margin:0 auto}
+#sec-biblioteca .bib-filtros{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:1.8rem 0 2.2rem}
+#sec-biblioteca .bib-f{font-family:'Cinzel',serif;font-size:.74rem;letter-spacing:.12em;padding:.5rem 1.1rem;
+  border:1px solid var(--bd);background:var(--w);color:var(--txm);border-radius:999px;cursor:pointer;transition:.2s}
+#sec-biblioteca .bib-f:hover{border-color:var(--bdg);color:var(--tc)}
+#sec-biblioteca .bib-f.on{background:var(--tc);border-color:var(--tc);color:#fff}
+#sec-biblioteca .bib-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.4rem}
+#sec-biblioteca .bib-card{background:var(--w);border:1px solid var(--bd);border-radius:6px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+#sec-biblioteca .bib-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,10,7,.16)}
+#sec-biblioteca .bib-card.bib-off{display:none}
+#sec-biblioteca .bib-port{position:relative;aspect-ratio:2/3;overflow:hidden;background:var(--dk)}
+#sec-biblioteca .bib-port img,#sec-biblioteca .bib-port video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+#sec-biblioteca .bib-card:hover .bib-port img{transform:scale(1.04)}
+#sec-biblioteca .bib-badge{position:absolute;top:.7rem;left:.7rem;font-family:'Cinzel',serif;font-size:.62rem;
+  letter-spacing:.12em;text-transform:uppercase;padding:.32rem .6rem;border-radius:2px;color:#fff;background:var(--tc)}
+#sec-biblioteca .bib-badge.oro{background:var(--gd)}
+#sec-biblioteca .bib-badge.verde{background:#4B6B3A}
+#sec-biblioteca .bib-body{padding:1.1rem 1.1rem 1.25rem;display:flex;flex-direction:column;flex:1}
+#sec-biblioteca .bib-tipo{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.16em;color:var(--txl);
+  text-transform:uppercase;margin-bottom:.45rem}
+#sec-biblioteca .bib-body h3{font-family:'Cinzel',serif;font-size:1rem;line-height:1.3;margin:0 0 .5rem;color:var(--tx)}
+#sec-biblioteca .bib-desc{font-size:.93rem;line-height:1.5;color:var(--txm);margin:0 0 .9rem;flex:1}
+#sec-biblioteca .bib-pie{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:auto;
+  border-top:1px solid var(--bd);padding-top:.85rem}
+#sec-biblioteca .bib-precio{font-family:'Cinzel',serif;font-size:1.22rem;color:var(--tc);font-weight:600}
+#sec-biblioteca .bib-precio .cur{font-size:.62rem;color:var(--txl);letter-spacing:.1em;margin-left:.2rem}
+#sec-biblioteca .bib-precio.gratis{color:#4B6B3A}
+#sec-biblioteca .bib-btn{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;text-decoration:none;
+  background:var(--gd);color:#fff;padding:.55rem .9rem;border-radius:3px;white-space:nowrap;transition:.2s}
+#sec-biblioteca .bib-btn:hover{background:var(--gdl)}
+#sec-biblioteca .bib-btn.sec{background:transparent;color:var(--tc);border:1px solid var(--bdg)}
+#sec-biblioteca .bib-alt{display:block;text-align:center;font-size:.8rem;color:var(--txl);margin-top:.6rem}
+#sec-biblioteca .bib-alt a{color:var(--gd);text-decoration:underline}
+#sec-biblioteca .bib-trust{text-align:center;color:var(--txl);font-size:.9rem;margin-top:2rem;font-style:italic}
+@media(max-width:900px){#sec-biblioteca .bib-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){
+  #sec-biblioteca{padding:3rem 1rem}
+  #sec-biblioteca .bib-pie{flex-direction:column;align-items:stretch}
+  #sec-biblioteca .bib-btn{text-align:center}
+}
+</style>
+<section id="sec-biblioteca">
+  <div class="bib-wrap">
+    <div class="thematic-header rv">
+      <span class="sec-label">TIENDA · REVISTAS Y LIBROS EN PDF</span>
+      <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">La Tienda de Memorias del Pasado</h2>
+      <p>Revistas ilustradas, libros y cuentos de historia antigua, con rigor histórico y diseño editorial. Descarga inmediata y lectura en cualquier dispositivo.</p>
+    </div>
+
+    <div class="bib-filtros rv">
+      <span class="bib-f on" data-f="todo">Todo</span>
+      <span class="bib-f" data-f="revista">Revistas</span>
+      <span class="bib-f" data-f="libro">Libros</span>
+      <span class="bib-f" data-f="infantil">Infantil</span>
+      <span class="bib-f" data-f="gratis">Gratis</span>
+    </div>
+
+    <div class="bib-grid" id="bib-grid">
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/coleccion-2026-portada.jpg" alt="Portada del pack HISTORIKA Colección 2026 con las nueve revistas" loading="lazy">
+          <span class="bib-badge oro">Pack · Ahorra 71%</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 9 ediciones · 146 páginas</div>
+          <h3>HISTORIKA · Colección 2026</h3>
+          <p class="bib-desc">Las nueve ediciones de 2026 en un solo pack: Los Diez Emperadores, Persia, Dossier, Estratos, Hallazgos, Fronteras, Conexiones, Hititas y Guardianes. Compradas por separado valen $44.91.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$12.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&utm_medium=tienda&utm_campaign=coleccion2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-roma-por-dentro-portada.jpg" alt="Portada de la edición especial HISTORIKA Roma por dentro" loading="lazy">
+          <span class="bib-badge oro">Edición especial</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Edición especial · 24 páginas</div>
+          <h3>Roma por dentro</h3>
+          <p class="bib-desc">La ingeniería que hizo funcionar un imperio: acueductos, la Cloaca Máxima, el hipocausto, los ascensores del Coliseo, el Panteón y 80.000 km de calzadas.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$6.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/roma-por-dentro?utm_source=web&utm_medium=tienda&utm_campaign=roma-por-dentro" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0HMMGCRWZ" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-guardianes-2026-portada.jpg" alt="Portada de la revista HISTORIKA Guardianes, rostros contra el mal" loading="lazy">
+          <span class="bib-badge">Nueva edición</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 16 páginas</div>
+          <h3>Guardianes, rostros contra el mal</h3>
+          <p class="bib-desc">Un Sileno de barro que vigilaba a un muerto, las Medusas y la columna que llora de la Cisterna Basílica de Constantinopla, un Zeus rescatado de los traficantes, un mosaico en Kültepe y un patio de columnas en Arsinoe.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/guardianes2026?utm_source=web&utm_medium=tienda&utm_campaign=guardianes2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-hititas-2026-portada.jpg" alt="Portada de la revista HISTORIKA Hititas, la voz de la arcilla" loading="lazy">
+          <span class="bib-badge">Edición especial</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 16 páginas</div>
+          <h3>Hititas, la voz de la arcilla</h3>
+          <p class="bib-desc">El archivo secreto de un rey hitita: 184 tablillas con cartas desde el frente, una epidemia en la corte y oráculos. Además, los colosos de Ramsés II, una espada en un lago volcánico y Dioniso en el Ponto.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/hititas2026?utm_source=web&utm_medium=tienda&utm_campaign=hititas2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-conexiones-2026-portada.jpg" alt="Portada de la revista HISTORIKA Conexiones 2026" loading="lazy">
+          <span class="bib-badge">Nueva edición</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 16 páginas</div>
+          <h3>Conexiones 2026</h3>
+          <p class="bib-desc">Cómo se unía el mundo antiguo: una tumba etrusca llena de tesoros griegos, la Troya de Esmirna, legiones sobre tumbas faraónicas y el telégrafo de agua de los griegos.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/conexiones2026?utm_source=web&utm_medium=tienda&utm_campaign=conexiones2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-fronteras-2026-portada.jpg" alt="Portada de la revista HISTORIKA Fronteras 2026" loading="lazy">
+          <span class="bib-badge">Nueva edición</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 16 páginas</div>
+          <h3>Fronteras 2026</h3>
+          <p class="bib-desc">Los bordes del mundo antiguo: la muralla gala bajo el Hôtel-Dieu de París, una ciudad fantasma del Limes del Danubio, la capilla de Paser en Tebas y el carnyx celta frente a Grecia y Roma.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/fronteras2026?utm_source=web&utm_medium=tienda&utm_campaign=fronteras2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista gratis">
+        <div class="bib-port">
+          <img src="assets/img/revista-ecos-portada.jpg" alt="Portada de la revista Historika: Ecos del Mundo Antiguo" loading="lazy">
+          <span class="bib-badge verde">Gratis</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · Muestra</div>
+          <h3>Historika: Ecos del Mundo Antiguo</h3>
+          <p class="bib-desc">Reportajes ilustrados, mapas y cronologías sobre las civilizaciones que forjaron el mundo. Hójeala como una revista de papel, sin registro.</p>
+          <div class="bib-pie">
+            <span class="bib-precio gratis">Gratis</span>
+            <a class="bib-btn sec" href="https://online.fliphtml5.com/Historika/Historika_Ecos_del_Mundo_Antiguo/?utm_source=web&utm_medium=tienda&utm_campaign=ecos-mundo-antiguo" target="_blank" rel="noopener">Leer ahora →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-persia-2026-portada.jpg" alt="Portada de la revista Persia: el Imperio aqueménida" loading="lazy">
+          <span class="bib-badge">Nueva edición</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 16 páginas</div>
+          <h3>Persia 2026</h3>
+          <p class="bib-desc">De Ciro el Grande a la caída ante Alejandro: el imperio más poderoso antes de la era helenística, en 12 artículos visuales con fuentes antiguas.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/persia2026?utm_source=web&utm_medium=tienda&utm_campaign=persia2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-hallazgos-2026-portada.jpg" alt="Portada de la revista Hallazgos 2026: arqueología clásica" loading="lazy">
+          <span class="bib-badge">Nueva edición</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 14 páginas</div>
+          <h3>Hallazgos 2026</h3>
+          <p class="bib-desc">Roma, Troya, Iberia y Egipto: los cuatro descubrimientos que este año están reescribiendo la historia del Mediterráneo antiguo.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/hallazgos2026?utm_source=web&utm_medium=tienda&utm_campaign=hallazgos2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-emperadores-2026-portada.jpg" alt="Portada de la revista HISTORIKA Los diez emperadores" loading="lazy">
+          <span class="bib-badge">Edición especial</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 24 páginas</div>
+          <h3>Los diez emperadores</h3>
+          <p class="bib-desc">De Augusto a Constantino: diez reinados que fundaron, salvaron y reinventaron el Imperio, cada uno con su obra, su cita y sus fuentes.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/emperadores2026?utm_source=web&utm_medium=tienda&utm_campaign=emperadores2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0HMPTTG9F" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-dossier-2026-portada.jpg" alt="Portada de la revista HISTORIKA Dossier 2026" loading="lazy">
+          <span class="bib-badge">Revista</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 15 páginas</div>
+          <h3>Dossier 2026</h3>
+          <p class="bib-desc">Seis hallazgos que reescriben el mundo antiguo: los Vigiles de Trajano, Heracleópolis Magna, la ciudadela de Dájla, Pompeya, el baluarte de Tutmosis I y Vespasiano.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/dossier2026?utm_source=web&utm_medium=tienda&utm_campaign=dossier2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-estratos-2026-portada.jpg" alt="Portada de la revista HISTORIKA Estratos 2026" loading="lazy">
+          <span class="bib-badge">Revista</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 13 páginas</div>
+          <h3>Estratos 2026</h3>
+          <p class="bib-desc">Cinco capas del mundo antiguo: los frescos ocultos de Esmirna, el lagar de Menfis, el laberinto de Saqqara, la ilusión del Limes y el taller donde nació la metalurgia.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/estratos2026?utm_source=web&utm_medium=tienda&utm_campaign=estratos2026" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="revista">
+        <div class="bib-port">
+          <img src="assets/img/revista-roma-imperial-portada.jpg" alt="Portada de la revista Roma Imperial: las batallas que forjaron un imperio" loading="lazy">
+          <span class="bib-badge oro">Edición especial</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Revista · 10 batallas</div>
+          <h3>Roma Imperial</h3>
+          <p class="bib-desc">De Trasímeno a Adrianópolis: 600 años de historia militar romana en una edición especial ilustrada.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/roma-imperial?utm_source=web&utm_medium=tienda&utm_campaign=roma-imperial" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro infantil">
+        <div class="bib-port">
+          <img src="assets/img/cuento-gotita-portada.jpg" alt="Portada del cuento ilustrado Gotita y el acueducto" loading="lazy">
+          <span class="bib-badge verde">Infantil</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Cuento · 2 a 4 años</div>
+          <h3>Gotita y el Acueducto</h3>
+          <p class="bib-desc">El viaje de una gota de agua desde la montaña hasta Roma, por canales, túneles y los arcos más altos del mundo antiguo. Incluye página para colorear.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$2.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/gotita?utm_source=web&utm_medium=tienda&utm_campaign=gotita-acueducto" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0HKD1D4DM" target="_blank" rel="noopener">tapa blanda o Kindle</a></span>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro">
+        <div class="bib-port">
+          <img src="assets/img/teutoburgo-portada-real.jpg" alt="Portada del libro Teutoburgo: la emboscada que detuvo a Roma" loading="lazy">
+          <span class="bib-badge">Libro</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Libro · PDF o Amazon</div>
+          <h3>Teutoburgo: La Emboscada que Detuvo a Roma</h3>
+          <p class="bib-desc">Arminius, Varo y los tres días que destrozaron tres legiones romanas y cambiaron para siempre el mapa de Europa.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$7.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/rzfqxw?utm_source=web&utm_medium=tienda&utm_campaign=teutoburgo" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+          <span class="bib-alt">También en <a href="https://amzn.to/4qHAP6r" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro">
+        <div class="bib-port">
+          <img src="assets/img/imperios-simbolo-portada.jpg" alt="Portada del libro Imperios del Símbolo" loading="lazy">
+          <span class="bib-badge">Libro</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Libro · PDF o Amazon</div>
+          <h3>Imperios del Símbolo</h3>
+          <p class="bib-desc">Egipto, Mesopotamia, Grecia, Roma y Bizancio: cómo cinco civilizaciones convirtieron el poder en piedra, rito e imagen.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$5.00<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/imperios-del-simbolo?utm_source=web&utm_medium=tienda&utm_campaign=imperios-del-simbolo" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+          <span class="bib-alt">También en <a href="https://www.amazon.com/dp/B0F63ZZLBN" target="_blank" rel="noopener">Kindle o tapa blanda</a></span>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro">
+        <div class="bib-port">
+          <img src="assets/img/libro-que-comian-portada.jpg" alt="Portada del libro ¿Qué comían realmente los romanos?" loading="lazy">
+          <span class="bib-badge">Libro</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Libro · Cocina romana</div>
+          <h3>¿Qué comían realmente los romanos?</h3>
+          <p class="bib-desc">Diez platos auténticos de la Antigua Roma reconstruidos para la cocina moderna: panis, moretum, patina, libum, garum y más, con su historia y su receta.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$9.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://historiaantigua.gumroad.com/l/xklcum?utm_source=web&utm_medium=tienda&utm_campaign=que-comian" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro">
+        <div class="bib-port">
+          <img src="assets/img/libro-meditaciones-portada.jpg" alt="Portada de la novela Meditaciones de Sangre y Mármol" loading="lazy">
+          <span class="bib-badge oro">Novela</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Novela histórica · Amazon</div>
+          <h3>Meditaciones de Sangre y Mármol</h3>
+          <p class="bib-desc">La última vigilia de Marco Aurelio: guerras en el Danubio, la peste y la traición, contadas desde el emperador que escribió las Meditaciones.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$4.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://www.amazon.com/dp/B0F76C41YZ" target="_blank" rel="noopener">Ver en Amazon →</a>
+          </div>
+          <span class="bib-alt">Kindle $4.99 · tapa blanda $7.99</span>
+        </div>
+      </article>
+
+      <article class="bib-card rv" data-cat="libro infantil">
+        <div class="bib-port">
+          <img src="assets/img/libro-filosofo-manto-portada.jpg" alt="Portada del cuento El Filósofo con el Manto Equivocado" loading="lazy">
+          <span class="bib-badge verde">Infantil</span>
+        </div>
+        <div class="bib-body">
+          <div class="bib-tipo">Cuento · Kindle</div>
+          <h3>El Filósofo con el Manto Equivocado</h3>
+          <p class="bib-desc">Diógilo vive en un barril y lleva un manto de mil remiendos. Un cuento inspirado en Diógenes de Sinope sobre ser auténtico.</p>
+          <div class="bib-pie">
+            <span class="bib-precio">$6.99<span class="cur">USD</span></span>
+            <a class="bib-btn" href="https://www.amazon.com/dp/B0FVJ28RK7" target="_blank" rel="noopener">Ver en Amazon →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="bib-trust">Descarga inmediata vía Gumroad · Pago seguro · Léelo en cualquier dispositivo</p>
+  </div>
+</section>
+<script>
+document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
+  f.addEventListener('click',function(){
+    document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(x){x.classList.remove('on')});
+    f.classList.add('on');
+    var v=f.dataset.f;
+    document.querySelectorAll('#bib-grid .bib-card').forEach(function(c){
+      c.classList.toggle('bib-off', v!=='todo' && c.dataset.cat.split(' ').indexOf(v)===-1);
+    });
+  });
+});
+</script>
+
+
+
+
+<footer id="footer">
+  <div class="ft-inner">
+    <div class="ft-logo">
+      <img src="assets/img/logo.png" alt="Logo" width="40" height="40">
+      <div><div class="ft-title">MEMORIAS DEL PASADO</div><div class="ft-sub">Historia · Arqueología · Mundo Antiguo</div></div>
+    </div>
+    <div class="ft-grid">
+      <div class="ft-col">
+        <h5>Leer</h5>
+        <a href="articulos/index.html">Todos los artículos</a>
+        <a href="articulos/index.html#roma">Roma</a>
+        <a href="articulos/index.html#persia">Persia y Alejandro</a>
+        <a href="articulos/index.html#pompeya">Pompeya</a>
+        <a href="articulos/index.html#hispania">Hispania romana</a>
+        <a href="articulos/index.html#ingenieria">Ingeniería antigua</a>
+        <a href="boletin.html">Boletín Historika</a>
+      </div>
+      <div class="ft-col">
+        <h5>Ver y escuchar</h5>
+        <a href="index.html#sec-documentales">Documentales</a>
+        <a href="articulos/podcast-ep1-imperio-que-goberno-el-mundo.html">Podcast Gaugamela · Ep. 1</a>
+        <a href="articulos/podcast-ep2-choque-de-los-titanes.html">Podcast Gaugamela · Ep. 2</a>
+        <a href="articulos/podcast-ep3-llanura-de-gaugamela.html">Podcast Gaugamela · Ep. 3</a>
+        <a href="mapa-alejandro.html">Mapa interactivo de Alejandro</a>
+        <a href="recetas/index.html">Recetas romanas</a>
+      </div>
+      <div class="ft-col">
+        <h5>Tienda y comunidad</h5>
+        <a href="tienda.html">Revistas y libros en PDF</a>
+        <a href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&utm_medium=footer" target="_blank" rel="noopener">Pack Colección 2026</a>
+        <a href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">Grupo exclusivo de Facebook</a>
+        <a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener">Canal de WhatsApp</a>
+        <a id="sec-apoyo" href="https://www.paypal.com/ncp/payment/JN2PTMJBDYHQY" target="_blank" rel="noopener">❤ Apoya nuestro trabajo</a>
+      </div>
+    </div>
+    <div class="ft-social"><a href="https://www.instagram.com/histo_riaantigua/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'ig'});}"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.66-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a><a href="https://web.facebook.com/profile.php?id=100094547199409" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'fb'});}"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a><a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener" aria-label="Canal de WhatsApp" title="Canal de WhatsApp" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'wa'});}"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37A9.8 9.8 0 0 1 2.24 12C2.24 6.6 6.64 2.2 12.05 2.2c2.62 0 5.08 1.02 6.93 2.88A9.74 9.74 0 0 1 21.85 12c0 5.4-4.4 9.8-9.8 9.8zm8.35-18.15A11.73 11.73 0 0 0 12.05.2C5.54.2.24 5.5.24 12c0 2.08.54 4.11 1.58 5.9L.14 24l6.26-1.64A11.8 11.8 0 0 0 12.04 23.8h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.12-3.45-8.35z"/></svg></a><a href="https://www.youtube.com/channel/UCMlbGIwcs9BeRWrA-ZbOhuQ" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube" onclick="if(typeof gtag==='function'){gtag('event','clic_red_social',{red:'yt'});}"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a></div>
+    <div class="ft-copy">
+      <div class="ft-orn">✦ ✦ ✦</div>
+      <p>© 2026 Memorias del Pasado · Historia que trasciende el tiempo</p>
+      <p style="margin-top:.6rem"><a href="privacidad.html" style="color:var(--gdl);text-decoration:none">Política de Privacidad</a> &nbsp;·&nbsp; <a href="terminos.html" style="color:var(--gdl);text-decoration:none">Términos de Uso</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('js');
+function toggleMenu(){var n=document.getElementById('hdr-nav');if(n)n.classList.toggle('open');}
+document.addEventListener('click',function(e){var n=document.getElementById('hdr-nav'),b=document.getElementById('menu-btn');if(n&&b&&!n.contains(e.target)&&!b.contains(e.target))n.classList.remove('open');});
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(function(e,i){e.style.transitionDelay=((i%3)*70)+'ms';io.observe(e);});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')});},2500);
+})();
+</script>
+<script>document.querySelectorAll('#sec-biblioteca a[href*="gumroad.com/l/"]').forEach(function(a){a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','clic_comprar',{producto:a.href.split('/l/')[1].split('?')[0]});});});</script>
+</body>
+</html>
