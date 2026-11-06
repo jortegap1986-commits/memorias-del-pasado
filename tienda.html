@@ -120,6 +120,7 @@ html.js .rv.in{opacity:1;transform:none}
       <span class="sec-label">TIENDA · REVISTAS Y LIBROS EN PDF</span>
       <h2 style="font-family:'Cinzel Decorative',serif;color:var(--tc);font-size:clamp(1.5rem,4vw,2.8rem)">La Tienda de Memorias del Pasado</h2>
       <p>Revistas ilustradas, libros y cuentos de historia antigua, con rigor histórico y diseño editorial. Descarga inmediata y lectura en cualquier dispositivo.</p>
+      <p style="margin-top:.6rem;font-size:.92rem"><a href="#creadores" style="color:var(--gd);text-decoration:underline">¿Haces videos de historia? Mira nuestros clips para creadores ↓</a></p>
     </div>
 
     <div class="bib-filtros rv">
@@ -458,9 +459,131 @@ document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
   });
 });
 </script>
+<!-- ═══════ PARA CREADORES · CLIPS DE VIDEO ═══════ -->
+<style>
+#creadores{background:var(--dk);color:#EFE7D8;padding:5rem 2rem}
+#creadores .cr-wrap{max-width:1060px;margin:0 auto}
+#creadores .sec-label{color:var(--gdl)}
+#creadores h2{font-family:'Cinzel Decorative',serif;color:#F4ECDD;font-size:clamp(1.5rem,4vw,2.6rem);margin:.4rem 0 .8rem}
+#creadores .cr-intro{max-width:720px;margin:0 auto;text-align:center;color:#CFC4B0;line-height:1.65}
+#creadores .cr-chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1.6rem 0 2.6rem}
+#creadores .cr-chip{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid rgba(201,162,92,.45);color:#E6D3A8;padding:.45rem .85rem;border-radius:999px}
+#creadores .cr-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.8rem}
+#creadores .cr-card{background:#1b1712;border:1px solid rgba(201,162,92,.25);border-radius:8px;overflow:hidden;
+  display:grid;grid-template-columns:42% 1fr;transition:transform .25s,box-shadow .25s}
+#creadores .cr-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+#creadores .cr-media{position:relative;min-height:420px;background:#000}
+#creadores .cr-media video,#creadores .cr-media img{position:absolute;inset:0}
+#creadores .cr-media video,#creadores .cr-media img{width:100%;height:100%;object-fit:cover;display:block}
+#creadores .cr-badge{position:absolute;top:.6rem;left:.6rem;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;
+  text-transform:uppercase;padding:.3rem .55rem;border-radius:2px;background:var(--tc);color:#fff}
+#creadores .cr-body{padding:1.3rem 1.3rem 1.4rem;display:flex;flex-direction:column}
+#creadores .cr-tipo{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.16em;color:#B8A98E;text-transform:uppercase;margin-bottom:.4rem}
+#creadores .cr-body h3{font-family:'Cinzel',serif;font-size:1.08rem;line-height:1.3;margin:0 0 .55rem;color:#F4ECDD}
+#creadores .cr-body p{font-size:.92rem;line-height:1.55;color:#CFC4B0;margin:0 0 .8rem}
+#creadores .cr-body ul{list-style:none;padding:0;margin:0 0 1rem;font-size:.86rem;color:#D9CEB9}
+#creadores .cr-body li{padding:.18rem 0 .18rem 1.1rem;position:relative}
+#creadores .cr-body li:before{content:'✦';position:absolute;left:0;color:var(--gd);font-size:.7rem;top:.32rem}
+#creadores .cr-pie{margin-top:auto;border-top:1px solid rgba(201,162,92,.25);padding-top:.9rem;display:flex;
+  align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap}
+#creadores .cr-precio{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--gdl);font-weight:600}
+#creadores .cr-precio small{font-size:.66rem;color:#B8A98E;letter-spacing:.06em;margin-left:.25rem}
+#creadores .cr-btn{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;text-decoration:none;background:var(--gd);
+  color:#fff;padding:.6rem 1rem;border-radius:3px;white-space:nowrap;transition:.2s}
+#creadores .cr-btn:hover{background:var(--gdl)}
+#creadores .cr-lic{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.8rem}
+#creadores .cr-lic div{border:1px solid rgba(201,162,92,.22);border-radius:6px;padding:1.1rem 1.2rem;background:rgba(255,255,255,.02)}
+#creadores .cr-lic h4{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.08em;color:#E6D3A8;margin:0 0 .45rem}
+#creadores .cr-lic p{font-size:.86rem;line-height:1.55;color:#CFC4B0;margin:0}
+#creadores .cr-nota{text-align:center;color:#9E927C;font-size:.84rem;margin-top:2rem;font-style:italic}
+@media(max-width:900px){#creadores .cr-grid{grid-template-columns:1fr}#creadores .cr-lic{grid-template-columns:1fr}}
+@media(max-width:540px){#creadores{padding:3rem 1rem}#creadores .cr-card{grid-template-columns:1fr}
+  #creadores .cr-media{min-height:0;aspect-ratio:4/5}#creadores .cr-btn{width:100%;text-align:center}}
+</style>
+<section id="creadores">
+  <div class="cr-wrap">
+    <div class="thematic-header rv" style="text-align:center">
+      <span class="sec-label">PARA CREADORES · CLIPS DE VIDEO</span>
+      <h2>El mundo antiguo, listo para tus videos</h2>
+      <p class="cr-intro">Si haces contenido de historia en YouTube, TikTok o Reels, o preparas clases y documentales, usa los mismos clips con los que construimos nuestros videos. Formato vertical, alta resolución y licencia para contenido monetizado.</p>
+    </div>
+    <div class="cr-chips rv">
+      <span class="cr-chip">Vertical 9:16 · 1080×1920</span>
+      <span class="cr-chip">Con sonido y sin sonido</span>
+      <span class="cr-chip">MP4 listo para CapCut y Premiere</span>
+      <span class="cr-chip">Uso monetizado permitido</span>
+    </div>
 
+    <div class="cr-grid">
+      <article class="cr-card rv">
+        <div class="cr-media">
+          <video src="assets/video/clips-legions.mp4" poster="assets/img/clips-legions.jpg" muted loop playsinline autoplay preload="none" aria-label="Vista previa del pack Legiones y Batallas"></video>
+          <span class="cr-badge">Cinematográfico</span>
+        </div>
+        <div class="cr-body">
+          <div class="cr-tipo">Pack de video · 25 clips</div>
+          <h3>Legiones y Batallas</h3>
+          <p>El ejército romano en acción, con estética de película.</p>
+          <ul>
+            <li>Legión en marcha y cruce del Rin y del Rubicón</li>
+            <li>Testudo bajo flechas, balista y túneles de asedio</li>
+            <li>Abordaje de una galera cartaginesa</li>
+            <li>Falange espartana y ejército persa</li>
+          </ul>
+          <div class="cr-pie">
+            <span class="cr-precio">$29<small>USD · desde</small></span>
+            <a class="cr-btn" href="https://historiaantigua.gumroad.com/l/legions?utm_source=web&utm_medium=tienda&utm_campaign=clips-legions" target="_blank" rel="noopener">Ver el pack →</a>
+          </div>
+        </div>
+      </article>
 
+      <article class="cr-card rv">
+        <div class="cr-media">
+          <video src="assets/video/clips-legionary3d.mp4" poster="assets/img/clips-legionary3d.jpg" muted loop playsinline autoplay preload="none" aria-label="Vista previa del pack Legionario Romano 3D"></video>
+          <span class="cr-badge">Estilo 3D animado</span>
+        </div>
+        <div class="cr-body">
+          <div class="cr-tipo">Pack de video · 20 clips</div>
+          <h3>Legionario Romano 3D</h3>
+          <p>El equipo del soldado explicado en 3D animado, ideal para contenido educativo.</p>
+          <ul>
+            <li>Cáligas: clavos, despiece y marcha</li>
+            <li>Casco, pilum y scutum: golpe, impacto y muro de escudos</li>
+            <li>El escorpión romano disparando</li>
+            <li>Sarcina, herrero y legionario esquivando flechas</li>
+          </ul>
+          <div class="cr-pie">
+            <span class="cr-precio">$19<small>USD · desde</small></span>
+            <a class="cr-btn" href="https://historiaantigua.gumroad.com/l/legionary3d?utm_source=web&utm_medium=tienda&utm_campaign=clips-legionary3d" target="_blank" rel="noopener">Ver el pack →</a>
+          </div>
+        </div>
+      </article>
+    </div>
 
+    <div class="cr-lic rv">
+      <div>
+        <h4>Licencia Creador</h4>
+        <p>Para tus propios videos, cursos y redes, incluido contenido monetizado. Es el precio que ves en cada pack.</p>
+      </div>
+      <div>
+        <h4>Licencia Extendida</h4>
+        <p>Suma trabajos para clientes, agencias, publicidad y televisión. Se elige al comprar en Gumroad.</p>
+      </div>
+      <div>
+        <h4>Qué no se permite</h4>
+        <p>Revender o redistribuir los archivos, ni subirlos a bancos de imágenes o de video.</p>
+      </div>
+    </div>
+    <p class="cr-nota">Clips creados con herramientas de IA generativa y seleccionados uno a uno por nuestro equipo · Descarga inmediata vía Gumroad</p>
+  </div>
+</section>
+<script>
+(function(){var vs=document.querySelectorAll('#creadores video');if(!('IntersectionObserver' in window))return;
+var io=new IntersectionObserver(function(en){en.forEach(function(x){var v=x.target;if(x.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}});},{threshold:.25});
+vs.forEach(function(v){io.observe(v)});})();
+document.querySelectorAll('#creadores a[href*="gumroad.com/l/"]').forEach(function(a){a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','clic_comprar',{producto:a.href.split('/l/')[1].split('?')[0],seccion:'creadores'});});});
+</script>
 
 <footer id="footer">
   <div class="ft-inner">
@@ -491,6 +614,7 @@ document.querySelectorAll('#sec-biblioteca .bib-f').forEach(function(f){
       <div class="ft-col">
         <h5>Tienda y comunidad</h5>
         <a href="tienda.html">Revistas y libros en PDF</a>
+        <a href="tienda.html#creadores">Clips de video para creadores</a>
         <a href="https://historiaantigua.gumroad.com/l/coleccion2026?utm_source=web&utm_medium=footer" target="_blank" rel="noopener">Pack Colección 2026</a>
         <a href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener">Grupo exclusivo de Facebook</a>
         <a href="https://whatsapp.com/channel/0029Vb9zU59Chq6JjoPdyI2z" target="_blank" rel="noopener">Canal de WhatsApp</a>
