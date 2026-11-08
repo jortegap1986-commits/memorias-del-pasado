@@ -432,12 +432,12 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 @media(max-width:900px){.art-rel-grid{grid-template-columns:1fr}.art-rel-cta{grid-template-columns:1fr}.art-rel{padding:3rem 1.1rem}}
 
 /* ══ TEMA CLARO 2026 · cabecera y pie compartidos por todo el sitio ══ */
-#header{background:rgba(251,248,242,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(35,28,20,.10);box-shadow:0 6px 30px -20px rgba(35,28,20,.35)}
+#header{background:rgba(255,254,251,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(35,28,20,.10);box-shadow:0 6px 30px -20px rgba(35,28,20,.35)}
 .hdr-logo img,.ft-logo img{background:#231C14;border-radius:50%;padding:3px;box-shadow:0 0 0 1px rgba(184,137,43,.55)}
 .hdr-title{color:#231C14}
-.hn-menu{background:#FBF8F2;border-top-color:#B4532A;border-radius:0 0 10px 10px}
-.hn-menu a:hover{background:#F4EEE3;color:#B4532A}
-#footer{background:#F4EEE3;color:#4B4034;border-top:1px solid rgba(35,28,20,.10);position:relative}
+.hn-menu{background:#FFFEFB;border-top-color:#B4532A;border-radius:0 0 10px 10px}
+.hn-menu a:hover{background:#FAF7F2;color:#B4532A}
+#footer{background:#FAF7F2;color:#4B4034;border-top:1px solid rgba(35,28,20,.10);position:relative}
 #footer::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#B8892B,#B4532A,#B8892B)}
 #footer .ft-title{color:#231C14}
 #footer .ft-sub{color:#7E7263}
@@ -456,4 +456,4 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 #footer .ft-social a:hover{background:#B4532A;border-color:#B4532A}
 #footer .ft-social svg{fill:#4B4034}
 #footer .ft-social a:hover svg{fill:#fff}
-@media(max-width:960px){.hdr-nav.open{background:#FBF8F2;border-top:1px solid rgba(35,28,20,.10);border-radius:0 0 14px 14px}}
+@media(max-width:960px){.hdr-nav.open{background:#FFFEFB;border-top:1px solid rgba(35,28,20,.10);border-radius:0 0 14px 14px}}
