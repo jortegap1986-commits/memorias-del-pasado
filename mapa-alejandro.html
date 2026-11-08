@@ -113,8 +113,27 @@
   @media (max-width:560px){.yeardisp{min-width:92px;font-size:.92rem}.slider-wrap{order:3;flex:1 1 100%}.pop{width:74vw}}
   @media (prefers-reduced-motion:reduce){.battle.on .pulse{animation:none}}
 </style>
+<link rel="stylesheet" href="css/header.css">
+<style>body{padding:0 0 14px!important}#header.hdr2{align-self:stretch;width:100%;margin-bottom:14px}.wrap{padding:0 14px}</style>
 </head>
 <body>
+<header id="header" class="hdr2">
+  <div class="hdr-inner">
+    <a class="hdr-logo" href="index.html" aria-label="Inicio">
+      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
+    </a>
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
+      <a class="hn" href="index.html">Inicio</a>
+      <a class="hn" href="articulos/index.html">Artículos</a>
+      <a class="hn" href="index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="boletin.html">Boletín</a>
+      <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
+      <a class="hn hn-cta" href="tienda.html">Revistas</a>
+    </nav>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
+  </div>
+</header>
 <div class="wrap">
   <div class="titlebar">
     <h1>Conquistas de Alejandro Magno</h1>
@@ -311,5 +330,6 @@
   render(0);
 })();
 </script>
+<script src="js/header.js"></script>
 </body>
 </html>

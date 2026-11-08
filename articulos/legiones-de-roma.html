@@ -76,53 +76,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css">
 <style>.art-section{display:block}#article-view,.av-back-bar{display:block}.art-hero{margin-top:0}</style>
+<link rel="stylesheet" href="../css/header.css">
 </head>
 <body data-article-id="art-legiones">
 <!-- HEADER -->
-<header id="header">
+<header id="header" class="hdr2">
   <div class="hdr-inner">
-    <a class="hdr-logo" href="../index.html" style="text-decoration:none;color:inherit;display:flex">
-      <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado">
-      <div>
-        <span class="hdr-title">MEMORIAS DEL PASADO</span>
-        <span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span>
-      </div>
+    <a class="hdr-logo" href="../index.html" aria-label="Inicio">
+      <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
       <a class="hn" href="../index.html">Inicio</a>
-      <div class="hn-drop">
-        <button class="hn">Biblioteca ▾</button>
-        <div class="hn-menu">
-          <a href="falange-macedonia.html">La Falange Macedonia</a>
-          <a href="dario-y-el-imperio-persa.html">Darío III y el Imperio Persa</a>
-          <a href="../index.html#sec-podcast">Podcast Gaugamela</a>
-          <a href="../index.html#sec-persia-grid">Conquista de Persia</a>
-          <a href="conquista-de-persia.html">→ Guía Completa: Persia</a>
-          <a href="../index.html#sec-roma-grid">Imperio Romano</a>
-          <a href="imperio-romano.html">→ Guía Completa: Roma</a>
-          <a href="../index.html#sec-pompeya">Pompeya</a>
-          <a href="legiones-de-roma.html">Las Legiones de Roma</a>
-          <a href="pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
-          <a href="pompeya-arte-y-vida.html">Pompeya: Arte y Vida</a>
-          <a href="batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
-          <a href="maquinaria-de-guerra-romana.html">Maquinaria de Guerra Romana</a>
-          <a href="catedrales-goticas.html">Catedrales Góticas</a>
-        </div>
-      </div>
-      <a class="hn" href="../index.html#sec-explora">Explora</a>
-      <a class="hn" href="../index.html#sec-podcast">🎙️ Podcast</a>
-      <a class="hn" href="../index.html#sec-revista">Revista</a>
+      <a class="hn active" href="../articulos/index.html" aria-current="page">Artículos</a>
+      <a class="hn" href="../index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="../boletin.html">Boletín</a>
       <a class="hn" href="../index.html#sec-comunidad">Comunidad</a>
-      <a class="hn hn-cta" href="../index.html#sec-ebook">📖 Comprar Libro</a>
+      <a class="hn hn-cta" href="../tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 
 
 <div class="av-back-bar">
   <a class="av-back" href="../index.html" style="text-decoration:none">&#8592; Volver a Inicio</a>
-  <span class="av-crumb">Inicio / Biblioteca / <span>Legiones Romanas: Armamento y Organización de Roma</span></span>
+  <span class="av-crumb"><a href="../index.html">Inicio</a> / <a href="index.html">Artículos</a> / <span>Legiones Romanas: Armamento y Organización de Roma</span></span>
 </div>
 
 <main>
@@ -172,9 +151,6 @@
       <p>El recluta romano recién llegado al campamento no era tratado como un guerrero sino como materia prima. Los primeros meses de servicio eran una inmersión total en el sistema romano de entrenamiento, diseñado para destruir los hábitos civiles del recluta y reemplazarlos con los reflejos del soldado. El programa incluía marchas a paso de doble tiempo con equipamiento completo, natación, salto de obstáculos, lucha cuerpo a cuerpo y, sobre todo, práctica de armas con espadas y lanzas de madera del doble del peso normal —para que cuando el legionario tomara el gladius real, lo sintiera ligero y manejable.</p>
       <p>La disciplina romana era legendaria y a veces brutal. El sistema de castigos incluía desde la reducción de raciones hasta la flagelación pública. El más temido era la decimación: si una cohorte o centuria demostraba cobardía en batalla, el resto del ejército la rodeaba, cada diez hombres echaban a suertes quién sería el décimo, y ese décimo era ejecutado por sus propios compañeros con palos y piedras. Se documentan aproximadamente una decena de decimaciones en la historia romana, lo que sugiere que la amenaza era más efectiva que su aplicación real.</p>
 
-      <video controls preload="metadata"><source src="../assets/video/campamento.mp4" type="video/mp4">Tu navegador no admite video HTML5.</video>
-      <p class="vcap">Reconstrucción del campamento legionario romano (castra) mostrando la distribución estandarizada que se replicaba en cada rincón del Imperio.</p>
-
       <h2 id="tacticas-de-combate-la-ciencia-de-matar-en-formacion">Tácticas de Combate: La Ciencia de Matar en Formación</h2>
       <p>La táctica básica de la legión en batalla era la triple acies —triple línea de combate—. Las tres líneas, separadas entre sí por intervalos que permitían el movimiento, se desplegaban con los más jóvenes y menos experimentados en la primera línea, los veteranos de media carrera en la segunda, y los más veteranos en la tercera. Esta disposición aparentemente arriesgada era en realidad sabia: los jóvenes de la primera línea absorbían el choque inicial y se retiraban a través de los huecos de la segunda línea cuando se agotaban, siendo reemplazados por los veteranos más frescos y experimentados.</p>
       <p>La secuencia de combate estándar comenzaba con la descarga de pila —cada legionario llevaba normalmente dos, uno ligero y uno pesado—, seguida inmediatamente por el grito de guerra y la carga con gladius. El objetivo era llegar al cuerpo a cuerpo lo más rápido posible después de la descarga de lanzas, cuando el enemigo todavía estaba asimilando el impacto.</p>
@@ -198,8 +174,8 @@
       </blockquote>
 
       <figure>
-        <img src="../assets/img/foro-romano.jpg" alt="El Foro Romano" loading="lazy">
-        <figcaption>El Foro Romano, centro político de la potencia que las legiones construyeron y defendieron durante siglos. Cada victoria legionaria era celebrada aquí con triunfos que llenaban de gloria la Vía Sacra.</figcaption>
+        <img src="../assets/img/newsletter-bg-legion.jpg" alt="Legión romana formada junto a su campamento fortificado" loading="lazy">
+        <figcaption>Una legión formada junto a su campamento. Cada noche, en territorio hostil, los legionarios levantaban foso, terraplén y empalizada antes de dormir: el mismo trazado en cualquier rincón del Imperio.</figcaption>
       </figure>
 
     </div>
@@ -288,5 +264,6 @@
 
 <script src="../js/article.js"></script>
 
+<script src="../js/header.js"></script>
 </body>
 </html>

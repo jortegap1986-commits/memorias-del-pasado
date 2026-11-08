@@ -65,6 +65,7 @@ html.js .rv.in{opacity:1;transform:none}
 @media(max-width:960px){.idx-grid .art-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.idx-grid .art-grid{grid-template-columns:1fr}#q{margin-left:0;width:100%}}
 </style>
+<link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
 <header id="header" class="hdr2">
@@ -73,15 +74,15 @@ html.js .rv.in{opacity:1;transform:none}
       <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
       <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
       <a class="hn" href="../index.html">Inicio</a>
-      <a class="hn active" href="../articulos/index.html">Artículos</a>
+      <a class="hn active" href="../articulos/index.html" aria-current="page">Artículos</a>
       <a class="hn" href="../index.html#sec-documentales">Documentales</a>
       <a class="hn" href="../boletin.html">Boletín</a>
       <a class="hn" href="../index.html#sec-comunidad">Comunidad</a>
       <a class="hn hn-cta" href="../tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()" aria-label="Menú">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 <section class="idx-head">
@@ -241,7 +242,7 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </a>
 <a class="art-card rv" data-tags="persia" data-title="el legado aqueménida que heredó alejandro" href="legado-aquemenida.html" onclick="if(typeof gtag==='function'){gtag('event','clic_indice',{article_id:'legado-aquemenida'});}">
-  <div class="art-card-img"><img src="../assets/img/persia/podcast-ep3-babilonia-poster.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">PERSIA · LEGADO</span></div>
+  <div class="art-card-img"><img src="../assets/img/babilonia-avenida.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">PERSIA · LEGADO</span></div>
   <div class="art-card-body">
     <h3 class="art-card-title">El Legado Aqueménida que Heredó Alejandro</h3>
     <p class="art-card-exc">Cuando Alejandro Magno conquistó el Imperio Persa, no simplemente destruyó una estructura política y la reemplazó con otra. Heredó una de las…</p>
@@ -353,7 +354,7 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </a>
 <a class="art-card rv" data-tags="persia podcast" data-title="la llanura de gaugamela" href="podcast-ep3-llanura-de-gaugamela.html" onclick="if(typeof gtag==='function'){gtag('event','clic_indice',{article_id:'podcast-ep3-llanura-de-gaugamela'});}">
-  <div class="art-card-img"><img src="../assets/img/persia/podcast-ep3-babilonia-poster.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">PODCAST · EP. 3</span></div>
+  <div class="art-card-img"><img src="../assets/img/babilonia-avenida.jpg" alt="" loading="lazy" decoding="async"><span class="art-card-cat">PODCAST · EP. 3</span></div>
   <div class="art-card-body">
     <h3 class="art-card-title">La Llanura de Gaugamela</h3>
     <p class="art-card-exc">Episodio 3 del podcast Memorias del Pasado, en audio: la batalla de Gaugamela contada como relato narrado, con la caída del Imperio Persa ante Alejandro Magno.</p>
@@ -442,5 +443,6 @@ document.addEventListener('click',function(e){var n=document.getElementById('hdr
   addEventListener('hashchange',function(){var h=location.hash.replace('#','');if(document.querySelector('.chip[data-f="'+h+'"]'))setF(h);});
 })();
 </script>
+<script src="../js/header.js"></script>
 </body>
 </html>

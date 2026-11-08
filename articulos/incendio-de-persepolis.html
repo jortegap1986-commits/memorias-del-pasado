@@ -76,53 +76,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css">
 <style>.art-section{display:block}#article-view,.av-back-bar{display:block}.art-hero{margin-top:0}</style>
+<link rel="stylesheet" href="../css/header.css">
 </head>
 <body data-article-id="art-persepolis">
 <!-- HEADER -->
-<header id="header">
+<header id="header" class="hdr2">
   <div class="hdr-inner">
-    <a class="hdr-logo" href="../index.html" style="text-decoration:none;color:inherit;display:flex">
-      <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado">
-      <div>
-        <span class="hdr-title">MEMORIAS DEL PASADO</span>
-        <span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span>
-      </div>
+    <a class="hdr-logo" href="../index.html" aria-label="Inicio">
+      <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
       <a class="hn" href="../index.html">Inicio</a>
-      <div class="hn-drop">
-        <button class="hn">Biblioteca ▾</button>
-        <div class="hn-menu">
-          <a href="falange-macedonia.html">La Falange Macedonia</a>
-          <a href="dario-y-el-imperio-persa.html">Darío III y el Imperio Persa</a>
-          <a href="../index.html#sec-podcast">Podcast Gaugamela</a>
-          <a href="../index.html#sec-persia-grid">Conquista de Persia</a>
-          <a href="conquista-de-persia.html">→ Guía Completa: Persia</a>
-          <a href="../index.html#sec-roma-grid">Imperio Romano</a>
-          <a href="imperio-romano.html">→ Guía Completa: Roma</a>
-          <a href="../index.html#sec-pompeya">Pompeya</a>
-          <a href="legiones-de-roma.html">Las Legiones de Roma</a>
-          <a href="pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
-          <a href="pompeya-arte-y-vida.html">Pompeya: Arte y Vida</a>
-          <a href="batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
-          <a href="maquinaria-de-guerra-romana.html">Maquinaria de Guerra Romana</a>
-          <a href="catedrales-goticas.html">Catedrales Góticas</a>
-        </div>
-      </div>
-      <a class="hn" href="../index.html#sec-explora">Explora</a>
-      <a class="hn" href="../index.html#sec-podcast">🎙️ Podcast</a>
-      <a class="hn" href="../index.html#sec-revista">Revista</a>
+      <a class="hn active" href="../articulos/index.html" aria-current="page">Artículos</a>
+      <a class="hn" href="../index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="../boletin.html">Boletín</a>
       <a class="hn" href="../index.html#sec-comunidad">Comunidad</a>
-      <a class="hn hn-cta" href="../index.html#sec-ebook">📖 Comprar Libro</a>
+      <a class="hn hn-cta" href="../tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 
 
 <div class="av-back-bar">
   <a class="av-back" href="../index.html" style="text-decoration:none">&#8592; Volver a Inicio</a>
-  <span class="av-crumb">Inicio / Biblioteca / <span>El Incendio de Persépolis: ¿Venganza o Accidente?</span></span>
+  <span class="av-crumb"><a href="../index.html">Inicio</a> / <a href="index.html">Artículos</a> / <span>El Incendio de Persépolis: ¿Venganza o Accidente?</span></span>
 </div>
 
 <main>
@@ -240,5 +219,6 @@
 
 <script src="../js/article.js"></script>
 
+<script src="../js/header.js"></script>
 </body>
 </html>

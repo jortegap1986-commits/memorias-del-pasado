@@ -50,6 +50,7 @@ html.js .rv.in{opacity:1;transform:none}
 #sec-biblioteca .thematic-header{text-align:center;max-width:720px;margin:0 auto}
 #sec-biblioteca .thematic-header p{font-family:'EB Garamond',serif;color:var(--txm);font-size:1.1rem}
 </style>
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 <header id="header" class="hdr2">
@@ -58,15 +59,15 @@ html.js .rv.in{opacity:1;transform:none}
       <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
       <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
       <a class="hn" href="index.html">Inicio</a>
       <a class="hn" href="articulos/index.html">Artículos</a>
       <a class="hn" href="index.html#sec-documentales">Documentales</a>
       <a class="hn" href="boletin.html">Boletín</a>
       <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
-      <a class="hn hn-cta active" href="tienda.html">Revistas</a>
+      <a class="hn hn-cta active" href="tienda.html" aria-current="page">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()" aria-label="Menú">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 <!-- ═══════ LA BIBLIOTECA · TIENDA UNIFICADA ═══════ -->
@@ -642,5 +643,6 @@ document.addEventListener('click',function(e){var n=document.getElementById('hdr
 })();
 </script>
 <script>document.querySelectorAll('#sec-biblioteca a[href*="gumroad.com/l/"]').forEach(function(a){a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','clic_comprar',{producto:a.href.split('/l/')[1].split('?')[0]});});});</script>
+<script src="js/header.js"></script>
 </body>
 </html>

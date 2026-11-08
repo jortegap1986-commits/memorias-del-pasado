@@ -76,53 +76,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css">
 <style>.art-section{display:block}#article-view,.av-back-bar{display:block}.art-hero{margin-top:0}</style>
+<link rel="stylesheet" href="../css/header.css">
 </head>
 <body data-article-id="art-maquinaria">
 <!-- HEADER -->
-<header id="header">
+<header id="header" class="hdr2">
   <div class="hdr-inner">
-    <a class="hdr-logo" href="../index.html" style="text-decoration:none;color:inherit;display:flex">
-      <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado">
-      <div>
-        <span class="hdr-title">MEMORIAS DEL PASADO</span>
-        <span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span>
-      </div>
+    <a class="hdr-logo" href="../index.html" aria-label="Inicio">
+      <img src="../assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
       <a class="hn" href="../index.html">Inicio</a>
-      <div class="hn-drop">
-        <button class="hn">Biblioteca ▾</button>
-        <div class="hn-menu">
-          <a href="falange-macedonia.html">La Falange Macedonia</a>
-          <a href="dario-y-el-imperio-persa.html">Darío III y el Imperio Persa</a>
-          <a href="../index.html#sec-podcast">Podcast Gaugamela</a>
-          <a href="../index.html#sec-persia-grid">Conquista de Persia</a>
-          <a href="conquista-de-persia.html">→ Guía Completa: Persia</a>
-          <a href="../index.html#sec-roma-grid">Imperio Romano</a>
-          <a href="imperio-romano.html">→ Guía Completa: Roma</a>
-          <a href="../index.html#sec-pompeya">Pompeya</a>
-          <a href="legiones-de-roma.html">Las Legiones de Roma</a>
-          <a href="pompeya-ultimo-dia.html">Pompeya: El Último Día</a>
-          <a href="pompeya-arte-y-vida.html">Pompeya: Arte y Vida</a>
-          <a href="batalla-teutoburgo.html">La Batalla de Teutoburgo</a>
-          <a href="maquinaria-de-guerra-romana.html">Maquinaria de Guerra Romana</a>
-          <a href="catedrales-goticas.html">Catedrales Góticas</a>
-        </div>
-      </div>
-      <a class="hn" href="../index.html#sec-explora">Explora</a>
-      <a class="hn" href="../index.html#sec-podcast">🎙️ Podcast</a>
-      <a class="hn" href="../index.html#sec-revista">Revista</a>
+      <a class="hn active" href="../articulos/index.html" aria-current="page">Artículos</a>
+      <a class="hn" href="../index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="../boletin.html">Boletín</a>
       <a class="hn" href="../index.html#sec-comunidad">Comunidad</a>
-      <a class="hn hn-cta" href="../index.html#sec-ebook">📖 Comprar Libro</a>
+      <a class="hn hn-cta" href="../tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 
 
 <div class="av-back-bar">
   <a class="av-back" href="../index.html" style="text-decoration:none">&#8592; Volver a Inicio</a>
-  <span class="av-crumb">Inicio / Biblioteca / <span>Maquinaria de Guerra Romana: La Ingeniería del Poder</span></span>
+  <span class="av-crumb"><a href="../index.html">Inicio</a> / <a href="index.html">Artículos</a> / <span>Maquinaria de Guerra Romana: La Ingeniería del Poder</span></span>
 </div>
 
 <main>
@@ -141,17 +120,8 @@
       <p>El scorpio era la pieza artillera más precisa del arsenal romano: un ballista de pequeño calibre montado sobre un trípode giratorio que disparaba pernos de hierro de setenta a cien centímetros de longitud. Su funcionamiento se basaba en dos manojos de cuerda trenzada —normalmente de tendón o pelo femenino, materiales que ofrecían la elasticidad óptima— que se retorcían hasta acumular tensión suficiente para propulsar el proyectil. El alcance efectivo del scorpio llegaba a los cien metros con una precisión extraordinaria para la época: los soldados romanos lo apodaban "el escorpión" porque su picadura llegaba de donde no se le veía.</p>
       <p>El onagro —literalmente "asno salvaje", por la patada que daba al disparar— era una catapulta de un solo brazo que lanzaba piedras de entre dos y seis kilogramos a distancias de entre ciento cincuenta y cuatrocientos metros. No era especialmente preciso, pero su potencia era devastadora contra las mamposteías de las murallas enemigas. Los proyectiles del onagro podían derrumbar merlones, destruir parapetos y, en el asedio de ciudades, lanzar por encima de las murallas no solo piedras sino también cabezas de enemigos muertos, animales en descomposición —antecedente de la guerra biológica— o recipientes de incendiarios.</p>
 
-      <video controls preload="metadata"><source src="../assets/video/ariete1.mp4" type="video/mp4">Tu navegador no admite video HTML5.</video>
-      <p class="vcap">Reconstrucción en movimiento del ariete romano en operación contra una muralla fortificada, mostrando la estructura de madera protectora y el mecanismo de oscilación del palo de choque.</p>
-
       <h2 id="el-ariete-el-puno-de-hierro-de-roma">El Ariete: El Puño de Hierro de Roma</h2>
       <p>El ariete —del latín aries, carnero, por la forma de su cabeza de hierro— era el instrumento más directo y brutalmente eficaz del arsenal de asedio romano: un enorme tronco de árbol, a veces de veinte o treinta metros de longitud, suspendido de una estructura de madera mediante cadenas, con la punta revestida de hierro moldeada en forma de cabeza de carnero. Los soldados hacían oscilar el ariete como un péndulo, golpeando repetidamente el mismo punto de la muralla hasta que la argamasa cedía y los bloques comenzaban a moverse.</p>
-      <figure class="art-video">
-        <video controls preload="none" style="width:100%;border-radius:4px;margin:1.5rem 0">
-          <source src="../assets/video/ariete1.mp4" type="video/mp4">
-        </video>
-        <figcaption>El ariete romano: el arma de asedio más temida del mundo antiguo, capaz de derribar muros de piedra en horas de uso continuado.</figcaption>
-      </figure>
       <p>Los romanos desarrollaron dos tipos principales de ariete. El más simple era el ariete manual, sostenido por los propios soldados, que lo llevaban corriendo hacia el muro y lo golpeaban con el impulso del movimiento. El más efectivo era el ariete suspendido en la testudo arietaria: una enorme estructura de madera con ruedas, cubierta de cuero mojado o metal para protegerla del fuego griego que los defensores arrojaban desde las murallas, que albergaba el ariete en su interior y permitía maniobrar con él de manera más controlada y segura.</p>
       <p>En el asedio de Jerusalén en el año 70 dC, el general Tito empleó arietes de dimensiones colosales contra los muros de la ciudad. Josefo, el historiador judío que fue testigo del asedio, describe el impacto de los arietes con horror: cada golpe hacía temblar los cimientos de los muros, y los defensores podían sentir la vibración en sus pies incluso cuando estaban en el interior de la ciudad, lejos del punto de impacto.</p>
 
@@ -167,9 +137,6 @@
       <h2 id="los-grandes-asedios-donde-la-ingenieria-demostro-su-supremacia">Los Grandes Asedios: Donde la Ingeniería Demostró su Supremacía</h2>
       <p>El gran asedio de Alesia, en el año 52 aC, sigue siendo el ejemplo más extraordinario de ingeniería de asedio en la historia antigua. César había acorralado en la colina de Alesia al líder galo Vercingetórix con ochenta mil guerreros. Para impedir su escape, César ordenó construir una línea de circunvalación de dieciocho kilómetros de longitud alrededor de la colina. Cuando llegó un ejército galo de socorro —estimado por César en doscientos cincuenta mil hombres, aunque los historiadores modernos reducen esta cifra— César ordenó construir una segunda línea de contravallación de veintiún kilómetros mirando hacia fuera. En pocas semanas, César había construido cuarenta kilómetros de murallas con fosos, parapetos, torres y trampas antipersonales, con un ejército de cincuenta mil hombres, atrapado entre dos fuerzas enemigas mucho más numerosas. El resultado fue la derrota de ambos ejércitos galos y la rendición de Vercingetórix.</p>
       <p>El asedio de Masada, entre los años 73 y 74 dC, es otro caso extraordinario. Masada era una fortaleza natural sobre una mesa de roca vertical de cuatrocientos metros de altura en el desierto del Neguev, habitada por los últimos resistentes judíos de la gran revuelta del 66-73 dC. El gobernador romano Lucio Flavio Silva ordenó la construcción de una rampa de tierra y piedra desde el desierto hasta la cima de la meseta —una obra de ingeniería de proporciones faraónicas que hoy todavía puede verse en el yacimiento de Masada. La rampa tardó varios meses en construirse y cuando estuvo terminada, los defensores de Masada eligieron el suicidio colectivo antes que la rendición.</p>
-
-      <video controls preload="metadata"><source src="../assets/video/murallas.mp4" type="video/mp4">Tu navegador no admite video HTML5.</video>
-      <p class="vcap">Exploración de murallas y sistemas de fortificación romana, mostrando las técnicas constructivas y los elementos defensivos del diseño militar romano.</p>
 
       <figure>
         <img src="../assets/img/asedios.jpg" alt="Asedios romanos" loading="lazy">
@@ -275,5 +242,6 @@
 
 <script src="../js/article.js"></script>
 
+<script src="../js/header.js"></script>
 </body>
 </html>

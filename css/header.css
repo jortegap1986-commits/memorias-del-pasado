@@ -1,0 +1,36 @@
+/* ══ Menú estándar Memorias del Pasado · usado por todas las páginas ══ */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600&family=Inter:wght@400;500;600&display=swap');
+#header.hdr2{position:sticky;top:0;z-index:800;background:rgba(255,254,251,.92);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(35,28,20,.10);box-shadow:0 6px 30px -20px rgba(35,28,20,.35);transition:background .4s,box-shadow .4s;font-size:16px;line-height:1.4}
+#header.hdr2.scrolled{background:rgba(255,254,251,.96)}
+#header.hdr2 .hdr-inner{max-width:1280px;margin:0 auto;padding:.7rem 2rem;display:flex;align-items:center;gap:1.5rem;position:relative;transition:padding .4s cubic-bezier(.2,.7,.2,1)}
+#header.hdr2.scrolled .hdr-inner{padding-top:.45rem;padding-bottom:.45rem}
+#header.hdr2 .hdr-logo{display:flex;align-items:center;gap:.75rem;flex-shrink:0;text-decoration:none;color:inherit}
+#header.hdr2 .hdr-logo img{width:46px;height:46px;object-fit:contain;background:#231C14;border-radius:50%;padding:3px;box-shadow:0 0 0 1px rgba(184,137,43,.55)}
+#header.hdr2 .hdr-title{font-family:'Cinzel Decorative',Georgia,serif;font-size:.78rem;font-weight:700;color:#231C14;display:block;letter-spacing:.08em}
+#header.hdr2 .hdr-sub{font-family:'Cinzel',Georgia,serif;font-size:.46rem;letter-spacing:.22em;color:#7E7263;text-transform:uppercase;display:block}
+#header.hdr2 .hdr-nav{display:flex;align-items:center;gap:.1rem;margin-left:auto}
+#header.hdr2 .hn{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:.84rem;font-weight:500;letter-spacing:.01em;text-transform:none;color:#4B4034;text-decoration:none;border:0;background:none;position:relative;padding:.6rem .9rem;white-space:nowrap;transition:color .2s}
+#header.hdr2 .hn::after{content:'';position:absolute;left:.9rem;right:.9rem;bottom:.35rem;height:1.5px;background:#B4532A;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+#header.hdr2 .hn:hover,#header.hdr2 .hn.active{color:#231C14}
+#header.hdr2 .hn:hover::after,#header.hdr2 .hn.active::after{transform:scaleX(1);transform-origin:left}
+#header.hdr2 .hn-cta{background:#B8861E!important;color:#fff!important;border-radius:999px;margin-left:.6rem;padding:.6rem 1.15rem!important;transition:background .2s}
+#header.hdr2 .hn-cta::after{display:none}
+#header.hdr2 .hn-cta:hover{background:#B4532A!important}
+#header.hdr2 .hn:focus-visible,#header.hdr2 #menu-btn:focus-visible{outline:2px solid #B8892B;outline-offset:2px}
+#header.hdr2 #menu-btn{display:none;margin-left:auto;background:#fff;border:1px solid rgba(35,28,20,.15);border-radius:10px;padding:.4rem .75rem;font-size:1.2rem;line-height:1;color:#231C14;cursor:pointer}
+@media(max-width:960px){
+  #header.hdr2 .hdr-inner{padding:.6rem 1.1rem}
+  #header.hdr2 #menu-btn{display:block}
+  #header.hdr2 .hdr-nav{display:none}
+  #header.hdr2 .hdr-nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#FFFEFB;border-top:1px solid rgba(35,28,20,.10);border-radius:0 0 14px 14px;padding:.6rem 1rem 1rem;box-shadow:0 18px 40px -18px rgba(35,28,20,.35)}
+  #header.hdr2 .hdr-nav.open .hn{padding:.85rem .6rem;font-size:1rem}
+  #header.hdr2 .hdr-nav.open .hn::after{display:none}
+  #header.hdr2 .hdr-nav.open .hn-cta{margin:.5rem 0 0;text-align:center}
+}
+@media(max-width:420px){#header.hdr2 .hdr-sub{display:none}}
+/* barra de migas y tabla de contenidos ajustadas a la altura del menú nuevo */
+.av-back-bar{top:66px!important}
+.av-crumb a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.av-crumb a:hover{color:#B4532A;border-bottom-color:currentColor}
+.art-toc{top:130px!important}
+.art-body h2[id]{scroll-margin-top:130px!important}

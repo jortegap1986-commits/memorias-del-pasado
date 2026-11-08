@@ -49,12 +49,27 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 footer.legal-ft{background:var(--dk);color:var(--stl);text-align:center;padding:2rem;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em}
 footer.legal-ft a{color:var(--gdl);text-decoration:none}
 </style>
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 
-<div class="legal-top">
-  <a href="index.html"><img src="assets/img/logo.png" alt="Logo Memorias del Pasado">← Volver al inicio</a>
-</div>
+<header id="header" class="hdr2">
+  <div class="hdr-inner">
+    <a class="hdr-logo" href="index.html" aria-label="Inicio">
+      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
+    </a>
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
+      <a class="hn" href="index.html">Inicio</a>
+      <a class="hn" href="articulos/index.html">Artículos</a>
+      <a class="hn" href="index.html#sec-documentales">Documentales</a>
+      <a class="hn" href="boletin.html">Boletín</a>
+      <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
+      <a class="hn hn-cta" href="tienda.html">Revistas</a>
+    </nav>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
+  </div>
+</header>
 
 <div class="legal-wrap">
   <span class="sec-label">HISTORIKA · MEMORIAS DEL PASADO</span>
@@ -97,5 +112,6 @@ footer.legal-ft a{color:var(--gdl);text-decoration:none}
 
 <footer class="legal-ft">© 2026 MEMORIAS DEL PASADO · <a href="index.html">VOLVER AL INICIO</a> · <a href="privacidad.html">POLÍTICA DE PRIVACIDAD</a></footer>
 
+<script src="js/header.js"></script>
 </body>
 </html>

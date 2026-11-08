@@ -121,48 +121,31 @@
     .bt-subscribe{flex-direction:column;text-align:center;padding:2.6rem 1.8rem}
   }
 </style>
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body data-article-id="boletin-25">
 <!-- HEADER -->
-<header id="header">
+<header id="header" class="hdr2">
   <div class="hdr-inner">
-    <a class="hdr-logo" href="index.html" style="text-decoration:none;color:inherit;display:flex">
-      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado">
-      <div>
-        <span class="hdr-title">MEMORIAS DEL PASADO</span>
-        <span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span>
-      </div>
+    <a class="hdr-logo" href="index.html" aria-label="Inicio">
+      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+      <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
       <a class="hn" href="index.html">Inicio</a>
-      <div class="hn-drop">
-        <button class="hn">Biblioteca ▾</button>
-        <div class="hn-menu">
-          <a href="articulos/falange-macedonia.html">La Falange Macedonia</a>
-          <a href="articulos/dario-y-el-imperio-persa.html">Darío III y el Imperio Persa</a>
-          <a href="index.html#sec-podcast">Podcast Gaugamela</a>
-          <a href="index.html#sec-persia-grid">Conquista de Persia</a>
-          <a href="articulos/conquista-de-persia.html">→ Guía Completa: Persia</a>
-          <a href="index.html#sec-roma-grid">Imperio Romano</a>
-          <a href="articulos/imperio-romano.html">→ Guía Completa: Roma</a>
-          <a href="index.html#sec-pompeya">Pompeya</a>
-          <a href="articulos/legiones-de-roma.html">Las Legiones de Roma</a>
-          <a href="articulos/acueducto-de-segovia.html">El Acueducto de Segovia</a>
-          <a href="articulos/italica.html">Itálica</a>
-        </div>
-      </div>
-      <a class="hn" href="index.html#sec-explora">Explora</a>
-      <a class="hn" href="boletin.html">📰 Boletín</a>
+      <a class="hn" href="articulos/index.html">Artículos</a>
+      <a class="hn" href="index.html#sec-documentales">Documentales</a>
+      <a class="hn active" href="boletin.html" aria-current="page">Boletín</a>
       <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
-      <a class="hn hn-cta" href="index.html#sec-biblioteca">🛍️ Tienda</a>
+      <a class="hn hn-cta" href="tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 
 <div class="av-back-bar">
   <a class="av-back" href="index.html" style="text-decoration:none">&#8592; Volver a Inicio</a>
-  <span class="av-crumb">Inicio / <span>Boletín Historika</span></span>
+  <span class="av-crumb"><a href="index.html">Inicio</a> / <span>Boletín Historika</span></span>
 </div>
 
 <main>
@@ -311,5 +294,6 @@
   });
 </script>
 
+<script src="js/header.js"></script>
 </body>
 </html>

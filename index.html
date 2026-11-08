@@ -149,7 +149,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-portada-poster.jpg">
+<link rel="preload" as="image" href="assets/img/hero-arco-poster.jpg">
 <link rel="stylesheet" href="css/site.css">
 <style>
 /* ════════════════════════════════════════════════════════════
@@ -255,7 +255,7 @@ html.js .hero-fade{opacity:0;animation:fUp .9s var(--ease) forwards}
 .arch{position:absolute;inset:0 6% 0 10%;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--sn);box-shadow:var(--sh2);isolation:isolate}
 .arch::after{content:'';position:absolute;inset:10px;border:1px solid rgba(255,255,255,.55);border-radius:999px 999px 12px 12px;pointer-events:none;z-index:2}
 .arch .poster,.arch video{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center 40%}
-.arch .poster{background:url('assets/img/hero-portada-poster.jpg') center 40%/cover no-repeat}
+.arch .poster{background:url('assets/img/hero-arco-poster.jpg') center 40%/cover no-repeat}
 html.js .arch .poster{animation:kb 18s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14)}}
 .arch video{opacity:0;transition:opacity 1.4s}
@@ -480,6 +480,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
   .tl-rail i{transform:scaleX(1);transition:none}
 }
 </style>
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 <div id="x-progress" aria-hidden="true"></div>
@@ -490,15 +491,15 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
       <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
       <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
-    <nav class="hdr-nav" id="hdr-nav">
-      <a class="hn active" href="index.html">Inicio</a>
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
+      <a class="hn active" href="index.html" aria-current="page">Inicio</a>
       <a class="hn" href="articulos/index.html">Artículos</a>
       <a class="hn" href="index.html#sec-documentales">Documentales</a>
       <a class="hn" href="boletin.html">Boletín</a>
       <a class="hn" href="index.html#sec-comunidad">Comunidad</a>
       <a class="hn hn-cta" href="tienda.html">Revistas</a>
     </nav>
-    <button id="menu-btn" onclick="toggleMenu()" aria-label="Menú">☰</button>
+    <button id="menu-btn" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-controls="hdr-nav">☰</button>
   </div>
 </header>
 
@@ -526,8 +527,8 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
     <div class="hero-art" aria-hidden="true">
       <div class="arch" data-par="0.05">
         <div class="poster"></div>
-        <video id="hero-video" muted loop playsinline preload="none" poster="assets/img/hero-portada-poster.jpg">
-          <source src="assets/video/hero-portada.mp4" type="video/mp4">
+        <video id="hero-video" muted loop playsinline preload="none" poster="assets/img/hero-arco-poster.jpg">
+          <source src="assets/video/hero-arco.mp4" type="video/mp4">
         </video>
       </div>
       <figure class="float f1" data-par="-0.08"><div class="bob"><img src="assets/img/acueducto-segovia1.jpg" alt="" decoding="async"><figcaption>Acueducto de Segovia</figcaption></div></figure>
@@ -893,5 +894,6 @@ document.addEventListener('click',function(e){var n=document.getElementById('hdr
   addEventListener('pagehide',function(){if(typeof gtag==='function')gtag('event','home_time',{seconds:Math.round((Date.now()-t0)/1000)});});
 })();
 </script>
+<script src="js/header.js"></script>
 </body>
 </html>
