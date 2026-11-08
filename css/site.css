@@ -430,3 +430,30 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 .art-rel-box.dark{background:var(--dk);border-color:rgba(212,168,50,.3)}
 .art-rel-box.dark h3{color:#fff}.art-rel-box.dark p{color:rgba(255,255,255,.78)}
 @media(max-width:900px){.art-rel-grid{grid-template-columns:1fr}.art-rel-cta{grid-template-columns:1fr}.art-rel{padding:3rem 1.1rem}}
+
+/* ══ TEMA CLARO 2026 · cabecera y pie compartidos por todo el sitio ══ */
+#header{background:rgba(251,248,242,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(35,28,20,.10);box-shadow:0 6px 30px -20px rgba(35,28,20,.35)}
+.hdr-logo img,.ft-logo img{background:#231C14;border-radius:50%;padding:3px;box-shadow:0 0 0 1px rgba(184,137,43,.55)}
+.hdr-title{color:#231C14}
+.hn-menu{background:#FBF8F2;border-top-color:#B4532A;border-radius:0 0 10px 10px}
+.hn-menu a:hover{background:#F4EEE3;color:#B4532A}
+#footer{background:#F4EEE3;color:#4B4034;border-top:1px solid rgba(35,28,20,.10);position:relative}
+#footer::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#B8892B,#B4532A,#B8892B)}
+#footer .ft-title{color:#231C14}
+#footer .ft-sub{color:#7E7263}
+#footer .ft-grid{border-top-color:rgba(35,28,20,.10);border-bottom-color:rgba(35,28,20,.10)}
+#footer .ft-col h5{color:#B4532A}
+#footer .ft-col a{color:#4B4034;transition:color .2s,transform .3s cubic-bezier(.2,.7,.2,1)}
+#footer .ft-col a:hover{color:#B4532A;transform:translateX(4px)}
+#footer .ft-copy{color:#7E7263}
+#footer .ft-copy a{color:#B4532A!important}
+#footer .ft-orn{color:#B8892B}
+.ft-social{display:flex;justify-content:center;gap:.9rem;margin:1.5rem 0 .5rem}
+.ft-social a{width:40px;height:40px;border:1px solid;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.ft-social a:hover{transform:translateY(-2px)}
+.ft-social svg{width:18px;height:18px}
+#footer .ft-social a{border-color:rgba(35,28,20,.15);background:#fff}
+#footer .ft-social a:hover{background:#B4532A;border-color:#B4532A}
+#footer .ft-social svg{fill:#4B4034}
+#footer .ft-social a:hover svg{fill:#fff}
+@media(max-width:960px){.hdr-nav.open{background:#FBF8F2;border-top:1px solid rgba(35,28,20,.10);border-radius:0 0 14px 14px}}
