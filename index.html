@@ -211,10 +211,8 @@ body{background:var(--iv);color:var(--ink2)}
 /* ── reveal: visible por defecto, anima solo con JS ── */
 html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 html.js .rv.in{opacity:1;transform:none}
-html.js .rv-img{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease)}
-html.js .rv-img.in{clip-path:inset(0 0 0 0)}
-html.js .rv-img img{transform:scale(1.18);transition:transform 1.8s var(--ease)}
-html.js .rv-img.in img{transform:scale(1)}
+html.js .rv .rv-img img{transform:scale(1.08);transition:transform 1.8s var(--ease)}
+html.js .rv.in .rv-img img{transform:scale(1)}
 
 /* ── barra de progreso de lectura ── */
 #x-progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--au),var(--tr));z-index:900;pointer-events:none}
@@ -475,7 +473,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
 /* ── movimiento reducido ── */
 @media(prefers-reduced-motion:reduce){
   html.js .rv,html.js .tl-ev{opacity:1;transform:none;transition:none}
-  html.js .rv-img{clip-path:none}html.js .rv-img img{transform:none}
+  html.js .rv .rv-img img{transform:none}
   html.js .hero-txt h1 .w>span,html.js .hero-fade,html.js .float,html.js .arch{animation:none;opacity:1;transform:none;clip-path:none}
   html.js .arch .poster,html.js .float .bob,html.js .seal svg,html.js #x-civ .track,html.js .dc .pl::before,html.js .pod .wave i{animation:none}
   html.js .laurel path{stroke-dashoffset:0;transition:none}
@@ -560,7 +558,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
     </div>
     <div class="feat">
       <a class="fc big rv" href="articulos/batalla-teutoburgo.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'batalla-teutoburgo',posicion:1});}">
-        <div class="im rv-img"><img src="assets/img/teutoburgo.jpg" alt="" loading="eager" decoding="async"></div>
+        <div class="im rv-img"><img src="assets/img/teutoburgo-bosque.jpg" alt="" loading="eager" decoding="async"></div>
         <span class="go" aria-hidden="true">↗</span>
         <div class="bd">
           <span class="tag">Batalla<i>· 14 min</i></span>
@@ -578,7 +576,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
           </div>
         </a>
         <a class="fc side rv" href="articulos/legiones-de-roma.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'legiones-de-roma',posicion:3});}">
-          <div class="im rv-img"><img src="assets/img/legion2.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="im rv-img"><img src="assets/img/legion3.jpg" alt="" loading="lazy" decoding="async"></div>
           <div class="bd">
             <span class="tag">Ejército<i>· 14 min</i></span>
             <h3>5.500 hombres, diez cohortes, una sola voluntad.</h3>
@@ -601,11 +599,11 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
       <div class="tl-rail"><i></i></div>
       <div class="tl-scroll">
         <a class="tl-ev" href="articulos/fundacion-de-roma.html"><div class="ph"><img src="assets/img/roma/roma-tiber.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">753<small>a.C.</small></span><h4>Fundación de Roma</h4><p>Rómulo, el Tíber y el mito que se volvió imperio.</p></a>
-        <a class="tl-ev" href="articulos/batalla-gaugamela.html"><div class="ph"><img src="assets/img/gaugamela.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">331<small>a.C.</small></span><h4>Gaugamela</h4><p>Alejandro contra Darío III: el día que cayó Persia.</p></a>
-        <a class="tl-ev" href="articulos/guerras-punicas.html"><div class="ph"><img src="assets/img/roma-rep.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">264<small>a.C.</small></span><h4>Guerras Púnicas</h4><p>Roma y Cartago se disputan el Mediterráneo.</p></a>
-        <a class="tl-ev" href="articulos/julio-cesar-rubicon.html"><div class="ph"><img src="assets/img/senado.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">49<small>a.C.</small></span><h4>César cruza el Rubicón</h4><p>La apuesta que acabó con la República.</p></a>
+        <a class="tl-ev" href="articulos/batalla-gaugamela.html"><div class="ph"><img src="assets/img/persia/gaugamela-articulo.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">331<small>a.C.</small></span><h4>Gaugamela</h4><p>Alejandro contra Darío III: el día que cayó Persia.</p></a>
+        <a class="tl-ev" href="articulos/guerras-punicas.html"><div class="ph"><img src="assets/img/punicas-alpes.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">264<small>a.C.</small></span><h4>Guerras Púnicas</h4><p>Roma y Cartago se disputan el Mediterráneo.</p></a>
+        <a class="tl-ev" href="articulos/julio-cesar-rubicon.html"><div class="ph"><img src="assets/img/cesar-rubicon.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">49<small>a.C.</small></span><h4>César cruza el Rubicón</h4><p>La apuesta que acabó con la República.</p></a>
         <a class="tl-ev" href="articulos/augusto-y-la-pax-romana.html"><div class="ph"><img src="assets/img/roma/augusto-domus-poster.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">27<small>a.C.</small></span><h4>Augusto y la Pax Romana</h4><p>Dos siglos de paz construidos por un solo hombre.</p></a>
-        <a class="tl-ev" href="articulos/batalla-teutoburgo.html"><div class="ph"><img src="assets/img/teutoburgo2.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">9<small>d.C.</small></span><h4>Teutoburgo</h4><p>Tres legiones perdidas en un bosque germano.</p></a>
+        <a class="tl-ev" href="articulos/batalla-teutoburgo.html"><div class="ph"><img src="assets/img/teutoburgo-emboscada.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">9<small>d.C.</small></span><h4>Teutoburgo</h4><p>Tres legiones perdidas en un bosque germano.</p></a>
         <a class="tl-ev" href="articulos/pompeya-ultimo-dia.html"><div class="ph"><img src="assets/img/pompeya2.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">79<small>d.C.</small></span><h4>Pompeya</h4><p>El Vesubio congela una ciudad para siempre.</p></a>
         <a class="tl-ev" href="articulos/crisis-del-siglo-iii.html"><div class="ph"><img src="assets/img/roma/crisis3-domus-poster.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">235<small>d.C.</small></span><h4>Crisis del siglo III</h4><p>Cincuenta años, veintiséis emperadores.</p></a>
       </div>
@@ -839,7 +837,7 @@ document.addEventListener('click',function(e){var n=document.getElementById('hdr
   }
 
   // Reveal al hacer scroll (con escalonado por grupo)
-  var els=document.querySelectorAll('.rv,.rv-img,#tl,.laurel');
+  var els=document.querySelectorAll('.rv,#tl,.laurel');
   if(RM||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
   else{
     var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
