@@ -440,12 +440,12 @@ body{background:var(--w);color:var(--tx);font-family:'EB Garamond',Georgia,serif
 #footer{background:#FAF7F2;color:#4B4034;border-top:1px solid rgba(35,28,20,.10);position:relative}
 #footer::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#B8892B,#B4532A,#B8892B)}
 #footer .ft-title{color:#231C14}
-#footer .ft-sub{color:#7E7263}
+#footer .ft-sub{color:#655A4D}
 #footer .ft-grid{border-top-color:rgba(35,28,20,.10);border-bottom-color:rgba(35,28,20,.10)}
 #footer .ft-col h5{color:#B4532A}
 #footer .ft-col a{color:#4B4034;transition:color .2s,transform .3s cubic-bezier(.2,.7,.2,1)}
 #footer .ft-col a:hover{color:#B4532A;transform:translateX(4px)}
-#footer .ft-copy{color:#7E7263}
+#footer .ft-copy{color:#655A4D}
 #footer .ft-copy a{color:#B4532A!important}
 #footer .ft-orn{color:#B8892B}
 .ft-social{display:flex;justify-content:center;gap:.9rem;margin:1.5rem 0 .5rem}

@@ -149,7 +149,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-arco-poster.jpg">
+<link rel="preload" as="image" href="assets/img/hero-arco-poster-960.webp" type="image/webp">
 <link rel="stylesheet" href="css/site.css">
 <style>
 /* ════════════════════════════════════════════════════════════
@@ -163,7 +163,7 @@
   --sn:#F0EBE2;      /* piedra */
   --ink:#231C14;     /* tinta: titulares */
   --ink2:#4B4034;    /* texto */
-  --ink3:#7E7263;    /* texto suave */
+  --ink3:#6B6052;    /* texto suave */
   --tr:#B4532A;      /* terracota pompeyana */
   --tr2:#CC6A3F;
   --au:#B8892B;      /* oro suave */
@@ -173,7 +173,7 @@
   --sh1:0 1px 2px rgba(35,28,20,.05),0 8px 24px rgba(35,28,20,.06);
   --sh2:0 2px 6px rgba(35,28,20,.06),0 24px 60px rgba(35,28,20,.14);
   --ease:cubic-bezier(.2,.7,.2,1);
-  --serif:'Cormorant Garamond','EB Garamond',Georgia,serif;
+  --serif:'Cormorant Garamond','Cormorant Respaldo',Georgia,serif;
   --body:'EB Garamond',Georgia,serif;
   --ui:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
@@ -182,6 +182,8 @@ body{background:var(--iv);color:var(--ink2)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
 @media(max-width:760px){.wrap{padding:0 1.1rem}}
 
+/* fuente de respaldo con las mismas medidas que Cormorant: evita que el titular salte al cargar */
+@font-face{font-family:'Cormorant Respaldo';src:local('Times New Roman'),local('Times'),local('Liberation Serif'),local('Noto Serif'),local('DejaVu Serif');size-adjust:92.5%;ascent-override:95%;descent-override:30%;line-gap-override:0%}
 /* ── utilidades ── */
 .anc{display:block!important;height:0!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;overflow:hidden!important;background:none!important}
 .anc::before,.anc::after{display:none!important}
@@ -236,7 +238,8 @@ html.js .rv.in .rv-img img{transform:scale(1)}
   radial-gradient(1100px 600px at 85% 10%,rgba(217,180,92,.10),transparent 60%),
   radial-gradient(800px 500px at 0% 100%,rgba(180,83,42,.04),transparent 60%),var(--iv);padding:4.5rem 0 5.5rem}
 #x-hero .numeral{position:absolute;left:-2vw;bottom:-4vw;font-family:var(--serif);font-weight:700;font-size:22vw;line-height:.8;color:rgba(35,28,20,.03);letter-spacing:-.02em;pointer-events:none;user-select:none;white-space:nowrap}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:start}
+@media(min-width:961px){.hero-txt{min-height:600px;display:flex;flex-direction:column;justify-content:center}}
 .hero-txt h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,5.6vw,4.7rem);line-height:1.0;letter-spacing:-.015em;color:var(--ink);margin:1.2rem 0 1.4rem;text-wrap:balance}
 .hero-txt h1 em{font-style:italic;color:var(--tr)}
 .hero-txt h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
@@ -255,7 +258,7 @@ html.js .hero-fade{opacity:0;animation:fUp .9s var(--ease) forwards}
 .arch{position:absolute;inset:0 6% 0 10%;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--sn);box-shadow:var(--sh2);isolation:isolate}
 .arch::after{content:'';position:absolute;inset:10px;border:1px solid rgba(255,255,255,.55);border-radius:999px 999px 12px 12px;pointer-events:none;z-index:2}
 .arch .poster,.arch video{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center 40%}
-.arch .poster{background:url('assets/img/hero-arco-poster.jpg') center 40%/cover no-repeat}
+.arch .poster{background:url('assets/img/hero-arco-poster.jpg') center 40%/cover no-repeat;background-image:image-set(url('assets/img/hero-arco-poster-960.webp') type('image/webp'),url('assets/img/hero-arco-poster.jpg') type('image/jpeg'))}
 html.js .arch .poster{animation:kb 18s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14)}}
 .arch video{opacity:0;transition:opacity 1.4s}
@@ -330,7 +333,7 @@ html.js #x-civ .track{animation:mq 38s linear infinite}
 .tl-ev:hover .dot{background:var(--tr);border-color:var(--tr);transform:scale(1.3)}
 .tl-ev .yr{font-family:var(--serif);font-weight:700;font-size:1.9rem;color:var(--ink);line-height:1;display:block}
 .tl-ev .yr small{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.1em;color:var(--tr);margin-left:.3rem}
-.tl-ev h4{font-family:var(--ui);font-size:.95rem;font-weight:600;color:var(--ink);margin:.55rem 0 .3rem;line-height:1.3}
+.tl-ev .tl-h{font-family:var(--ui);font-size:.95rem;font-weight:600;color:var(--ink);margin:.55rem 0 .3rem;line-height:1.3}
 .tl-ev p{font-family:var(--body);font-size:.98rem;line-height:1.45;color:var(--ink3);margin:0}
 html.js .tl-ev{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .tl-wrap.in .tl-ev{opacity:1;transform:none}
@@ -487,8 +490,8 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
 
 <header id="header" class="hdr2">
   <div class="hdr-inner">
-    <a class="hdr-logo" href="index.html" aria-label="Inicio">
-      <img src="assets/img/logo.png" alt="Logo Memorias del Pasado" width="46" height="46">
+    <a class="hdr-logo" href="index.html">
+      <img src="assets/img/logo.png" alt="" width="46" height="46">
       <div><span class="hdr-title">MEMORIAS DEL PASADO</span><span class="hdr-sub">Historia · Arqueología · Mundo Antiguo</span></div>
     </a>
     <nav class="hdr-nav" id="hdr-nav" aria-label="Menú principal">
@@ -517,22 +520,20 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
         <a class="btn btn-ghost mag" href="articulos/index.html" onclick="if(typeof gtag==='function'){gtag('event','clic_hero_cta',{tipo:'ver_articulos'});}">Ver los 34 artículos</a>
       </div>
       <div class="hero-proof hero-fade" style="animation-delay:1s">
-        <div><b data-count="700000" data-suffix="+">700.000+</b><span>lectores en redes</span></div>
-        <div><b data-count="34">34</b><span>artículos</span></div>
-        <div><b data-count="4">4</b><span>documentales</span></div>
-        <div><b data-count="9">9</b><span>revistas</span></div>
+        <div><b>700.000+</b><span>lectores en redes</span></div>
+        <div><b>34</b><span>artículos</span></div>
+        <div><b>4</b><span>documentales</span></div>
+        <div><b>9</b><span>revistas</span></div>
       </div>
     </div>
 
     <div class="hero-art" aria-hidden="true">
       <div class="arch" data-par="0.05">
         <div class="poster"></div>
-        <video id="hero-video" muted loop playsinline preload="none" poster="assets/img/hero-arco-poster.jpg">
-          <source src="assets/video/hero-arco.mp4" type="video/mp4">
-        </video>
+        <video id="hero-video" muted loop playsinline preload="none" poster="assets/img/hero-arco-poster.jpg" data-src="assets/video/hero-arco.mp4" data-src-movil="assets/video/hero-arco-movil.mp4"></video>
       </div>
-      <figure class="float f1" data-par="-0.08"><div class="bob"><img src="assets/img/acueducto-segovia1.jpg" alt="" decoding="async"><figcaption>Acueducto de Segovia</figcaption></div></figure>
-      <figure class="float f2" data-par="0.1"><div class="bob"><img src="assets/img/roma-imperial.jpg" alt="" decoding="async"><figcaption>Roma imperial</figcaption></div></figure>
+      <figure class="float f1" data-par="-0.08"><div class="bob"><picture><source type="image/webp" srcset="assets/img/acueducto-segovia1-480.webp 480w, assets/img/acueducto-segovia1-960.webp 960w, assets/img/acueducto-segovia1-1440.webp 1200w" sizes="200px"><img src="assets/img/acueducto-segovia1.jpg" alt="" decoding="async"></picture><figcaption>Acueducto de Segovia</figcaption></div></figure>
+      <figure class="float f2" data-par="0.1"><div class="bob"><picture><source type="image/webp" srcset="assets/img/roma-imperial-480.webp 480w, assets/img/roma-imperial-960.webp 832w" sizes="200px"><img src="assets/img/roma-imperial.jpg" alt="" decoding="async"></picture><figcaption>Roma imperial</figcaption></div></figure>
       <div class="seal">
         <svg viewBox="0 0 132 132"><defs><path id="sealp" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text font-family="Cinzel,serif" font-size="10.5" letter-spacing="3.2" fill="#D9B45C"><textPath href="#sealp">MEMORIAS DEL PASADO · HISTORIKA · </textPath></text></svg>
         <img src="assets/img/logo.png" alt="">
@@ -559,7 +560,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
     </div>
     <div class="feat">
       <a class="fc big rv" href="articulos/batalla-teutoburgo.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'batalla-teutoburgo',posicion:1});}">
-        <div class="im rv-img"><img src="assets/img/teutoburgo-bosque.jpg" alt="" loading="eager" decoding="async"></div>
+        <div class="im rv-img"><picture><source type="image/webp" srcset="assets/img/teutoburgo-bosque-480.webp 480w, assets/img/teutoburgo-bosque-960.webp 960w, assets/img/teutoburgo-bosque-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 60vw"><img src="assets/img/teutoburgo-bosque.jpg" alt="" loading="eager" decoding="async"></picture></div>
         <span class="go" aria-hidden="true">↗</span>
         <div class="bd">
           <span class="tag">Batalla<i>· 14 min</i></span>
@@ -569,7 +570,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
       </a>
       <div class="feat-side">
         <a class="fc side rv" href="articulos/acueducto-de-segovia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'acueducto-de-segovia',posicion:2});}">
-          <div class="im rv-img"><img src="assets/img/acueducto-segovia1.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="im rv-img"><picture><source type="image/webp" srcset="assets/img/acueducto-segovia1-480.webp 480w, assets/img/acueducto-segovia1-960.webp 960w, assets/img/acueducto-segovia1-1440.webp 1200w" sizes="(max-width: 560px) 100vw, 22vw"><img src="assets/img/acueducto-segovia1.jpg" alt="" loading="lazy" decoding="async"></picture></div>
           <div class="bd">
             <span class="tag">Ingeniería<i>· 12 min</i></span>
             <h3>2.000 años en pie sin una gota de argamasa.</h3>
@@ -577,7 +578,7 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
           </div>
         </a>
         <a class="fc side rv" href="articulos/legiones-de-roma.html" onclick="if(typeof gtag==='function'){gtag('event','clic_empieza',{article_id:'legiones-de-roma',posicion:3});}">
-          <div class="im rv-img"><img src="assets/img/legion3.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="im rv-img"><picture><source type="image/webp" srcset="assets/img/legion3-480.webp 480w, assets/img/legion3-960.webp 960w, assets/img/legion3-1440.webp 1200w" sizes="(max-width: 560px) 100vw, 22vw"><img src="assets/img/legion3.jpg" alt="" loading="lazy" decoding="async"></picture></div>
           <div class="bd">
             <span class="tag">Ejército<i>· 14 min</i></span>
             <h3>5.500 hombres, diez cohortes, una sola voluntad.</h3>
@@ -599,14 +600,14 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
     <div class="tl-wrap" id="tl">
       <div class="tl-rail"><i></i></div>
       <div class="tl-scroll">
-        <a class="tl-ev" href="articulos/fundacion-de-roma.html"><div class="ph"><img src="assets/img/roma/roma-tiber.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">753<small>a.C.</small></span><h4>Fundación de Roma</h4><p>Rómulo, el Tíber y el mito que se volvió imperio.</p></a>
-        <a class="tl-ev" href="articulos/batalla-gaugamela.html"><div class="ph"><img src="assets/img/persia/gaugamela-articulo.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">331<small>a.C.</small></span><h4>Gaugamela</h4><p>Alejandro contra Darío III: el día que cayó Persia.</p></a>
-        <a class="tl-ev" href="articulos/guerras-punicas.html"><div class="ph"><img src="assets/img/punicas-alpes.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">264<small>a.C.</small></span><h4>Guerras Púnicas</h4><p>Roma y Cartago se disputan el Mediterráneo.</p></a>
-        <a class="tl-ev" href="articulos/julio-cesar-rubicon.html"><div class="ph"><img src="assets/img/cesar-rubicon.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">49<small>a.C.</small></span><h4>César cruza el Rubicón</h4><p>La apuesta que acabó con la República.</p></a>
-        <a class="tl-ev" href="articulos/augusto-y-la-pax-romana.html"><div class="ph"><img src="assets/img/roma/augusto-domus-poster.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">27<small>a.C.</small></span><h4>Augusto y la Pax Romana</h4><p>Dos siglos de paz construidos por un solo hombre.</p></a>
-        <a class="tl-ev" href="articulos/batalla-teutoburgo.html"><div class="ph"><img src="assets/img/teutoburgo-emboscada.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">9<small>d.C.</small></span><h4>Teutoburgo</h4><p>Tres legiones perdidas en un bosque germano.</p></a>
-        <a class="tl-ev" href="articulos/pompeya-ultimo-dia.html"><div class="ph"><img src="assets/img/pompeya2.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">79<small>d.C.</small></span><h4>Pompeya</h4><p>El Vesubio congela una ciudad para siempre.</p></a>
-        <a class="tl-ev" href="articulos/crisis-del-siglo-iii.html"><div class="ph"><img src="assets/img/roma/crisis3-domus-poster.jpg" alt="" loading="lazy"></div><span class="dot"></span><span class="yr">235<small>d.C.</small></span><h4>Crisis del siglo III</h4><p>Cincuenta años, veintiséis emperadores.</p></a>
+        <a class="tl-ev" href="articulos/fundacion-de-roma.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/roma/roma-tiber-480.webp 480w, assets/img/roma/roma-tiber-960.webp 960w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/roma/roma-tiber.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">753<small>a.C.</small></span><h3 class="tl-h">Fundación de Roma</h3><p>Rómulo, el Tíber y el mito que se volvió imperio.</p></a>
+        <a class="tl-ev" href="articulos/batalla-gaugamela.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/persia/gaugamela-articulo-480.webp 480w, assets/img/persia/gaugamela-articulo-960.webp 960w, assets/img/persia/gaugamela-articulo-1440.webp 1376w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/persia/gaugamela-articulo.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">331<small>a.C.</small></span><h3 class="tl-h">Gaugamela</h3><p>Alejandro contra Darío III: el día que cayó Persia.</p></a>
+        <a class="tl-ev" href="articulos/guerras-punicas.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/punicas-alpes-480.webp 480w, assets/img/punicas-alpes-960.webp 960w, assets/img/punicas-alpes-1440.webp 1440w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/punicas-alpes.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">264<small>a.C.</small></span><h3 class="tl-h">Guerras Púnicas</h3><p>Roma y Cartago se disputan el Mediterráneo.</p></a>
+        <a class="tl-ev" href="articulos/julio-cesar-rubicon.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/cesar-rubicon-480.webp 480w, assets/img/cesar-rubicon-960.webp 960w, assets/img/cesar-rubicon-1440.webp 1440w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/cesar-rubicon.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">49<small>a.C.</small></span><h3 class="tl-h">César cruza el Rubicón</h3><p>La apuesta que acabó con la República.</p></a>
+        <a class="tl-ev" href="articulos/augusto-y-la-pax-romana.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/roma/augusto-domus-poster-480.webp 480w, assets/img/roma/augusto-domus-poster-960.webp 720w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/roma/augusto-domus-poster.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">27<small>a.C.</small></span><h3 class="tl-h">Augusto y la Pax Romana</h3><p>Dos siglos de paz construidos por un solo hombre.</p></a>
+        <a class="tl-ev" href="articulos/batalla-teutoburgo.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/teutoburgo-emboscada-480.webp 480w, assets/img/teutoburgo-emboscada-960.webp 960w, assets/img/teutoburgo-emboscada-1440.webp 1440w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/teutoburgo-emboscada.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">9<small>d.C.</small></span><h3 class="tl-h">Teutoburgo</h3><p>Tres legiones perdidas en un bosque germano.</p></a>
+        <a class="tl-ev" href="articulos/pompeya-ultimo-dia.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/pompeya2-480.webp 480w, assets/img/pompeya2-960.webp 960w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/pompeya2.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">79<small>d.C.</small></span><h3 class="tl-h">Pompeya</h3><p>El Vesubio congela una ciudad para siempre.</p></a>
+        <a class="tl-ev" href="articulos/crisis-del-siglo-iii.html"><div class="ph"><picture><source type="image/webp" srcset="assets/img/roma/crisis3-domus-poster-480.webp 480w, assets/img/roma/crisis3-domus-poster-960.webp 960w, assets/img/roma/crisis3-domus-poster-1440.webp 1280w" sizes="(max-width: 760px) 60vw, 240px"><img src="assets/img/roma/crisis3-domus-poster.jpg" alt="" loading="lazy"></picture></div><span class="dot"></span><span class="yr">235<small>d.C.</small></span><h3 class="tl-h">Crisis del siglo III</h3><p>Cincuenta años, veintiséis emperadores.</p></a>
       </div>
       <div class="tl-hint" aria-hidden="true">← Desliza para recorrer los siglos →</div>
     </div>
@@ -634,27 +635,27 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
     </div>
     <div class="grid3">
 <a class="ac rv tilt" href="articulos/falange-macedonia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'falange-macedonia'});}">
-  <div class="im"><img src="assets/img/falange2.jpg" alt="" loading="lazy" decoding="async"><span class="cat">Grecia · Táctica</span></div>
+  <div class="im"><picture><source type="image/webp" srcset="assets/img/falange2-480.webp 480w, assets/img/falange2-960.webp 960w, assets/img/falange2-1440.webp 1100w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"><img src="assets/img/falange2.jpg" alt="" loading="lazy" decoding="async"></picture><span class="cat">Grecia · Táctica</span></div>
   <div class="bd"><h3>Falange Macedonia: Armas y Táctica que Conquistaron el Mundo</h3><p>Qué era la falange macedonia, cómo se organizaba y qué armas usaba: la formación con la que Filipo II y Alejandro dominaron el Mediterráneo.</p><div class="ft"><span>14 min de lectura</span><span>Leer →</span></div></div>
 </a>
 <a class="ac rv tilt" href="articulos/dario-y-el-imperio-persa.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'dario-y-el-imperio-persa'});}">
-  <div class="im"><img src="assets/img/dario2.jpg" alt="" loading="lazy" decoding="async"><span class="cat">Persia · Darío III</span></div>
+  <div class="im"><picture><source type="image/webp" srcset="assets/img/dario2-480.webp 480w, assets/img/dario2-960.webp 960w, assets/img/dario2-1440.webp 1100w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"><img src="assets/img/dario2.jpg" alt="" loading="lazy" decoding="async"></picture><span class="cat">Persia · Darío III</span></div>
   <div class="bd"><h3>Darío III y la Caída del Imperio Persa</h3><p>En el otoño del 331 a.C., en una llanura polvorienta cerca de Gaugamela, el destino del mundo conocido quedó sellado.</p><div class="ft"><span>13 min de lectura</span><span>Leer →</span></div></div>
 </a>
 <a class="ac rv tilt" href="articulos/maquinaria-de-guerra-romana.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'maquinaria-de-guerra-romana'});}">
-  <div class="im"><img src="assets/img/maquinaria2.jpg" alt="" loading="lazy" decoding="async"><span class="cat">Roma · Ingeniería de guerra</span></div>
+  <div class="im"><picture><source type="image/webp" srcset="assets/img/maquinaria2-480.webp 480w, assets/img/maquinaria2-960.webp 960w, assets/img/maquinaria2-1440.webp 1400w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"><img src="assets/img/maquinaria2.jpg" alt="" loading="lazy" decoding="async"></picture><span class="cat">Roma · Ingeniería de guerra</span></div>
   <div class="bd"><h3>Maquinaria de Guerra Romana: La Ingeniería del Poder</h3><p>Si las legiones conquistaban los campos abiertos, la maquinaria de guerra era la que doblegaba las ciudades amuralladas.</p><div class="ft"><span>13 min de lectura</span><span>Leer →</span></div></div>
 </a>
 <a class="ac rv tilt" href="articulos/pompeya-ultimo-dia.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'pompeya-ultimo-dia'});}">
-  <div class="im"><img src="assets/img/pompeya1.jpg" alt="" loading="lazy" decoding="async"><span class="cat">Pompeya · 79 d.C.</span></div>
+  <div class="im"><picture><source type="image/webp" srcset="assets/img/pompeya1-480.webp 480w, assets/img/pompeya1-960.webp 960w, assets/img/pompeya1-1440.webp 1100w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"><img src="assets/img/pompeya1.jpg" alt="" loading="lazy" decoding="async"></picture><span class="cat">Pompeya · 79 d.C.</span></div>
   <div class="bd"><h3>Pompeya: El Último Día de una Ciudad Eterna</h3><p>Hora a hora, la erupción del Vesubio: cómo murió Pompeya, el testimonio de Plinio el Joven y lo que la arqueología sigue revelando.</p><div class="ft"><span>14 min de lectura</span><span>Leer →</span></div></div>
 </a>
 <a class="ac rv tilt" href="articulos/italica.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'italica'});}">
-  <div class="im"><img src="assets/img/italica1.jpg" alt="" loading="lazy" decoding="async"><span class="cat">Hispania · Ciudad imperial</span></div>
+  <div class="im"><picture><source type="image/webp" srcset="assets/img/italica1-480.webp 480w, assets/img/italica1-960.webp 960w, assets/img/italica1-1440.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"><img src="assets/img/italica1.jpg" alt="" loading="lazy" decoding="async"></picture><span class="cat">Hispania · Ciudad imperial</span></div>
   <div class="bd"><h3>Itálica: La Primera Ciudad que Roma Fundó Fuera de Italia</h3><p>En 206 a.C., Escipión instaló a sus veteranos en una colina de Hispania. Dos siglos después, esa colonia había dado a Roma dos emperadores.</p><div class="ft"><span>13 min de lectura</span><span>Leer →</span></div></div>
 </a>
 <a class="ac rv tilt" href="articulos/pompeya-arte-y-vida.html" onclick="if(typeof gtag==='function'){gtag('event','clic_mas_leidos',{article_id:'pompeya-arte-y-vida'});}">
-  <div class="im"><img src="assets/img/pompeya3.jpg" alt="" loading="lazy" decoding="async"><span class="cat">Pompeya · Vida cotidiana</span></div>
+  <div class="im"><picture><source type="image/webp" srcset="assets/img/pompeya3-480.webp 480w, assets/img/pompeya3-960.webp 821w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"><img src="assets/img/pompeya3.jpg" alt="" loading="lazy" decoding="async"></picture><span class="cat">Pompeya · Vida cotidiana</span></div>
   <div class="bd"><h3>Pompeya: Arte, Vida y Revelaciones Eternas</h3><p>Si la primera historia de Pompeya es de muerte y destrucción, la segunda —quizás la más importante— es una historia de vida.</p><div class="ft"><span>14 min de lectura</span><span>Leer →</span></div></div>
 </a>
     </div>
@@ -699,9 +700,9 @@ html.js .pod .wave i{animation:wv 1.2s ease-in-out infinite}
   <div class="wrap pack">
     <div class="covers rv" id="covers" aria-hidden="true">
       <div class="stage">
-        <img src="assets/img/revista-persia-2026-portada.jpg" alt="" loading="lazy">
-        <img src="assets/img/revista-emperadores-2026-portada.jpg" alt="" loading="lazy">
-        <img src="assets/img/revista-fronteras-2026-portada.jpg" alt="" loading="lazy">
+        <picture><source type="image/webp" srcset="assets/img/revista-persia-2026-portada-480.webp 480w, assets/img/revista-persia-2026-portada-960.webp 800w" sizes="240px"><img src="assets/img/revista-persia-2026-portada.jpg" alt="" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="assets/img/revista-emperadores-2026-portada-480.webp 480w, assets/img/revista-emperadores-2026-portada-960.webp 800w" sizes="240px"><img src="assets/img/revista-emperadores-2026-portada.jpg" alt="" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="assets/img/revista-fronteras-2026-portada-480.webp 480w, assets/img/revista-fronteras-2026-portada-960.webp 800w" sizes="240px"><img src="assets/img/revista-fronteras-2026-portada.jpg" alt="" loading="lazy"></picture>
       </div>
     </div>
     <div class="rv">
@@ -882,7 +883,7 @@ document.addEventListener('click',function(e){var n=document.getElementById('hdr
   var v=document.getElementById('hero-video');
   if(v&&!RM){var c=navigator.connection||{};
     if(!(c.saveData||/2g/.test(c.effectiveType||''))){
-      var go=function(){v.preload='auto';v.load();var p=v.play();if(p&&p.then)p.then(function(){v.classList.add('on')}).catch(function(){});v.addEventListener('playing',function(){v.classList.add('on')},{once:true});};
+      var go=function(){v.src=matchMedia('(max-width: 760px)').matches?v.dataset.srcMovil:v.dataset.src;v.preload='auto';v.load();var p=v.play();if(p&&p.then)p.then(function(){v.classList.add('on')}).catch(function(){});v.addEventListener('playing',function(){v.classList.add('on')},{once:true});};
       if('requestIdleCallback' in window)requestIdleCallback(go,{timeout:1500});else setTimeout(go,600);
       document.addEventListener('visibilitychange',function(){if(document.hidden)v.pause();else if(v.classList.contains('on'))v.play().catch(function(){});});
     }}
