@@ -50,7 +50,7 @@ a{color:var(--rojo)}
 .obj ul{padding-left:18px}
 /* lecciones */
 .lec{padding:64px 0 30px;border-top:1px solid var(--linea);margin-top:40px}
-.lec .head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+
 .lec .num{font-family:'Cinzel',serif;font-size:54px;color:var(--oro);line-height:1}
 .lec h2{font-family:'Cinzel',serif;font-size:clamp(26px,4vw,36px);color:var(--vino2);line-height:1.15}
 .lec .rt{font-family:'Oswald';letter-spacing:.12em;font-size:12px;color:var(--gris);margin:8px 0 18px}
@@ -102,6 +102,34 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 .end h2{font-family:'Cinzel',serif;color:var(--oro);font-size:28px}
 .end p{max-width:600px;margin:12px auto 22px;opacity:.9}
 .fuentes{font-size:14px;color:var(--gris);margin-top:30px}.fuentes li{margin-left:18px}
+
+/* banners de lección */
+.lec{border-top:0;margin-top:30px;padding-top:0}
+.ban{position:relative;width:100vw;margin-left:calc(50% - 50vw);min-height:min(62vh,520px);display:flex;align-items:flex-end;justify-content:center;background:#140508 center/cover no-repeat;margin-bottom:38px}
+.ban:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#14050822 0%,#14050855 45%,#140508e6 100%)}
+.ban .bi{position:relative;text-align:center;padding:0 22px 46px;max-width:900px}
+.ban .bk{font-family:'Oswald',sans-serif;letter-spacing:.3em;font-size:13px;color:var(--oro);display:inline-block;border-top:1px solid #e9c46a88;border-bottom:1px solid #e9c46a88;padding:6px 14px}
+.ban h2{font-family:'Cinzel',serif;color:#fff;font-size:clamp(30px,5.6vw,58px);line-height:1.1;margin-top:14px;text-shadow:0 4px 30px #000a}
+.ban-q{background:radial-gradient(ellipse at 50% 40%,#5a1a26,#140508 75%);min-height:300px}
+/* clips */
+.clip{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:center;background:var(--vino);color:#f3e9d7;border-radius:6px;padding:18px;margin:30px 0}
+.clip video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:4px;background:#000;display:block}
+.clip .h,.mec .h{font-family:'Oswald';letter-spacing:.18em;font-size:13px;color:var(--oro);display:block;margin-bottom:8px}
+.clip p{font-size:17px;margin:0 0 10px}.clip small{opacity:.6;font-size:13px}
+/* mecanismo 3D */
+.mec{margin:34px 0;background:#140508;color:#f3e9d7;border-radius:6px;overflow:hidden}
+.mec .mh{padding:20px 22px 6px}.mec h3{font-family:'Cinzel',serif;font-size:24px;color:#fff}.mec .mh p{font-size:15px;opacity:.8;margin:4px 0 0}
+.stage{position:relative;aspect-ratio:16/10}
+#c3d{width:100%;height:100%;display:block}
+.stage .cap{position:absolute;left:16px;right:16px;bottom:14px;background:#140508d9;border-left:3px solid var(--oro);padding:10px 14px;font-size:16px;line-height:1.5;transition:opacity .4s}
+.steps{display:flex;gap:6px;padding:12px 14px 16px;flex-wrap:wrap}
+.steps button{flex:1;min-width:90px;background:#ffffff12;border:1px solid #e9c46a55;color:#f3e9d7;border-radius:20px;padding:8px 10px;font-family:'Oswald';letter-spacing:.08em;font-size:13px;cursor:pointer}
+.steps button.on{background:var(--oro);color:var(--vino)}
+.steps .pl{flex:0 0 46px;min-width:46px}
+/* música */
+.mus{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--vino);color:var(--oro);border:1px solid #e9c46a88;border-radius:30px;padding:10px 16px;font-family:'Oswald';letter-spacing:.12em;font-size:13px;cursor:pointer;box-shadow:0 8px 24px #0006}
+.mus.on{background:var(--oro);color:var(--vino)}
+@media(max-width:640px){.clip{grid-template-columns:1fr}.clip video{max-width:300px;margin:0 auto}.stage{aspect-ratio:4/5}.stage .cap{font-size:14px}}
 @media(max-width:640px){body{font-size:17px}.two,.cards,.cols3{grid-template-columns:1fr}.stats b{font-size:22px}.top .t{display:none}.lec .num{font-size:42px}}
 @media print{.top,.prog,.hero,.toc,.lec,.quiz,.end,.obj{display:none!important}.cert{display:block!important}}
 </style>
@@ -141,11 +169,10 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 
 <!-- LECCIÓN 1 -->
 <article class="lec" id="l1" data-l="1">
-  <div class="head"><span class="num">I</span><h2>El último día</h2></div>
-  <div class="rt">LECCIÓN 1 · 3 MINUTOS DE LECTURA</div>
+  <header class="ban" style="background-image:url(img/erupcion.webp)"><div class="bi"><div class="bk">LECCIÓN I · 3 MINUTOS</div><h2>El último día</h2></div></header>
   <p class="lead">Pompeya era una ciudad próspera de Campania, en el sur de Italia, a los pies del Vesubio. Tenía foro, templos, termas, teatros y calles llenas de tiendas. Sus habitantes no sabían que la montaña verde que veían cada mañana era un volcán activo.</p>
   <p>Hubo avisos. Entre los años 62 y 63 un fuerte terremoto dañó la ciudad, y en el año 79 muchas casas todavía se estaban reparando. Ese año el Vesubio entró en erupción: una columna de ceniza y piedra pómez cubrió Pompeya, Herculano y Estabia, y las nubes ardientes que bajaron después acabaron con quienes no habían huido.</p>
-  <figure><img src="img/erupcion.webp" alt="" loading="lazy"><figcaption>La erupción del año 79 vista desde una calle de Pompeya. Reconstrucción visual.</figcaption></figure>
+  <div class="clip"><video src="media/erupcion.mp4" poster="media/erupcion.jpg" muted loop playsinline preload="none"></video><div class="ct"><b class="h">ANIMACIÓN · ANTES Y DESPUÉS</b><p>De los calcos de las víctimas a la casa llena de vida, con la columna del Vesubio al fondo: así era Pompeya horas antes del final.</p><small>Reconstrucción visual animada · sin audio</small></div></div>
   <p>La tragedia tuvo una consecuencia que hoy es un regalo para la historia: la ceniza selló la ciudad como una cápsula del tiempo. Muebles, comida, pinturas, monedas y objetos de uso diario quedaron donde estaban el día de la erupción.</p>
   <ul class="tl">
     <li><b>62–63</b>Un terremoto daña la ciudad.</li>
@@ -155,16 +182,20 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
     <li><b>1997</b>Pompeya, Patrimonio de la Humanidad (UNESCO).</li>
     <li><b>2026</b>Se reconstruye el armario de la casa IX 11, 7.</li>
   </ul>
+  <section class="mec" id="mec-calco">
+    <div class="mh"><b class="h">MECANISMO 3D</b><h3>Cómo se hace un calco de Pompeya</h3><p>El método que inventó Giuseppe Fiorelli en 1863, en cuatro pasos.</p></div>
+    <div class="stage"><canvas id="c3d"></canvas><div class="cap" id="mcap"></div></div>
+    <div class="steps" id="msteps"><button data-s="0">1 · Ceniza</button><button data-s="1">2 · Hueco</button><button data-s="2">3 · Yeso</button><button data-s="3">4 · Calco</button><button id="mplay" class="pl">❚❚</button></div>
+  </section>
   <div class="box"><b class="h">CLAVE PARA RECORDAR</b>Pompeya no es una ruina normal: es una ciudad detenida en un instante. Por eso, casi 300 años después de empezar a excavarla, todavía aparecen habitaciones que nadie había estudiado.</div>
   <div class="check"><span>¿Terminaste la lección?</span><button class="btn" data-done="1">MARCAR COMO LEÍDA ✓</button></div>
 </article>
 
 <!-- LECCIÓN 2 -->
 <article class="lec" id="l2" data-l="2">
-  <div class="head"><span class="num">II</span><h2>Un armario en la calle de la Abundancia</h2></div>
-  <div class="rt">LECCIÓN 2 · 3 MINUTOS DE LECTURA</div>
+  <header class="ban" style="background-image:url(img/via.webp)"><div class="bi"><div class="bk">LECCIÓN II · 3 MINUTOS</div><h2>Un armario en la calle de la Abundancia</h2></div></header>
   <p class="lead">La Via dell'Abbondanza era la calle más viva de Pompeya. La cruzaba de oeste a este, del Foro a la puerta de Sarno, con tiendas, tabernas, talleres y casas de fachadas pintadas con anuncios electorales. Sus losas todavía conservan los surcos de las ruedas de los carros.</p>
-  <figure><img src="img/via.webp" alt="" loading="lazy"><figcaption>La Via dell'Abbondanza con el Vesubio al fondo. Reconstrucción visual.</figcaption></figure>
+  <div class="clip"><video src="media/calle.mp4" poster="media/calle.jpg" muted loop playsinline preload="none"></video><div class="ct"><b class="h">ANIMACIÓN · LA CALLE RENACE</b><p>Las ruinas de una calle de Pompeya recuperan sus fachadas, balcones y colores. Fíjate en las losas y en los pasos elevados para cruzar.</p><small>Reconstrucción visual animada · sin audio</small></div></div>
   <p>En esa calle está la casa IX 11, 7. Su fachada se excavó en 1912, pero las habitaciones de detrás esperaron más de un siglo. En 2026, durante la restauración de la vecina Insula de los Castos Amantes, los arqueólogos por fin las estudiaron a fondo.</p>
   <p>En una sala decorada con pinturas del Cuarto Estilo aparecieron los restos de un armario de madera. Con los datos de la excavación, el equipo del Parque Arqueológico reconstruyó su forma y su contenido.</p>
   <div class="stats"><div><b>24+</b><span>piezas en un collar de amuletos</span></div><div><b>38</b><span>monedas de bronce en un cestillo</span></div><div><b>1912</b><span>año en que se excavó la fachada</span></div></div>
@@ -185,8 +216,7 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 
 <!-- LECCIÓN 3 -->
 <article class="lec" id="l3" data-l="3">
-  <div class="head"><span class="num">III</span><h2>¿Qué eran los crepundia?</h2></div>
-  <div class="rt">LECCIÓN 3 · 3 MINUTOS DE LECTURA</div>
+  <header class="ban" style="background-image:url(img/bes.webp)"><div class="bi"><div class="bk">LECCIÓN III · 3 MINUTOS</div><h2>¿Qué eran los crepundia?</h2></div></header>
   <p class="lead">El collar del armario tiene al menos 24 piezas de fayenza, hueso, pasta vítrea y cristal de roca: el dios Bes, Mercurio, manos, pies, piñas y racimos de uva, cada una con su agujero para colgar. Los especialistas lo interpretan como <span class="glos" title="Del latín crepare, 'crujir': amuletos ensartados que sonaban al moverse">crepundia</span>.</p>
   <p>La palabra viene del verbo <i>crepare</i>, «crujir». Los crepundia eran colecciones de pequeños objetos ensartados que sonaban al moverse. Se colgaban del cuello del bebé o junto a la cuna, y cumplían tres funciones a la vez:</p>
   <div class="cards">
@@ -203,11 +233,10 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 
 <!-- LECCIÓN 4 -->
 <article class="lec" id="l4" data-l="4">
-  <div class="head"><span class="num">IV</span><h2>Nacer en Roma</h2></div>
-  <div class="rt">LECCIÓN 4 · 3 MINUTOS DE LECTURA</div>
+  <header class="ban" style="background-image:url(img/ninos.webp)"><div class="bi"><div class="bk">LECCIÓN IV · 3 MINUTOS</div><h2>Nacer en Roma</h2></div></header>
   <p class="lead">Sobrevivir a la infancia era la gran prueba de la vida romana. Las estimaciones demográficas sugieren que una parte enorme de los niños, quizá cerca de la mitad, no llegaba a la adolescencia. Fiebres, infecciones y complicaciones del parto eran las causas habituales.</p>
   <p>Por eso el recién nacido no recibía su nombre de inmediato. Había que esperar al <span class="glos" title="Día de la purificación y del nombre">dies lustricus</span>, el día de la purificación: el octavo tras el nacimiento para las niñas y el noveno para los niños. Ese día se le podían entregar sus primeros amuletos.</p>
-  <figure><img src="img/ninos.webp" alt="" loading="lazy"><figcaption>Un niño con su bulla al cuello en el patio de una casa de Pompeya. Reconstrucción visual.</figcaption></figure>
+  <figure><img src="img/fresco.webp" alt="" loading="lazy" style="max-height:520px;object-fit:cover"><figcaption>Pintura mural al estilo del Cuarto Estilo pompeyano. Recreación.</figcaption></figure>
   <div class="cards">
     <div><b>DIES LUSTRICUS</b>Día 8 (niñas) o 9 (niños): purificación y nombre.</div>
     <div><b>BULLA</b>Cápsula con talismanes que llevaban los niños libres.</div>
@@ -221,8 +250,7 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 
 <!-- LECCIÓN 5 -->
 <article class="lec" id="l5" data-l="5">
-  <div class="head"><span class="num">V</span><h2>Lo que sabemos y lo que no</h2></div>
-  <div class="rt">LECCIÓN 5 · 2 MINUTOS DE LECTURA</div>
+  <header class="ban" style="background-image:url(img/atardecer.webp)"><div class="bi"><div class="bk">LECCIÓN V · 2 MINUTOS</div><h2>Lo que sabemos y lo que no</h2></div></header>
   <p class="lead">Una buena lectura de la historia separa los hechos de las hipótesis. El hallazgo del armario es un ejemplo perfecto: hay datos firmes, preguntas abiertas y afirmaciones que circulan sin pruebas.</p>
   <div class="cols3">
     <div class="c1"><b>✓ CONFIRMADO</b><ul><li>Un collar de al menos 24 elementos y 38 monedas en un armario de la casa IX 11, 7.</li><li>Pesas de plomo que apuntan a una actividad comercial.</li></ul></div>
@@ -230,15 +258,14 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
     <div class="c3"><b>✗ SIN PRUEBAS</b><ul><li>Que los dueños murieran en la erupción: su destino es desconocido.</li><li>Cifras exactas de mortalidad infantil en Pompeya.</li></ul></div>
   </div>
   <p>El propio director del Parque Arqueológico, Gabriel Zuchtriegel, lo resume con prudencia: no se puede reconstruir con certeza la identidad de quien vivía en la casa. La atribución a Cornelius Maximus se basa en inscripciones que hoy ya no son visibles.</p>
-  <figure><img src="img/atardecer.webp" alt="" loading="lazy"><figcaption>El Vesubio y las ruinas de Pompeya al atardecer. Reconstrucción visual.</figcaption></figure>
+  <div class="clip"><video src="media/excavacion.mp4" poster="media/excavacion.jpg" muted loop playsinline preload="none"></video><div class="ct"><b class="h">ANIMACIÓN · LO QUE QUEDA</b><p>Una casa restaurada vuelve a su estado actual: muros desnudos, techos de protección y los calcos de quienes no escaparon. Lo que vemos hoy es solo una parte de la historia.</p><small>Reconstrucción visual animada · sin audio</small></div></div>
   <div class="box"><b class="h">CLAVE PARA RECORDAR</b>Cuando leas una noticia de arqueología, pregúntate siempre: ¿esto está confirmado, se está estudiando o es una suposición? Es la diferencia entre conocer la historia y repetir titulares.</div>
   <div class="check"><span>¿Terminaste la lección?</span><button class="btn" data-done="5">MARCAR COMO LEÍDA ✓</button></div>
 </article>
 
 <!-- QUIZ -->
 <section class="lec quiz" id="quiz" data-l="6">
-  <div class="head"><span class="num">✦</span><h2>Quiz final</h2></div>
-  <div class="rt">6 PREGUNTAS · RESPONDE Y PULSA «VER RESULTADO»</div>
+  <header class="ban ban-q"><div class="bi"><div class="bk">6 PREGUNTAS · 1 MINUTO</div><h2>Quiz final</h2></div></header>
   <div id="qs"></div>
   <div style="text-align:center;margin-top:20px"><button class="btn" id="eval">VER RESULTADO</button></div>
   <div class="res" id="res"><h3 id="score"></h3><p id="msg"></p><button class="btn" id="retry" style="display:none">VOLVER A INTENTAR</button></div>
@@ -258,6 +285,8 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 </section>
 </main>
 
+<button class="mus" id="mus" aria-pressed="false">♪ MÚSICA</button>
+<audio id="bgm" src="media/musica.mp3" loop preload="none"></audio>
 <section class="end">
   <h2>¿Quieres ir más allá?</h2>
   <p>La revista HISTORIKA «Pompeya, los talismanes del último día» amplía este curso con 16 páginas, y en el grupo exclusivo tienes todas las revistas completas.</p>
@@ -307,5 +336,7 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
   paint();
 })();
 </script>
+<script src="media/three.min.js"></script>
+<script src="media/curso.js"></script>
 </body>
 </html>
