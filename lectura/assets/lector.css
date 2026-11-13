@@ -45,3 +45,12 @@ body{background:radial-gradient(ellipse at 50% 35%,#4a1520 0%,#2a0b12 45%,#14050
 .lx-hint{position:static;transform:none;text-align:center;font-size:12px;letter-spacing:.08em;padding-top:2px}
 @media (max-width:760px){.lx-btn .t{display:none}.lx-btn{min-width:44px;font-size:16px;padding:7px 12px}.lx-bar{gap:8px}.lx-hint{font-size:11px}}
 a.lx-brand{text-decoration:none}
+.lx-cta{background:radial-gradient(ellipse at 50% 30%,#5a1a26,#2a0b12 75%);color:#f3e9d7;display:flex;align-items:center;justify-content:center;text-align:center}
+.lx-cta .in{padding:9% 10%;display:flex;flex-direction:column;align-items:center;gap:4%;height:100%;justify-content:center}
+.lx-cta .k{font-size:clamp(9px,1.3vw,13px);letter-spacing:.25em;color:#e9c46a}
+.lx-cta h2{font-family:'Cinzel',serif;font-size:clamp(16px,2.6vw,30px);line-height:1.2;color:#fff}
+.lx-cta p{font-size:clamp(11px,1.4vw,15px);line-height:1.5;opacity:.9}
+.lx-cta a.go{display:inline-block;background:#e9c46a;color:#2a0b12;text-decoration:none;font-weight:500;letter-spacing:.12em;padding:12px 22px;border-radius:30px;font-size:clamp(11px,1.3vw,14px);pointer-events:auto}
+.lx-cta a.go:hover{background:#fff}
+.lx-cta small{font-size:clamp(9px,1.1vw,12px);opacity:.7}
+.lx-cta a.sec{color:#e9c46a;font-size:clamp(10px,1.2vw,13px)}

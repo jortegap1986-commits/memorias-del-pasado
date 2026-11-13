@@ -15,11 +15,13 @@
   window.gtag = window.gtag || function () { dataLayer.push(arguments); };
   (function () { const g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA; document.head.appendChild(g); })();
   gtag('js', new Date());
-  gtag('config', GA, { page_title: 'Revista · ' + C.titulo, content_group: 'Lector revistas' });
-  const ev = (n, p) => { try { gtag('event', n, Object.assign({ revista: REV, revista_titulo: C.titulo }, p || {})); } catch (e) {} };
+  const MODO = C.cta ? 'avance' : 'completa';
+  gtag('config', GA, { page_title: (C.cta ? 'Avance · ' : 'Revista · ') + C.titulo, content_group: C.cta ? 'Avance revistas' : 'Lector revistas' });
+  const ev = (n, p) => { try { gtag('event', n, Object.assign({ revista: REV, revista_titulo: C.titulo, modo: MODO }, p || {})); } catch (e) {} };
   const visto = new Set([1]); let maxPag = 1; const hitos = new Set(); const t0 = Date.now();
   ev('revista_abierta', { paginas_total: C.paginas, origen: new URLSearchParams(location.search).get('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'directo') });
   function track(i) {
+    if (i > C.paginas) { if (!visto.has(i)) { visto.add(i); ev('avance_fin'); } return; }
     if (!visto.has(i)) { visto.add(i); ev('revista_pagina', { pagina: i, porcentaje: Math.round(100 * i / C.paginas) }); }
     if (i > maxPag) maxPag = i;
     const pct = 100 * maxPag / C.paginas;
@@ -56,10 +58,12 @@
     for (let i = 1; i <= C.paginas; i++) {
       const d = document.createElement('div');
       d.className = 'lx-page';
-      d.dataset.density = (i === 1 || i === C.paginas) ? 'hard' : 'soft';
+      d.dataset.density = (i === 1 || (i === C.paginas && !C.cta)) ? 'hard' : 'soft';
       d.innerHTML = `<img src="${src(i)}" alt="Página ${i}">`;
       book.appendChild(d);
     }
+    if (C.cta) { const d = document.createElement('div'); d.className = 'lx-page lx-cta'; d.dataset.density = 'hard'; d.innerHTML = C.cta; book.appendChild(d);
+      d.addEventListener('click', e => { const a = e.target.closest('a'); if (a) ev('avance_unirse_grupo', { destino: a.href }); }); }
     const s = size();
     pf = new St.PageFlip(book, {
       width: s.w, height: s.h, size: 'fixed', showCover: true, usePortrait: s.portrait,
@@ -77,7 +81,7 @@
 
   function upd() {
     const i = pf.getCurrentPageIndex() + 1;
-    const n = C.paginas;
+    const n = C.paginas + (C.cta ? 1 : 0);
     const pr = pf.getOrientation && pf.getOrientation() === 'portrait';
     if (!pr && i > 1) { const a = i % 2 === 0 ? i : i - 1; track(a); track(Math.min(a + 1, n)); } else track(i);
     const portrait = pf.getOrientation && pf.getOrientation() === 'portrait';
@@ -101,6 +105,7 @@
   document.querySelector('.lx-next').onclick = () => pf && pf.flipNext();
   document.getElementById('b-prev').onclick = () => pf && pf.flipPrev();
   document.getElementById('b-next').onclick = () => pf && pf.flipNext();
+  if (C.cta) document.getElementById('b-thumbs').style.display = 'none';
   document.getElementById('b-thumbs').onclick = () => (ev('revista_miniaturas'), document).querySelector('.lx-thumbs').classList.toggle('open');
   document.getElementById('b-full').onclick = () => {
     const el = document.documentElement; ev('revista_pantalla_completa');
@@ -109,7 +114,7 @@
   };
   const Z = document.querySelector('.lx-zoom');
   document.getElementById('b-zoom').onclick = () => {
-    const i = pf.getCurrentPageIndex() + 1;
+    const i = Math.min(pf.getCurrentPageIndex() + 1, C.paginas);
     Z.querySelector('.pages').innerHTML = `<img src="${src(i)}" alt="">` + (i > 1 && i < C.paginas && window.innerWidth >= 760 ? `<img src="${src(i + 1)}" alt="">` : '');
     Z.classList.add('open'); ev('revista_zoom', { pagina: i });
   };
