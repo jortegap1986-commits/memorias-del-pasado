@@ -44,3 +44,4 @@ body{background:radial-gradient(ellipse at 50% 35%,#4a1520 0%,#2a0b12 45%,#14050
 }
 .lx-hint{position:static;transform:none;text-align:center;font-size:12px;letter-spacing:.08em;padding-top:2px}
 @media (max-width:760px){.lx-btn .t{display:none}.lx-btn{min-width:44px;font-size:16px;padding:7px 12px}.lx-bar{gap:8px}.lx-hint{font-size:11px}}
+a.lx-brand{text-decoration:none}
