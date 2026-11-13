@@ -23,6 +23,26 @@
     };
   }
 
+
+  // ---------- Continuar donde lo dejaste ----------
+  (function () {
+    const KEY = 'hk_curso_pompeya15_pos';
+    const secs = [...document.querySelectorAll('.lec[id]')];
+    const names = { l1: 'Lección I · El último día', l2: 'Lección II · El armario', l3: 'Lección III · Los crepundia', l4: 'Lección IV · Nacer en Roma', l5: 'Lección V · Lo que sabemos', quiz: 'el quiz final' };
+    let saved = null; try { saved = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (saved && saved.id && saved.id !== 'l1' && !location.hash && document.getElementById(saved.id)) {
+      const b = document.createElement('div'); b.className = 'resume';
+      b.innerHTML = '<span>📖 Te quedaste en <b>' + (names[saved.id] || 'tu última lección') + '</b></span><button class="btn">CONTINUAR →</button><button class="x" aria-label="Cerrar">✕</button>';
+      document.body.appendChild(b);
+      b.querySelector('.btn').onclick = () => { const el = document.getElementById(saved.id); window.scrollTo({ top: el.offsetTop + (saved.off || 0) - 60, behavior: 'smooth' }); b.remove(); ga('curso_continuar', { leccion: saved.id }); };
+      b.querySelector('.x').onclick = () => b.remove();
+    }
+    let tmr; window.addEventListener('scroll', () => { clearTimeout(tmr); tmr = setTimeout(() => {
+      const y = window.scrollY + 120; let cur = null;
+      secs.forEach(s => { if (s.offsetTop <= y) cur = s; });
+      if (cur) try { localStorage.setItem(KEY, JSON.stringify({ id: cur.id, off: Math.max(0, y - 120 - cur.offsetTop), t: Date.now() })); } catch (e) {}
+    }, 400); }, { passive: true });
+  })();
   // ---------- Mecanismo: el calco de Fiorelli (renders 3D animados) ----------
   const stage = document.querySelector('#mec-calco .stage');
   if (!stage) return;
