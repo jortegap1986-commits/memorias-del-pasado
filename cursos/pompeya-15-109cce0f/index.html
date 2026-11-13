@@ -119,8 +119,12 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 /* mecanismo 3D */
 .mec{margin:34px 0;background:#140508;color:#f3e9d7;border-radius:6px;overflow:hidden}
 .mec .mh{padding:20px 22px 6px}.mec h3{font-family:'Cinzel',serif;font-size:24px;color:#fff}.mec .mh p{font-size:15px;opacity:.8;margin:4px 0 0}
-.stage{position:relative;aspect-ratio:16/10}
-#c3d{width:100%;height:100%;display:block}
+.stage{position:relative;aspect-ratio:1376/768;overflow:hidden;background:#140508}
+.stage .mi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity 1.1s ease}
+.stage .mi.on{opacity:1;animation:kb 6.8s ease-out forwards}
+.stage.pause .mi.on{animation-play-state:paused}
+@keyframes kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+#c3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .stage .cap{position:absolute;left:16px;right:16px;bottom:14px;background:#140508d9;border-left:3px solid var(--oro);padding:10px 14px;font-size:16px;line-height:1.5;transition:opacity .4s}
 .steps{display:flex;gap:6px;padding:12px 14px 16px;flex-wrap:wrap}
 .steps button{flex:1;min-width:90px;background:#ffffff12;border:1px solid #e9c46a55;color:#f3e9d7;border-radius:20px;padding:8px 10px;font-family:'Oswald';letter-spacing:.08em;font-size:13px;cursor:pointer}
@@ -129,7 +133,7 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 /* música */
 .mus{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--vino);color:var(--oro);border:1px solid #e9c46a88;border-radius:30px;padding:10px 16px;font-family:'Oswald';letter-spacing:.12em;font-size:13px;cursor:pointer;box-shadow:0 8px 24px #0006}
 .mus.on{background:var(--oro);color:var(--vino)}
-@media(max-width:640px){.clip{grid-template-columns:1fr}.clip video{max-width:300px;margin:0 auto}.stage{aspect-ratio:4/5}.stage .cap{font-size:14px}}
+@media(max-width:640px){.clip{grid-template-columns:1fr}.clip video{max-width:300px;margin:0 auto}.stage .cap{font-size:13px;left:8px;right:8px;bottom:8px;padding:8px 10px}}
 @media(max-width:640px){body{font-size:17px}.two,.cards,.cols3{grid-template-columns:1fr}.stats b{font-size:22px}.top .t{display:none}.lec .num{font-size:42px}}
 @media print{.top,.prog,.hero,.toc,.lec,.quiz,.end,.obj{display:none!important}.cert{display:block!important}}
 </style>
@@ -183,7 +187,7 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
     <li><b>2026</b>Se reconstruye el armario de la casa IX 11, 7.</li>
   </ul>
   <section class="mec" id="mec-calco">
-    <div class="mh"><b class="h">MECANISMO 3D</b><h3>Cómo se hace un calco de Pompeya</h3><p>El método que inventó Giuseppe Fiorelli en 1863, en cuatro pasos.</p></div>
+    <div class="mh"><b class="h">MECANISMO · RENDER 3D</b><h3>Cómo se hace un calco de Pompeya</h3><p>El método que inventó Giuseppe Fiorelli en 1863, en cuatro pasos.</p></div>
     <div class="stage"><canvas id="c3d"></canvas><div class="cap" id="mcap"></div></div>
     <div class="steps" id="msteps"><button data-s="0">1 · Ceniza</button><button data-s="1">2 · Hueco</button><button data-s="2">3 · Yeso</button><button data-s="3">4 · Calco</button><button id="mplay" class="pl">❚❚</button></div>
   </section>
@@ -336,7 +340,6 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
   paint();
 })();
 </script>
-<script src="media/three.min.js"></script>
 <script src="media/curso.js"></script>
 </body>
 </html>
