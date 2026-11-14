@@ -3,6 +3,18 @@
 window.HK_GRUPO = 'https://www.facebook.com/groups/1164504891177213';
 window.HK_CURSOS = [
   {
+    id: 'ingenieria20',
+    titulo: 'Ingeniería romana en 20 minutos',
+    sub: 'Arcos, hormigón, acueductos y cloacas',
+    desc: 'Por qué un arco se sostiene solo, cómo resiste la cúpula del Panteón, el agua que llegaba a Roma solo por gravedad y la Cloaca Máxima. Con dos mecanismos en render 3D.',
+    min: 20, lecciones: 5, precio: '6,99',
+    img: '/cursos/ingenieria-20-demo/img/cover.webp',
+    demo: '/cursos/ingenieria-20-demo/',
+    comprar: 'https://historiaantigua.gumroad.com/l/ingenieria20',
+    extras: ['2 mecanismos 3D', 'Animaciones', 'Quiz', 'Certificado'],
+    badge: 'NUEVO'
+  },
+  {
     id: 'pompeya15',
     titulo: 'Pompeya en 15 minutos',
     sub: 'La infancia bajo la ceniza',
@@ -12,7 +24,7 @@ window.HK_CURSOS = [
     demo: '/cursos/pompeya-15-demo/',
     comprar: 'https://historiaantigua.gumroad.com/l/pompeya15',
     extras: ['Animaciones', 'Mecanismo 3D', 'Quiz', 'Certificado'],
-    badge: 'NUEVO'
+    badge: ''
   }
 ];
 
@@ -92,7 +104,7 @@ window.HK_CURSOS = [
       </div>
       <div class="hkv-st" id="hkv-cursos">MICRO-CURSOS</div>
       <div class="hkv-cursos">${window.HK_CURSOS.map(c => cursoCard(c, med)).join('')}
-        <div class="hkv-soon"><b>Nuevos cursos cada mes</b><p>Ingeniería romana, Persia, Egipto… Entérate primero en el grupo exclusivo.</p><a class="hkv-b gr" href="${window.HK_GRUPO}" target="_blank" rel="noopener" data-ev="grupo_proximos">QUIERO ENTERARME</a></div>
+        <div class="hkv-soon"><b>Nuevos cursos cada mes</b><p>Persia, el legionario romano, Constantinopla… Entérate primero en el grupo exclusivo.</p><a class="hkv-b gr" href="${window.HK_GRUPO}" target="_blank" rel="noopener" data-ev="grupo_proximos">QUIERO ENTERARME</a></div>
       </div>
       <div class="hkv-g"><div><h3>¿Quieres leer todas las revistas completas?</h3><p>En el grupo exclusivo tienes la biblioteca HISTORIKA entera, las ediciones nuevas apenas salen y la comunidad de historia antigua.</p></div>
         <a class="hkv-b gr" href="${window.HK_GRUPO}" target="_blank" rel="noopener" data-ev="grupo_banda">ÚNETE AL GRUPO</a></div>
