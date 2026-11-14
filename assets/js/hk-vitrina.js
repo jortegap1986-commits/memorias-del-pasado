@@ -3,6 +3,18 @@
 window.HK_GRUPO = 'https://www.facebook.com/groups/1164504891177213';
 window.HK_CURSOS = [
   {
+    id: 'persia15',
+    titulo: 'Persia en 15 minutos',
+    sub: 'Ciro, Darío, el Camino Real y los qanats',
+    desc: 'Cómo un imperio gobernó del Mediterráneo al Indo: correos a caballo que cruzaban 2.500 km en 7 días, canales subterráneos en el desierto y Persépolis. Con dos mecanismos en render 3D.',
+    min: 15, lecciones: 5, precio: '4,99',
+    img: '/cursos/persia-15-demo/img/cover.webp',
+    demo: '/cursos/persia-15-demo/',
+    comprar: 'https://historiaantigua.gumroad.com/l/persia15',
+    extras: ['2 mecanismos 3D', 'Animaciones', 'Quiz', 'Certificado'],
+    badge: 'NUEVO'
+  },
+  {
     id: 'ingenieria20',
     titulo: 'Ingeniería romana en 20 minutos',
     sub: 'Arcos, hormigón, acueductos y cloacas',
@@ -12,7 +24,7 @@ window.HK_CURSOS = [
     demo: '/cursos/ingenieria-20-demo/',
     comprar: 'https://historiaantigua.gumroad.com/l/ingenieria20',
     extras: ['2 mecanismos 3D', 'Animaciones', 'Quiz', 'Certificado'],
-    badge: 'NUEVO'
+    badge: ''
   },
   {
     id: 'pompeya15',
@@ -104,7 +116,7 @@ window.HK_CURSOS = [
       </div>
       <div class="hkv-st" id="hkv-cursos">MICRO-CURSOS</div>
       <div class="hkv-cursos">${window.HK_CURSOS.map(c => cursoCard(c, med)).join('')}
-        <div class="hkv-soon"><b>Nuevos cursos cada mes</b><p>Persia, el legionario romano, Constantinopla… Entérate primero en el grupo exclusivo.</p><a class="hkv-b gr" href="${window.HK_GRUPO}" target="_blank" rel="noopener" data-ev="grupo_proximos">QUIERO ENTERARME</a></div>
+        <div class="hkv-soon"><b>Nuevos cursos cada mes</b><p>El legionario romano, Constantinopla, Egipto… Entérate primero en el grupo exclusivo.</p><a class="hkv-b gr" href="${window.HK_GRUPO}" target="_blank" rel="noopener" data-ev="grupo_proximos">QUIERO ENTERARME</a></div>
       </div>
       <div class="hkv-g"><div><h3>¿Quieres leer todas las revistas completas?</h3><p>En el grupo exclusivo tienes la biblioteca HISTORIKA entera, las ediciones nuevas apenas salen y la comunidad de historia antigua.</p></div>
         <a class="hkv-b gr" href="${window.HK_GRUPO}" target="_blank" rel="noopener" data-ev="grupo_banda">ÚNETE AL GRUPO</a></div>
