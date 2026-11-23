@@ -155,21 +155,41 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
 @media(max-width:640px){.clip{grid-template-columns:1fr}.clip video{max-width:300px;margin:0 auto}.stage .cap{font-size:13px;left:8px;right:8px;bottom:8px;padding:8px 10px}}
 @media(max-width:640px){body{font-size:17px}.two,.cards,.cols3{grid-template-columns:1fr}.stats b{font-size:22px}.top .t{display:none}.lec .num{font-size:42px}}
 @media print{.top,.prog,.hero,.toc,.lec,.quiz,.end,.obj{display:none!important}.cert{display:block!important}}
+
+.hero{min-height:64vh!important}
+.hero .hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero:before{z-index:1}.hero .in{z-index:2}
+.hero .hook{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,4.4vw,38px);line-height:1.2;color:#fff;margin:14px 0 6px;text-shadow:0 3px 18px #000c}
+.mec.first{margin-top:0;border-radius:0 0 6px 6px}
+.mec.first .mh h3{font-size:22px}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;justify-content:center;gap:12px;background:#2a0b12f2;color:#f3e9d7;padding:12px 16px calc(12px + env(safe-area-inset-bottom));font-family:'Oswald',sans-serif;letter-spacing:.08em;font-size:14px;text-decoration:none;transform:translateY(110%);transition:transform .35s;box-shadow:0 -8px 24px #0006}
+.buybar.on{transform:none}.buybar b{background:#e9c46a;color:#2a0b12;border-radius:20px;padding:7px 14px;font-weight:600}
+.mus{bottom:76px!important}
+.buybar span,.buybar b{white-space:nowrap}
+@media(max-width:600px){.hero p.d,.hero .meta{display:none}.hero .in{padding-top:40px;padding-bottom:34px}.hero{min-height:56vh!important}}
 </style>
 </head>
 <body>
 <div class="top"><span class="b">HISTORIKA</span><span class="t">Micro-curso · Ingeniería romana en 20 minutos</span><a class="buy-top" href="https://historiaantigua.gumroad.com/l/ingenieria20?utm_source=web&utm_medium=demo&utm_campaign=ingenieria20" target="_blank" rel="noopener" data-buy>COMPRAR · USD 6,99</a><button onclick="document.getElementById('indice').scrollIntoView()">ÍNDICE</button></div>
 
 <header class="hero" style="background-image:url(img/cover.webp)">
+  <video class="hv" src="media/cimbra.mp4" poster="media/cimbra.jpg" autoplay muted loop playsinline></video>
   <div class="in">
     <div class="kick">DEMO GRATIS · MICRO-CURSO HISTORIKA</div>
+    <p class="hook">¿Cómo se sostiene un arco de piedra sin una gota de cemento?</p>
     <h1>Ingeniería romana en 20 minutos</h1>
     <p class="d">Arcos, hormigón, acueductos y cloacas: cómo construyó Roma obras que siguen en pie casi dos mil años después.</p>
     <div class="meta"><span>⏱ 20 MIN</span><span>5 LECCIONES</span><span>2 MECANISMOS 3D</span><span>CERTIFICADO</span></div>
-    <a class="btn" href="#l1">LEER LA DEMO GRATIS</a> <a class="btn sec2" href="https://historiaantigua.gumroad.com/l/ingenieria20?utm_source=web&utm_medium=demo&utm_campaign=ingenieria20" target="_blank" rel="noopener" data-buy>COMPRAR CURSO · USD 6,99</a>
+    <a class="btn" href="#mec-arco">VER EL TRUCO ROMANO ↓</a> <a class="btn sec2" href="https://historiaantigua.gumroad.com/l/ingenieria20?utm_source=web&utm_medium=demo&utm_campaign=ingenieria20" target="_blank" rel="noopener" data-buy>COMPRAR CURSO · USD 6,99</a>
   </div>
 </header>
 <main class="wrap">
+  <section class="mec first" id="mec-arco" data-imgs="media/arco_1.webp,media/arco_2.webp,media/arco_3.webp,media/arco_4.webp" data-fx="polvo">
+    <div class="mh"><b class="h">MECANISMO · RENDER 3D</b><h3>Cómo se construye un arco romano</h3><p>De los pilares al arco que se sostiene solo, en cuatro pasos.</p></div>
+    <div class="stage"><canvas></canvas><div class="cap"></div></div>
+    <div class="steps"><button data-s="0">1 · Pilares</button><button data-s="1">2 · Cimbra</button><button data-s="2">3 · Dovelas</button><button data-s="3">4 · Clave</button><button class="pl">❚❚</button></div>
+    <script type="application/json">["<b>1 · Pilares y dovelas.</b> Primero se levantan los dos estribos y se tallan las dovelas en forma de cuña.", "<b>2 · La cimbra.</b> Entre los pilares se monta un armazón de madera con la forma exacta del arco.", "<b>3 · De abajo hacia arriba.</b> Las dovelas se colocan sobre la cimbra desde ambos lados a la vez, para equilibrar el peso, hasta dejar solo el hueco central.", "<b>4 · Clave y descimbrado.</b> Al encajar la clave, el arco queda bloqueado. Se retira la cimbra… y la piedra se sostiene sola."]</script>
+  </section>
 <section class="toc" id="indice">
   <h2>Contenido</h2>
   <div class="obj"><b>AL TERMINAR SABRÁS</b><ul>
@@ -186,12 +206,6 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
   <p>Sus piezas tienen nombre propio. Las <span class="glos" title="Piedras en forma de cuña que forman el arco">dovelas</span> son bloques en forma de cuña; la <span class="glos" title="La dovela central, la última que se coloca">clave</span> es la dovela central, la última en colocarse; y los <span class="glos" title="Pilares o muros que reciben el empuje lateral del arco">estribos</span> o pilas reciben el empuje del arco, que no solo baja: también empuja hacia los lados.</p>
   <div class="cards"><div><b>DOVELAS</b>Cuñas de piedra que se aprietan entre sí.</div><div><b>CLAVE</b>La pieza central que cierra y bloquea el arco.</div><div><b>ESTRIBOS</b>Absorben el empuje lateral y lo llevan al suelo.</div></div>
   <div class="clip"><video src="media/cimbra.mp4" poster="media/cimbra.jpg" muted loop playsinline preload="none"></video><div class="ct"><b class="h">ANIMACIÓN · LA CIMBRA</b><p>Mientras el arco está incompleto no se sostiene. Por eso se construía sobre una cimbra: un armazón de madera con su misma forma que sostenía las dovelas hasta colocar la clave.</p><small>Animación · sin audio</small></div></div>
-  <section class="mec" id="mec-arco" data-imgs="media/arco_1.webp,media/arco_2.webp,media/arco_3.webp,media/arco_4.webp" data-fx="polvo">
-    <div class="mh"><b class="h">MECANISMO · RENDER 3D</b><h3>Cómo se construye un arco romano</h3><p>De los pilares al arco que se sostiene solo, en cuatro pasos.</p></div>
-    <div class="stage"><canvas></canvas><div class="cap"></div></div>
-    <div class="steps"><button data-s="0">1 · Pilares</button><button data-s="1">2 · Cimbra</button><button data-s="2">3 · Dovelas</button><button data-s="3">4 · Clave</button><button class="pl">❚❚</button></div>
-    <script type="application/json">["<b>1 · Pilares y dovelas.</b> Primero se levantan los dos estribos y se tallan las dovelas en forma de cuña.", "<b>2 · La cimbra.</b> Entre los pilares se monta un armazón de madera con la forma exacta del arco.", "<b>3 · De abajo hacia arriba.</b> Las dovelas se colocan sobre la cimbra desde ambos lados a la vez, para equilibrar el peso, hasta dejar solo el hueco central.", "<b>4 · Clave y descimbrado.</b> Al encajar la clave, el arco queda bloqueado. Se retira la cimbra… y la piedra se sostiene sola."]</script>
-  </section>
   <p>Los romanos no inventaron el arco: ya lo conocían en Mesopotamia y lo usaban los etruscos. Su mérito fue usarlo en serie y a escala gigante, en puentes, acueductos, anfiteatros y bóvedas. Con arcos superpuestos el Pont du Gard alcanza casi 49 metros de altura, y el puente de Alcántara, terminado bajo Trajano hacia el año 106, sigue en pie sobre el Tajo.</p>
   <div class="box"><b class="h">CLAVE PARA RECORDAR</b>Un arco no se sostiene por el mortero sino por la forma. Mientras todas sus piezas sigan apretadas, puede durar milenios.</div>
   
@@ -220,6 +234,8 @@ figcaption{font-size:14px;color:var(--gris);margin-top:8px;font-style:italic}
   <p>La revista HISTORIKA «Roma por dentro» amplía este curso con 24 páginas, y en el grupo exclusivo tienes todas las revistas completas.</p>
   <a class="btn" href="https://www.facebook.com/groups/1164504891177213" target="_blank" rel="noopener" onclick="gtag('event','curso_cta_grupo',{curso:'ing20'})">ÚNETE AL GRUPO EXCLUSIVO</a>
 </section>
+<a class="buybar" id="buybar" href="https://historiaantigua.gumroad.com/l/ingenieria20?utm_source=web&utm_medium=demo&utm_campaign=ingenieria20" target="_blank" rel="noopener" data-buy><span>Curso completo</span><b>USD 6,99 · COMPRAR →</b></a>
+<script>(function(){var b=document.getElementById("buybar");addEventListener("scroll",function(){b.classList.toggle("on",scrollY>window.innerHeight*0.5)},{passive:true})})();</script>
 <script>window.CURSO={"id":"ing20_demo"};document.querySelectorAll("[data-buy]").forEach(a=>a.addEventListener("click",()=>{try{gtag("event","clic_comprar",{producto:"ingenieria20",seccion:"demo_curso"})}catch(e){}}));try{gtag("event","curso_demo_vista",{curso:"ing20"})}catch(e){}</script>
 <script src="media/curso.js"></script>
 </body>
